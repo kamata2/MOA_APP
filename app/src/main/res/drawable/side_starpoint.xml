@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--&lt;!&ndash; 체크박스 해제상태 &ndash;&gt;-->
+    <!--<item android:drawable="@drawable/checkbox_n"-->
+    <!--android:state_checked="false" />-->
+    <!--&lt;!&ndash; 체크박스 선택상태 &ndash;&gt;-->
+    <!--<item android:drawable="@drawable/checkbox_p"-->
+    <!--android:state_checked="true" />-->
+    <!--&lt;!&ndash; default state &ndash;&gt;-->
+    <!--<item android:drawable="@drawable/checkbox_n" />-->
+
+ 
+</selector>

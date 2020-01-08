@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteSmoke"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_tolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_toolbar_height"
+        android:background="@drawable/top_toolbar_style"
+        android:orientation="horizontal">
+
+        <!--<ImageButton-->
+        <!--android:id="@+id/side_alarm"-->
+        <!--android:layout_width="12dp"-->
+        <!--android:layout_height="14.7dp"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginRight="36dp"-->
+        <!--android:background="@drawable/notice_n"-->
+        <!--android:contentDescription="@string/icon_description"-->
+        <!--android:paddingStart="0dp"-->
+        <!--android:paddingTop="@dimen/top_toolbar_location_ic_opt_bottom_padding"-->
+        <!--android:paddingEnd="@dimen/top_toolbar_location_ic_right_padding"-->
+        <!--android:paddingBottom="@dimen/top_toolbar_location_ic_opt_bottom_padding"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:src="@drawable/white_location_ic"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintRight_toLeftOf="@id/btnSearch"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <LinearLayout
+                android:id="@+id/side_finish"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15.7dp"
+                    android:layout_marginRight="17.3dp"
+                    android:background="@drawable/btn_x_k"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/whiteSmoke"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/userInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/side_profile_img"
+                    android:layout_width="53dp"
+                    android:layout_height="53dp"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="7.33dp"
+                    android:layout_marginBottom="10.33dp"
+                    android:padding="1.7dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile_1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/relative_profile_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="17dp"
+                        android:layout_marginTop="12dp">
+
+                        <TextView
+                            android:id="@+id/profile_review"
+                            style="@style/MoaFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17.3dp"
+                            android:text="리뷰"
+                            android:textColor="#7f7f7f"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/profile_review_cnt"
+                            style="@style/MoaFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.7dp"
+                            android:layout_toRightOf="@+id/profile_review"
+                            android:text="128"
+                            android:textColor="#ff794c"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/profile_review_centerline"
+                            android:layout_width="0.33dp"
+                            android:layout_height="14dp"
+                            android:layout_marginLeft="14dp"
+                            android:layout_toRightOf="@+id/profile_review_cnt"
+                            android:background="#999999" />
+
+                        <TextView
+                            android:id="@+id/profile_agree"
+                            style="@style/MoaFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15.3dp"
+                            android:layout_toRightOf="@+id/profile_review_centerline"
+                            android:text="받은공감"
+                            android:textColor="#7f7f7f"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/profile_agree_cnt"
+                            style="@style/MoaFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4.7dp"
+                            android:layout_toRightOf="@+id/profile_agree"
+                            android:text="42"
+                            android:textColor="#ff794c"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/side_profile_click"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp">
+
+                        <TextView
+                            android:id="@+id/profile_name_check"
+                            style="@style/MoaFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="17.33dp"
+                            android:text="DJ.DUCK"
+                            android:textColor="#121212"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="7dp"
+                            android:layout_height="14dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="13dp"
+                            android:layout_toRightOf="@+id/profile_name_check"
+                            android:background="@drawable/arrow_2_right" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/loginOrSignUpLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="7.33dp"
+                    android:text="로그인하면 엄청난 적립금 혜택이 팡팡!!"
+                    android:textColor="#4f4f4f"
+                    android:textSize="13.3sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btnlogin"
+                        style="@style/MoaFont"
+                        android:layout_width="166.7dp"
+                        android:layout_height="46.7dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="13.3dp"
+                        android:layout_marginTop="28.5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/common_white_coral_style_10"
+                        android:stateListAnimator="@null"
+                        android:text="로그인"
+                        android:textColor="@color/coral"
+                        android:textSize="13.3sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnSignUp"
+                        style="@style/MoaFont"
+                        android:layout_width="166.7dp"
+                        android:layout_height="46.7dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="6.7dp"
+                        android:layout_marginTop="28.5dp"
+                        android:layout_marginRight="13.3dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/common_radius_coral_button_form"
+                        android:stateListAnimator="@null"
+                        android:text="회원가입"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13.3sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/linkWater" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#FFFFFF">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/time_const"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/time_line"
+                        android:layout_width="26dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="13.7dp"
+                        android:layout_marginTop="14.33dp"
+                        android:src="@drawable/timeline"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/del"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7.3dp"
+                        android:layout_toRightOf="@id/time_line"
+                        android:text="타임라인"
+                        android:textColor="#4f4f4f"
+                        android:textSize="12.7sp"
+                        app:layout_constraintBottom_toBottomOf="@id/time_line"
+                        app:layout_constraintLeft_toRightOf="@id/time_line"
+                        app:layout_constraintTop_toTopOf="@id/time_line" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/side_favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/time_const"
+                    android:layout_marginLeft="71.7dp"
+                    android:layout_marginTop="16.7dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/find"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bookmark"
+                        android:textColor="#7f7f7f"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/cnt_favorite"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/find"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginBottom="16.7dp"
+                        android:text="99"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/block"
+                        android:layout_width="0.33dp"
+                        android:layout_height="39dp"
+                        android:layout_marginTop="58dp"
+                        android:background="@color/linkWater" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/side_review_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/time_const"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="16.7dp"
+                    android:layout_marginRight="77dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/find2"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="리뷰 관리"
+                        android:textColor="#7f7f7f"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/cnt_review"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/find2"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="11dp"
+                        android:text="10"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/linkWater" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+
+                    android:id="@+id/side_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+
+                    <ImageView
+                        android:id="@+id/orderlist"
+                        android:layout_width="26dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13.7dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/orderlist" />
+
+                    <TextView
+                        android:id="@+id/order"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@id/orderlist"
+                        android:text="주문내역"
+                        android:textColor="#4f4f4f"
+                        android:textSize="12.7sp" />
+
+                    <ImageView
+                        android:id="@+id/cir2"
+                        style=""
+                        android:layout_width="13.33dp"
+                        android:layout_height="13.33dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30.33dp" />
+
+                    <TextView
+                        android:id="@+id/cnt_order"
+                        style="@style/MoaFont"
+                        android:layout_width="24dp"
+                        android:layout_height="14dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="27dp"
+                        android:background="@drawable/side_main_coral_number"
+                        android:gravity="center"
+                        android:text="333"
+                        android:textColor="@color/white"
+                        android:textSize="9.33sp" />
+
+                    <ImageView
+                        android:layout_width="7dp"
+                        android:layout_height="14dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="13.3dp"
+                        android:src="@drawable/arrow_2_right" />
+
+                    <TextView
+                        android:id="@+id/line2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.33dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/linkWater" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/side_reservation"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+
+                    <ImageView
+                        android:id="@+id/reserve"
+                        android:layout_width="26dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13.7dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/reservationlist" />
+
+                    <TextView
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="7.3dp"
+                        android:layout_toRightOf="@id/reserve"
+                        android:text="예약 내역"
+                        android:textColor="#4f4f4f"
+                        android:textSize="12.7sp" />
+
+
+                    <TextView
+                        style="@style/MoaFont"
+                        android:layout_width="24dp"
+                        android:layout_height="14dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="27dp"
+                        android:background="@drawable/side_main_coral_number"
+                        android:gravity="center"
+                        android:text="333"
+                        android:textColor="@color/white"
+                        android:textSize="9.33sp" />
+
+                    <ImageView
+                        android:layout_width="7dp"
+                        android:layout_height="14dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="13.3dp"
+                        android:src="@drawable/arrow_2_right" />
+
+                    <TextView
+                        android:id="@+id/reserveline"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.33dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/linkWater" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/side_coupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+
+                    <ImageView
+                        android:id="@+id/coupon"
+                        android:layout_width="26dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13.7dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/new_coupon" />
+
+                    <TextView
+                        android:id="@+id/couponbox"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="6dp"
+                        android:layout_toRightOf="@id/coupon"
+                        android:text="쿠폰함"
+                        android:textColor="#4f4f4f"
+                        android:textSize="12.7sp" />
+
+                    <ImageView
+                        android:id="@+id/couponcir"
+                        android:layout_width="13.33dp"
+                        android:layout_height="13.33dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30.33dp" />
+
+                    <TextView
+                        android:id="@+id/cnt_coupon"
+                        style="@style/MoaFont"
+                        android:layout_width="24dp"
+                        android:layout_height="14dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="27dp"
+                        android:background="@drawable/side_main_coral_number"
+                        android:gravity="center"
+                        android:text="333"
+                        android:textColor="@color/white"
+                        android:textSize="9.33sp" />
+
+                    <ImageView
+                        android:layout_width="7dp"
+                        android:layout_height="14dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="13.3dp"
+                        android:src="@drawable/arrow_2_right" />
+
+                    <TextView
+                        android:id="@+id/line3"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.33dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/linkWater" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/side_event"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+
+                    <ImageView
+                        android:id="@+id/megaphone"
+                        android:layout_width="26dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13.7dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/event" />
+
+                    <TextView
+                        android:id="@+id/event"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="7.7dp"
+                        android:layout_toRightOf="@id/megaphone"
+                        android:text="이벤트/공지사항"
+                        android:textColor="#4f4f4f"
+                        android:textSize="12.7sp" />
+
+                    <ImageView
+                        android:id="@+id/cir4"
+                        android:layout_width="13.33dp"
+                        android:layout_height="13.33dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30.33dp" />
+
+                    <TextView
+                        android:id="@+id/cnt_event"
+                        style="@style/MoaFont"
+                        android:layout_width="24dp"
+                        android:layout_height="14dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="27dp"
+                        android:background="@drawable/side_main_coral_number"
+                        android:gravity="center"
+                        android:text="333"
+                        android:textColor="@color/white"
+                        android:textSize="9.33sp" />
+
+                    <ImageView
+                        android:layout_width="7dp"
+                        android:layout_height="14dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="13.3dp"
+                        android:src="@drawable/arrow_2_right" />
+
+                    <TextView
+                        android:id="@+id/line4"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.33dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/linkWater" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/side_customercenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+
+                    <ImageView
+                        android:id="@+id/headset"
+                        android:layout_width="26dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13.7dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/servicecenter" />
+
+                    <TextView
+                        android:id="@+id/customer"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="7.3dp"
+                        android:layout_toRightOf="@id/headset"
+                        android:text="고객센터"
+                        android:textColor="#4f4f4f"
+                        android:textSize="12.7sp" />
+
+                    <TextView
+                        android:id="@+id/cnt_customer"
+                        style="@style/MoaFont"
+                        android:layout_width="24dp"
+                        android:layout_height="14dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginRight="27dp"
+                        android:background="@drawable/side_main_coral_number"
+                        android:gravity="center"
+                        android:text="333"
+                        android:textColor="@color/white"
+                        android:textSize="9.33dp" />
+
+                    <ImageView
+                        android:layout_width="7dp"
+                        android:layout_height="14dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="13.3dp"
+                        android:src="@drawable/arrow_2_right" />
+
+                    <TextView
+                        android:id="@+id/line5"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.33dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/linkWater" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/side_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+
+                    <ImageView
+                        android:id="@+id/settings"
+                        android:layout_width="26dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13.7dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_setting" />
+
+                    <TextView
+                        android:id="@+id/establish"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@id/settings"
+                        android:text="설정"
+                        android:textColor="#4f4f4f"
+                        android:textSize="12.7sp" />
+
+
+                    <ImageView
+                        android:layout_width="7dp"
+                        android:layout_height="14dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="13.3dp"
+                        android:src="@drawable/arrow_2_right" />
+
+
+                    <TextView
+                        android:id="@+id/line6"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.33dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/linkWater" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/IDESTABLISH"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/id"
+                        android:layout_width="26dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="13.7dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/idsetting" />
+
+                    <TextView
+                        android:id="@+id/idesta"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="7.3dp"
+                        android:layout_toRightOf="@id/id"
+                        android:text="@string/account_setting"
+                        android:textColor="#4f4f4f"
+                        android:textSize="12.7sp" />
+
+                    <ImageView
+                        android:layout_width="7dp"
+                        android:layout_height="14dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="13.3dp"
+                        android:src="@drawable/arrow_2_right" />
+
+                    <TextView
+                        android:id="@+id/line7"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.33dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/linkWater" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="shunshade">#ff9b4c</color>
+    <color name="transparent">#00000000</color>
+    <color name="atlantis">#abcc3a</color>
+    <color name="white">#ffffff</color>
+    <color name="whiteSmoke">#f8f8f8</color>
+    <color name="whisper">#eaeaea</color>
+    <color name="goldenTainoi">#ffc24c</color>
+    <color name="selectiveYellow">#ffbb02</color>
+    <color name="mySin">#ffad4c</color>
+    <color name="richGold">#9d521a</color>
+    <color name="summerSky">#18b0e2</color>
+    <color name="coral">#ff794c</color>
+    <color name="sunsetOrange">#fa504d</color>
+    <color name="lightGray">#d3d3d3</color>
+    <color name="ghost">#c0c0c2</color>
+    <color name="pinkSwan">#b6b6b6</color>
+    <color name="gainsboro">#e1e1e1</color>
+    <color name="zambezi">#5f5f5f</color>
+    <color name="dimGray">#717171</color>
+    <color name="grey">#7c7c7c</color>
+    <color name="nobel">#969696</color>
+    <color name="linkWater">#cccccc</color>
+    <color name="darkGray">#b0b0b0</color>
+    <color name="matterhorn">#505050</color>
+    <color name="charcoal">#414141</color>
+    <color name="eclipse">#404040</color>
+    <color name="matterhorn51">#515151</color>
+    <color name="black">#000000</color>
+    <color name="pacificBlue">#00A8C6</color>
+    <color name="heather">#b3b4b5</color>
+    <color name="silver">#bbbaba</color>
+    <color name="suvaGrey">#8a8a8a</color>
+    <color name="hong">#e13748</color>
+    <color name="gray98">#989797</color>
+    <color name="gray78">#787878</color>
+    <color name="color_343434">#343434</color>
+    <color name="color_545454">#545454</color>
+    <color name="color_565656">#565656</color>
+    <color name="color_989898">#989898</color>
+    <color name="light_blue">#15aeca</color>
+    <color name="light_coral">#ff8d5a</color>
+    <color name="grayb1">#b1b1b1</color>
+
+
+
+    <color name="line_color">#c2c2c2</color>
+    <color name="gray95">#f2f2f2</color>
+
+    <!-- 주문 내역 -->
+    <color name="item_order_history_order_type_wait_bg">#fff3da</color>
+    <color name="item_order_history_order_type_wait">#ff9b4c</color>
+</resources>

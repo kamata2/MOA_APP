@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/whiteSmoke"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_data_form_cover"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:paddingBottom="23dp">
+        
+        <com.moaPlatform.moa.util.custom.CustomEditText
+            android:id="@+id/editPhoneNumber"
+            android:layout_width="682px"
+            android:layout_height="110px"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            android:hint="휴대전화 번호 입력 (-제외)"
+            android:background="@drawable/common_edit_text_form"/>
+
+        <com.moaPlatform.moa.util.custom.CustomButton
+            android:layout_width="234px"
+            android:layout_height="93px"
+            android:text="인증받기"
+            android:background="@color/coral"
+            android:textColor="@color/white"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editPhoneNumber"
+            app:layout_constraintBottom_toBottomOf="@+id/editPhoneNumber"/>
+
+        <com.moaPlatform.moa.util.custom.CustomEditText
+            android:id="@+id/editCertifiedNumber"
+            android:layout_width="682px"
+            android:layout_height="110px"
+            app:layout_constraintTop_toBottomOf="@+id/editPhoneNumber"
+            android:layout_marginTop="7dp"
+            android:hint="인증번호 입력"/>
+
+        <com.moaPlatform.moa.util.custom.CustomButton
+            android:id="@+id/btnCertified"
+            android:layout_width="234px"
+            android:layout_height="93px"
+            android:background="@color/coral"
+            android:textColor="@color/white"
+            android:text="인증"
+            app:layout_constraintTop_toTopOf="@+id/editCertifiedNumber"
+            app:layout_constraintBottom_toBottomOf="@+id/editCertifiedNumber"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <com.moaPlatform.moa.util.custom.CustomButton
+            android:layout_width="939px"
+            android:layout_height="93px"
+            app:layout_constraintTop_toBottomOf="@+id/editCertifiedNumber"
+            android:layout_marginTop="8dp"
+            android:text="변경 완료"
+            android:textColor="@color/white"
+            android:background="@color/darkGray" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

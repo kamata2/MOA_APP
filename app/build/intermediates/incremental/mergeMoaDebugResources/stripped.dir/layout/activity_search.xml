@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.moaPlatform.moa.util.custom_view.CommonTitleView
+        android:id="@+id/commonTitleSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputStoreKeyword"
+        style="@style/MoaFont"
+        android:layout_width="match_parent"
+        android:layout_height="46.7dp"
+        android:layout_marginStart="13.3dp"
+        android:layout_marginTop="@dimen/location_setting_input_address_top_space"
+        android:layout_marginEnd="13.3dp"
+        android:background="@drawable/common_edit_text_form"
+        android:hint="@string/storesearch_input_keyword_hint"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingStart="@dimen/space_9"
+        android:paddingEnd="@dimen/location_setting_input_address_padding_right"
+        android:textColor="@color/black"
+        android:textSize="13.3sp"
+        app:layout_constraintTop_toBottomOf="@id/commonTitleSearch"
+        tools:targetApi="o" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btnAddressSearch"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/inputStoreKeyword"
+        app:layout_constraintRight_toRightOf="@id/inputStoreKeyword"
+        app:layout_constraintTop_toTopOf="@id/inputStoreKeyword">
+
+        <ImageView
+            android:layout_width="@dimen/location_setting_search_ic_size"
+            android:layout_height="@dimen/location_setting_search_ic_size"
+            android:layout_marginEnd="@dimen/space_9"
+            android:background="@color/white"
+            android:contentDescription="@string/underline_description"
+            android:scaleType="fitXY"
+            android:src="@drawable/search"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewSearchFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:paddingStart="13.3dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintTop_toBottomOf="@id/inputStoreKeyword">
+
+        <RadioGroup
+            android:id="@+id/rbRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="24.3dp"
+            android:layout_marginEnd="9dp"
+            android:background="@color/white"
+            android:checkedButton="@id/rbDelivery"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/rbDelivery"
+                style="@style/CoralRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="-5dp"
+                android:text="배달"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rbEatOut"
+                style="@style/CoralRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:drawablePadding="-5dp"
+                android:text="플레이스"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/rbTakeOut"
+                style="@style/CoralRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:drawablePadding="-5dp"
+                android:text="테이크아웃"
+                android:textSize="12sp" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btFilter"
+            style="@style/BlackColorBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="13.3dp"
+            android:background="@drawable/common_edit_text_form"
+            android:drawableStart="@drawable/search_filter_ic"
+            android:drawablePadding="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:stateListAnimator="@null"
+            android:text="테이크아웃"
+            android:textSize="12sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/middle_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginLeft="13.3dp"
+        android:layout_marginTop="13.3dp"
+        android:layout_marginRight="13.3dp"
+        android:background="@color/linkWater"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewSearchFilter" />
+
+    <RelativeLayout
+        android:id="@+id/rlSearchEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewSearchFilter">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/review_image"
+                android:layout_width="96.7dp"
+                android:layout_height="85dp"
+                android:layout_gravity="center"
+                android:background="@drawable/searchimg" />
+
+            <TextView
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/review_image"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="19.7dp"
+                android:text="해당하는 매장이 없습니다."
+                android:textColor="@color/gray98"
+                android:textSize="13.3sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlSearchHistoryEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewSearchFilter">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/search_image"
+                android:layout_width="92.7dp"
+                android:layout_height="79.3dp"
+                android:layout_gravity="center"
+                android:background="@drawable/item_store_search_empty_ic" />
+
+            <TextView
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19.7dp"
+                android:text="최근 검색어가 없습니다."
+                android:textColor="@color/gray98"
+                android:textSize="13.3sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llSearchHistoryContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/common_margin_10"
+        android:paddingEnd="@dimen/common_margin_10"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewSearchFilter">
+
+        <TextView
+            style="@style/MoaFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="최근 검색어"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSearchHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:paddingBottom="20dp"
+            tools:listitem="@layout/search_history_item" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="@color/pinkSwan"
+            android:contentDescription="@string/underline_description" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:paddingTop="13.3dp"
+            android:paddingBottom="13.3dp">
+
+            <TextView
+                android:id="@+id/tvAllRemove"
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="0dp"
+                android:text="전체 삭제"
+                android:textSize="10.7sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSearchStoreList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/middle_line"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStoreSearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/middle_line" />
+
+    <com.moaPlatform.moa.util.custom_view.CommonLoadingView
+        android:id="@+id/viewSearchLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

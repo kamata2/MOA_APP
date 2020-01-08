@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="313.33dp"
+        android:layout_height="158.33dp"
+        android:background="@drawable/common_dialog_form_cover"
+        android:layout_centerHorizontal="true"
+        >
+        <LinearLayout
+            android:id="@+id/dlgclose"
+            android:layout_width="30dp"
+            android:layout_height="35dp">
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10.67dp"
+            android:background="@drawable/btn_x_k"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="13.33dp"
+            />
+
+
+        </LinearLayout>
+        <TextView
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/pro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="프로필 사진 변경하기"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#1f1f1f"
+            style="@style/MoaFont"
+            />
+
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="#b6b6b6"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/pro"
+            android:layout_marginLeft="13.33dp"
+            android:layout_marginRight="13.33dp"
+            android:layout_marginTop="11.67dp"
+            />
+        
+        <RelativeLayout
+            android:id="@+id/dlgphoto"
+            android:layout_below="@+id/line"
+            android:layout_width="66.67dp"
+            android:layout_height="66.67dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="36.67dp"
+            android:background="@drawable/side_profile_fixc"
+            android:layout_alignParentLeft="true"
+            >
+            
+            <ImageView
+                android:id="@+id/ca"
+                android:layout_width="21dp"
+                android:layout_height="19.3dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/addphoto"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:id="@+id/take_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="사진촬영"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#797979"
+                android:layout_marginTop="42.33dp"
+                style="@style/MoaFont"
+                />
+            
+
+        </RelativeLayout> 
+        
+        <RelativeLayout
+            android:id="@+id/dlgalbum"
+            android:layout_below="@id/line"
+            android:layout_width="66.67dp"
+            android:layout_height="66.67dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="36.67dp"
+            android:background="@drawable/side_profile_fixc"
+            android:layout_centerHorizontal="true"
+            >
+
+            <ImageView
+                android:id="@+id/ph"
+                android:layout_width="21dp"
+                android:layout_height="19.3dp"
+                android:background="@drawable/album"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="사진앨범"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#797979"
+                android:layout_marginTop="42.33dp"
+                style="@style/MoaFont"
+                />
+           
+        </RelativeLayout>    
+        
+        <RelativeLayout
+            android:id="@+id/delpic"
+            android:layout_below="@id/line"
+            android:layout_width="66.67dp"
+            android:layout_height="66.67dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="36.67dp"
+            android:background="@drawable/side_profile_fixc"
+            android:layout_alignParentRight="true"
+            >
+
+            <ImageView
+                android:id="@+id/tr"
+                android:layout_width="21dp"
+                android:layout_height="19.3dp"
+                android:background="@drawable/delete"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="삭제"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#797979"
+                android:layout_marginTop="42.33dp"
+                style="@style/MoaFont"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

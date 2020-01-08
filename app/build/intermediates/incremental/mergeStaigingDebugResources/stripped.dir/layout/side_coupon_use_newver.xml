@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="13.3dp"
+    android:paddingRight="13.3dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11.3dp"
+        android:background="@drawable/border_rect_0_0_0_0_ffffff_1dp_c5c5c5"
+        android:gravity=""
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/used"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.3dp"
+            android:layout_marginRight="10.3dp"
+            android:text="사용 완료"
+            android:textColor="#b1b1bb"
+            android:textSize="10.7sp"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/couponTitle"
+            style="@style/MoaFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="GOEAT 첫 만남 감사 쿠폰"
+            android:textColor="@color/black"
+            android:textSize="13.3sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/coupon_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.7dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/couponTitle">
+
+            <TextView
+                android:id="@+id/couponPrice"
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="5000원"
+                android:textColor="@color/coral"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/coupon_price_discount"
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="할인 쿠폰"
+                android:textColor="@color/coral"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/coupon_use_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/coupon_discount"
+            android:layout_marginTop="10.7dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/coupon_discount">
+
+            <TextView
+                android:id="@+id/couponDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018.07.25   23:59까지"
+                android:textColor="#9b9b9b"
+                android:textSize="12.7sp" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/coupon_use_way"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.3dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginRight="0.3dp"
+            android:layout_marginBottom="0.3dp"
+            android:background="@color/whiteSmoke"
+            android:paddingBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/coupon_use_day">
+
+            <LinearLayout
+                android:id="@+id/coupon_deliver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="배달 카테고리 전체 주문 적용"
+                    android:textColor="@color/black"
+                    android:textSize="13.3sp" />
+
+                <ImageView
+                    android:id="@+id/arrow_down2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="7dp"
+                    android:background="@drawable/arrow_down_2" />
+
+                <ImageView
+                    android:id="@+id/arrow_up2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="7dp"
+                    android:background="@drawable/arrow_up_2"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/coupon_hide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/coupon_deliver">
+
+                <TextView
+                    android:id="@+id/couponType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="첫 주문 1회 사용 가능"
+                    android:textColor="#636363"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/couponLimite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1만원 이상 주문 시 사용 가능"
+                    android:textColor="#636363"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/couponType" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

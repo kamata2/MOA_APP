@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+        android:id="@+id/quantityDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:responsiveTextSize="62"
+        android:text="-"
+        android:paddingLeft="22px"
+        android:paddingRight="22px"
+        android:paddingTop="3px"
+        android:paddingBottom="3px"
+        android:textColor="@color/pinkSwan"
+        android:background="@drawable/quantity_control_down_style"/>
+
+    <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+        android:id="@+id/quantityCount"
+        android:layout_width="120px"
+        android:layout_height="0dp"
+        android:text="1"
+        app:responsiveTextSize="42"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:background="@drawable/quantity_control_count_style"
+        app:layout_constraintLeft_toRightOf="@+id/quantityDown"
+        app:layout_constraintTop_toTopOf="@+id/quantityDown"
+        app:layout_constraintBottom_toBottomOf="@+id/quantityDown"/>
+    
+    <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+        android:id="@+id/quantityUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:responsiveTextSize="62"
+        android:text="+"
+        android:paddingLeft="22px"
+        android:paddingRight="22px"
+        android:paddingTop="3px"
+        android:paddingBottom="3px"
+        android:textColor="@color/pinkSwan"
+        android:background="@drawable/quantity_control_up_style"
+        app:layout_constraintLeft_toRightOf="@+id/quantityCount"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

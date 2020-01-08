@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/side_relative_event"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/image_event_row"
+        android:layout_width="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:layout_height="156.7dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_event_row"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="13.3dp"
+        android:layout_marginRight="13.3dp"
+        >
+
+        <TextView
+            android:id="@+id/start_date_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="2018.12.01(토)"
+            android:textColor="@color/black"
+            android:textSize="14.3sp"
+            style="@style/MoaFont"/>
+
+        <TextView
+            android:id="@+id/middle_date_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" ~ "
+            android:layout_toRightOf="@id/start_date_event"
+            android:layout_marginLeft="6dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:textSize="14.3sp" />
+
+        <TextView
+            android:id="@+id/end_date_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="2019.01.01(화)"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:textSize="14.3sp"
+            android:layout_toRightOf="@id/middle_date_event"
+            style="@style/MoaFont"/>
+
+
+        <ImageView
+            android:id="@+id/event_new_icon"
+            android:layout_width="13.3dp"
+            android:layout_height="13.3dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/new_icon" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

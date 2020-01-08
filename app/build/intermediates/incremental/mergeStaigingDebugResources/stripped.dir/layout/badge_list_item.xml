@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveConstraintLayout
+        android:layout_width="1050px"
+        android:layout_height="223px"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15px"
+        android:background="@drawable/common_data_form_cover">
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveConstraintLayout
+            android:id="@+id/badgeHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/badge_item_header"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="7px"
+            android:layout_marginLeft="7px"
+            android:layout_marginRight="7px">
+
+            <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+                android:id="@+id/badgeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="모아 가족"
+                app:responsiveTextSize="36"
+                android:textColor="@color/coral"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="230px"
+                android:layout_marginTop="10px"
+                android:layout_marginBottom="10px"/>
+
+            <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+                android:id="@+id/badgeSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/ 정회원 가입"
+                app:responsiveTextSize="30"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/badgeTitle"
+                app:layout_constraintTop_toTopOf="@+id/badgeTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/badgeTitle"
+                android:layout_marginLeft="20px"/>
+
+            <ImageView
+                android:id="@+id/badgeQuestion"
+                android:layout_width="@dimen/achievement_list_item_question_size"
+                android:layout_height="@dimen/achievement_list_item_question_size"
+                android:background="@drawable/questionmark_o"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="@dimen/achievement_list_item_question_margin_right"
+                android:contentDescription="@string/achievement_list_item_question_ic_description"/>
+
+        </com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveConstraintLayout>
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveImageView
+            android:id="@+id/badgeIcon"
+            android:layout_width="139px"
+            android:layout_height="139px"
+            android:src="@drawable/badge_signup"
+            android:scaleType="fitXY"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="57px"/>
+
+        <com.moaPlatform.moa.util.custom_view.range_bar.RangeBar
+            android:id="@+id/badgeRangeBar"
+            android:layout_width="801px"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/badgeIcon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="42px"
+            android:layout_marginBottom="10px">
+        </com.moaPlatform.moa.util.custom_view.range_bar.RangeBar>
+
+    </com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

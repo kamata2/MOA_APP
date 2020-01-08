@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/coupon_coral"
+        android:layout_width="match_parent"
+        android:layout_height="128.3dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/couponlist"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.3dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/couponTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:text="[첫 만남 감사 쿠폰]"
+                android:textColor="@color/coral"
+                android:textSize="13.3dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/couponDay"
+                android:layout_marginTop="3.3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="27dp"
+                android:text="2018.07.25 23:59까지"
+                android:textColor="@color/matterhorn51"
+                android:textSize="8dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/couponPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12.3dp"
+                android:text="5,000원"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/couponPattern"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/sale_coupon"
+                android:textColor="@color/black"
+                android:textSize="10.7dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/couponType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="27dp"
+                    android:text="첫 주문 1회 사용 가능"
+                    android:textColor="@color/matterhorn"
+                    android:textSize="@dimen/space_9"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_below="@+id/couponType"
+                    android:id="@+id/couponLimite"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="27dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1만원 이상 주문시 사용 가능"
+                    android:textColor="@color/matterhorn"
+                    android:textSize="@dimen/space_9"
+                    android:textStyle="bold" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+            android:id="@+id/coralLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:layout_marginLeft="10.3dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="27dp"
+            android:background="@color/coral" />
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_9">
+
+            <TextView
+                android:id="@+id/couponInsert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:text="배달 카테고리 전체 주문 적용"
+                android:textColor="@color/matterhorn"
+                android:textSize="10dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="27dp"
+                android:id="@+id/used"
+                android:layout_width="45.3dp"
+                android:layout_height="14.3dp"
+                android:background="@drawable/couponlist_3"
+                android:gravity="center"
+                android:text="사용완료"
+                android:textColor="@color/white"
+                android:textSize="9.3dp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

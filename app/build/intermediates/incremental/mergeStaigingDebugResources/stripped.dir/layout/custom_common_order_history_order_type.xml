@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvCommonOrderType"
+        style="@style/MoaFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_order_history_order_type_order_reception"
+        android:paddingStart="@dimen/common_order_history_order_type_start_end_space"
+        android:paddingTop="@dimen/common_order_history_order_type_top_end_bottom"
+        android:paddingEnd="@dimen/common_order_history_order_type_start_end_space"
+        android:paddingBottom="@dimen/common_order_history_order_type_top_end_bottom"
+        android:textColor="@color/coral"
+        android:textSize="@dimen/common_order_history_order_type_text_size"
+        android:textStyle="bold"
+        tools:text="주문 접수" />
+
+</LinearLayout>

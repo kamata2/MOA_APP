@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/common_dialog_form_cover">
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="36.7dp">
+
+        <RelativeLayout
+            android:id="@+id/rlCloseContainer"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="13.33dp">
+
+            <ImageButton
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/btn_x_k" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/MoaFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:text="@string/one_button_dialog_title"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/underLine"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/headerLayout"
+        android:layout_marginStart="13.33dp"
+        android:layout_marginEnd="13.33dp"
+        android:background="@color/pinkSwan"
+        android:contentDescription="@string/underline_description" />
+
+
+    <RelativeLayout
+        android:id="@+id/dialogText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24.33dp">
+
+        <ImageView
+            android:id="@+id/finger_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fingerprint_s" />
+
+        <TextView
+            android:id="@+id/dialogContent"
+            style="@style/MoaFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="11.7dp"
+            android:layout_toRightOf="@id/finger_image"
+            android:lineSpacingExtra="2dp"
+            android:text="지문 센서를 터치해 주세요."
+            android:textColor="@color/color_565656"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/cancel_finger"
+        style="@style/MoaFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialogText"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="18.3dp"
+        android:layout_marginBottom="24.7dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingStart="27.7dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="27.7dp"
+        android:paddingBottom="8dp"
+        android:text="취소"
+        android:textColor="@color/coral"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

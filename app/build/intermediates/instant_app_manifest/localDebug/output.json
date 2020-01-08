@@ -1,0 +1,1 @@
+[{"outputType":{"type":"INSTANT_APP_MANIFEST"},"apkData":{"type":"MAIN","splits":[],"versionCode":1022,"versionName":"1.0.2.2","enabled":true,"outputFile":"app-local-debug.apk","fullName":"localDebug","baseName":"local-debug"},"path":"AndroidManifest.xml","properties":{"packageId":"com.moaPlatform.moaLocal","split":"","minSdkVersion":"19"}}]

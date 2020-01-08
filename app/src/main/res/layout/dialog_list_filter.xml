@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="241.7dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            >
+            <RelativeLayout
+                android:id="@+id/rlListFilterClose"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="13.3dp"
+                >
+                <ImageView
+                    android:layout_width="12.7dp"
+                    android:layout_height="13.3dp"
+                    android:background="@drawable/btn_x_k"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvListFilterTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:gravity="center"
+                android:letterSpacing="-0.02"
+                android:text="@string/dialog_list_filter_title"
+                android:textStyle="bold"
+                android:textColor="#343434"
+                android:textSize="15sp"
+                style="@style/MoaFont"/>
+
+            <RelativeLayout
+                android:id="@+id/tvListFilterComplete"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="13.3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:text="@string/dialog_list_filter_complete"
+                android:textColor="@color/coral"
+                android:textSize="13sp"
+                style="@style/MoaFont"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewListFilterTitleDivider"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="#dbdbdb" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16.7dp"
+            android:paddingBottom="16.7dp"
+            android:layout_below="@id/viewListFilterTitleDivider"
+            >
+            <View
+                android:id="@+id/viewListFilterLeftContainerDivider"
+                android:layout_width="0.3dp"
+                android:layout_height="169dp"
+                android:background="#dbdbdb"
+                android:layout_centerHorizontal="true"
+                />
+
+            <LinearLayout
+                android:id="@+id/llListFilterLeftContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toLeftOf="@id/viewListFilterLeftContainerDivider"
+                >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llListFilterRightContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toRightOf="@id/viewListFilterLeftContainerDivider"
+                >
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

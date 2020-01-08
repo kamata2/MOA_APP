@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/wallet_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="13.3dp"
+        android:paddingTop="20dp"
+        android:paddingRight="13.3dp">
+
+        <com.moaPlatform.moa.util.custom_view.CommonEditTextErrorMsgView
+            android:id="@+id/viewWalletPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.moaPlatform.moa.util.custom_view.CommonEditTextErrorMsgView
+            android:id="@+id/viewWalletPasswordCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.7dp"/>
+
+        <com.moaPlatform.moa.util.custom_view.CommonEditTextErrorMsgView
+            android:id="@+id/viewWalletBirthDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.7dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/linkWater" />
+
+        <TextView
+            style="@style/MoaFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="전자지갑 비밀번호와 생년월일을 입력하십시오."
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            style="@style/MoaFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.3dp"
+            android:text="전자지갑 비밀번호는 전자지갑의 복원 용도로 사용되며,"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            style="@style/MoaFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="전자지갑 비밀번호에 대한 설명입니다."
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnJoin"
+        style="@style/CoralBoldStyle"
+        android:layout_width="match_parent"
+        android:layout_height="53.3dp"
+        android:text="다음"
+        android:textSize="16.7dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

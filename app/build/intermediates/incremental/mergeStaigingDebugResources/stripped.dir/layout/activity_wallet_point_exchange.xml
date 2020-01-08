@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.moaPlatform.moa.util.custom_view.CommonTitleView
+        android:id="@+id/commonTitleWalletPointExchange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <ScrollView
+        android:id="@+id/scrollWalletPointExchange"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/commonTitleWalletPointExchange"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:paddingBottom="20dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="50dp">
+
+            <LinearLayout
+                android:id="@+id/llWalletPointExchangeTopContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="@string/wallet_point_exchange_moa_coin"
+                    android:textColor="#ff794c"
+                    android:textSize="13.3sp"
+                    style="@style/MoaFont"/>
+
+                <TextView
+                    android:id="@+id/tvWalletPointExchangeMoaCoin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:textColor="#0c0c0c"
+                    android:textSize="23.3sp"
+                    tools:text="3,000 MOA"
+                    style="@style/MoaFont"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="27dp"
+                    android:background="#dbdbdb" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="@string/wallet_point_exchange_point"
+                    android:textColor="#ff794c"
+                    android:textSize="13.3sp"
+                    style="@style/MoaFont"/>
+
+                <TextView
+                    android:id="@+id/tvWalletPointExchangeMoaPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:textColor="#0c0c0c"
+                    android:textSize="23.3sp"
+                    tools:text="3,000 P"
+                    style="@style/MoaFont"/>
+
+                <TextView
+                    android:id="@+id/tvWalletPointExchangeWon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:textColor="#545454"
+                    android:textSize="13.3sp"
+                    tools:text="(\ 3,000)"
+                    style="@style/MoaFont"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="28dp"
+                    android:background="#e1e1e1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4.7dp"
+                    android:background="#f2f2f2" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="20dp"
+                android:layout_below="@id/llWalletPointExchangeTopContainer"
+                android:orientation="vertical"
+
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="13dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/wallet_point_exchange_sub_title_ratio"
+                        android:textColor="#1f1f1f"
+                        android:textSize="13.3sp"
+                        style="@style/MoaFont"/>
+
+                    <TextView
+                        android:id="@+id/tvWalletPointExchangeRatio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:singleLine="true"
+                        android:textColor="#1f1f1f"
+                        android:textSize="13.3sp"
+                        tools:text="1MOA → 20P"
+                        style="@style/MoaFont"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="13dp">
+
+                    <TextView
+                        android:id="@+id/tvWalletPointExchangeOneDayLimitTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/wallet_point_exchange_one_day_limit"
+                        android:textColor="#1f1f1f"
+                        android:textSize="13.3sp"
+                        style="@style/MoaFont"/>
+
+                    <TextView
+                        android:id="@+id/tvWalletPointExchangeOneDayLimitTotalPoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tvWalletPointExchangeOneDayLimitTitle"
+                        android:singleLine="true"
+                        android:textColor="#1f1f1f"
+                        android:textSize="13.3sp"
+                        tools:text="100,000 P"
+                        style="@style/MoaFont"/>
+
+                    <TextView
+                        android:id="@+id/tvWalletPointExchangeOneDayLimitPoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:singleLine="true"
+                        android:textColor="#1f1f1f"
+                        android:textSize="13.3sp"
+                        tools:text="100,000 P"
+                        style="@style/MoaFont"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginRight="13.3dp"
+                    android:background="#e0e0e0" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="13dp"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/wallet_point_exchange_moa"
+                        android:textColor="#1f1f1f"
+                        android:textSize="13.3sp"
+                        style="@style/MoaFont"/>
+
+                    <TextView
+                        android:id="@+id/tvWalletPointExchangeMax"
+                        android:layout_width="54.7dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/qrcode_input_button"
+                        android:gravity="center"
+                        android:text="@string/wallet_point_exchange_max"
+                        android:textColor="@color/coral"
+                        android:textSize="13.3sp"
+                        style="@style/MoaFont"/>
+
+                    <EditText
+                        android:id="@+id/etWalletPointExchangeInputMoaCoin"
+                        android:layout_width="140dp"
+                        android:layout_height="30dp"
+                        android:layout_toLeftOf="@id/tvWalletPointExchangeMax"
+                        android:background="@drawable/border_rect_0_0_0_0_ffffff_1dp_b6b6b6"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:hint="@string/wallet_point_exchange_edit_text_hint"
+                        android:singleLine="true"
+                        android:textColor="#343434"
+                        android:layout_marginRight="6.3dp"
+                        android:textColorHint="@color/linkWater"
+                        android:textSize="12sp"
+                        style="@style/MoaFont"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="13dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/wallet_point_exchange_fee"
+                        android:textColor="#1f1f1f"
+                        android:textSize="13.3sp"
+                        style="@style/MoaFont"/>
+
+                    <TextView
+                        android:id="@+id/tvWalletPointExchangeFee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:textColor="#1f1f1f"
+                        android:textSize="13.3sp"
+                        tools:text="11 Moa"
+                        style="@style/MoaFont"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="13dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/wallet_point_exchange_to_be_point"
+                        android:textColor="#1f1f1f"
+                        android:textSize="13.3sp"
+                        style="@style/MoaFont"/>
+
+                    <TextView
+                        android:id="@+id/tvWalletPointExchangeToBePoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:singleLine="true"
+                        android:textColor="#1f1f1f"
+                        android:textSize="13.3sp"
+                        tools:text="10,000 P"
+                        style="@style/MoaFont"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginRight="13.3dp"
+                    android:background="#e0e0e0" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13.3dp"
+                    android:layout_marginEnd="13.3dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical">
+
+                    <CheckBox
+                        android:id="@+id/cbWalletPointExchangeTermsAgree"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:button="@null"
+                        android:drawableStart="@drawable/check_box_coral"
+                        android:text="@string/wallet_point_exchange_terms_text"
+                        android:layout_centerVertical="true"
+                        android:textSize="13.3sp" />
+
+                    <TextView
+                        android:id="@+id/tvWalletPointExchangeTerms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="13dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        tools:text="@string/wallet_point_exchange_terms"
+                        android:textColor="#ff794c"
+                        android:textSize="12sp"
+                        style="@style/MoaFont"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnWalletPointExchange"
+        style="@style/MoaFont"
+        android:layout_width="match_parent"
+        android:layout_height="53.3dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/select_wallet_point_exchange_terms_agree"
+        android:gravity="center"
+        android:text="포인트 전환하기"
+        android:textColor="@color/white"
+        android:textSize="16.7dp" />
+</RelativeLayout>

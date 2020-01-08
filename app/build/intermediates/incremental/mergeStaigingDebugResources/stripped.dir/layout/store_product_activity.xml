@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteSmoke"
+    tools:context=".delivery_menu.store_product.StoreProductActivity">
+
+    <include
+        android:id="@+id/topToolbar"
+        layout="@layout/top_toolbar" />
+    <View
+        android:id="@+id/topLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/linkWater"
+        app:layout_constraintTop_toBottomOf="@id/topToolbar"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/shoppingCartButton"
+        app:layout_constraintTop_toBottomOf="@+id/topLine">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/common_gainsboro_bottom_line"
+                android:paddingBottom="30dp"
+                android:paddingTop="14dp">
+
+                <ImageView
+                    android:id="@+id/thumbNail"
+                    android:layout_width="@dimen/store_product_thumbnail_width"
+                    android:layout_height="@dimen/store_product_thumbnail_height"
+                    android:layout_marginTop="16dp"
+                    android:contentDescription="@string/underline_description"
+                    android:scaleType="fitXY"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/menu_icon_circle" />
+
+                <TextView
+                    android:id="@+id/productName"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/black"
+                    android:textSize="18.3sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/thumbNail"
+                    tools:text="@string/store_product_name_demo" />
+
+                <TextView
+                    android:id="@+id/productDescription"
+                    style="@style/MoaFont"
+                    android:layout_width="@dimen/store_product_description_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11.7dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="12.7sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/productName"
+                    tools:text="@string/store_product_description" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16.7dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/productDescription">
+
+                    <TextView
+                        android:id="@+id/tvSavePercent"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2.3dp"
+                        android:background="@drawable/shopping_cart_discount_button"
+                        android:paddingStart="7dp"
+                        android:paddingTop="3dp"
+                        android:paddingEnd="7dp"
+                        android:paddingBottom="3dp"
+                        android:textColor="@color/coral"
+                        android:textSize="12sp"
+                        tools:text="적립률 10%" />
+
+                    <TextView
+                        android:id="@+id/additionalDc"
+                        android:background="@drawable/shopping_cart_discount_button_gold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/store_product_additional_dc_margin_right"
+                        android:paddingStart="@dimen/store_product_dc_padding_left_right"
+                        android:paddingTop="@dimen/store_product_dc_padding_top_bottom"
+                        android:paddingEnd="@dimen/store_product_dc_padding_left_right"
+                        android:paddingBottom="@dimen/store_product_dc_padding_top_bottom"
+                        android:textSize="12sp"
+                        android:textColor="@color/goldenTainoi"
+                        style="@style/MoaFont"
+                        tools:text="@string/store_product_additional_dc" />
+
+                    <TextView
+                        android:id="@+id/deliveryDc"
+                        android:background="@drawable/shopping_cart_discount_button_blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/store_product_additional_dc_margin_right"
+                        android:paddingStart="@dimen/store_product_dc_padding_left_right"
+                        android:paddingTop="@dimen/store_product_dc_padding_top_bottom"
+                        android:paddingEnd="@dimen/store_product_dc_padding_left_right"
+                        android:paddingBottom="@dimen/store_product_dc_padding_top_bottom"
+                        android:textSize="12sp"
+                        android:textColor="#15aeca"
+                        style="@style/MoaFont"
+                        tools:text="@string/store_product_delivery_dc" />
+
+                    <TextView
+                        android:id="@+id/deliveryPercentDc"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shopping_cart_discount_button_lightcoral"
+                        android:paddingStart="@dimen/store_product_dc_padding_left_right"
+                        android:paddingTop="@dimen/store_product_dc_padding_top_bottom"
+                        android:paddingEnd="@dimen/store_product_dc_padding_left_right"
+                        android:paddingBottom="@dimen/store_product_dc_padding_top_bottom"
+                        android:textColor="@color/light_coral"
+                        android:textSize="12sp"
+                        tools:text="@string/store_product_delivery_dc" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:paddingTop="36.7dp">
+
+                <TextView
+                    android:id="@+id/quantityName"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginRight="13.3dp"
+                    android:text="@string/store_product_quantity_name"
+                    android:textColor="@color/black"
+                    android:textSize="16.7sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/quantityDown"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/quantityDown" />
+
+                <ImageButton
+                    android:id="@+id/quantityDown"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/quantity_control_down_style"
+                    android:contentDescription="@string/store_product_quantity_control_description"
+                    android:paddingLeft="9dp"
+                    android:paddingTop="14.7dp"
+                    android:paddingRight="9dp"
+                    android:paddingBottom="14.7dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/minus"
+                    app:layout_constraintRight_toLeftOf="@+id/productQuantity"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/productQuantity"
+                    android:layout_width="65dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/quantity_control_count_style"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/coral"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/quantityDown"
+                    app:layout_constraintRight_toLeftOf="@+id/quantityUp"
+                    app:layout_constraintTop_toTopOf="@+id/quantityDown" />
+
+                <ImageButton
+                    android:id="@+id/quantityUp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="13.3dp"
+                    android:background="@drawable/quantity_control_up_style"
+                    android:contentDescription="@string/store_product_quantity_control_description"
+                    android:padding="@dimen/store_product_quantity_padding"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/plus"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/countLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginTop="38dp"
+                    android:background="@color/linkWater"
+                    app:layout_constraintTop_toBottomOf="@id/quantityName" />
+
+                <TextView
+                    android:id="@+id/priceName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13.3dp"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/store_product_price_name"
+                    android:textColor="@color/black"
+                    android:textSize="16.7sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/countLine" />
+
+                <TextView
+                    android:id="@+id/tvStoreProductSingleItemPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="13.3dp"
+                    android:textColor="@color/black"
+                    android:textSize="16.7sp"
+                    android:visibility="gone"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/priceName"
+                    tools:text="35,000원" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/priceRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintTop_toBottomOf="@+id/priceName"
+                    tools:listitem="@layout/store_product_price_item" />
+
+                <View
+                    android:id="@+id/recyclerLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/linkWater"
+                    app:layout_constraintTop_toBottomOf="@id/priceRecyclerView" />
+
+                <TextView
+                    android:id="@+id/selectOption"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="30dp"
+                    android:text="선택 옵션 (2개까지 추가 가능)"
+                    android:textColor="@color/black"
+                    android:textSize="16.7sp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recyclerLine" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/addProductRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/selectOption"
+                    tools:listitem="@layout/store_product_add_product_item_content" />
+
+                <View
+                    android:id="@+id/optionBg"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="4.7dp"
+                    android:background="@color/whiteSmoke"
+                    app:layout_constraintTop_toBottomOf="@id/addProductRecyclerView" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/linkWater"
+                    app:layout_constraintTop_toTopOf="@id/optionBg" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingLeft="13.3dp"
+                    android:paddingTop="20dp"
+                    android:paddingRight="13.3dp"
+                    app:layout_constraintTop_toBottomOf="@+id/optionBg">
+
+                    <TextView
+                        android:id="@+id/orderPriceTitle"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/store_product_order_price_title"
+                        android:textColor="@color/black"
+                        android:textSize="13.3sp" />
+
+                    <TextView
+                        android:id="@+id/orderPriceContent"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/black"
+                        android:textSize="13.3sp"
+                        android:textStyle="bold"
+                        tools:text="@string/store_product_price_item_option_price" />
+
+                    <View
+                        android:id="@+id/orderLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_below="@id/orderPriceTitle"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/linkWater" />
+
+                    <TextView
+                        android:id="@+id/deliveryPriceTitle"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/orderLine"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/store_product_delivery_price_title"
+                        android:textColor="@color/black"
+                        android:textSize="13.3sp" />
+
+                    <TextView
+                        android:id="@+id/deliveryPriceContent"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/orderLine"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/black"
+                        android:textSize="13.3sp"
+                        android:textStyle="bold"
+                        tools:text="@string/store_product_price_item_option_price" />
+
+                    <View
+                        android:id="@+id/deliverLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_below="@id/deliveryPriceContent"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/linkWater" />
+
+                    <TextView
+                        android:id="@+id/salePriceTitle"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/deliverLine"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/store_product_sale_price_title"
+                        android:textColor="@color/black"
+                        android:textSize="13.3sp" />
+
+                    <TextView
+                        android:id="@+id/salePriceContent"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/deliverLine"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/black"
+                        android:textSize="13.3sp"
+                        android:textStyle="bold"
+                        tools:text="4,500원" />
+
+                    <ImageView
+                        android:id="@+id/priceInfoUnderLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@id/salePriceTitle"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/linkWater"
+                        android:contentDescription="@string/underline_description" />
+
+                    <TextView
+                        android:id="@+id/tvStoreProductMinOrderPrice"
+                        style="@style/MoaFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/priceInfoUnderLine"
+                        android:layout_marginTop="43.3dp"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/coral"
+                        android:textSize="13.3sp"
+                        android:textStyle="bold"
+                        tools:text="최소 주문 금액 3,000원 이상" />
+
+                    <LinearLayout
+                        android:id="@+id/priceParent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvStoreProductMinOrderPrice"
+                        android:layout_marginTop="17dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/totalOrderPriceTitle"
+                            style="@style/MoaFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="@string/store_product_total_price_title"
+                            android:textColor="@color/black"
+                            android:textSize="20.2sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/totalOrderPriceContent"
+                            style="@style/MoaFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/priceInfoUnderLine"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginLeft="13.3dp"
+                            android:textColor="@color/black"
+                            android:textSize="27sp"
+                            android:textStyle="bold"
+                            tools:text="4,500원" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/priceParent"
+                        android:layout_marginTop="13.3dp"
+                        android:layout_marginBottom="43.3dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/savePoint"
+                            style="@style/MoaFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="13.3sp"
+                            tools:text="@string/store_product_save_point_title" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/shoppingCartButton"
+        style="@style/MoaFont"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/common_bottom_button_height"
+        android:background="@color/selectiveYellow"
+        android:text="@string/store_product_shopping_cart_button"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16.7sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/orderButton" />
+
+    <Button
+        android:id="@+id/orderButton"
+        style="@style/CoralBoldStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/common_bottom_button_height"
+        android:text="@string/store_product_order_button"
+        android:textSize="16.7sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/shoppingCartButton"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

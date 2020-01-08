@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteSmoke"
+    tools:context=".delivery_menu.store_detail.StoreDetailActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/whiteSmoke">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/viewCollapsing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_collapseMode="parallax"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <!-- 가게 메인 배경-->
+                    <ImageView
+                        android:id="@+id/ivStoreThumbnail"
+                        android:layout_width="match_parent"
+                        android:layout_height="89dp"
+                        android:background="@color/white"
+                        android:contentDescription="@string/underline_description"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/store_detail_main_bg_80"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- 가게 정보 그룹-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/storeInfoGroup"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="90dp"
+                        android:background="@color/white"
+                        android:paddingBottom="20dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/ivStoreThumbnail">
+
+                        <!-- 가게 이름-->
+                        <TextView
+                            android:id="@+id/tvStoreName"
+                            style="@style/MoaFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="49.3dp"
+                            android:textColor="@color/black"
+                            android:textSize="26.7sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="파파존스 가산점" />
+
+                        <!-- 가게 배스트-->
+                        <ImageView
+                            android:id="@+id/lvBestStoreIc"
+                            android:layout_width="17.7dp"
+                            android:layout_height="17.7dp"
+                            android:layout_marginEnd="5dp"
+                            android:contentDescription="@string/underline_description"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/best_store_ic"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvStoreName"
+                            app:layout_constraintRight_toLeftOf="@+id/tvStoreName"
+                            app:layout_constraintTop_toTopOf="@+id/tvStoreName" />
+
+                        <LinearLayout
+                            android:id="@+id/viewReviewAndBookMark"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_margin_10"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            app:layout_constraintTop_toBottomOf="@id/tvStoreName">
+
+                            <!-- 리뷰-->
+                            <TextView
+                                style="@style/MoaFont"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/store_detail_review"
+                                android:textColor="@color/grey"
+                                android:textSize="13.3sp" />
+
+                            <TextView
+                                android:id="@+id/tvReviewCnt"
+                                style="@style/MoaFont"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6.3dp"
+                                android:textColor="@color/grey"
+                                android:textSize="13.3sp"
+                                tools:text="35" />
+
+                            <ImageView
+                                style="@style/MoaFont"
+                                android:layout_width="0.3dp"
+                                android:layout_height="8dp"
+                                android:layout_marginStart="11.3dp"
+                                android:layout_marginEnd="10.7dp"
+                                android:background="@color/linkWater" />
+
+                            <!-- 즐겨 찾기-->
+                            <TextView
+                                style="@style/MoaFont"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/bookmark"
+                                android:textColor="@color/grey"
+                                android:textSize="13.3sp" />
+
+                            <TextView
+                                android:id="@+id/tvBookMarkCnt"
+                                style="@style/MoaFont"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6.3dp"
+                                android:textColor="@color/grey"
+                                android:textSize="13.3sp"
+                                tools:text="210" />
+
+                        </LinearLayout>
+
+                        <!-- 식당 평점-->
+                        <TextView
+                            android:id="@+id/tvRatingPoint"
+                            style="@style/BlackColorBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="21.3dp"
+                            android:textSize="23.5sp"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/rbRatingPoint"
+                            app:layout_constraintTop_toBottomOf="@+id/viewReviewAndBookMark"
+                            tools:text="4.0" />
+
+                        <RatingBar
+                            android:id="@+id/rbRatingPoint"
+                            style="@style/customRating"
+                            android:layout_width="95dp"
+                            android:layout_height="18dp"
+                            android:layout_marginStart="5dp"
+                            android:isIndicator="true"
+                            android:numStars="5"
+                            android:rating="3"
+                            android:stepSize="1"
+                            app:layout_constraintBottom_toBottomOf="@+id/tvRatingPoint"
+                            app:layout_constraintLeft_toRightOf="@+id/tvRatingPoint"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/tvRatingPoint"
+                            tools:targetApi="lollipop" />
+                        <!---->
+
+                        <!--</com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveConstraintLayout>-->
+                        <!--테이크아웃, 바로결제, 현장결제 정보-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/paymentInfoGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvRatingPoint">
+
+                            <TextView
+                                android:id="@+id/takeOut"
+                                style="@style/MoaFont"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/store_detail_activity_payment_type_bg"
+                                android:paddingLeft="6.3dp"
+                                android:paddingTop="2.7dp"
+                                android:paddingRight="6.3dp"
+                                android:paddingBottom="2.7dp"
+                                android:text="테이크아웃"
+                                android:textColor="@color/dimGray"
+                                android:textSize="12sp"
+                                app:layout_constraintHorizontal_chainStyle="packed"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toLeftOf="@+id/nowPay"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/nowPay"
+                                style="@style/MoaFont"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4.7dp"
+                                android:background="@drawable/store_detail_activity_payment_type_bg"
+                                android:paddingLeft="6.3dp"
+                                android:paddingTop="2.7dp"
+                                android:paddingRight="6.3dp"
+                                android:paddingBottom="2.7dp"
+                                android:text="바로결제"
+                                android:textColor="@color/dimGray"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toRightOf="@+id/takeOut"
+                                app:layout_constraintRight_toLeftOf="@+id/meetPay"
+                                app:layout_constraintTop_toTopOf="@+id/takeOut" />
+
+                            <TextView
+                                android:id="@+id/meetPay"
+                                style="@style/MoaFont"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4.3dp"
+                                android:background="@drawable/store_detail_activity_payment_type_bg"
+                                android:paddingLeft="6.3dp"
+                                android:paddingTop="2.7dp"
+                                android:paddingRight="6.3dp"
+                                android:paddingBottom="2.7dp"
+                                android:text="현장결제"
+                                android:textColor="@color/dimGray"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toRightOf="@+id/nowPay"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/nowPay" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <!-- 주문금액 배달요금 정보 -->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/orderInfoGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13.3dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="13.3dp"
+                            android:background="@drawable/side_customercenter_border"
+                            android:paddingBottom="15.3dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/paymentInfoGroup">
+
+                            <TextView
+                                android:id="@+id/orderMoneyTitle"
+                                style="@style/MoaFont"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15.7dp"
+                                android:layout_marginTop="15.3dp"
+                                android:text="최소주문금액"
+                                android:textColor="@color/black"
+                                android:textSize="13.3sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/orderMoney"
+                                style="@style/MoaFont"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="28.3dp"
+                                android:textColor="@color/black"
+                                android:textSize="13.3sp"
+                                app:layout_constraintLeft_toRightOf="@+id/orderMoneyTitle"
+                                app:layout_constraintTop_toTopOf="@id/orderMoneyTitle"
+                                tools:text="최소 15,000원 이상" />
+
+                            <TextView
+                                android:id="@+id/deliveryMoneyTitle"
+                                style="@style/MoaFont"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="11.7dp"
+                                android:text="배달요금"
+                                android:textColor="@color/black"
+                                android:textSize="13.3sp"
+                                app:layout_constraintLeft_toLeftOf="@+id/orderMoneyTitle"
+                                app:layout_constraintTop_toBottomOf="@+id/orderMoneyTitle" />
+
+                            <TextView
+                                android:id="@+id/deliveryMoney"
+                                style="@style/MoaFont"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="13.3sp"
+                                app:layout_constraintBottom_toBottomOf="@id/deliveryMoneyTitle"
+                                app:layout_constraintLeft_toLeftOf="@id/orderMoney"
+                                app:layout_constraintTop_toTopOf="@id/deliveryMoneyTitle"
+                                tools:text="2,000원(3만원 이상 주문시 무료)" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <LinearLayout
+                            android:id="@+id/viewStoreInfoGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="13.3dp"
+                            android:layout_marginLeft="13.3dp"
+                            android:layout_marginTop="@dimen/common_margin_10"
+                            android:layout_marginRight="13.3dp"
+                            android:gravity="start"
+                            android:orientation="horizontal"
+                            app:layout_constraintTop_toBottomOf="@id/orderInfoGroup">
+
+                            <com.moaPlatform.moa.util.custom_view.CommonTimeEventView
+                                android:id="@+id/viewStoreDetailTimeEventOne"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <com.moaPlatform.moa.util.custom_view.CommonTimeEventView
+                                android:id="@+id/viewStoreDetailTimeEventTwo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <com.moaPlatform.moa.util.custom_view.CommonTimeEventView
+                                android:id="@+id/viewStoreDetailTimeEventThree"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <com.moaPlatform.moa.util.custom_view.CommonTimeEventView
+                                android:id="@+id/viewStoreDetailTimeEventFour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <!--&lt;!&ndash; 적립률 &ndash;&gt;-->
+                            <!--<TextView-->
+                                <!--android:id="@+id/tvSavePercent"-->
+                                <!--style="@style/MoaFont"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_marginEnd="2.3dp"-->
+                                <!--android:background="@drawable/shopping_cart_discount_button"-->
+                                <!--android:paddingStart="@dimen/store_product_dc_padding_left_right"-->
+                                <!--android:paddingTop="@dimen/store_product_dc_padding_top_bottom"-->
+                                <!--android:paddingEnd="@dimen/store_product_dc_padding_left_right"-->
+                                <!--android:paddingBottom="@dimen/store_product_dc_padding_top_bottom"-->
+                                <!--android:textColor="@color/coral"-->
+                                <!--android:textSize="12sp"-->
+                                <!--tools:text="적립률 10%" />-->
+                            <!--&lt;!&ndash; 추가 적립 &ndash;&gt;-->
+                            <!--<TextView-->
+                                <!--android:id="@+id/additionalDc"-->
+                                <!--style="@style/MoaFont"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_marginEnd="@dimen/store_product_additional_dc_margin_right"-->
+                                <!--android:background="@drawable/shopping_cart_discount_button_gold"-->
+                                <!--android:paddingStart="@dimen/store_product_dc_padding_left_right"-->
+                                <!--android:paddingTop="@dimen/store_product_dc_padding_top_bottom"-->
+                                <!--android:paddingEnd="@dimen/store_product_dc_padding_left_right"-->
+                                <!--android:paddingBottom="@dimen/store_product_dc_padding_top_bottom"-->
+                                <!--android:textColor="@color/goldenTainoi"-->
+                                <!--android:textSize="12sp"-->
+                                <!--tools:text="@string/store_product_additional_dc" />-->
+
+                            <!--&lt;!&ndash; 배달할인&ndash;&gt;-->
+                            <!--<TextView-->
+                                <!--android:id="@+id/deliveryDiscount"-->
+                                <!--style="@style/MoaFont"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_marginEnd="@dimen/store_product_additional_dc_margin_right"-->
+                                <!--android:background="@drawable/shopping_cart_discount_button_blue"-->
+                                <!--android:paddingStart="@dimen/store_product_dc_padding_left_right"-->
+                                <!--android:paddingTop="@dimen/store_product_dc_padding_top_bottom"-->
+                                <!--android:paddingEnd="@dimen/store_product_dc_padding_left_right"-->
+                                <!--android:paddingBottom="@dimen/store_product_dc_padding_top_bottom"-->
+                                <!--android:textColor="#15aeca"-->
+                                <!--android:textSize="12sp"-->
+                                <!--tools:text="배달할인 2,000원" />-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/deliveryPercentDc"-->
+                                <!--style="@style/MoaFont"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:background="@drawable/shopping_cart_discount_button_lightcoral"-->
+                                <!--android:paddingStart="@dimen/store_product_dc_padding_left_right"-->
+                                <!--android:paddingTop="@dimen/store_product_dc_padding_top_bottom"-->
+                                <!--android:paddingEnd="@dimen/store_product_dc_padding_left_right"-->
+                                <!--android:paddingBottom="@dimen/store_product_dc_padding_top_bottom"-->
+                                <!--android:textColor="@color/light_coral"-->
+                                <!--android:textSize="12sp"-->
+                                <!--tools:text="@string/store_product_delivery_dc" />-->
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical"
+                            app:layout_constraintTop_toBottomOf="@id/viewStoreInfoGroup">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.3dp"
+                                android:layout_marginLeft="13.3dp"
+                                android:layout_marginRight="13.3dp"
+                                android:background="@color/linkWater" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60.3dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/viewCallGroup"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:contentDescription="@string/underline_description"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/call" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/space_9"
+                                        android:text="@string/phone_call"
+                                        android:textColor="@color/grey"
+                                        android:textSize="@dimen/common_text_xxs_size"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:id="@+id/viewOneLine"
+                                    android:layout_width="0.3dp"
+                                    android:layout_height="25dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/linkWater" />
+
+                                <LinearLayout
+                                    android:id="@+id/viewBookMark"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <CheckBox
+                                        android:id="@+id/cbBookMark"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:button="@drawable/store_detail_bookmark_checkbox"
+                                        android:checked="false"
+                                        android:contentDescription="@string/underline_description"
+                                        android:scaleType="fitXY" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="8dp"
+                                        android:text="@string/bookmark"
+                                        android:textColor="@color/grey"
+                                        android:textSize="@dimen/common_text_xxs_size"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="0.3dp"
+                                    android:layout_height="25dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/linkWater" />
+
+                                <LinearLayout
+                                    android:id="@+id/viewShareGroup"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:contentDescription="@string/underline_description"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/share" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="7.7dp"
+                                        android:text="@string/share"
+                                        android:textColor="@color/grey"
+                                        android:textSize="@dimen/common_text_xxs_size"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.3dp"
+                                android:layout_marginLeft="13.3dp"
+                                android:layout_marginRight="13.3dp"
+                                android:background="@color/linkWater" />
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <!-- 가게 이미지-->
+                    <ImageView
+                        android:id="@+id/storeThumbNail"
+                        android:layout_width="68.3dp"
+                        android:layout_height="68.3dp"
+                        android:layout_marginTop="48dp"
+                        android:contentDescription="@string/underline_description"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/menu_icon_circle"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/ivStoreThumbnail" />
+                    <!-- 이벤트 공지 -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/eventNoticeGroup"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common_margin_10"
+                        android:layout_marginRight="@dimen/common_margin_10"
+                        android:layout_marginBottom="23.3dp"
+                        android:background="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="@+id/storeInfoGroup"
+                        app:layout_constraintRight_toRightOf="@+id/storeInfoGroup"
+                        app:layout_constraintTop_toBottomOf="@+id/storeInfoGroup">
+
+                        <TextView
+                            android:id="@+id/eventNotice"
+                            style="@style/MoaFont"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textSize="13.3sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/eventGuideMore"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="[안내] 이벤트" />
+
+                        <ImageView
+                            android:id="@+id/eventGuideMore"
+                            android:layout_width="6dp"
+                            android:layout_height="10dp"
+                            android:contentDescription="@string/underline_description"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ad_more_arrow"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:id="@+id/bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@drawable/common_bold_line"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/transparent"
+                    app:contentInsetEnd="0dp"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetRight="0dp"
+                    app:contentInsetStart="0dp"
+                    app:layout_collapseMode="pin">
+
+                    <include
+                        android:id="@+id/topToolbar"
+                        layout="@layout/top_toolbar" />
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/storeDetailTabMenu"
+                android:layout_width="match_parent"
+                android:layout_height="45.3dp"
+                android:background="@drawable/common_gainsboro_bottom_line"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="pin"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/black"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/black"
+                app:tabTextAppearance="@style/tabLayoutText"
+                app:tabTextColor="@color/grey" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/common_bottom_button_height"
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <com.moaPlatform.moa.util.custom_view.NonScrollViewPager
+                android:id="@+id/storeViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnShoppingCart"
+            style="@style/CoralBoldStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_bottom_button_height"
+            android:layout_gravity="bottom"
+            android:background="@color/coral"
+            android:textSize="@dimen/common_text_xxl_size"
+            android:visibility="gone"
+            tools:text="장바구니 (3)" />
+
+        <Button
+            android:id="@+id/btnStoreDetailCallOrder"
+            style="@style/CoralBoldStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_bottom_button_height"
+            android:layout_gravity="bottom"
+            android:text="@string/activity_store_detail_call_order"
+            android:textSize="@dimen/common_text_xxl_size"
+            android:visibility="gone" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.moaPlatform.moa.util.custom_view.CommonLoadingView
+        android:id="@+id/viewStoreDetailLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- 구매 조건 확인 및 결제 진행 동의시 scrollview 숨김처리 [start]-->
+    <ScrollView
+        android:id="@+id/scrollWalletPayContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/qrpayok">
+
+        <LinearLayout
+            android:id="@+id/paytotalshow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- TODO CHAN : 공통 fragment로 취합 필요 [start]-->
+            <RelativeLayout
+                android:id="@+id/rlWalletMainTopInfoContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/wallet_main_activity_card_bg" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintCardViewPagerContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/cardViewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlLeftArrow"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toBottomOf="@id/cardViewPager"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/cardViewPager">
+
+                        <ImageView
+                            android:layout_width="7.7dp"
+                            android:layout_height="12dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/arrow_w_left" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlRightArrow"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toBottomOf="@id/cardViewPager"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/cardViewPager">
+
+                        <ImageView
+                            android:layout_width="7.7dp"
+                            android:layout_height="12dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/arrow_w_right" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llWalletMainAddcard"
+                        android:layout_width="125.3dp"
+                        android:layout_height="32.3dp"
+                        android:layout_marginBottom="14.7dp"
+                        android:background="@drawable/border_rect_70_70_70_70_trans_1dp_ffffff"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent">
+
+                        <ImageView
+                            android:layout_width="25.3dp"
+                            android:layout_height="21.3dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/registration_card" />
+
+                        <TextView
+                            style="@style/MoaFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5.7dp"
+                            android:text="카드 추가하기"
+                            android:textColor="@color/white"
+                            android:textSize="12.7sp" />
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RelativeLayout
+                    android:id="@+id/top_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="39.7dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="GOEAT Wallet"
+                        android:textColor="@color/white"
+                        android:textSize="13.3sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/walletsetting"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center|end"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginEnd="11.3dp"
+                            android:background="@drawable/icon_setting_w" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/ivWalletMainMaskImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="136dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/bg_card_bottom_mask" />
+            </RelativeLayout>
+
+
+            <!-- TODO CHAN : 공통 fragment로 취합 필요 [end]-->
+
+            <!-- 본문 내용. -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="13.3dp"
+                    android:paddingRight="13.3dp">
+
+                    <TextView
+                        android:id="@+id/qrstorename"
+                        style="@style/MoaFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="17.3dp"
+                        android:background="@drawable/border_rect_70_70_70_70_f7f7f7_0dp_trans"
+                        android:gravity="center"
+                        android:textColor="#333333"
+                        android:textSize="20sp"
+                        tools:text="괴물 떡볶이 남양주 다산점" />
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13.3dp"
+                    android:layout_marginTop="30dp"
+                    android:text="결제 금액 입력"
+                    android:textColor="#1f1f1f"
+                    android:textSize="16.7sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginRight="13.3dp">
+
+                    <EditText
+                        android:id="@+id/qrinputmoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="46.7dp"
+                        android:layout_marginTop="16.7dp"
+                        android:background="@drawable/goeat_border"
+                        android:hint="결제 금액을 입력해 주세요."
+                        android:inputType="number"
+                        android:paddingStart="10dp"
+                        android:textColorHint="#949494"
+                        android:textSize="13.3sp" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginRight="13.3dp">
+
+                    <!-- 결제 금액 -->
+                    <TextView
+                        android:id="@+id/deliveryMoneyContent"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="3.3dp"
+                        android:textSize="13.3sp"
+                        android:visibility="gone"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="25,000원" />
+
+                    <TextView
+                        android:id="@+id/moaPointTitle"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="GOEAT POINT"
+                        android:textSize="13.3sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/useMoaPoint"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0P (-0원)"
+                        android:textSize="13.3sp"
+                        app:layout_constraintBottom_toBottomOf="@id/moaPointTitle"
+                        app:layout_constraintRight_toRightOf="@id/deliveryMoneyContent"
+                        app:layout_constraintTop_toTopOf="@id/moaPointTitle" />
+
+                    <TextView
+                        android:id="@+id/useMoaPointNeedLogin"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="로그인 후 사용 가능"
+                        android:textColor="@color/coral"
+                        android:textSize="13.3sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/moaPointTitle"
+                        app:layout_constraintRight_toRightOf="@id/deliveryMoneyContent"
+                        app:layout_constraintTop_toTopOf="@id/moaPointTitle" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/viewInputMoaPoint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="19.7dp"
+                        android:background="@color/whiteSmoke"
+                        android:padding="@dimen/common_margin_10"
+                        app:layout_constraintTop_toBottomOf="@id/moaPointTitle">
+
+                        <TextView
+                            android:id="@+id/tvMyPoint"
+                            style="@style/BlackColorBold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="13.3sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="보유 : 3,000 P (3,000원)" />
+
+                        <EditText
+                            android:id="@+id/etMyUsePoint"
+                            style="@style/MoaFont"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="@dimen/common_margin_10"
+                            android:background="@drawable/common_edit_text_form"
+                            android:inputType="number"
+                            android:paddingEnd="14dp"
+                            android:textAlignment="textEnd"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:layout_constraintHorizontal_weight="3"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/btMyUsePoint"
+                            app:layout_constraintTop_toBottomOf="@id/tvMyPoint"
+                            tools:text="2,000 P (2,000원)" />
+
+                        <Button
+                            android:id="@+id/btMyUsePoint"
+                            style="@style/MoaFont"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="6.7dp"
+                            android:background="@drawable/qrcode_input_button"
+                            android:text="사용"
+                            android:textColor="@color/coral"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:layout_constraintHorizontal_weight="1"
+                            app:layout_constraintLeft_toRightOf="@id/etMyUsePoint"
+                            app:layout_constraintRight_toLeftOf="@id/btnAllPoint"
+                            app:layout_constraintTop_toTopOf="@id/etMyUsePoint" />
+
+                        <Button
+                            android:id="@+id/btnAllPoint"
+                            style="@style/BlackColorBold"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="6.7dp"
+                            android:background="@drawable/qrcode_input_button"
+                            android:text="전액 사용"
+                            android:textColor="@color/coral"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="@id/btMyUsePoint"
+                            app:layout_constraintHorizontal_weight="1"
+                            app:layout_constraintLeft_toRightOf="@id/btMyUsePoint"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/btMyUsePoint" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <ImageView
+                        android:id="@+id/moaPointUnderLine"
+                        style="@style/OrderPayUnderLine"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:contentDescription="@string/underline_description"
+                        app:layout_constraintTop_toBottomOf="@id/viewInputMoaPoint" />
+
+                    <TextView
+                        android:id="@+id/couponSaleTitle"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="쿠폰 할인"
+                        android:textSize="13.3sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/moaPointUnderLine" />
+
+                    <Button
+                        android:id="@+id/btnCouponSelect"
+                        style="@style/BlackColorBold"
+                        android:layout_width="65dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/qrcode_input_button"
+                        android:text="조회"
+                        android:textColor="@color/coral"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/couponSaleTitle"
+                        app:layout_constraintLeft_toRightOf="@id/couponSaleTitle"
+                        app:layout_constraintTop_toTopOf="@id/couponSaleTitle" />
+
+                    <TextView
+                        android:id="@+id/saleCoupon"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-0원"
+                        android:textSize="13.3sp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="@id/couponSaleTitle"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/couponSaleTitle" />
+
+                    <TextView
+                        android:id="@+id/saleCouponNeedLogin"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="로그인 후 사용 가능"
+                        android:textColor="@color/coral"
+                        android:textSize="13.3sp"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="@id/couponSaleTitle"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/couponSaleTitle" />
+
+                    <ImageView
+                        android:id="@+id/couponDiscountUnderLine"
+                        style="@style/OrderPayUnderLine"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="11dp"
+                        android:contentDescription="@string/underline_description"
+                        app:layout_constraintTop_toBottomOf="@id/btnCouponSelect" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="43.3dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="총 결제 금액"
+                        android:textColor="#252525"
+                        android:textSize="20.2sp" />
+
+                    <TextView
+                        android:id="@+id/qrtotalmoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="0 원"
+                        android:textColor="#252525"
+                        android:textSize="27sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="1dp"
+                        android:text="원"
+                        android:textColor="#252525"
+                        android:textSize="27sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="결제 시"
+                        android:textColor="#000000"
+                        android:textSize="13.3sp" />
+
+                    <TextView
+                        android:id="@+id/qrtotalpoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10.3dp"
+                        android:text="0"
+                        android:textColor="#000000"
+                        android:textSize="13.3sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="1dp"
+                        android:text="P"
+                        android:textColor="#000000"
+                        android:textSize="13.3sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10.3dp"
+                        android:text="적립예정"
+                        android:textColor="#000000"
+                        android:textSize="13.3sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginTop="43dp"
+                    android:background="@color/linkWater"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f2f2f2"
+                    android:paddingTop="16.67dp"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/deliveryOrderDangerTitle"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13.33dp"
+                        android:text="개인정보 제 3자 정보 제공 동의"
+                        android:textColor="@color/charcoal"
+                        android:textSize="12sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/deliveryOrderDangerAllSee"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="13.33dp"
+                        android:text="@string/agreement_to_terms_of_use_agree_all_reed"
+                        android:textColor="@color/charcoal"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/deliveryOrderDangerTitle"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/deliveryOrderDangerTitle" />
+
+                    <ImageView
+                        android:id="@+id/dangerUnerLine"
+                        style="@style/OrderPayUnderLine"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:contentDescription="@string/underline_description"
+                        app:layout_constraintTop_toBottomOf="@+id/deliveryOrderDangerAllSee" />
+
+                    <CheckBox
+                        android:id="@+id/paycheckqrs"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="19.7dp"
+                        android:background="@null"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableStart="@drawable/checkyn"
+                        android:text="@string/point_use_check"
+                        android:textSize="12sp"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dangerUnerLine" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout><!-- 카드 어댑터 제외 본문내용-->
+
+        </LinearLayout><!--스크롤뷰 감싸는 전체 -->
+    </ScrollView>
+    <!-- 구매 조건 확인 및 결제 진행 동의시 scrollview 숨김처리 [end]-->
+
+    <RelativeLayout
+        android:id="@+id/rlWalletMainQrBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12.3dp">
+
+        <ImageView
+            android:layout_width="13.3dp"
+            android:layout_height="13.3dp"
+            android:background="@drawable/btn_x_w" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llWalletPayNextStepContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/passwordview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="76.3dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GOEAT PAY 제비밀번호를 입력해 주세요."
+                    android:textColor="@color/coral"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="39.7dp"
+                    android:gravity="center_horizontal">
+
+                    <com.moaPlatform.moa.util.custom_view.CommonPasswordInputView
+                        android:id="@+id/inputWalletPayPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="39.7dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/password_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/find_pw"
+                        android:textColor="@color/black"
+                        android:textSize="12.5sp" />
+
+                    <ImageView
+                        android:layout_width="1dp"
+                        android:layout_height="15dp"
+                        android:layout_marginStart="12.7dp"
+                        android:layout_marginEnd="13.3dp"
+                        android:background="@color/lightGray" />
+
+                    <TextView
+                        android:id="@+id/password_change"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="비밀번호 재설정"
+                        android:textColor="@color/black"
+                        android:textSize="12.5sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.moaPlatform.moa.util.custom_view.CommonLoadingView
+        android:id="@+id/viewLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:id="@+id/qrpayok"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="53.3dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/common_radius_coral_button_form"
+        android:text="결제하기"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
+</RelativeLayout>

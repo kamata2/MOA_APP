@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteSmoke"
+    >
+
+    <RelativeLayout
+        android:id="@+id/coupon_count_toptolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="6.7dp"
+        android:paddingBottom="6.7dp"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/coupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="보유 쿠폰 "
+            android:textSize="12sp"
+            android:textColor="@color/matterhorn"
+            android:layout_marginLeft="13.3dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_toRightOf="@+id/coupon"
+            android:id="@+id/coupon_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textSize="12sp"
+            android:textColor="@color/matterhorn"
+            android:layout_marginTop="5dp"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_toRightOf="@id/coupon_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="장"
+            android:textSize="12sp"
+            android:textColor="@color/matterhorn"
+            android:layout_marginTop="5dp"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/couponRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="13.3dp"
+            android:background="@drawable/coupon_register_button"
+            android:text="쿠폰 등록"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:paddingLeft="21.7dp"
+            android:paddingRight="21.7dp"
+            android:paddingTop="9.7dp"
+            android:paddingBottom="9.7dp"
+            android:layout_alignParentRight="true"
+            style="@style/MoaFont"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/linkWater"/>
+
+       <RelativeLayout
+           android:id="@+id/nocoupon"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:background="@color/white"
+           android:layout_marginTop="5dp"
+           android:visibility="gone">
+
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:layout_centerInParent="true"
+                  >
+              
+              <ImageView
+                  android:layout_width="96.7dp"
+                  android:layout_height="58.7dp"
+                  android:background="@drawable/no_coupon"
+                  android:layout_gravity="center"
+                  />
+
+              <TextView
+                  android:layout_marginTop="20.3dp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="사용 가능한 쿠폰이 없습니다."
+                  android:textSize="15sp"
+                  android:textColor="@color/gray98"
+                  android:layout_gravity="center"
+                  style="@style/MoaFont"
+                  />
+              </LinearLayout>
+       </RelativeLayout>
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:layout_marginTop="5dp"
+           android:id="@+id/coupon_recycle"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:background="@color/white">
+       </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</LinearLayout>

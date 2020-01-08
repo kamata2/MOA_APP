@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/top_toolbar_style"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="13.3dp">
+
+        <ImageView
+            android:id="@+id/thumbNail"
+            android:layout_width="300dp"
+            android:layout_height="167.7dp"
+            android:contentDescription="@string/underline_description"
+            android:scaleType="fitXY"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/adHowFood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="3.3dp"
+            android:paddingEnd="@dimen/common_margin_10"
+            android:paddingBottom="21dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/storeName"
+                style="@style/BlackColorBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9.3dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="@dimen/common_text_l_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/starIc"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/starIc"
+                android:layout_width="11dp"
+                android:layout_height="11dp"
+                android:layout_marginEnd="4dp"
+                android:contentDescription="@string/underline_description"
+                android:scaleType="fitXY"
+                android:src="@drawable/yellow_star"
+                app:layout_constraintBottom_toBottomOf="@id/storeName"
+                app:layout_constraintRight_toLeftOf="@id/ratingPoint"
+                app:layout_constraintTop_toTopOf="@id/storeName" />
+
+            <TextView
+                android:id="@+id/ratingPoint"
+                style="@style/BlackColorBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@id/starIc"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/starIc" />
+
+            <TextView
+                android:id="@+id/adStoreKeyword"
+                style="@style/MoaFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5.7dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/zambezi"
+                android:textSize="@dimen/common_text_xxxs_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/storeName" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/viewStoreRepresentativeMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="21dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvStoreMenuName"
+                style="@style/BlackColorBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9.3dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvStoreMenuPrice"
+                style="@style/BlackColorBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewAllMenuTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/whiteSmoke"
+        android:visibility="gone"
+        tools:ignore="UseCompoundDrawables">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_marginBottom="11dp"
+            android:background="@color/linkWater"/>
+
+        <TextView
+            android:id="@+id/menuCategoryName"
+            style="@style/BlackColorBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13.3dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="11dp"
+            tools:text="전체메뉴" />
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewAllMenu"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="@color/linkWater"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <RelativeLayout
+            android:id="@+id/menu_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingLeft="13.3dp"
+            android:paddingRight="13.3dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/menuName"
+                style="@style/BlackColorBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textSize="15sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginRight="40dp"
+                android:layout_toLeftOf="@id/menuPrice"
+                tools:text="전체메뉴" />
+
+            <TextView
+                android:id="@+id/menu_explain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MoaFont"
+                android:text="메뉴 설명입니다."
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/menuName"
+                android:layout_alignParentLeft="true"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginRight="40dp"
+                android:layout_toLeftOf="@id/menuPrice" />
+
+            <TextView
+                android:id="@+id/menuPrice"
+                style="@style/BlackColorBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_alignParentRight="true"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="전체메뉴" />
+        </RelativeLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

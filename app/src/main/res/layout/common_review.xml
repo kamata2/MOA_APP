@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivReviewProfile"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="13.3dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/profile_4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rlReviewTitleContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8.7dp"
+        app:layout_constraintBottom_toBottomOf="@id/ivReviewProfile"
+        app:layout_constraintLeft_toRightOf="@id/ivReviewProfile"
+        app:layout_constraintRight_toLeftOf="@id/llReviewLikeContainer"
+        app:layout_constraintTop_toTopOf="@id/ivReviewProfile">
+
+        <TextView
+            android:id="@+id/tvReviewTitleUserName"
+            style="@style/MoaFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="13.3sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="testIdtestIdfsdfdfsdtestId" />
+
+        <TextView
+            android:id="@+id/tvReviewTitleTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6.7dp"
+            android:textColor="#181818"
+            android:textSize="10.7sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvReviewTitleUserName"
+            app:layout_constraintLeft_toRightOf="@id/tvReviewTitleUserName"
+            app:layout_constraintTop_toTopOf="@id/tvReviewTitleUserName"
+            tools:text="2018.09.12" />
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/ratingBarReview"
+            android:layout_width="56.3dp"
+            android:layout_height="10.7dp"
+            android:layout_below="@id/tvReviewTitleUserName"
+            android:layout_marginTop="7dp"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressTint="@color/goldenTainoi"
+            android:rating="0"
+            app:layout_constraintLeft_toLeftOf="@id/tvReviewTitleUserName"
+            app:layout_constraintTop_toBottomOf="@id/tvReviewTitleUserName"
+            tools:targetApi="lollipop" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 좋아요 버튼 -->
+    <LinearLayout
+        android:id="@+id/llReviewLikeContainer"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/item_store_review_horizontal"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/ivReviewProfile"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toRightOf="@id/rlReviewTitleContainer"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivReviewProfile">
+
+        <CheckBox
+            android:id="@+id/cbReviewLikeIcon"
+            android:layout_width="24.3dp"
+            android:layout_height="24.3dp"
+            android:button="@drawable/select_eat_out_store_review_like_checkbox"
+            android:checked="false" />
+
+        <TextView
+            android:id="@+id/tvReviewLikeCnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3.3dp"
+            android:letterSpacing="-0.1"
+            android:textColor="#3c4048"
+            android:textSize="8.7sp"
+            tools:text="65" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llReviewScoreContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/ivReviewProfile">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13.3dp"
+            android:text="@string/review_taste_score"
+            android:textColor="#9b9b9b"
+            android:textSize="13.3sp" />
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="1dp"
+            android:isIndicator="true"
+            android:numStars="1"
+            android:progressTint="@color/goldenTainoi"
+            android:rating="1"
+            tools:targetApi="lollipop" />
+
+        <TextView
+            android:id="@+id/tvReviewScoreTaste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffb83e"
+            android:textSize="13.3sp"
+            tools:text="4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/review_amount_score"
+            android:textColor="#9b9b9b"
+            android:textSize="13.3sp" />
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="1dp"
+            android:isIndicator="true"
+            android:numStars="1"
+            android:progressTint="@color/goldenTainoi"
+            android:rating="1"
+            tools:targetApi="lollipop" />
+
+        <TextView
+            android:id="@+id/tvReviewScoreAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffb83e"
+            android:textSize="13.3sp"
+            tools:text="4" />
+
+        <TextView
+            android:id="@+id/tvReviewScoreDeliveryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/review_delivery_score"
+            android:textColor="#9b9b9b"
+            android:textSize="13.3sp" />
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="1dp"
+            android:isIndicator="true"
+            android:numStars="1"
+            android:progressTint="@color/goldenTainoi"
+            android:rating="1"
+            tools:targetApi="lollipop" />
+
+        <TextView
+            android:id="@+id/tvReviewScoreDelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffb83e"
+            android:textSize="13.3sp"
+            tools:text="4" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvReviewContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12.7dp"
+        android:letterSpacing="-0.1"
+        android:lineSpacingExtra="5sp"
+        android:paddingLeft="13.3dp"
+        android:paddingRight="13.3dp"
+        android:textColor="#181818"
+        android:textSize="14.3sp"
+        app:layout_constraintTop_toBottomOf="@id/llReviewScoreContainer"
+        tools:text="역시 굽네 기름빠져서 먹을때마다 담백하고 부드러운 맛에 놀랍니다! 많이 파세요!!" />
+
+    <!-- 세로 이미지 리스트 -->
+    <LinearLayout
+        android:id="@+id/llReviewVerticalListContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/item_store_review_horizontal"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="@dimen/item_store_review_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tvReviewContent" />
+
+    <!-- 가로 이미지 리스트 -->
+    <LinearLayout
+        android:id="@+id/llReviewHorizontalListContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/item_store_review_horizontal"
+        android:layout_marginRight="@dimen/item_store_review_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/llReviewVerticalListContainer" />
+
+    <!-- 사장님 댓글 영역 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrainReviewOwnerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/item_store_review_horizontal"
+        android:layout_marginRight="@dimen/item_store_review_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/llReviewHorizontalListContainer">
+
+        <ImageView
+            android:id="@+id/ivReviewArrow"
+            android:layout_width="11.3dp"
+            android:layout_height="9.3dp"
+            android:layout_marginLeft="13.4dp"
+            android:layout_marginTop="10.3dp"
+            android:background="@drawable/ntriangle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_rect_5_5_5_5_f0f0f0_0dp_trans"
+            android:paddingBottom="16.7dp"
+            app:layout_constraintTop_toBottomOf="@id/ivReviewArrow">
+
+            <TextView
+                android:id="@+id/tvReviewOwner"
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="16.7dp"
+                android:background="@drawable/border_rect_20_20_20_20_bfbfbf_0dp_trans"
+                android:gravity="center"
+                android:letterSpacing="-0.1"
+                android:paddingLeft="8.3dp"
+                android:paddingTop="3dp"
+                android:paddingRight="8.3dp"
+                android:paddingBottom="3dp"
+                android:text="@string/common_eat_out_store_review_owner"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="사장님" />
+
+            <TextView
+                android:id="@+id/tvReviewOwnerWriteTime"
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6.7dp"
+                android:letterSpacing="-0.1"
+                android:textColor="#181818"
+                android:textSize="10.7sp"
+                app:layout_constraintBottom_toBottomOf="@id/tvReviewOwner"
+                app:layout_constraintLeft_toRightOf="@id/tvReviewOwner"
+                app:layout_constraintTop_toTopOf="@id/tvReviewOwner"
+                tools:text="2018.10.08" />
+
+            <TextView
+                android:id="@+id/tvReviewOwnerContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9.3dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="9.3dp"
+                android:letterSpacing="-0.1"
+                android:lineSpacingExtra="3dp"
+                android:textColor="#181818"
+                android:textSize="14.3sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvReviewOwner"
+                tools:text="안녕하세요. 고객님 맛있게 드셨다니 저도 매우 기쁘네요. 다음에는 서비스도 더 팍팍 드리도록 할게요 ~! 감사합니다^^" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlReviewOptionButtonContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.7dp"
+        android:paddingStart="@dimen/item_store_review_horizontal"
+        android:paddingEnd="@dimen/item_store_review_horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constrainReviewOwnerContainer">
+
+        <Button
+            android:id="@+id/btnReviewModify"
+            android:layout_width="54.7dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="61.4dp"
+            android:background="@drawable/side_review_hex_button"
+            android:gravity="center"
+            android:text="@string/review_modify"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            style="@style/MoaFont"/>
+
+        <Button
+            android:id="@+id/btnReviewDelete"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="54.7dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="6.7dp"
+            android:background="@drawable/side_review_hex_button"
+            android:gravity="center"
+            android:text="@string/review_delete"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llReviewDivider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43.3dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/constrainReviewOwnerContainer"></LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

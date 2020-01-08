@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lab2_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.moaPlatform.moa.util.custom_view.CommonTitleView
+        android:id="@+id/commonTitleMyReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/event_notice_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_below="@id/commonTitleMyReview"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/grey"
+        app:tabSelectedTextColor="@color/eclipse"
+        app:tabTextColor="@color/grey"
+        app:tabTextAppearance="@style/tabLayoutText"
+        >
+    </com.google.android.material.tabs.TabLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/linkWater"
+        android:layout_below="@id/event_notice_tabs"
+        />
+
+    <RelativeLayout
+        android:layout_below="@id/event_notice_tabs"
+        android:id="@+id/event_main_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:gravity="center"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            >
+
+        <ImageView
+            android:layout_width="92.7dp"
+            android:layout_height="79.3dp"
+            android:layout_gravity="center"
+            android:background="@drawable/plate"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="진행중인 이벤트가 없습니다."
+            android:textSize="13.3sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="19.7dp"
+
+            />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/event_notice_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/event_notice_tabs" />
+
+</RelativeLayout>

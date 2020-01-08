@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_checked="false">
+        <layer-list>
+            <item android:drawable="@drawable/check_3_n"
+                android:width="12.7dp"
+                android:height="12.7dp"
+                >
+            </item>
+        </layer-list>
+    </item>
+    <!-- Checked -->
+    <item android:state_checked="true">
+        <layer-list>
+            <!-- 이미지 영역 -->
+            <item android:drawable="@drawable/check_3_p"
+                android:width="12.7dp"
+                android:height="12.7dp"
+                >
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

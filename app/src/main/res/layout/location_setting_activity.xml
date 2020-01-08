@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".top_menu.location.LocationSettingActivity">
+
+    <include
+        android:id="@+id/viewLocationSettingToolbar"
+        layout="@layout/top_toolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewLocationSettingToolbarUnderLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/linkWater"
+        app:layout_constraintTop_toBottomOf="@id/viewLocationSettingToolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewAddressInputGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/location_setting_activity_content_space"
+        android:paddingEnd="@dimen/location_setting_activity_content_space"
+        app:layout_constraintTop_toBottomOf="@id/viewLocationSettingToolbarUnderLine">
+
+        <EditText
+            android:id="@+id/etAddressListKeywordInput"
+            style="@style/MoaFont"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_edit_text_height"
+            android:layout_marginTop="@dimen/location_setting_input_address_top_space"
+            android:background="@drawable/common_edit_text_form"
+            android:hint="@string/location_setting_input_address_hint"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingStart="@dimen/edit_text_start_space"
+            android:paddingEnd="@dimen/location_setting_input_address_padding_right"
+            android:textColor="@color/black"
+            android:textSize="@dimen/edit_text_size"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="o" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clAddressListKeywordSearchGroup"
+            android:layout_width="70dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/etAddressListKeywordInput"
+            app:layout_constraintRight_toRightOf="@id/etAddressListKeywordInput"
+            app:layout_constraintTop_toTopOf="@id/etAddressListKeywordInput">
+
+            <ImageView
+                android:layout_width="17.7dp"
+                android:layout_height="17.7dp"
+                android:layout_marginEnd="@dimen/space_9"
+                android:background="@color/white"
+                android:contentDescription="@string/underline_description"
+                android:scaleType="fitXY"
+                android:src="@drawable/search"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/flLocationSetting"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewAddressInputGroup" />
+
+    <com.moaPlatform.moa.util.custom_view.CommonLoadingView
+        android:id="@+id/viewLocationSettingLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--<FrameLayout-->
+    <!--android:id="@+id/detailLocationLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:visibility="gone" />-->
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--android:id="@+id/viewAddress"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:paddingStart="@dimen/location_setting_activity_content_space"-->
+    <!--android:paddingEnd="@dimen/location_setting_activity_content_space"-->
+    <!--android:visibility="gone">-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/inputAddress"-->
+    <!--style="@style/MoaFont"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/common_edit_text_height"-->
+    <!--android:layout_marginTop="@dimen/location_setting_input_address_top_space"-->
+    <!--android:background="@drawable/common_edit_text_form"-->
+    <!--android:hint="@string/location_setting_input_address_hint"-->
+    <!--android:imeOptions="actionDone"-->
+    <!--android:importantForAutofill="no"-->
+    <!--android:inputType="text"-->
+    <!--android:maxLines="1"-->
+    <!--android:paddingStart="@dimen/edit_text_start_space"-->
+    <!--android:paddingEnd="@dimen/location_setting_input_address_padding_right"-->
+    <!--android:textColor="@color/black"-->
+    <!--android:textSize="@dimen/edit_text_size"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--tools:targetApi="o" />-->
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--android:id="@+id/btnAddressSearch"-->
+    <!--android:layout_width="70dp"-->
+    <!--android:layout_height="0dp"-->
+    <!--app:layout_constraintBottom_toBottomOf="@id/inputAddress"-->
+    <!--app:layout_constraintRight_toRightOf="@id/inputAddress"-->
+    <!--app:layout_constraintTop_toTopOf="@id/inputAddress">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="17.7dp"-->
+    <!--android:layout_height="17.7dp"-->
+    <!--android:layout_marginEnd="@dimen/space_9"-->
+    <!--android:background="@color/white"-->
+    <!--android:contentDescription="@string/underline_description"-->
+    <!--android:scaleType="fitXY"-->
+    <!--android:src="@drawable/search"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/searchIntroduceText"-->
+    <!--style="@style/MoaFont"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="@dimen/location_setting_search_address_introduce_margin_top"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:lineSpacingExtra="7.3dp"-->
+    <!--android:textSize="@dimen/common_text_xl_size"-->
+    <!--app:layout_constraintLeft_toLeftOf="@id/inputAddress"-->
+    <!--app:layout_constraintRight_toRightOf="@id/inputAddress"-->
+    <!--app:layout_constraintTop_toBottomOf="@id/inputAddress"-->
+    <!--tools:text="@string/location_setting_search_address_introduce" />-->
+
+    <!--<fragment-->
+    <!--android:id="@+id/viewAddressList"-->
+    <!--android:name="com.moaPlatform.moa.top_menu.location.AddressListFragment"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@id/inputAddress"-->
+    <!--tools:layout="@layout/location_setting_address_list_fragment" />-->
+
+    <!--<com.moaPlatform.moa.util.custom_view.CommonLoadingView-->
+    <!--android:id="@+id/viewLoading"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--android:layout_marginBottom="@dimen/top_toolbar_height"/>-->
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

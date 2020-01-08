@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/moa_optional_access_dialog_width"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/common_dialog_form_cover"
+    android:paddingStart="@dimen/moa_optional_access_dialog_side_padding"
+    android:paddingEnd="@dimen/moa_optional_access_dialog_side_padding"
+    android:paddingBottom="@dimen/moa_optional_access_dialog_bottom_padding">
+
+    <TextView
+        style="@style/OptionalAccessDialogTitle"
+        android:text="@string/moa_optional_access_dialog_title"
+        app:layout_constraintLeft_toLeftOf="@+id/done"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/dialogIntroduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:lineSpacingExtra="3dp"
+        android:text="@string/moa_optional_access_dialog_title_content"
+        android:layout_marginTop="@dimen/moa_optional_access_dialog_title_content_margin_top"
+        android:layout_marginBottom="@dimen/moa_optional_access_dialog_title_content_margin_bottom"
+        tools:ignore="SmallSp"
+        style="@style/MoaFont" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_underline_height"
+        android:background="@color/linkWater"
+        android:contentDescription="@string/underline_description"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/moa_optional_access_dialog_access_info_form_margin_left"
+        android:layout_marginTop="@dimen/moa_optional_access_dialog_access_info_form_margin_top_first"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/location_g"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/underline_description"
+            android:layout_marginEnd="@dimen/moa_optional_access_dialog_location_ic_margin_right" />
+
+        <TextView
+            android:text="@string/moa_optional_access_dialog_location_info"
+            app:layout_constraintLeft_toLeftOf="@id/done"
+            style="@style/OptionalAccessDialogSubTitle"/>
+
+        <TextView
+            android:text="@string/moa_optional_access_dialog_location_content"
+            style="@style/OptionalAccessDialogSubContent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/moa_optional_access_dialog_access_info_form_margin_left"
+        android:layout_marginTop="@dimen/moa_optional_access_dialog_access_info_form_margin_top"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sms"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/underline_description"
+            android:layout_marginEnd="@dimen/moa_optional_access_dialog_sms_ic_margin_right" />
+
+        <TextView
+            android:text="@string/moa_optional_access_dialog_sms_title"
+            style="@style/OptionalAccessDialogSubTitle"/>
+
+        <TextView
+            android:text="@string/moa_optional_access_dialog_sms_content"
+            style="@style/OptionalAccessDialogSubContent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/moa_optional_access_dialog_access_info_form_margin_left"
+        android:layout_marginTop="@dimen/moa_optional_access_dialog_access_info_form_margin_top"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/phone"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/underline_description"
+            android:layout_marginEnd="@dimen/moa_optional_access_dialog_phone_ic_margin_right" />
+
+        <TextView
+            android:text="@string/moa_optional_access_dialog_telephone_title"
+            style="@style/OptionalAccessDialogSubTitle"/>
+
+        <TextView
+            android:text="@string/moa_optional_access_dialog_telephone_content"
+            style="@style/OptionalAccessDialogSubContent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/moa_optional_access_dialog_access_info_form_margin_left"
+        android:layout_marginTop="@dimen/moa_optional_access_dialog_access_info_form_margin_top"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/camera"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/underline_description"
+            android:layout_marginEnd="@dimen/moa_optional_access_dialog_phone_ic_margin_right" />
+
+        <TextView
+            android:text="@string/moa_optional_access_dialog_camera_photo_title"
+            style="@style/OptionalAccessDialogSubTitle"/>
+
+        <TextView
+            android:text="@string/moa_optional_access_dialog_camera_photo_content"
+            style="@style/OptionalAccessDialogSubContent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/moa_optional_access_dialog_access_info_form_margin_left"
+        android:layout_marginTop="@dimen/moa_optional_access_dialog_access_info_form_margin_top"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cloud"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/underline_description"
+            android:layout_marginEnd="@dimen/moa_optional_access_dialog_storage_ic_margin_right" />
+
+        <TextView
+            android:text="@string/moa_optional_access_dialog_storage_space_title"
+            style="@style/OptionalAccessDialogSubTitle"/>
+
+        <TextView
+            android:text="@string/moa_optional_access_dialog_storage_space_title"
+            style="@style/OptionalAccessDialogSubContent"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/contentInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:lineSpacingExtra="3dp"
+        android:text="@string/moa_optional_access_dialog_content_info"
+        android:textColor="@color/black"
+        tools:ignore="SmallSp"
+        android:textSize="12sp"
+        style="@style/MoaFont" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_underline_height"
+        android:background="@color/linkWater"
+        android:contentDescription="@string/underline_description" />
+
+    <TextView
+        style="@style/OptionalAccessDialogTitle"
+        android:text="@string/moa_optional_access_dialog_change_access_title" />
+
+    <TextView
+        android:layout_marginTop="16.3dp"
+        android:text="@string/moa_optional_access_dialog_change_access_content"
+        style="@style/OptionalAccessDialogSubTitle" />
+
+    <Button
+        android:id="@+id/done"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/moa_optional_access_dialog_done_height"
+        android:text="@string/moa_optional_access_dialog_done"
+        android:textSize="13.3sp"
+        style="@style/CoralBoldStyle"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

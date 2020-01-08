@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteSmoke"
+    tools:context="com.moaPlatform.moa.bottom_menu.main.MainActivity">
+
+    <com.moaPlatform.moa.util.custom_view.NestedScrollingView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingBottom="@dimen/bottom_toolbar_padding">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/lvDeliveryCategoryBg"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/main_category_bg_height"
+                android:contentDescription="@string/underline_description"
+                android:scaleType="fitXY"
+                android:src="@drawable/main_delivery_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/lvEatOutCategoryBg"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/main_category_bg_height"
+                android:contentDescription="@string/underline_description"
+                android:scaleType="fitXY"
+                android:src="@drawable/main_eat_out_bg"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/tempImg"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_marginBottom="45dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/underline_description"
+                app:layout_constraintBottom_toBottomOf="@id/lvDeliveryCategoryBg"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/categoryAnimation"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/animationCover"
+                app:layout_constraintLeft_toLeftOf="@id/animationCover"
+                app:layout_constraintRight_toRightOf="@id/animationCover"
+                app:layout_constraintTop_toTopOf="@id/animationCover"
+                app:lottie_loop="true" />
+
+            <ImageView
+                android:id="@+id/animationCover"
+                android:layout_width="@dimen/main_category_ani_cover_size"
+                android:layout_height="@dimen/main_category_ani_cover_size"
+                android:contentDescription="@string/underline_description"
+                android:scaleType="fitXY"
+                android:src="@drawable/main_ani_circle_cover"
+                app:layout_constraintBottom_toBottomOf="@id/categoryLayout"
+                app:layout_constraintLeft_toLeftOf="@id/categoryLayout"
+                app:layout_constraintRight_toRightOf="@id/categoryLayout"
+                app:layout_constraintTop_toTopOf="@id/categoryLayout" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/categoryLayout"
+                android:layout_width="@dimen/main_category_circle_layout_size"
+                android:layout_height="@dimen/main_category_circle_layout_size"
+                android:layout_marginBottom="31dp"
+                app:layout_constraintBottom_toBottomOf="@id/tempImg"
+                app:layout_constraintLeft_toLeftOf="@id/lvDeliveryCategoryBg"
+                app:layout_constraintRight_toRightOf="@id/lvDeliveryCategoryBg">
+
+                <ImageButton
+                    android:id="@+id/categoryEatOutBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="132.7dp"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/underline_description"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/demo_top_cateogry"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/categoryEatOutGroup"
+                    android:layout_width="@dimen/main_category_group_width"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@id/categoryEatOutBg"
+                    app:layout_constraintLeft_toLeftOf="@id/categoryEatOutBg"
+                    app:layout_constraintRight_toRightOf="@id/categoryEatOutBg"
+                    app:layout_constraintTop_toTopOf="@id/categoryEatOutBg"
+                    app:layout_constraintVertical_bias="0.1">
+
+                    <ImageView
+                        android:id="@+id/categoryEatOutIc"
+                        android:layout_width="24dp"
+                        android:layout_height="29dp"
+                        android:layout_gravity="center_horizontal"
+                        android:contentDescription="@string/underline_description"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/circle_dineout" />
+
+                    <TextView
+                        android:id="@+id/categoryEatOutText"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/space_9"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/common_text_xs_size"
+                        android:textStyle="bold"
+                        tools:text="플레이스" />
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/categoryDeliveryBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="132.7dp"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/underline_description"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/demo_bottom_cateogry"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/categoryDeliveryGroup"
+                    android:layout_width="@dimen/main_category_group_width"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@id/categoryDeliveryBg"
+                    app:layout_constraintLeft_toLeftOf="@id/categoryDeliveryBg"
+                    app:layout_constraintRight_toRightOf="@id/categoryDeliveryBg"
+                    app:layout_constraintTop_toTopOf="@id/categoryDeliveryBg"
+                    app:layout_constraintVertical_bias="0.9">
+
+                    <ImageView
+                        android:id="@+id/categoryDeliveryIc"
+                        android:layout_width="33.3dp"
+                        android:layout_height="29.7dp"
+                        android:layout_gravity="center_horizontal"
+                        android:contentDescription="@string/underline_description"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/circle_delivery" />
+
+                    <TextView
+                        android:id="@+id/categoryDeliveryText"
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/space_9"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/common_text_xs_size"
+                        android:textStyle="bold"
+                        tools:text="배달" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageButton
+                android:id="@+id/selectCategoryBg"
+                android:layout_width="@dimen/main_category_circle_layout_size"
+                android:layout_height="132.7dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/underline_description"
+                android:scaleType="fitXY"
+                android:src="@drawable/demo_select_bottom_cateogry"
+                app:layout_constraintBottom_toBottomOf="@id/categoryLayout"
+                app:layout_constraintLeft_toLeftOf="@id/categoryLayout"
+                app:layout_constraintRight_toRightOf="@id/categoryLayout" />
+
+            <TextView
+                android:id="@+id/addressText"
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/main_category_address_margin_bottom"
+                android:textColor="@color/white"
+                android:textSize="@dimen/common_text_xs_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/selectCategoryBg"
+                app:layout_constraintLeft_toLeftOf="@id/selectCategoryBg"
+                app:layout_constraintRight_toRightOf="@id/selectCategoryBg" />
+
+            <ImageView
+                android:id="@+id/addressUnderLine"
+                android:layout_width="@dimen/main_select_category_line_width"
+                android:layout_height="@dimen/main_select_category_line_height"
+                android:layout_marginBottom="@dimen/main_select_category_line_margin_bottom"
+                android:background="@color/white"
+                android:contentDescription="@string/underline_description"
+                app:layout_constraintBottom_toTopOf="@id/addressText"
+                app:layout_constraintLeft_toLeftOf="@id/selectCategoryBg"
+                app:layout_constraintRight_toRightOf="@id/selectCategoryBg" />
+
+            <TextView
+                android:id="@+id/selectCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/main_select_category_margin_bottom"
+                android:textColor="@color/white"
+                android:textSize="@dimen/common_text_xxl_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/addressUnderLine"
+                app:layout_constraintLeft_toLeftOf="@id/selectCategoryBg"
+                app:layout_constraintRight_toRightOf="@id/selectCategoryBg" />
+
+            <com.moaPlatform.moa.util.custom_view.NonScrollViewPager
+                android:id="@+id/subMenuViewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/main_activity_sub_menu_bg"
+                app:layout_constraintTop_toBottomOf="@id/tempImg" />
+
+            <!-- 유저 정보 -->
+            <LinearLayout
+                android:id="@+id/viewUserInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/main_ad_title_margin_top"
+                android:paddingBottom="15dp"
+                app:layout_constraintTop_toBottomOf="@id/subMenuViewpager">
+
+                <TextView
+                    android:id="@+id/isLoginText"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="@dimen/main_use_info_padding"
+                    android:text="@string/login"
+                    android:textColor="@color/matterhorn"
+                    android:textSize="14.5sp" />
+
+                <ImageView
+                    android:id="@+id/userInfoBar"
+                    android:layout_width="1dp"
+                    android:layout_height="11dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/matterhorn"
+                    android:contentDescription="@string/underline_description" />
+
+                <TextView
+                    android:id="@+id/customerServiceText"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/main_use_info_padding"
+                    android:paddingEnd="0dp"
+                    android:text="@string/customer_service"
+                    android:textColor="@color/matterhorn"
+                    android:textSize="14.5sp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/linkWater"
+                app:layout_constraintTop_toBottomOf="@+id/viewUserInfo" />
+
+            <!--이용 약관 레이아웃 -->
+            <LinearLayout
+                android:id="@+id/termsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/main_termsLayout_padding"
+                android:paddingBottom="@dimen/main_termsLayout_padding"
+                app:layout_constraintTop_toBottomOf="@id/viewUserInfo">
+
+                <TextView
+                    android:id="@+id/ceoInfoCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="@dimen/main_termsLayout_content_margin"
+                    android:text="@string/ceo_info_check"
+                    android:textColor="@color/matterhorn"
+                    android:textSize="11.5sp" />
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/linkWater"
+                    android:contentDescription="@string/underline_description" />
+
+                <TextView
+                    android:id="@+id/useOfTerms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/main_termsLayout_content_margin"
+                    android:paddingEnd="@dimen/main_termsLayout_content_margin"
+                    android:text="@string/use_of_terms"
+                    android:textColor="@color/matterhorn"
+                    android:textSize="11.5sp" />
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/linkWater"
+                    android:contentDescription="@string/underline_description" />
+
+                <TextView
+                    android:id="@+id/privacyPolicy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/main_termsLayout_content_margin"
+                    android:paddingEnd="0dp"
+                    android:text="@string/privacy_policy"
+                    android:textColor="@color/matterhorn"
+                    android:textSize="11.5sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/moaEntrepreneurInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/main_entrepreneur_padding_top_bottom"
+                android:paddingBottom="@dimen/main_entrepreneur_padding_top_bottom"
+                app:layout_constraintTop_toBottomOf="@id/termsLayout">
+
+                <TextView
+                    style="@style/BlackColorNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/moa_entrepreneur_info"
+                    android:textSize="12.7sp" />
+
+                <ImageView
+                    android:id="@+id/ivMoaEntrepreneurArrow"
+                    android:layout_width="@dimen/main_entrepreneur_info_arrow_width"
+                    android:layout_height="@dimen/main_entrepreneur_info_arrow_height"
+                    android:layout_marginStart="@dimen/main_entrepreneur_info_arrow_margin_left"
+                    android:contentDescription="@string/underline_description"
+                    android:rotation="90"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ad_more_arrow" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewMoaEntrepreneurInfoLayoutUnderLine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_underline_height"
+                android:layout_marginStart="23.3dp"
+                android:layout_marginEnd="23.3dp"
+                android:background="@color/linkWater"
+                app:layout_constraintTop_toBottomOf="@id/moaEntrepreneurInfoLayout" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clMoaEntrepreneurInfoContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingTop="16.3dp"
+                android:paddingBottom="16.3dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/viewMoaEntrepreneurInfoLayoutUnderLine">
+
+                <TextView
+                    android:id="@+id/tvCeo"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="대표이사 : 임승옥"
+                    android:textColor="@color/color_565656"
+                    android:textSize="10.7sp"
+                    app:layout_constraintLeft_toLeftOf="@id/tvMainBusinessNumber"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvMainBusinessNumber"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="사업자등록번호 : 852-81-00695"
+                    android:textColor="@color/color_565656"
+                    android:textSize="10.7sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tvPartition"
+                    app:layout_constraintTop_toBottomOf="@id/tvCeo" />
+
+                <TextView
+                    android:id="@+id/tvPartition"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="|"
+                    android:textColor="@color/color_565656"
+                    android:textSize="10.7sp"
+                    app:layout_constraintLeft_toRightOf="@id/tvMainBusinessNumber"
+                    app:layout_constraintRight_toLeftOf="@id/tvMainOrderNumber"
+                    app:layout_constraintTop_toBottomOf="@id/tvCeo" />
+
+                <TextView
+                    android:id="@+id/tvMainOrderNumber"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="통신판매업신고 : 2019-서울금천-0748"
+                    android:textSize="10.7sp"
+                    app:layout_constraintLeft_toRightOf="@id/tvPartition"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCeo" />
+
+
+                <TextView
+                    android:id="@+id/tvMainAddress"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="본사 : 서울시 금천구 가산디지털1로 168"
+                    android:textColor="@color/color_565656"
+                    android:textSize="10.7sp"
+                    app:layout_constraintLeft_toLeftOf="@id/tvMainBusinessNumber"
+                    app:layout_constraintTop_toBottomOf="@id/tvMainBusinessNumber" />
+
+                <TextView
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="고객센터 : support@moaplanet.co.kr"
+                    android:textColor="@color/color_565656"
+                    android:textSize="10.7sp"
+                    app:layout_constraintLeft_toLeftOf="@id/tvMainBusinessNumber"
+                    app:layout_constraintTop_toBottomOf="@id/tvMainAddress" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/main_moa_responsibility_padding_bottom"
+                app:layout_constraintTop_toBottomOf="@id/clMoaEntrepreneurInfoContainer">
+
+                <TextView
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/main_moa_not_responsibility_margin_top"
+                    android:gravity="center"
+                    android:lineSpacingExtra="3dp"
+                    android:text="@string/moa_not_responsibility"
+                    android:textColor="@color/matterhorn"
+                    android:textSize="9.5sp" />
+
+                <TextView
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/main_copyright_margin_top"
+                    android:gravity="center"
+                    android:text="@string/copyright_moa"
+                    android:textColor="@color/matterhorn"
+                    android:textSize="9.5sp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.moaPlatform.moa.util.custom_view.NestedScrollingView>
+
+    <include
+        android:id="@+id/topToolbar"
+        layout="@layout/top_toolbar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <include
+            android:id="@+id/bottomToolbar"
+            layout="@layout/bottom_toolbar" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="false" android:drawable="@drawable/store_detail_bookmark_nor_ic"/>
+    <item android:state_checked="true" android:drawable="@drawable/store_detail_bookmark_press_ic"/>
+    <item android:drawable="@drawable/store_detail_bookmark_nor_ic"/>
+</selector>

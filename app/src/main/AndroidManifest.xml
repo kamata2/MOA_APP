@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.moaPlatform.moa">
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- NETWORK_PROVIDER 접근 권한 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- GPS_PROVIDER 접근 권한 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="UnusedAttribute">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+
+        <activity
+            android:name=".intro.IntroActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/kakaolink_host"
+                    android:scheme="@string/kakao_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".payment.StartEasyPayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".account.FindIdActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".bottom_menu.main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".side_menu.SideMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".delivery_menu.store_list.StoreListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".top_menu.location.LocationSettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".delivery_menu.store_detail.StoreDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bottom_menu.wallet.wallet_main.view.WalletMainActivity"
+            android:screenOrientation="portrait" />     <!-- 메인 탭 > 월렛 -->
+        <activity
+            android:name=".bottom_menu.wallet.wallet_main.view.WalletSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bottom_menu.wallet.wallet_main.view.WalletAgreeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bottom_menu.wallet.wallet_main.view.WalletSettingPWActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bottom_menu.wallet.wallet_main.view.IdentityActivity"
+            android:screenOrientation="portrait" /> <!-- 전화번호 인증 화면 -->
+        <activity
+            android:name=".bottom_menu.badge.badge_main.view.BadgeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".online_payment.order_payment.OrderPaymentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".online_payment.order_payment.WalletPayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".delivery_menu.store_product.StoreProductActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bottom_menu.wallet.barcode.QrCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bottom_menu.wallet.barcode.QrMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bottom_menu.wallet.barcode.CustomQrScanningActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bottom_menu.wallet.barcode.QrCodeInputDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".side_menu.usernotice.UserNoticeActivity"
+            android:screenOrientation="portrait" /> <!-- 카드등록 웹뷰-->
+        <activity
+            android:name=".bottom_menu.shopping_cart.main.ShoppingCartActivity"
+            android:screenOrientation="portrait" /> <!-- 장바구니 상세 -->
+        <activity
+            android:name=".bottom_menu.shopping_cart.detail.ShoppingCartDetailActivity"
+            android:screenOrientation="portrait" /> <!-- 사이드 메뉴 -->
+        <!-- 사이드 메뉴 메인 -->
+        <activity
+            android:name=".side_menu.order.detail.view.OrderDetailHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ReviewModifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".auth.sign_up.controller.SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.CardRegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".side_menu.favorite.BookmarkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".side_menu.coupon.CouponListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".side_menu.order.OrderHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".side_menu.review_view.MyReviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".side_menu.eventnotice.view.event.EventMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".side_menu.coupon.CouponRegisterMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".side_menu.settings.noticeagree.NoticeAgreeSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".side_menu.settings.account.FingerPrintSettingMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".delivery_menu.eatout_store_detail.EatOutStoreDetailActivity"
+            android:screenOrientation="portrait" /> <!-- 외식 상세화면 -->
+        <activity
+            android:name=".delivery_menu.eatout_store_list.EatOutStoreListActivity"
+            android:screenOrientation="portrait" /> <!-- 외식 상점 리스트 화면 -->
+        <activity
+            android:name=".delivery_menu.eatout_store_detail.EatOutStoreDaumMapActivity"
+            android:screenOrientation="portrait" /> <!-- 외식 상세 > 지도 화면 -->
+        <activity
+            android:name=".delivery_menu.eatout_store_detail.EatOutStoreProductListActivity"
+            android:screenOrientation="portrait" /> <!-- 외식 상세 > 상품 리스트 화면 -->
+        <activity
+            android:name=".delivery_menu.eatout_store_detail.EatOutStoreReviewActivity"
+            android:screenOrientation="portrait" /> <!-- 외식 상세 > 리뷰 리스트 화면 -->
+        <activity
+            android:name=".side_menu.eventnotice.view.event.EventSubWebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".side_menu.customercenter.faq.view.FaqMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".side_menu.customercenter.CustomerCenterMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".side_menu.customercenter.myquestion.view.OneOnOneQuestionMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".side_menu.customercenter.myquestion.view.MyQuestionMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ReviewWriteMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".side_menu.profile.ProfileChangeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".auth.sign_up.controller.LogInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".auth.sign_up.controller.LogInFingerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".auth.sign_up.controller.LogInFingerBeforeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".side_menu.settings.account.AccountSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".side_menu.settings.account.PasswordChangeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EventWebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".online_payment.order_payment.PaymentCouponActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".top_menu.search.StoreSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bottom_menu.theme.ThemeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wallet.WalletRestoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.MoaPayPswInitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bottom_menu.wallet.wallet_main.view.PaymentResetPasswordActivity"
+            android:screenOrientation="portrait" /> <!-- GOEAT PAY 비밀번호 재설정화면 -->
+        <activity
+            android:name=".bottom_menu.wallet.wallet_main.view.PaymentSearchPasswordActivity"
+            android:screenOrientation="portrait" /> <!-- GOEAT PAY 비밀번호 재설정화면 -->
+        <activity
+            android:name=".bottom_menu.wallet.wallet_main.view.WalletPointHistoryActivity"
+            android:screenOrientation="portrait" /> <!-- 포인트 내역 -->
+        <activity
+            android:name=".auth.PinResetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".auth.sign_up.FindPasswordActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".bottom_menu.wallet.wallet_main.view.WalletPointExchangeActivity"
+            android:screenOrientation="portrait" /> <!-- 월렛 > 포인트 전환 -->
+
+        <activity
+            android:name=".bottom_menu.wallet.wallet_main.view.WalletPasswordInputActivity"
+            android:screenOrientation="portrait" /> <!-- 월렛 > 포인트 전환 > 비밀번호 인증 -->
+
+        <!--<activity-->
+            <!--android:name=".side_menu.profile.MemberOutNotice"-->
+            <!--android:screenOrientation="portrait" />&lt;!&ndash;회원탈퇴 유의사항&ndash;&gt;-->
+
+        <!--<activity-->
+            <!--android:name=".side_menu.customercenter.myquestion.MyQuestionNomember"-->
+            <!--android:screenOrientation="portrait" />&lt;!&ndash;비회원 문의내역&ndash;&gt;-->
+
+
+        <service
+            android:name=".notification.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!--<meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />-->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimary" />
+    </application>
+
+</manifest>

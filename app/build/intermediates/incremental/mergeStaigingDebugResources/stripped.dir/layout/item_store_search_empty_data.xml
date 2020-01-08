@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="@dimen/item_store_search_empty_ic_width"
+        android:layout_height="@dimen/item_store_search_empty_ic_height"
+        android:layout_gravity="center"
+        android:background="@drawable/item_store_search_empty_ic"
+        android:contentDescription="@string/storesearch_item_empty_ic_description" />
+
+    <TextView
+        android:id="@+id/tvStoreSearchEmpty"
+        style="@style/MoaFont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/item_store_search_empty_text_top_space"
+        android:gravity="center_horizontal"
+        android:text="@string/storesearch_item_empty_search_data"
+        android:textColor="@color/gray98"
+        android:textSize="@dimen/item_store_search_empty_text_size"
+        android:textStyle="bold" />
+
+</LinearLayout>

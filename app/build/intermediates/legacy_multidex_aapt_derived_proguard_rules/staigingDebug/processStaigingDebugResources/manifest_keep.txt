@@ -1,0 +1,4 @@
+# Referenced at C:\B2C_MOA_APP (2)\app\build\intermediates\merged_manifests\staigingDebug\AndroidManifest.xml:43
+-keep class androidx.core.app.CoreComponentFactory { <init>(); }
+# Referenced at C:\B2C_MOA_APP (2)\app\build\intermediates\merged_manifests\staigingDebug\AndroidManifest.xml:43
+-keep class androidx.multidex.MultiDexApplication { <init>(); }

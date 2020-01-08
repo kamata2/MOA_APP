@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/tvbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="@color/linkWater" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/whiteSmoke" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewHead"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginTop="4.7dp"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingStart="13dp"
+        android:paddingEnd="0dp">
+
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            style="@style/BlackColorBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9.7dp"
+            android:textSize="@dimen/common_text_xl_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:text="GOEAT 플러스" />
+
+        <LinearLayout
+            android:id="@+id/viewAdQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7.3dp"
+            android:background="@drawable/view_sotre_list_ad"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="6.7dp"
+            android:paddingTop="3.7dp"
+            android:paddingEnd="6.7dp"
+            android:paddingBottom="3.7dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvHeaderTitle"
+            app:layout_constraintLeft_toRightOf="@id/tvHeaderTitle"
+            app:layout_constraintTop_toTopOf="@id/tvHeaderTitle">
+
+            <TextView
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="광고"
+                android:textColor="@color/suvaGrey"
+                android:textSize="@dimen/common_text_xxxs_size" />
+
+            <ImageView
+                android:layout_width="8.7dp"
+                android:layout_height="8.7dp"
+                android:layout_marginStart="3dp"
+                android:contentDescription="@string/underline_description"
+                android:scaleType="fitXY"
+                android:src="@drawable/store_list_ad_question_ic" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/viewAdStoreNotify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/viewAdQuestion">
+
+            <ImageView
+                android:id="@+id/ivAdNotify"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/underline_description"
+                android:scaleType="fitXY"
+                android:src="@drawable/store_list_ad_noti"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:layout_marginEnd="@dimen/common_margin_10"
+                android:text="GOEAT 플러스 광고 상품을 구매한\n매장이 표시되는 영역입니다."
+                android:textColor="@color/grey"
+                android:textSize="@dimen/common_text_xxxs_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clStoreListContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivThumbNail"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="13dp"
+            android:contentDescription="@string/underline_description"
+            android:scaleType="fitXY"
+            android:src="@color/coral"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/viewThumbNailMask"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/store_list_thumbnail_mask_w"
+            app:layout_constraintLeft_toLeftOf="@id/ivThumbNail"
+            app:layout_constraintTop_toTopOf="@id/ivThumbNail" />
+
+        <TextView
+            android:id="@+id/tvNotOpen"
+            style="@style/MoaFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="오픈\n대기"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_text_l_size"
+            app:layout_constraintBottom_toBottomOf="@id/viewThumbNailMask"
+            app:layout_constraintLeft_toLeftOf="@id/viewThumbNailMask"
+            app:layout_constraintRight_toRightOf="@id/viewThumbNailMask"
+            app:layout_constraintTop_toTopOf="@id/viewThumbNailMask" />
+
+        <ImageView
+            android:id="@+id/bestStoreIc"
+            android:layout_width="17.7dp"
+            android:layout_height="17.7dp"
+            android:contentDescription="@string/underline_description"
+            android:scaleType="fitXY"
+            android:src="@drawable/best_store_ic"
+            app:layout_constraintBottom_toTopOf="@id/ivThumbNail"
+            app:layout_constraintLeft_toLeftOf="@id/ivThumbNail"
+            app:layout_constraintRight_toLeftOf="@id/ivThumbNail"
+            app:layout_constraintTop_toTopOf="@id/ivThumbNail" />
+
+        <TextView
+            android:id="@+id/tvStoreName"
+            style="@style/BlackColorBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            app:layout_constraintBottom_toTopOf="@id/viewRating"
+            app:layout_constraintLeft_toRightOf="@id/ivThumbNail"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="동대문 엽기 떡볶이" />
+
+        <LinearLayout
+            android:id="@+id/viewRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/viewStoreInfo"
+            app:layout_constraintLeft_toLeftOf="@id/tvStoreName"
+            app:layout_constraintTop_toBottomOf="@id/tvStoreName">
+
+            <ImageView
+                android:layout_width="9.3dp"
+                android:layout_height="9.3dp"
+                android:contentDescription="@string/underline_description"
+                android:scaleType="fitXY"
+                android:src="@drawable/yellow_star" />
+
+            <TextView
+                android:id="@+id/tvRatingPoint"
+                style="@style/BlackColorBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3.7dp"
+                android:textSize="@dimen/common_text_xs_size"
+                tools:text="3.2" />
+
+            <TextView
+                android:id="@+id/tvReview"
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10.3dp"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/common_text_xs_size"
+                tools:text="리뷰 34" />
+
+            <TextView
+                android:id="@+id/tvBookMark"
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/common_text_xs_size"
+                tools:text="즐겨찾기 98" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/viewStoreInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/tvStoreName"
+            app:layout_constraintTop_toBottomOf="@id/viewRating">
+
+            <TextView
+                android:id="@+id/tvTakeOut"
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="4dp"
+                android:paddingTop="2.3dp"
+                android:paddingEnd="4dp"
+                android:paddingBottom="2.3dp"
+                android:text="테이크 아웃"
+                android:textSize="10.5sp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tvCoupon"
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5.7dp"
+                android:paddingStart="4dp"
+                android:paddingTop="2.3dp"
+                android:paddingEnd="4dp"
+                android:paddingBottom="2.3dp"
+                android:text="타임 이벤트"
+                android:textSize="10.5sp"
+                android:visibility="gone"/>
+
+            <com.moaPlatform.moa.util.custom_view.CommonTimeEventView
+                android:id="@+id/viewStoreTimeEventOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.moaPlatform.moa.util.custom_view.CommonTimeEventView
+                android:id="@+id/viewStoreTimeEventTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.moaPlatform.moa.util.custom_view.CommonTimeEventView
+                android:id="@+id/viewStoreTimeEventThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.moaPlatform.moa.util.custom_view.CommonTimeEventView
+                android:id="@+id/viewStoreTimeEventFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivItemArrow"
+            android:layout_width="7.7dp"
+            android:layout_height="14dp"
+            android:layout_marginEnd="13dp"
+            android:contentDescription="@string/underline_description"
+            android:scaleType="fitXY"
+            android:src="@drawable/list_item_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSaveRate"
+            style="@style/MoaFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3.3dp"
+            android:textColor="@color/sunsetOrange"
+            android:textSize="@dimen/common_text_l_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/ivItemArrow"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="적립률 7%" />
+
+        <ImageView
+            android:id="@+id/ivSaveRateIc"
+            android:layout_width="16.7dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="5.7dp"
+            android:contentDescription="@string/underline_description"
+            android:scaleType="fitXY"
+            android:src="@drawable/store_list_high_save_rate_ic"
+            app:layout_constraintBottom_toBottomOf="@id/tvSaveRate"
+            app:layout_constraintRight_toLeftOf="@id/tvSaveRate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

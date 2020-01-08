@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteSmoke">
+
+    <com.moaPlatform.moa.util.custom_view.CommonTitleView
+        android:id="@+id/commonTitleReviewWrite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintSideReviewWriteComplete"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/top_toolbar_height"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/tvSideReviewWriteComplete"
+            style="@style/MoaFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/top_toolbar_now_location_title_margin_right"
+            android:paddingRight="@dimen/top_toolbar_now_location_title_margin_right"
+            android:text="완료"
+            android:textColor="@color/coral"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/whiteSmoke"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/commonTitleReviewWrite"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:paddingBottom="30dp"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constrainSideReviewWriteTopInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvSideReviewWriteStoreName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13.3dp"
+                        android:layout_marginTop="20dp"
+                        tools:text="동대문 엽기 떡볶이"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        style="@style/MoaFont"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvSideReviewWriteMenuTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="메뉴"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="13.3dp"
+                        android:layout_marginRight="13.3dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvSideReviewWriteStoreName"
+                        android:layout_marginTop="9.7dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:background="@drawable/tangerinbutton"
+                        style="@style/MoaFont"/>
+
+
+                    <TextView
+                        android:id="@+id/tvSideReviewWriteMenuContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5.7dp"
+                        tools:text="치즈 떡볶이, 순대, 닭강정 1인분"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        style="@style/MoaFont"
+                        app:layout_constraintBottom_toBottomOf="@id/tvSideReviewWriteMenuTitle"
+                        app:layout_constraintLeft_toRightOf="@id/tvSideReviewWriteMenuTitle"
+                        app:layout_constraintTop_toTopOf="@id/tvSideReviewWriteMenuTitle"
+                        />
+
+                    <TextView
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_marginTop="20.7dp"
+                        android:background="@drawable/common_bold_line"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvSideReviewWriteMenuContent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/starPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="20dp"
+                    android:text="별점"
+                    android:textColor="@color/black"
+                    android:textSize="14.3sp"
+                    android:textStyle="bold"
+                    style="@style/MoaFont"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/constrainSideReviewWriteTopInfo" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/star_point"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="8.3dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/whiteSmoke"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/starPoint">
+
+                    <TextView
+                        android:id="@+id/tasty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="21.7dp"
+                        android:layout_marginTop="19.33dp"
+                        android:text="맛"
+                        android:textColor="@color/black"
+                        android:textSize="12.7sp"
+                        style="@style/MoaFont"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                        android:id="@+id/ratingSideReviewWriteTasty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="61.7dp"
+                        android:isIndicator="false"
+                        android:max="5"
+                        android:numStars="5"
+                        android:progressTint="@color/goldenTainoi"
+                        android:rating="0"
+                        app:layout_constraintBottom_toBottomOf="@id/tasty"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tasty"
+                        />
+
+                    <TextView
+                        android:id="@+id/much"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="21.7dp"
+                        android:layout_marginTop="21dp"
+                        android:text="양"
+                        android:textColor="@color/black"
+                        android:textSize="12.7sp"
+                        style="@style/MoaFont"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tasty" />
+
+                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                        android:id="@+id/ratingSideReviewWriteAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="61.7dp"
+                        android:isIndicator="false"
+                        android:max="5"
+                        android:numStars="5"
+                        android:progressTint="@color/goldenTainoi"
+                        android:rating="0"
+                        app:layout_constraintBottom_toBottomOf="@id/much"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/much"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvSideReviewWriteDeliveryScoreTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16.7dp"
+                        android:layout_marginTop="21dp"
+                        android:layout_marginBottom="17.3dp"
+                        android:text="배달"
+                        android:textColor="@color/black"
+                        android:textSize="12.7sp"
+                        style="@style/MoaFont"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/much" />
+
+                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                        android:id="@+id/ratingSideReviewWriteDelivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="61.7dp"
+                        android:isIndicator="false"
+                        android:max="5"
+                        android:numStars="5"
+                        android:progressTint="@color/goldenTainoi"
+                        android:rating="0"
+                        app:layout_constraintBottom_toBottomOf="@id/tvSideReviewWriteDeliveryScoreTitle"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvSideReviewWriteDeliveryScoreTitle"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tvSideReviewWritePleaseEnterStar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8.3dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/review_modify_activity_please_enter_star"
+                    android:textColor="@color/coral"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/star_point" />
+
+                <TextView
+                    android:id="@+id/tvSideReviewWriteTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="20dp"
+                    android:text="리뷰 작성"
+                    android:textColor="@color/black"
+                    android:textSize="14.3sp"
+                    android:textStyle="bold"
+                    style="@style/MoaFont"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSideReviewWritePleaseEnterStar" />
+
+                <EditText
+                    android:id="@+id/etSideReviewWriteContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="101.67dp"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="8.3dp"
+                    android:layout_marginRight="13.3dp"
+                    android:background="@drawable/common_edit_text_form"
+                    android:breakStrategy="simple"
+                    android:gravity="top"
+                    style="@style/MoaFont"
+                    android:hint="@string/review_modify_activity_write_content_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="none"
+                    android:paddingLeft="@dimen/space_9"
+                    android:paddingTop="13.3dp"
+                    android:paddingRight="@dimen/space_9"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvSideReviewWriteTitle" />
+
+                <TextView
+                    android:id="@+id/tvSideMenuReviewWriteToolTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8.3dp"
+                    android:text="리뷰 내용을 입력해 주세요."
+                    android:textColor="@color/coral"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etSideReviewWriteContent"/>
+
+                <TextView
+                    android:id="@+id/file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="파일첨부"
+                    android:textColor="@color/black"
+                    android:textSize="14.3dp"
+                    android:textStyle="bold"
+                    style="@style/MoaFont"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvSideMenuReviewWriteToolTip" />
+
+                <LinearLayout
+                    android:id="@+id/side_oneonone_pic_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="10dp"
+                    android:weightSum="3"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/file">
+
+                    <RelativeLayout
+                        android:id="@+id/rlSideReviewWriteImage1Container"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/whisper">
+
+                        <ImageView
+                            android:id="@+id/ivSideReviewWritePicture1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/ivSideReviewWritePicture1CameraIcon"
+                            android:layout_width="31dp"
+                            android:layout_height="31dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/addphoto_l" />
+
+                        <TextView
+                            android:id="@+id/tvSideReviewWritePicture1Delete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ivSideReviewWritePicture1CameraIcon"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="3dp"
+                            android:text="삭제"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlSideReviewWriteImage2Container"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6.7dp"
+                        android:layout_weight="1"
+                        android:background="@color/whisper">
+
+                        <ImageView
+                            android:id="@+id/ivSideReviewWritePicture2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/lightGray"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/ivSideReviewWritePicture2CameraIcon"
+                            android:layout_width="31dp"
+                            android:layout_height="31dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/addphoto_l" />
+
+                        <TextView
+                            android:id="@+id/tvSideReviewWritePicture2Delete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ivSideReviewWritePicture2CameraIcon"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="3dp"
+                            android:text="삭제"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlSideReviewWriteImage3Container"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6.7dp"
+                        android:layout_weight="1"
+                        android:background="@color/whisper">
+
+                        <ImageView
+                            android:id="@+id/ivSideReviewWritePicture3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/lightGray"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/ivSideReviewWritePicture3CameraIcon"
+                            android:layout_width="31dp"
+                            android:layout_height="31dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/addphoto_l" />
+
+                        <TextView
+                            android:id="@+id/tvSideReviewWritePicture3Delete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ivSideReviewWritePicture3CameraIcon"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="3dp"
+                            android:text="삭제"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="8.3dp"
+                    android:text="이미지 첨부 파일은 최대 3개까지 가능"
+                    android:textColor="@color/zambezi"
+                    android:textSize="12.7sp"
+                    style="@style/MoaFont"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/side_oneonone_pic_total" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="8.3dp"
+                    android:text="첨부 가능 파일 : JPG,PNG 이미지 파일"
+                    android:textColor="@color/zambezi"
+                    android:textSize="12.7sp"
+                    style="@style/MoaFont"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/image"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

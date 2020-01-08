@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingTop="19.7dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="32.7dp">
+
+    <TextView
+        android:id="@+id/tvWalletPointHistoryDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#7d7d7d"
+        android:textSize="10sp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tvWalletPointHistoryDesc"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2019.00.00 00:00:00" />
+
+    <TextView
+        android:id="@+id/tvWalletPointHistoryDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="9.3sp"
+        app:layout_constraintLeft_toRightOf="@id/tvWalletPointHistoryDate"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="적립" />
+
+    <TextView
+        android:id="@+id/tvWalletPointHistoryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6.7dp"
+        android:textSize="10.7sp"
+        android:textColor="@color/black"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tvWalletPointHistoryPoint"
+        app:layout_constraintTop_toBottomOf="@id/tvWalletPointHistoryDate"
+        tools:text="이벤트 적립" />
+
+    <TextView
+        android:id="@+id/tvWalletPointHistoryPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6.7dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/tvWalletPointHistoryName"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWalletPointHistoryDate"
+        tools:text="1,000p" />
+</androidx.constraintlayout.widget.ConstraintLayout>

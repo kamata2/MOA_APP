@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 메인 탭메뉴 월렛화면 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:id="@+id/scrollWalletMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/llBarcodePayment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlWalletMainTopInfoContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/wallet_main_activity_card_bg"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintCardViewPagerContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/cardViewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlLeftArrow"
+                        android:layout_width="36dp"
+                        android:layout_height="150dp"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toBottomOf="@id/cardViewPager"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/cardViewPager">
+
+                        <ImageView
+                            android:layout_width="7.7dp"
+                            android:layout_height="12dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/arrow_w_left" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlRightArrow"
+                        android:layout_width="36dp"
+                        android:layout_height="150dp"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toBottomOf="@id/cardViewPager"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/cardViewPager">
+
+                        <ImageView
+                            android:layout_width="7.7dp"
+                            android:layout_height="12dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/arrow_w_right" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llWalletMainAddcard"
+                        android:layout_width="125.3dp"
+                        android:layout_height="32.3dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/border_rect_70_70_70_70_trans_1dp_ffffff"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent">
+
+                        <ImageView
+                            android:layout_width="25.3dp"
+                            android:layout_height="21.3dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/registration_card" />
+
+                        <TextView
+                            style="@style/MoaFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.7dp"
+                            android:text="카드 추가하기"
+                            android:textColor="@color/white"
+                            android:textSize="12.7sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RelativeLayout
+                    android:id="@+id/top_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="39.7dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="GOEAT Wallet"
+                        android:textColor="@color/white"
+                        android:textSize="13.3sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/llWalletsetting"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center|end"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/walletsetting"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginEnd="11.3dp"
+                            android:background="@drawable/icon_setting_w"
+                            android:padding="15dp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/ivWalletMainMaskImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="136dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/bg_card_bottom_mask" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlWalletMainLoginContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="19.3dp">
+
+                <ImageView
+                    android:id="@+id/ivWalletMainLoginTitleIcon1"
+                    android:layout_width="12.7dp"
+                    android:layout_height="12.7dp"
+                    android:layout_marginLeft="16.7dp"
+                    android:layout_marginTop="1.7dp"
+                    android:background="@drawable/exclamation_mark" />
+
+                <TextView
+                    android:id="@+id/tvWalletMainLoginContent1"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6.7dp"
+                    android:layout_toRightOf="@id/ivWalletMainLoginTitleIcon1"
+                    android:lineSpacingExtra="3dp"
+                    android:text="@string/wallet_main_login_content_1"
+                    android:textColor="#545454"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/ivWalletMainLoginTitleIcon2"
+                    android:layout_width="12.7dp"
+                    android:layout_height="12.7dp"
+                    android:layout_below="@id/tvWalletMainLoginContent1"
+                    android:layout_marginLeft="16.7dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/exclamation_mark" />
+
+                <TextView
+                    android:id="@+id/tvWalletMainLoginContent2"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvWalletMainLoginContent1"
+                    android:layout_marginLeft="6.7dp"
+                    android:layout_marginTop="4.3dp"
+                    android:layout_toRightOf="@id/ivWalletMainLoginTitleIcon2"
+                    android:lineSpacingExtra="3dp"
+                    android:text="@string/wallet_main_login_content_2"
+                    android:textColor="#545454"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnWalletMainLogin"
+                    style="@style/MoaFont"
+                    android:layout_width="65dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="26.7dp"
+                    android:background="@drawable/border_rect_70_70_70_70_fe9e8b_0dp_trans"
+                    android:gravity="center"
+                    android:text="@string/login"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/tvWalletMainLoginContent2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="21.3dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#e2e2e2" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llWalletMainWalletAddressContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/walletAddressTitleIc"
+                    android:layout_width="9dp"
+                    android:layout_height="8.7dp"
+                    android:background="@drawable/wallet" />
+
+                <TextView
+                    android:id="@+id/titleWalletAddress"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.7dp"
+                    android:text="전자지갑주소"
+                    android:textColor="#545454"
+                    android:textSize="10.7sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/walletAddress"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:textColor="#747474"
+                    android:textSize="10.7sp"
+                    android:textStyle="bold"
+                    tools:text="5JNKx8JeM7vYKx......1kUNKx8JG5THp5n" />
+
+                <RelativeLayout
+                    android:id="@+id/rlWalletMainCopyGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/walletAddresscopy"
+                        android:layout_width="8.3dp"
+                        android:layout_height="8.3dp"
+                        android:background="@drawable/copy" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llWalletMainMemberButtonConstainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13.3dp"
+                android:layout_marginTop="16.7dp"
+                android:layout_marginRight="13.3dp">
+
+                <LinearLayout
+                    android:id="@+id/llPaymentHistoryConstainer"
+                    android:layout_width="0dp"
+                    android:layout_height="36.7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_rect_0_0_0_0_ffffff_1dp_c5c5c5"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/paymentlist" />
+
+                    <TextView
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6.7dp"
+                        android:text="결제내역"
+                        android:textColor="#545454"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnCoupon"
+                    android:layout_width="0dp"
+                    android:layout_height="36.7dp"
+                    android:layout_marginLeft="6.7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_rect_0_0_0_0_ffffff_1dp_c5c5c5"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/coupon" />
+
+                    <TextView
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6.7dp"
+                        android:text="쿠폰함"
+                        android:textColor="#545454"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout><!--버튼 2개 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18.3dp"
+                android:layout_marginBottom="13.3dp">
+
+                <View
+                    android:layout_width="0.3dp"
+                    android:layout_height="190dp"
+                    android:layout_centerInParent="true"
+                    android:background="@color/linkWater" />
+
+                <LinearLayout
+                    android:id="@+id/moa_point"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/coinTitle"
+                        style="@style/MoaFont"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13.3dp"
+                        android:layout_weight="1"
+                        android:text="MOA"
+                        android:textColor="@color/coral"
+                        android:textSize="13.3sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="0.3dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/linkWater" />
+
+                    <TextView
+                        android:id="@+id/coinTitles"
+                        style="@style/MoaFont"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13.3dp"
+                        android:layout_weight="1"
+                        android:text="GOEAT POINT"
+                        android:textColor="@color/coral"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/moa_point_use"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/moa_point"
+                    android:layout_marginTop="32.3dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tvWalletMainMoaCoin"
+                        style="@style/MoaFont"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="21.7sp"
+                        android:textStyle="bold"
+                        tools:text="3,000 MOA" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/tvWalletMainpoint"
+                                style="@style/MoaFont"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="21.7sp"
+                                android:textStyle="bold"
+                                tools:text="3,000 P" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/tvWalletMainpointWon"
+                                    style="@style/MoaFont"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginLeft="10.3dp"
+                                    android:singleLine="true"
+                                    android:textColor="#545454"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    tools:text="(&#8361;3,000)" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llWalletMainStandByPointContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:gravity="center">
+
+                            <TextView
+                                style="@style/MoaFont"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="@string/wallet_stand_by_point"
+                                android:textColor="#545454"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvWalletMainStandByPoint"
+                                style="@style/MoaFont"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:singleLine="true"
+                                android:textColor="@color/coral"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                tools:text="+ 150 P" />
+
+                            <ImageView
+                                android:layout_width="12.7dp"
+                                android:layout_height="12.7dp"
+                                android:layout_marginLeft="4.7dp"
+                                android:background="@drawable/questionmark" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/moa_point_uselist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/moa_point_use"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginRight="13.3dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnWalletMainMoaCoin"
+                        style="@style/MoaFont"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="13.3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_rect_0_0_0_0_ffffff_1dp_c5c5c5"
+                        android:text="적립/사용내역"
+                        android:textColor="#545454"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/btnPointHistory"
+                        style="@style/MoaFont"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_rect_0_0_0_0_ffffff_1dp_c5c5c5"
+                        android:text="적립/사용내역"
+                        android:textColor="#545454"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/moa_point_uselist"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="6.7dp"
+                    android:layout_marginRight="13.3dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <Button
+                        android:id="@+id/btnChangePoint"
+                        style="@style/MoaFont"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="13.3dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/border_rect_0_0_0_0_ffffff_1dp_c5c5c5"
+                        android:text="포인트 전환"
+                        android:textColor="#545454"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout><!--스크롤뷰 감싸는 전체 -->
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlWalletMainBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12.3dp">
+
+        <ImageView
+            android:layout_width="13.3dp"
+            android:layout_height="13.3dp"
+            android:background="@drawable/btn_x_w" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llBarcodePayment"
+        android:layout_width="match_parent"
+        android:layout_height="53.3dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/coral"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/centerfocus" />
+
+        <TextView
+            style="@style/MoaFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.3dp"
+            android:text="QR코드 결제"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <com.moaPlatform.moa.util.custom_view.CommonLoadingView
+        android:id="@+id/commonLoadingViewWalletMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

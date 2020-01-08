@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/tvReviewHeaderScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19.7dp"
+        android:gravity="center_horizontal"
+        android:textColor="#000000"
+        android:textSize="36.8sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="3.5" />
+
+    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+        android:id="@+id/ratingBarReviewHeader"
+        android:layout_width="56.3dp"
+        android:layout_height="10.7dp"
+        android:layout_marginTop="8dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:progressTint="@color/goldenTainoi"
+        android:rating="0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvReviewHeaderScore"
+        tools:targetApi="lollipop" />
+
+    <LinearLayout
+        android:id="@+id/llReviewHeaderScoreContainer"
+        android:layout_width="match_parent"
+        android:layout_height="17dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="13.3dp"
+        android:layout_marginRight="55dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ratingBarReviewHeader">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvReviewHeaderTasteTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:letterSpacing="-0.08"
+                android:text="@string/review_taste_score"
+                android:textColor="#484848"
+                android:textSize="13.3sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/ratingBarReviewHeaderTaste"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                android:id="@+id/ratingBarReviewHeaderTaste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7.7dp"
+                android:layout_marginRight="3.3dp"
+                android:isIndicator="true"
+                android:numStars="1"
+                android:progressTint="@color/goldenTainoi"
+                android:rating="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tvReviewHeaderTasteTitle"
+                app:layout_constraintRight_toLeftOf="@id/tvReviewHeaderTasteScore"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:targetApi="lollipop" />
+
+            <TextView
+                android:id="@+id/tvReviewHeaderTasteScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:letterSpacing="-0.08"
+                android:textColor="#ffa800"
+                android:textSize="13.3sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/ratingBarReviewHeaderTaste"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="3.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="0.3dp"
+            android:layout_height="11.3dp"
+            android:background="#dbdbdb" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvReviewHeaderAmountTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:letterSpacing="-0.08"
+                android:text="@string/review_amount_score"
+                android:textColor="#484848"
+                android:textSize="13.3sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/ratingBarReviewHeaderAmount"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                android:id="@+id/ratingBarReviewHeaderAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7.7dp"
+                android:layout_marginRight="3.3dp"
+                android:isIndicator="true"
+                android:numStars="1"
+                android:progressTint="@color/goldenTainoi"
+                android:rating="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tvReviewHeaderAmountTitle"
+                app:layout_constraintRight_toLeftOf="@id/tvReviewHeaderAmountScore"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:targetApi="lollipop" />
+
+            <TextView
+                android:id="@+id/tvReviewHeaderAmountScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:letterSpacing="-0.08"
+                android:textColor="#ffa800"
+                android:textSize="13.3sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/ratingBarReviewHeaderAmount"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="3.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="0.3dp"
+            android:layout_height="11.3dp"
+            android:background="#dbdbdb" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvReviewHeaderDeliveryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:letterSpacing="-0.08"
+                android:text="@string/review_delivery_score"
+                android:textColor="#484848"
+                android:textSize="13.3sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/ratingBarReviewHeaderDelivery"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                android:id="@+id/ratingBarReviewHeaderDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7.7dp"
+                android:layout_marginRight="3.3dp"
+                android:isIndicator="true"
+                android:numStars="1"
+                android:progressTint="@color/goldenTainoi"
+                android:rating="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tvReviewHeaderDeliveryTitle"
+                app:layout_constraintRight_toLeftOf="@id/tvReviewHeaderDeliveryScore"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:targetApi="lollipop" />
+
+            <TextView
+                android:id="@+id/tvReviewHeaderDeliveryScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:letterSpacing="-0.08"
+                android:textColor="#ffa800"
+                android:textSize="13.3sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/ratingBarReviewHeaderDelivery"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="3.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintReviewHeaderWriteContainer"
+        android:layout_width="match_parent"
+        android:layout_height="36.7dp"
+        android:layout_marginLeft="13.3dp"
+        android:layout_marginTop="16.3dp"
+        android:layout_marginRight="13.3dp"
+        android:background="@drawable/border_rect_ffffff_1dp_c9c9c9"
+        app:layout_constraintTop_toBottomOf="@id/llReviewHeaderScoreContainer">
+
+        <ImageView
+            android:id="@+id/ivReviewHeaderWriteIcon"
+            android:layout_width="15dp"
+            android:layout_height="13.7dp"
+            android:background="@drawable/ic_review_write"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tvReviewHeaderWrite"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvReviewHeaderWrite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6.7dp"
+            android:gravity="center_horizontal"
+            android:letterSpacing="-0.08"
+            android:text="@string/review_write"
+            android:textColor="#484848"
+            android:textSize="11.8sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/ivReviewHeaderWriteIcon"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="13.3dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="13.3dp"
+        android:background="#d4d4d4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintReviewHeaderWriteContainer" />
+</androidx.constraintlayout.widget.ConstraintLayout>

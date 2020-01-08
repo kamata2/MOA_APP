@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".online_payment.order_payment.PaymentCouponActivity">
+
+    <com.moaPlatform.moa.util.custom_view.CommonTitleView
+        android:id="@+id/topToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etCouponNumber"
+        style="@style/BlackColorNormal"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/common_edit_text_height"
+        android:layout_marginStart="@dimen/common_margin_10"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="6.7dp"
+        android:background="@drawable/common_edit_text_form"
+        android:hint="쿠폰 번호를 입력해 주세요"
+        android:paddingStart="@dimen/space_9"
+        android:paddingEnd="0dp"
+        android:textSize="13.3sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btAddCoupon"
+        app:layout_constraintTop_toBottomOf="@id/topToolbar" />
+
+    <Button
+        android:id="@+id/btAddCoupon"
+        style="@style/CoralBoldStyle"
+        android:layout_width="84.7dp"
+        android:layout_height="@dimen/common_edit_text_height"
+        android:layout_marginEnd="@dimen/common_margin_10"
+        android:text="쿠폰등록"
+        android:textSize="@dimen/common_text_l_size"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/etCouponNumber" />
+
+    <ImageView
+        android:id="@+id/viewCouponUnderLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/common_margin_10"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/common_margin_10"
+        android:background="@color/whiteSmoke"
+        app:layout_constraintTop_toBottomOf="@id/etCouponNumber" />
+
+    <TextView
+        android:id="@+id/tvUseCoupon"
+        style="@style/BlackColorBold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin_10"
+        android:layout_marginTop="20dp"
+        android:text="사용 가능쿠폰"
+        app:layout_constraintTop_toBottomOf="@id/viewCouponUnderLine" />
+
+    <View
+        android:id="@+id/useCoupon_Line"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginLeft="13.3dp"
+        android:layout_marginTop="8.3dp"
+        android:layout_marginRight="13.3dp"
+        android:background="@color/linkWater"
+        app:layout_constraintTop_toBottomOf="@id/tvUseCoupon" />
+
+    <!--리스트 없을시 팝업-->
+
+    <LinearLayout
+        android:id="@+id/payment_nocoupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/useCoupon_Line">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="96.7dp"
+                android:layout_height="58.7dp"
+                android:layout_gravity="center"
+                android:background="@drawable/no_coupon" />
+
+            <TextView
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20.3dp"
+                android:text="사용 가능한 쿠폰이 없습니다."
+                android:textColor="@color/gray98"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCouponList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/common_margin_10"
+        android:layout_marginEnd="@dimen/common_margin_10"
+        android:paddingTop="8dp"
+        app:layout_constraintBottom_toTopOf="@id/btApplyCoupon"
+        app:layout_constraintTop_toBottomOf="@id/useCoupon_Line"
+        tools:listitem="@layout/payment_use_coupon_item"/>
+
+    <Button
+        android:id="@+id/btApplyCoupon"
+        style="@style/CoralBoldStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_bottom_button_height"
+        android:text="쿠폰 적용"
+        android:textSize="@dimen/common_text_xxl_size"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

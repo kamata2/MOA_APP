@@ -1,0 +1,10 @@
+#Wed Aug 07 11:17:42 KST 2019
+path.2=classes2.dex
+path.1=classes.dex
+path.0=classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+base.2=D\:\\B2C_MOA_APP\\app\\build\\intermediates\\transforms\\dexMerger\\moa\\debug\\1
+base.1=D\:\\B2C_MOA_APP\\app\\build\\intermediates\\transforms\\dexMerger\\moa\\debug\\1
+base.0=D\:\\B2C_MOA_APP\\app\\build\\intermediates\\transforms\\dexMerger\\moa\\debug\\0

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="13.3dp"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/thumbNail"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="13.3dp"
+        android:contentDescription="@string/underline_description"
+        android:scaleType="fitXY"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@color/black" />
+
+    <TextView
+        android:id="@+id/storeName"
+        style="@style/MoaFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="13.3dp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/addSaleText"
+        app:layout_constraintLeft_toRightOf="@+id/thumbNail"
+        app:layout_constraintTop_toTopOf="@id/thumbNail"
+        tools:text="치킨 달인 가산점" />
+
+    <LinearLayout
+        android:id="@+id/llShoppingCartTimeEventGroupOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.3dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/storeName"
+        app:layout_constraintTop_toBottomOf="@+id/storeName">
+
+        <com.moaPlatform.moa.util.custom_view.CommonTimeEventView
+            android:id="@+id/viewShoppingCartDefaultItemTimeEventOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"/>
+
+        <com.moaPlatform.moa.util.custom_view.CommonTimeEventView
+            android:id="@+id/viewShoppingCartDefaultItemTimeEventTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvTemp1"
+            style="@style/MoaFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2.3dp"
+            android:background="@drawable/shopping_cart_discount_button"
+            android:paddingStart="7dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="7dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/coral"
+            android:textSize="@dimen/store_product_dc_text_size"
+            android:textStyle="bold"
+            tools:text="적립률 10%" />
+
+        <TextView
+            android:id="@+id/tvTemp2"
+            style="@style/MoaFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/store_product_additional_dc_margin_right"
+            android:background="@drawable/shopping_cart_discount_button_gold"
+            android:paddingStart="@dimen/store_product_dc_padding_left_right"
+            android:paddingTop="@dimen/store_product_dc_padding_top_bottom"
+            android:paddingEnd="@dimen/store_product_dc_padding_left_right"
+            android:paddingBottom="@dimen/store_product_dc_padding_top_bottom"
+            android:textColor="@color/goldenTainoi"
+            android:textSize="@dimen/store_product_dc_text_size"
+            android:textStyle="bold"
+            tools:text="@string/store_product_additional_dc" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llShoppingCartTimeEventGroupTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/storeName"
+        app:layout_constraintTop_toBottomOf="@+id/llShoppingCartTimeEventGroupOne">
+
+        <com.moaPlatform.moa.util.custom_view.CommonTimeEventView
+            android:id="@+id/viewShoppingCartDefaultItemTimeEventThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"/>
+
+        <com.moaPlatform.moa.util.custom_view.CommonTimeEventView
+            android:id="@+id/viewShoppingCartDefaultItemTimeEventFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvTemp3"
+            style="@style/MoaFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2.3dp"
+            android:background="@drawable/shopping_cart_discount_button"
+            android:paddingStart="7dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="7dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/coral"
+            android:textSize="@dimen/store_product_dc_text_size"
+            android:textStyle="bold"
+            tools:text="적립률 10%" />
+
+        <TextView
+            android:id="@+id/tvTemp4"
+            style="@style/MoaFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/store_product_additional_dc_margin_right"
+            android:background="@drawable/shopping_cart_discount_button_gold"
+            android:paddingStart="@dimen/store_product_dc_padding_left_right"
+            android:paddingTop="@dimen/store_product_dc_padding_top_bottom"
+            android:paddingEnd="@dimen/store_product_dc_padding_left_right"
+            android:paddingBottom="@dimen/store_product_dc_padding_top_bottom"
+            android:textColor="@color/goldenTainoi"
+            android:textSize="@dimen/store_product_dc_text_size"
+            android:textStyle="bold"
+            tools:text="@string/store_product_additional_dc" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/addSaleText"
+        style="@style/MoaFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3.3dp"
+        android:background="@drawable/shopping_cart_discount_button"
+        android:paddingLeft="6.67dp"
+        android:paddingTop="3dp"
+        android:paddingRight="6.67dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/coral"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/thumbNail"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="@+id/storeName"
+        app:layout_constraintRight_toLeftOf="@id/deliverySaleText"
+        app:layout_constraintTop_toBottomOf="@+id/storeName"
+        tools:text="추가할인 5%" />
+
+    <TextView
+        android:id="@+id/deliverySaleText"
+        style="@style/MoaFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13.3dp"
+        android:background="@drawable/shopping_cart_discount_button_gold"
+        android:paddingLeft="6.67dp"
+        android:paddingTop="3dp"
+        android:paddingRight="6.67dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/goldenTainoi"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/thumbNail"
+        app:layout_constraintLeft_toRightOf="@+id/addSaleText"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/storeName"
+        tools:text="배달할인2,000원" />
+
+    <TextView
+        android:id="@+id/earnAddText"
+        style="@style/MoaFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3.7dp"
+        android:background="@drawable/shopping_cart_discount_button_blue"
+        android:paddingLeft="6.67dp"
+        android:paddingTop="3dp"
+        android:paddingRight="6.67dp"
+        android:paddingBottom="3dp"
+        android:textColor="#15aeca"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@id/addSaleText"
+        app:layout_constraintTop_toBottomOf="@+id/addSaleText"
+        tools:text="추가적립 2%" />
+
+    <TextView
+        android:id="@+id/moneyDiscountText"
+        style="@style/MoaFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3.7dp"
+        android:background="@drawable/shopping_cart_discount_button_lightcoral"
+        android:paddingLeft="6.67dp"
+        android:paddingTop="3dp"
+        android:paddingRight="6.67dp"
+        android:paddingBottom="3dp"
+        android:textColor="#ff8d5a"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@id/deliverySaleText"
+        app:layout_constraintTop_toBottomOf="@+id/addSaleText"
+        tools:text="1000원 할인" />
+
+    <ImageView
+        android:id="@+id/storeInfoUnderLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginLeft="13.3dp"
+        android:layout_marginTop="23.3dp"
+        android:layout_marginRight="13.3dp"
+        android:background="@color/linkWater"
+        android:contentDescription="@string/underline_description"
+        app:layout_constraintTop_toBottomOf="@+id/llShoppingCartTimeEventGroupTwo" />
+
+    <TextView
+        android:id="@+id/menuTitle"
+        style="@style/MoaFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13.3dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="13.3dp"
+        android:background="@drawable/tangerinbutton"
+        android:paddingLeft="5dp"
+        android:paddingTop="3dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="3dp"
+        android:text="메뉴"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/storeInfoUnderLine" />
+
+    <TextView
+        android:id="@+id/menuContent"
+        style="@style/MoaFont"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9.33dp"
+        android:layout_marginEnd="13.3dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textSize="13.3sp"
+        app:layout_constraintBottom_toBottomOf="@id/menuTitle"
+        app:layout_constraintLeft_toRightOf="@+id/menuTitle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/menuTitle"
+        tools:text="간장치킨" />
+
+    <ImageView
+        android:id="@+id/menuUnderLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginLeft="13.3dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="13.3dp"
+        android:background="@color/linkWater"
+        android:contentDescription="@string/underline_description"
+        app:layout_constraintTop_toBottomOf="@+id/menuContent" />
+
+    <TextView
+        android:id="@+id/totalPrice"
+        style="@style/MoaFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13.3dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuUnderLine"
+        tools:text="총 주문 금액 : 26,000원" />
+
+    <Button
+        android:id="@+id/clearBtn"
+        style="@style/NobelBoldStyle"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="13.3dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="6.7dp"
+        android:background="@color/pinkSwan"
+        android:text="비우기"
+        android:textSize="13.3sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnShoppingCartDefaultOrder"
+        app:layout_constraintTop_toBottomOf="@+id/totalPrice" />
+
+    <Button
+        android:id="@+id/btnShoppingCartDefaultOrder"
+        style="@style/CoralBoldStyle"
+        android:layout_width="0dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="2.5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="13.3dp"
+        android:text="주문하기"
+        android:textSize="13.3sp"
+        app:layout_constraintLeft_toRightOf="@+id/clearBtn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalPrice" />
+
+    <RelativeLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="4.7dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/whiteSmoke"
+        app:layout_constraintTop_toBottomOf="@id/clearBtn">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="@color/linkWater" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

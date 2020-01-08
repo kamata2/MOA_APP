@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="128.33dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/couponlist"
+        >
+
+        <TextView
+            android:id="@+id/first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[첫 만남 감사 쿠폰]"
+            android:textSize="13.33dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="23.67dp"
+            android:layout_marginTop="21.67dp"
+            style="@style/MoaFont"
+            />
+
+        <TextView
+            android:id="@+id/day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018.07.25 23:59까지"
+            android:textColor="@color/suvaGrey"
+            android:textSize="9.33dp"
+            android:layout_toRightOf="@id/first"
+            android:layout_marginTop="23.67dp"
+            android:layout_marginLeft="@dimen/space_9"
+            android:textStyle="bold"
+            style="@style/MoaFont"
+            />
+
+        <TextView
+            android:id="@+id/won"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/first"
+            android:layout_marginLeft="25.33dp"
+            android:layout_marginTop="20dp"
+            android:text="5,000원"
+            android:textSize="21.67dp"
+            android:textStyle="bold"
+            style="@style/MoaFont"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sale_coupon"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_below="@id/day"
+            android:layout_toRightOf="@id/won"
+            android:layout_marginTop="34dp"
+            android:layout_marginLeft="3dp"
+            style="@style/MoaFont"
+            />
+        <TextView
+            android:id="@+id/visit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="첫 주문 1회 사용 가능"
+            android:textColor="@color/black"
+            android:layout_marginTop="53.67dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="34dp"
+            android:textSize="11.33dp"
+            style="@style/MoaFont"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1만원 이상 주문 시 사용 가능 "
+            android:textColor="@color/black"
+            android:textSize="11.33dp"
+            android:layout_below="@id/visit"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="34dp"
+            style="@style/MoaFont"
+
+            />
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="@color/pinkSwan"
+            android:layout_marginLeft="11.33dp"
+            android:layout_marginRight="11.33dp"
+            android:layout_below="@id/won"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="배달 카테고리 전체 주문 적용"
+            android:textSize="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_below="@id/line"
+            android:layout_marginLeft="23.67dp"
+            android:layout_marginTop="7dp"
+            style="@style/MoaFont"
+            />
+        
+        <TextView
+            android:layout_width="45.33dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/store_list_accrual_rate_style"
+            android:layout_below="@id/line"
+            android:text="사용완료"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="8dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="34.67dp"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            style="@style/MoaFont"
+
+            />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

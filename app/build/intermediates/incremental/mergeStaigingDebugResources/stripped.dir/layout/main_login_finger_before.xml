@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.moaPlatform.moa.util.custom_view.CommonTitleView
+        android:id="@+id/commontitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/finger_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60.7dp"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:lines="2"
+        android:text="@string/finger_print_login"
+        android:textColor="#565656"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/commontitle" />
+
+    <TextView
+        android:id="@+id/fingerLoginFail"
+        style="@style/MoaFont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43sp"
+        android:text="@string/loginactivity_login_fail_msg"
+        android:textAlignment="center"
+        android:textColor="@color/coral"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/finger_Text" />
+
+    <LinearLayout
+        android:id="@+id/main_idpw_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="59.7dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/finger_Text">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/loginemail"
+                style="@style/MoaFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34.3dp"
+                android:background="@null"
+                android:hint="이메일 입력"
+                android:paddingLeft="4.7dp"
+                android:paddingRight="4.7dp"
+                android:singleLine="true"
+                android:textSize="13.3sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="7.7dp"
+                android:background="#cdcdcd" />
+
+            <EditText
+                android:id="@+id/loginpassword"
+                style="@style/MoaFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25.7dp"
+                android:background="@null"
+                android:hint="비밀번호 입력"
+                android:inputType="textPassword"
+                android:paddingLeft="4.7dp"
+                android:paddingRight="4.7dp"
+                android:singleLine="true"
+                android:textSize="13.3sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="7.7dp"
+                android:background="#cdcdcd" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/loginbtn"
+            style="@style/MoaFont"
+            android:layout_width="match_parent"
+            android:layout_height="46.7dp"
+            android:layout_below="@id/incoupon"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/common_radius_coral_button_form"
+            android:text="로그인"
+            android:textColor="@color/white"
+            android:textSize="13.3sp"
+            android:textStyle="bold" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/finger_login"
+                style="@style/CoralCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phone_layout"
+                android:layout_marginLeft="13.3dp"
+                android:background="@color/transparent"
+                android:text="@string/finger_checkbox"
+                android:textColor="@color/black"
+                android:textSize="13.3sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="13.3dp"
+                android:text="@string/finger_find_id"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout><!-- end of id/pw login view-->
+
+    <LinearLayout
+        android:id="@+id/llMainLoginJoin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="28dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            style="@style/MoaFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loginactivity_first_visit"
+            android:textColor="#999999"
+            android:textSize="12.8sp" />
+
+        <TextView
+            style="@style/MoaFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8.3dp"
+            android:text="@string/loginactivity_register"
+            android:textColor="#000000"
+            android:textSize="12.8sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

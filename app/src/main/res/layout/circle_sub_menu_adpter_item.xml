@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.moaPlatform.moa.util.resolution.custom.CustomTextImageView
+        android:id="@+id/menuChicken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:mainBackground="@color/white"
+        app:mainBackgroundHeight="314"
+        app:mainBackgroundWidth="362"
+        app:mainIconHeight="154"
+        app:mainIconWidth="154"
+        app:mainTitle="치킨"
+        app:mainTitleColor="@color/black"/>
+
+</android.support.constraint.ConstraintLayout>

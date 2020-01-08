@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleItem">
+        <attr name="circleItemBackground" format="reference|integer" />
+        <attr name="circleItemBackgroundWidth" format="reference|integer" />
+        <attr name="circleItemBackgroundHeight" format="reference|integer" />
+        <attr name="circleItemIcon" format="reference|integer" />
+        <attr name="circleItemTitle" format="reference|string" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomImageText">
+        <attr name="mainBackground" format="reference|integer" />
+        <attr name="mainBackgroundWidth" format="reference|integer" />
+        <attr name="mainBackgroundHeight" format="reference|integer" />
+        <attr name="mainIcon" format="reference|integer" />
+        <attr name="mainIconWidth" format="reference|integer" />
+        <attr name="mainIconHeight" format="reference|integer" />
+        <attr name="mainTitle" format="reference|string" />
+        <attr name="mainTitleColor" format="reference|integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ResponsiveTextView">
+        <attr name="responsiveTextSize" format="reference|integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ResponsiveCheckBox">
+        <attr name="defaultImage" format="reference|integer" />
+        <attr name="pressImage" format="reference|integer" />
+        <attr name="checkBoxText" format="reference|string" />
+        <attr name="checkBoxTextSize" format="reference|integer" />
+        <attr name="checkBoxTextStyle" format="reference|integer">
+            <enum name="bold" value="1"/>
+            <enum name="normal" value="0"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ResponsiveRadioButton">
+        <attr name="radioButtonNorImage" format="reference|integer" />
+        <attr name="radioButtonPressImage" format="reference|integer" />
+        <attr name="radioButtonText" format="reference|string" />
+        <attr name="radioButtonTextSize" format="reference|integer" />
+        <attr name="radioButtonTextStyle" format="reference|integer">
+            <enum name="bold" value="1"/>
+            <enum name="normal" value="0"/>
+        </attr>
+        <attr name="radioButtonCheck" format="reference|boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ResponsiveImageButton">
+        <attr name="lvButtonIc" format="reference|integer"/>
+        <attr name="lvButtonIcWidth" format="reference|integer"/>
+        <attr name="lvButtonIcHeight" format="reference|integer"/>
+        <attr name="lvButtonTextSize" format="reference|integer"/>
+        <attr name="lvButtonText" format="reference|string"/>
+        <attr name="lvButtonIcGone" format="reference|boolean"/>
+        <attr name="lvButtonTextPadding" format="reference|integer"/>
+        <attr name="lvButtonTextColor" format="reference|integer"/>
+        <attr name="lvButtonTextStyle" format="reference|integer">
+            <enum name="bold" value="1"/>
+            <enum name="normal" value="0"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ResponsiveRangeBar">
+        <attr name="rangeBarCount" format="reference|integer"/>
+        <attr name="rangeBarOneGiftCount" format="reference|integer"/>
+        <attr name="rangeBarTwoGiftCount" format="reference|integer"/>
+        <attr name="rangeBarThreeGiftCount" format="reference|integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="QuantityControlView">
+        <attr name="count" format="reference|integer"/>
+    </declare-styleable>
+
+    <!-- ******************* -->
+    <declare-styleable name="WaySelectButton">
+        <attr name="waySelectCheck" format="boolean"/>
+        <attr name="waySelectTitle" format="string|reference"/>
+    </declare-styleable>
+
+</resources>

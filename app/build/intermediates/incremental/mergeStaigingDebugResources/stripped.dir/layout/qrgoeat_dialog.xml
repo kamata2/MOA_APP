@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/common_dialog_form_cover">
+
+    <TextView
+        android:id="@+id/dialogContent"
+        style="@style/MoaFont"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/underLine"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24.33dp"
+        android:text="QR 코드결제를 이용하기 위해 \n 고잇 PAy 등록이 필요합니다."
+        android:textColor="@color/color_565656"
+        android:textSize="13.33sp" />
+
+    <TextView
+        android:id="@+id/nogo"
+        style="@style/MoaFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialogContent"
+        android:layout_marginTop="18.3dp"
+        android:layout_marginRight="23.7dp"
+        android:layout_marginBottom="24.7dp"
+        android:layout_toLeftOf="@+id/yes"
+        android:background="@color/white"
+        android:text="취소"
+        android:textColor="#a8a7a6"
+        android:textSize="13.3sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/yesgo"
+        style="@style/MoaFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialogContent"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="18.3dp"
+        android:layout_marginRight="27.7dp"
+        android:layout_marginBottom="24.7dp"
+        android:background="@color/white"
+        android:text="등록"
+        android:textColor="@color/coral"
+        android:textSize="13.3sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

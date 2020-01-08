@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/BlackColorBold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13.3sp"
+        tools:text="타이틀" />
+
+    <EditText
+        android:id="@+id/etInputView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_edit_text_height"
+        android:layout_marginTop="8.3dp"
+        android:background="@drawable/common_edit_text_form"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingStart="@dimen/edit_text_start_space"
+        android:paddingEnd="0dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/nobel"
+        android:textSize="@dimen/edit_text_size"
+        tools:hint="힌트 메시지"
+        tools:ignore="LabelFor"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/tvErrorMsg"
+        style="@style/MoaFont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.3dp"
+        android:textColor="@color/coral"
+        android:textSize="11.3sp"
+        android:textStyle="bold"
+        tools:text="에러 메시지" />
+
+</LinearLayout>

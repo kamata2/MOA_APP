@@ -1,0 +1,1 @@
+[{"outputType":{"type":"MERGED_MANIFESTS"},"apkData":{"type":"MAIN","splits":[],"versionCode":1022,"versionName":"1.0.2.2","enabled":true,"outputFile":"app-moa-debug.apk","fullName":"moaDebug","baseName":"moa-debug"},"path":"AndroidManifest.xml","properties":{"packageId":"com.moaPlatform.moa","split":"","minSdkVersion":"19"}}]

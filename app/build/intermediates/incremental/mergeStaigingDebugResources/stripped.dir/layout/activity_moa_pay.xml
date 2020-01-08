@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_card_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <EditText
+        android:id="@+id/et_pay_psw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="결제 비밀번호"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_card_list" />
+
+    <Button
+        android:id="@+id/btn_card_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="카드 등록"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_card_delete"
+        app:layout_constraintTop_toBottomOf="@id/et_pay_psw" />
+
+    <Button
+        android:id="@+id/btn_card_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="카드 삭제"
+        app:layout_constraintLeft_toRightOf="@id/btn_card_register"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_pay_psw" />
+
+    <EditText
+        android:id="@+id/et_card_nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="변경할 카드 닉네임"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_card_nick_change"
+        app:layout_constraintTop_toBottomOf="@id/btn_card_register" />
+
+    <Button
+        android:id="@+id/btn_card_nick_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="카드 이름 변경"
+        app:layout_constraintLeft_toRightOf="@id/et_card_nick"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_card_register" />
+
+    <EditText
+        android:id="@+id/et_order_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="주문번호"
+        android:text="2019042200000640"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_card_pay"
+        app:layout_constraintTop_toBottomOf="@id/et_card_nick" />
+
+    <Button
+        android:id="@+id/btn_card_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="결제"
+        app:layout_constraintLeft_toRightOf="@id/et_order_id"
+        app:layout_constraintRight_toLeftOf="@id/btn_card_refund"
+        app:layout_constraintTop_toBottomOf="@id/et_card_nick" />
+
+    <Button
+        android:id="@+id/btn_card_refund"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="결제 취소"
+        app:layout_constraintLeft_toRightOf="@id/btn_card_pay"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_card_nick" />
+
+    <EditText
+        android:id="@+id/et_new_and_init_psw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="신규 및 초기화 비밀번호"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_card_pay" />
+
+    <Button
+        android:id="@+id/btn_psw_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="결제 비번 변경"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_psw_init"
+        app:layout_constraintTop_toBottomOf="@id/et_new_and_init_psw" />
+
+    <Button
+        android:id="@+id/btn_psw_init"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="결제 비번 초기화"
+        app:layout_constraintLeft_toRightOf="@id/btn_psw_change"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_new_and_init_psw" />
+</androidx.constraintlayout.widget.ConstraintLayout>

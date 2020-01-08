@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveImageView
+        android:id="@+id/checkBoxNor"
+        android:layout_width="40px"
+        android:layout_height="40px"
+        android:background="@drawable/checkbox_n"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveImageView
+        android:id="@+id/checkBoxPress"
+        android:layout_width="40px"
+        android:layout_height="40px"
+        android:background="@drawable/checkbox_p"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+        android:id="@+id/checkBoxContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="안녕하신가?"
+        app:responsiveTextSize="34"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@+id/checkBoxNor"
+        app:layout_constraintTop_toTopOf="@+id/checkBoxNor"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBoxNor"
+        android:layout_marginLeft="31px"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+	<body>
+		<script type="text/javascript" src="./moaCryptoModule-v1.0.0.min.js"></script>
+		<script type="text/javascript" src="./moaECDSACoreAPI-v1.0.0.min.js"></script>
+		<script>
+			function doGenerate(curve) {
+				const keyPair = MoaECDSACoreAPI.doGenerate(curve);
+				ECDSA.generateKeyPair(keyPair.ecprvhex, keyPair.ecpubhex);
+			}
+
+			function doSign(curve, signAlg, msg, prvkey) {
+				const signValueHex = MoaECDSACoreAPI.doSign(curve, signAlg, msg, prvkey);
+				ECDSA.generateSign(signValueHex);
+			}
+
+			function doVerify(curve, signAlg, msg, signVal, pubkey) {
+				const result = MoaECDSACoreAPI.doVerify(curve, signAlg, msg, signVal, pubkey);
+				ECDSA.verifySign(result);
+			}
+		
+		</script>
+	</body>
+
+</html>

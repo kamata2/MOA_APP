@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/common_dialog_form_cover"
+    android:paddingLeft="@dimen/achievement_reward_dialog_padding_left_right"
+    android:paddingTop="@dimen/achievement_reward_dialog_padding_top"
+    android:paddingRight="@dimen/achievement_reward_dialog_padding_left_right"
+    android:paddingBottom="@dimen/achievement_reward_dialog_padding_bottom">
+
+    <TextView
+        android:layout_width="@dimen/achievement_reward_dialog_title_width"
+        android:layout_height="@dimen/achievement_reward_dialog_title_height"
+        android:text="@string/achievement_reward_dialog_reward_title_temp"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/achievement_reward_dialog_title_padding_top"
+        android:textSize="@dimen/achievement_reward_dialog_title_size"
+        android:background="@drawable/ribbon"
+        style="@style/MoaFont"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"/>
+
+    <ImageView
+        android:layout_width="@dimen/achievement_reward_dialog_coin_ic_width"
+        android:layout_height="@dimen/achievement_reward_dialog_coin_ic_height"
+        android:scaleType="fitXY"
+        android:src="@drawable/moacoin"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/achievement_reward_dialog_coin_ic_margin_top"
+        android:contentDescription="@string/achievement_reward_dialog_coin_ic_description"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/achievement_reward_dialog_coin"
+        android:textColor="@color/coral"
+        android:textStyle="bold"
+        android:textSize="@dimen/achievement_reward_dialog_coin_text_size"
+        style="@style/MoaFont"
+        android:layout_marginTop="@dimen/achievement_reward_dialog_coin_margin_top"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/achievement_reward_dialog_reward_step_temp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/achievement_reward_dialog_reward_step_text_size"
+        android:layout_marginTop="@dimen/achievement_reward_dialog_reward_step_margin_top"
+        style="@style/MoaFont"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/achievement_reward_dialog_reward_pay"
+        android:textColor="@color/matterhorn"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/achievement_reward_dialog_reward_pay_margin_top"
+        android:textSize="@dimen/achievement_reward_dialog_reward_pay_text_size"
+        style="@style/MoaFont"/>
+
+</LinearLayout>

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/topToolbar"
+        layout="@layout/top_toolbar"/>
+
+    <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveConstraintLayout
+        android:id="@+id/identificationAnnouncement"
+        android:layout_width="1080px"
+        android:layout_height="183px"
+        android:background="@drawable/top_toolbar_style"
+        app:layout_constraintTop_toBottomOf="@+id/topToolbar">
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/identification_announcement_content"
+            app:responsiveTextSize="36"
+            android:textColor="@color/dimGray"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveConstraintLayout>
+
+    <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveConstraintLayout
+        android:id="@+id/termsAndConditionsForm"
+        android:layout_width="1050px"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_data_form_cover"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/identificationAnnouncement"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15px"
+        android:paddingBottom="61px">
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+            android:id="@+id/termsAndConditionsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이용약관"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:responsiveTextSize="36"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="55px"
+            android:layout_marginTop="64px"/>
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveCheckBox
+            android:id="@+id/checkBoxAllAgreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:checkBoxText="아래의 내용에 모두 동의합니다."
+            app:checkBoxTextStyle="bold"
+            app:checkBoxTextSize="40"
+            app:layout_constraintTop_toBottomOf="@+id/termsAndConditionsTitle"
+            app:layout_constraintLeft_toLeftOf="@+id/termsAndConditionsTitle"
+            android:layout_marginTop="60px">
+        </com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveCheckBox>
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveCheckBox
+            android:id="@+id/checkBoxPersonalInformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:checkBoxText="인증 시 개인정보 이용 동의"
+            app:checkBoxTextSize="34"
+            app:checkBoxTextStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxAllAgreement"
+            app:layout_constraintLeft_toLeftOf="@+id/checkBoxAllAgreement"
+            android:layout_marginLeft="63px"
+            android:layout_marginTop="50px">
+        </com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveCheckBox>
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+            android:id="@+id/personalInformationRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전문보기"
+            android:textStyle="bold"
+            android:textColor="@color/coral"
+            app:responsiveTextSize="30"
+            app:layout_constraintBottom_toBottomOf="@+id/checkBoxPersonalInformation"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="55px"/>
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveCheckBox
+            android:id="@+id/checkBoxUniqueIdentification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:checkBoxText="인증 시 고유식별 정보 처리 동의"
+            app:checkBoxTextSize="34"
+            app:checkBoxTextStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxPersonalInformation"
+            app:layout_constraintLeft_toLeftOf="@+id/checkBoxPersonalInformation"
+            android:layout_marginTop="39px">
+        </com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveCheckBox>
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+            android:id="@+id/uniqueIdentificationRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전문보기"
+            android:textStyle="bold"
+            android:textColor="@color/coral"
+            app:responsiveTextSize="30"
+            app:layout_constraintBottom_toBottomOf="@+id/checkBoxUniqueIdentification"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="55px"/>
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveCheckBox
+            android:id="@+id/checkBoxNewsAgency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:checkBoxText="통신사 이용약관 동의"
+            app:checkBoxTextSize="34"
+            app:checkBoxTextStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxUniqueIdentification"
+            app:layout_constraintLeft_toLeftOf="@+id/checkBoxUniqueIdentification"
+            android:layout_marginTop="39px">
+        </com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveCheckBox>
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+            android:id="@+id/newsAgencyRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전문보기"
+            android:textStyle="bold"
+            android:textColor="@color/coral"
+            app:responsiveTextSize="30"
+            app:layout_constraintBottom_toBottomOf="@+id/checkBoxNewsAgency"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="55px"/>
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveCheckBox
+            android:id="@+id/checkBoxCertifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:checkBoxText="인증사 이용약관 동의"
+            app:checkBoxTextSize="34"
+            app:checkBoxTextStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxNewsAgency"
+            app:layout_constraintLeft_toLeftOf="@+id/checkBoxNewsAgency"
+            android:layout_marginTop="39px">
+        </com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveCheckBox>
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+            android:id="@+id/certifierRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전문보기"
+            android:textStyle="bold"
+            android:textColor="@color/coral"
+            app:responsiveTextSize="30"
+            app:layout_constraintBottom_toBottomOf="@+id/checkBoxCertifier"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="55px"/>
+
+    </com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveConstraintLayout>
+
+    <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveConstraintLayout
+        android:id="@+id/phoneCertifierForm"
+        android:layout_width="1050px"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_data_form_cover"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/termsAndConditionsForm"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15px">
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+            android:id="@+id/phoneCertifierTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="휴대전화"
+            android:textColor="@color/black"
+            app:responsiveTextSize="36"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="55px"
+            android:layout_marginTop="49px"/>
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveEditText
+            android:id="@+id/editName"
+            android:layout_width="580px"
+            android:layout_height="110px"
+            android:hint="이름"
+            android:textColorHint="@color/nobel"
+            app:responsiveTextSize="32"
+            android:background="@drawable/common_edit_text_form"
+            app:layout_constraintLeft_toLeftOf="@+id/phoneCertifierTitle"
+            app:layout_constraintTop_toBottomOf="@+id/phoneCertifierTitle"
+            android:layout_marginTop="42px"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toRightOf="@+id/editName"
+            app:layout_constraintTop_toTopOf="@+id/editName"
+            app:layout_constraintBottom_toBottomOf="@+id/editName"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내국인"
+                app:responsiveTextSize="36"
+                android:textStyle="bold"
+                android:theme="@style/MyRaidoButton"/>
+
+            <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="외국인"
+                app:responsiveTextSize="36"
+                android:textStyle="bold"
+                android:theme="@style/MyRaidoButton"/>
+
+        </RadioGroup>
+
+        <!--<com.moaPlatform.moa.util.custom.Responsive.ResponsiveConstraintLayout-->
+            <!--android:id="@+id/testEdit"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="0dp"-->
+            <!--app:layout_constraintLeft_toRightOf="@+id/editName"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/editName"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/editName"-->
+            <!--app:layout_constraintRight_toRightOf="parent"-->
+            <!--android:layout_marginRight="55px"-->
+            <!--android:background="@color/colorAccent"-->
+            <!--android:layout_marginLeft="32px"-->
+            <!--&gt;-->
+
+        <!--</com.moaPlatform.moa.util.custom.Responsive.ResponsiveConstraintLayout>-->
+
+        <!--<com.moaPlatform.moa.util.custom.Responsive.ResponsiveConstraintLayout-->
+            <!--android:id="@+id/test1"-->
+            <!--android:layout_width="30px"-->
+            <!--android:layout_height="30px"-->
+            <!--android:background="@color/nobel"-->
+            <!--app:layout_constraintLeft_toLeftOf="@+id/testEdit"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/editName"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/editName">-->
+        <!--</com.moaPlatform.moa.util.custom.Responsive.ResponsiveConstraintLayout>-->
+
+        <!--<com.moaPlatform.moa.util.custom.Responsive.ResponsiveConstraintLayout-->
+            <!--android:id="@+id/vvv"-->
+            <!--android:layout_width="93px"-->
+            <!--android:layout_height="35px"-->
+            <!--app:layout_constraintLeft_toRightOf="@+id/test1"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/test1"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/test1"-->
+            <!--android:layout_marginLeft="25px">-->
+        <!--</com.moaPlatform.moa.util.custom.Responsive.ResponsiveConstraintLayout>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/testName"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:text="내국인"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textColor="@color/black0c"-->
+            <!--app:layout_constraintLeft_toLeftOf="@+id/vvv"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/vvv"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/vvv"-->
+            <!--app:layout_constraintRight_toRightOf="@+id/vvv"-->
+            <!--android:autoSizeTextType="uniform"/>-->
+        <!--&lt;!&ndash;<com.moaPlatform.moa.util.custom.Responsive.ResponsiveTextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/testName"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="내국인"&ndash;&gt;-->
+        <!--&lt;!&ndash;app:responsiveTextSize="36"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="@color/black0c"&ndash;&gt;-->
+        <!--&lt;!&ndash;app:layout_constraintLeft_toRightOf="@+id/test1"&ndash;&gt;-->
+        <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="@+id/test1"&ndash;&gt;-->
+        <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="@+id/test1"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginLeft="25px"/>&ndash;&gt;-->
+
+        <!--<com.moaPlatform.moa.util.custom.Responsive.ResponsiveConstraintLayout-->
+            <!--android:id="@+id/test2"-->
+            <!--android:layout_width="30px"-->
+            <!--android:layout_height="30px"-->
+            <!--android:background="@color/nobel"-->
+            <!--app:layout_constraintLeft_toRightOf="@+id/testName"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/editName"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/editName"-->
+            <!--android:layout_marginLeft="32px">-->
+        <!--</com.moaPlatform.moa.util.custom.Responsive.ResponsiveConstraintLayout>-->
+
+        <!--<com.moaPlatform.moa.util.custom.Responsive.ResponsiveTextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="외국인"-->
+            <!--app:responsiveTextSize="36"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textColor="@color/black0c"-->
+            <!--app:layout_constraintLeft_toRightOf="@+id/test2"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/test2"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/test2"-->
+            <!--android:layout_marginLeft="25px"/>-->
+
+    </com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.moaPlatform.moa.util.custom_view.CommonTitleView
+        android:id="@+id/commonTitleMyReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/side_nomember_ask"
+                android:gravity="center"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="43dp"
+                android:textSize="15sp"
+                style="@style/MoaFont"
+                />
+
+            <TextView
+                android:id="@+id/email_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이메일"
+                android:textSize="14.3sp"
+                app:layout_constraintTop_toBottomOf="@id/title_name"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="13.3dp"
+                android:layout_marginTop="43.3dp"
+                android:textColor="@color/black"
+                style="@style/MoaFont"
+                />
+        
+        <EditText
+            android:id="@+id/into_email"
+            android:layout_width="match_parent"
+            android:layout_height="46.7dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email_text"
+            android:layout_marginLeft="13.3dp"
+            android:layout_marginRight="13.3dp"
+            android:layout_marginTop="8.3dp"
+            android:hint="이메일을 입력해 주세요."
+            android:paddingLeft="9.3dp"
+            android:textSize="13.3sp"
+            android:background="@drawable/side_customercenter_myquestion_border"
+            />
+
+        <TextView
+            android:id="@+id/password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비밀번호"
+            android:textSize="14.3sp"
+            app:layout_constraintTop_toBottomOf="@id/into_email"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="13.3dp"
+            android:layout_marginTop="16.7dp"
+            android:textColor="@color/black"
+            style="@style/MoaFont"
+            />
+
+        <EditText
+            android:id="@+id/into_password"
+            android:layout_width="match_parent"
+            android:layout_height="46.7dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/password_text"
+            android:layout_marginLeft="13.3dp"
+            android:layout_marginRight="13.3dp"
+            android:layout_marginTop="8.3dp"
+            android:hint="비밀번호를 입력해 주세요."
+            android:textSize="13.3sp"
+            android:paddingLeft="9.3dp"
+            android:inputType="textPassword"
+            android:background="@drawable/side_customercenter_myquestion_border"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/ask_nomember"
+            android:gravity="center"
+            android:layout_marginBottom="29.7dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GOEAT 회원이신가요?"
+                android:textSize="12.2sp"
+                android:textColor="@color/gray78"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="로그인 하기"
+                android:textColor="@color/black"
+                android:textSize="13.5sp"
+                android:layout_marginLeft="8.3dp"
+                />
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/ask_nomember"
+            android:layout_width="match_parent"
+            android:layout_height="53.3dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/common_radius_coral_button_form"
+            android:text="조회하기"
+            android:textColor="#ffffff"
+            android:textSize="16.7sp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/location_setting_activity_content_space"
+    android:paddingEnd="@dimen/location_setting_activity_content_space">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAddressList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/location_setting_address_item" />
+
+        <LinearLayout
+            android:id="@+id/llLocationSettingAddressEmptyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="81.7dp"
+                android:layout_height="85dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/location_setting_address_search_empty" />
+
+            <TextView
+                android:id="@+id/tvLocationSettingAddressEmptyAddress"
+                style="@style/BlackColorBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19.7dp"
+                android:gravity="center_horizontal"
+                android:text="주소 검색 결과가 없습니다.\n정확한 주소를 입력해 주세요."
+                android:textSize="13.3sp"
+                android:textColor="@color/darkGray"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

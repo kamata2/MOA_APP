@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteSmoke"
+    android:orientation="vertical"
+    tools:context=".side_menu.order.detail.view.OrderDetailHistoryActivity">
+
+    <com.moaPlatform.moa.util.custom_view.CommonTitleView
+        android:id="@+id/viewOrderHistoryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingStart="@dimen/activity_order_detail_history_common_space"
+                android:paddingEnd="@dimen/activity_order_detail_history_common_space"
+                android:paddingBottom="@dimen/activity_order_detail_history_store_info_group_bottom_space">
+
+                <TextView
+                    android:id="@+id/tvOrderDetailHistoryStoreName"
+                    style="@style/BlackColorBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_order_detail_history_store_name_top_space"
+                    android:textSize="@dimen/activity_order_detail_history_store_name_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="치킨 달인 가산점" />
+
+                <com.moaPlatform.moa.side_menu.order.OrderCommonOrderTypeView
+                    android:id="@+id/viewOrderDetailHistoryOrderType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvOrderDetailHistoryStoreName" />
+
+                <TextView
+                    android:id="@+id/tvOrderDetailHistoryOrderCancel"
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_order_detail_history_order_cancel_height"
+                    android:layout_marginTop="@dimen/activity_order_detail_history_order_cancel_top_space"
+                    android:background="@drawable/common_edit_text_form"
+                    android:gravity="center"
+                    android:text="@string/activity_order_detail_history_order_cancel"
+                    android:textColor="@color/color_565656"
+                    android:textSize="@dimen/activity_order_detail_history_order_cancel_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/tvOrderDetailHistoryStoreName" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_underline_height"
+                android:layout_marginBottom="@dimen/activity_order_detail_history_order_info_group_top_space"
+                android:background="@color/linkWater" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clOrderDetailHistoryOrderCancelGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tvOrderDetailHistoryCancelTitle"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_order_detail_history_common_space"
+                    android:layout_marginTop="@dimen/activity_order_detail_history_order_info_top_space"
+                    android:text="@string/activity_order_detail_history_order_cancel_title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/activity_order_detail_history_order_title_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvOrderDetailHistoryCancelReasonTitle"
+                    style="@style/BlackColorBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_order_detail_history_common_space"
+                    android:layout_marginTop="@dimen/activity_order_detail_history_order_cancel_title_top_space"
+                    android:text="@string/activity_order_detail_history_order_cancel_reason"
+                    android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvOrderDetailHistoryCancelTitle" />
+
+                <TextView
+                    android:id="@+id/tvOrderDetailHistoryCancelReasonType"
+                    style="@style/BlackColorBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/activity_order_detail_history_common_space"
+                    android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvOrderDetailHistoryCancelReasonTitle"
+                    tools:text="고객 예약 취소" />
+
+                <View
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_underline_height"
+                    android:layout_marginTop="@dimen/activity_order_detail_history_order_cancel_under_line_top_space"
+                    android:background="@color/linkWater"
+                    app:layout_constraintTop_toBottomOf="@id/tvOrderDetailHistoryCancelReasonTitle" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/activity_order_detail_history_common_space"
+                android:paddingEnd="@dimen/activity_order_detail_history_common_space">
+
+                <TextView
+                    android:id="@+id/tvOrderDetailHistoryInfoTitle"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_order_detail_history_order_info_top_space"
+                    android:text="@string/activity_order_detail_history_order_info_title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/activity_order_detail_history_order_title_text_size"
+                    android:textStyle="bold" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_order_detail_history_order_number_group_box_top_space"
+                    android:paddingTop="@dimen/activity_order_detail_history_order_info_item_box_space">
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistoryOrderNumberTitle"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/activity_order_detail_history_order_number"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistoryOrderNumber"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="2018-A1234" />
+
+                    <View
+                        style="@style/MoaFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/common_underline_height"
+                        android:layout_marginTop="@dimen/activity_order_detail_history_order_info_item_box_space"
+                        android:background="@color/linkWater"
+                        app:layout_constraintTop_toBottomOf="@id/tvOrderDetailHistoryOrderNumberTitle" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/activity_order_detail_history_order_info_item_box_space">
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistoryOrderTimeTitle"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/activity_order_detail_history_order_time"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistoryOrderTime"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="2018-07.05 20:15" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/common_underline_height"
+                        android:layout_marginTop="@dimen/activity_order_detail_history_order_info_item_box_space"
+                        android:background="@color/linkWater"
+                        app:layout_constraintTop_toBottomOf="@id/tvOrderDetailHistoryOrderTimeTitle" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/activity_order_detail_history_order_info_item_box_space">
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistoryOrderMethodTitle"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/activity_order_detail_history_order_method"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistoryOrderMethod"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="바로 결제" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/common_underline_height"
+                        android:layout_marginTop="@dimen/activity_order_detail_history_order_info_item_box_space"
+                        android:background="@color/linkWater"
+                        app:layout_constraintTop_toBottomOf="@id/tvOrderDetailHistoryOrderMethodTitle" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/activity_order_detail_history_order_info_item_box_space">
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistoryPaymentMethodTitle"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/activity_order_detail_history_payment_method"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistoryPaymentMethod"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="모아 PAY" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/common_underline_height"
+                        android:layout_marginTop="@dimen/activity_order_detail_history_order_info_item_box_space"
+                        android:background="@color/linkWater"
+                        app:layout_constraintTop_toBottomOf="@id/tvOrderDetailHistoryPaymentMethodTitle" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/activity_order_detail_history_order_info_item_box_space">
+
+                    <TextView
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/activity_order_detail_history_address"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistoryRoadAddress"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="서울 금천구 가산디지털 1로 168" />
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistoryRoadDetailAddress"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvOrderDetailHistoryRoadAddress"
+                        tools:text="우림라이온스밸리 C동 705호" />
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailJibunAddress"
+                        style="@style/BlackColorNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_order_detail_history_order_detail_address_top_space"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvOrderDetailHistoryRoadDetailAddress"
+                        tools:text="[지번] 금천구 가산동 371-28" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/common_underline_height"
+                        android:layout_marginTop="@dimen/activity_order_detail_history_order_info_item_box_space"
+                        android:background="@color/linkWater"
+                        app:layout_constraintTop_toBottomOf="@id/tvOrderDetailJibunAddress" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/activity_order_detail_history_order_info_item_box_space">
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistoryCallNumberTitle"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/activity_order_detail_history_contact_information"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistoryCallNumber"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="010-1234-1253" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/common_underline_height"
+                        android:layout_marginTop="@dimen/activity_order_detail_history_order_info_item_box_space"
+                        android:background="@color/linkWater"
+                        app:layout_constraintTop_toBottomOf="@id/tvOrderDetailHistoryCallNumberTitle" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/activity_order_detail_history_order_info_item_box_space">
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistoryRequestedTermTitle"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_order_detail_history_common_space"
+                        android:text="@string/activity_order_detail_history_requested_term"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvOrderDetailHistoryRequestedTerm" />
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistoryRequestedTerm"
+                        style="@style/BlackColorBold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12.7dp"
+                        android:background="@color/whiteSmoke"
+                        android:padding="@dimen/activity_order_detail_history_common_space"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintLeft_toRightOf="@id/tvOrderDetailHistoryRequestedTermTitle"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="asdasdsaokdosakdoaskdaskjdlksjakljksd" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/common_underline_height"
+                        android:layout_marginTop="@dimen/activity_order_detail_history_order_info_item_box_space"
+                        android:background="@color/linkWater"
+                        app:layout_constraintTop_toBottomOf="@id/tvOrderDetailHistoryRequestedTerm" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="33.33dp"
+                    android:text="@string/activity_order_detail_history_order_history"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/activity_order_detail_history_order_title_text_size"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/orderRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/item_order_detail_history_product" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/activity_order_detail_history_order_info_item_box_space">
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistoryOrderTotalTitle"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/activity_order_detail_history_order_total"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistoryOrderTotal"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="31,000원" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/common_underline_height"
+                        android:layout_marginTop="@dimen/activity_order_detail_history_order_info_item_box_space"
+                        android:background="@color/linkWater"
+                        app:layout_constraintTop_toBottomOf="@id/tvOrderDetailHistoryOrderTotalTitle" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/activity_order_detail_history_order_info_item_box_space">
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistorySaleAmountTitle"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/activity_order_detail_history_sale_amount"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/llOrderDetailHistoryPointGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tvOrderDetailHistoryMoaPointTitle"
+                            style="@style/BlackColorBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/activity_order_detail_history_moa_point_title"
+                            android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvOrderDetailHistoryMoaPoint"
+                            style="@style/MoaFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/activity_order_detail_history_sale_amount_moa_point_start_space"
+                            android:textColor="@color/coral"
+                            android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                            android:textStyle="bold"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="- 0 원" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llOrderDetailHistoryCouponGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_order_detail_history_sale_amount_coupon_group_top_space"
+                        android:orientation="horizontal"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/llOrderDetailHistoryPointGroup">
+
+                        <TextView
+                            android:id="@+id/tvOrderDetailHistoryCouponTitle"
+                            style="@style/BlackColorBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/activity_order_detail_history_coupon"
+                            android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvOrderDetailHistoryCoupon"
+                            style="@style/MoaFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/activity_order_detail_history_sale_amount_coupon_start_space"
+                            android:textColor="@color/coral"
+                            android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                            android:textStyle="bold"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="- 1,000 원" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llOrderDetailHistoryStoreSaleGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_order_detail_history_sale_amount_coupon_group_top_space"
+                        android:orientation="horizontal"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/llOrderDetailHistoryCouponGroup">
+
+                        <TextView
+                            android:id="@+id/tvOrderDetailHistoryStoreSaleTitle"
+                            style="@style/BlackColorBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/activity_order_detail_history_store_sale"
+                            android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvOrderDetailHistoryStoreSale"
+                            style="@style/MoaFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/activity_order_detail_history_sale_amount_coupon_start_space"
+                            android:textColor="@color/coral"
+                            android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                            android:textStyle="bold"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="- 1,000 원" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/common_underline_height"
+                        android:layout_marginTop="@dimen/activity_order_detail_history_order_info_item_box_space"
+                        android:background="@color/linkWater"
+                        app:layout_constraintTop_toBottomOf="@id/llOrderDetailHistoryStoreSaleGroup" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/activity_order_detail_history_order_info_item_box_space">
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistoryDeliveryPriceTitle"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="배달료"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistoryDeliveryPrice"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="1,000원" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/common_underline_height"
+                        android:layout_marginTop="@dimen/activity_order_detail_history_order_info_item_box_space"
+                        android:background="@color/linkWater"
+                        app:layout_constraintTop_toBottomOf="@id/tvOrderDetailHistoryDeliveryPriceTitle" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/activity_order_detail_history_order_info_item_box_space">
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistoryPaymentAmountTitle"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/activity_order_detail_history_payment_amount"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistoryPaymentAmount"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/activity_order_detail_history_order_price_text_size"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="24,000원" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/common_underline_height"
+                        android:layout_marginTop="@dimen/activity_order_detail_history_order_info_item_box_space"
+                        android:background="@color/linkWater"
+                        app:layout_constraintTop_toBottomOf="@id/tvOrderDetailHistoryPaymentAmountTitle" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/activity_order_detail_history_order_info_item_box_space"
+                    android:paddingBottom="@dimen/activity_order_detail_history_payment_reserve_bottom_space">
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistoryPaymentReserveTitle"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/activity_order_detail_history_payment_reserve"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvOrderDetailHistoryPaymentReserve"
+                        style="@style/BlackColorBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/activity_order_detail_history_order_info_item_text_size"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="2,400 P" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

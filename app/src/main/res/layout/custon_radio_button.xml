@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveImageView
+        android:id="@+id/radioIcNor"
+        android:layout_width="30px"
+        android:layout_height="30px"
+        android:background="@drawable/radio_n"
+        app:layout_constraintTop_toTopOf="@+id/radioContent"
+        app:layout_constraintBottom_toBottomOf="@+id/radioContent"/>
+
+    <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveImageView
+        android:id="@+id/radioIcPress"
+        android:layout_width="30px"
+        android:layout_height="30px"
+        android:background="@drawable/radio_p"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@+id/radioIcNor"/>
+
+    <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+        android:id="@+id/radioContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="내국인"
+        app:responsiveTextSize="36"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@+id/radioIcNor"
+        android:layout_marginLeft="25px"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

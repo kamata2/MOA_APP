@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.moaPlatform.moa.util.custom_view.CommonTitleView
+        android:id="@+id/commonTitleMyReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabMyReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/commonTitleMyReview"
+        android:background="@color/white"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/black"
+        app:tabIndicatorHeight="1.3dp"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextAppearance="@style/tabLayoutText"
+        app:tabTextColor="@color/grey" />
+
+    <View
+        android:id="@+id/tabLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_underline_height"
+        android:layout_below="@id/tabMyReview"
+        android:background="@color/linkWater" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pagerMyReview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tabLine" />
+</RelativeLayout>

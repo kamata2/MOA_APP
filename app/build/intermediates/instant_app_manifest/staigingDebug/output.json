@@ -1,0 +1,1 @@
+[{"outputType":{"type":"INSTANT_APP_MANIFEST"},"apkData":{"type":"MAIN","splits":[],"versionCode":1022,"versionName":"1.0.2.2","enabled":true,"outputFile":"app-staiging-debug.apk","fullName":"staigingDebug","baseName":"staiging-debug"},"path":"AndroidManifest.xml","properties":{"packageId":"com.moaPlatform.moaStaging","split":"","minSdkVersion":"19"}}]

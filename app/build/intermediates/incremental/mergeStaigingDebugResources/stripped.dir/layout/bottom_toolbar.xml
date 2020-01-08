@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bottom_toolbar_height"
+    android:background="@color/transparent">
+
+    <ImageView
+        android:id="@+id/shadowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/bottom_toolbar_shadow"
+        android:contentDescription="@string/underline_description"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="1.3dp"/>
+
+    <ImageView
+        android:id="@+id/bottomToolbarBg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/shadowLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/underline_description" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/homeGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/themeGroup"
+        app:layout_constraintTop_toBottomOf="@id/shadowLayout"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/btnHome"
+            android:layout_width="22dp"
+            android:layout_height="22.7dp"
+            android:background="@color/transparent"
+            android:contentDescription="@string/underline_description"
+            android:scaleType="fitCenter"
+            android:src="@drawable/main_home_p"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="홈"
+            android:textColor="@color/coral"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/btnHome"
+            app:layout_constraintRight_toRightOf="@id/btnHome"
+            app:layout_constraintTop_toBottomOf="@id/btnHome" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/themeGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/homeGroup"
+        app:layout_constraintRight_toLeftOf="@id/viewWalletGroup"
+        app:layout_constraintTop_toBottomOf="@id/shadowLayout"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/btnTheme"
+            android:layout_width="18.7dp"
+            android:layout_height="21dp"
+            android:background="@color/transparent"
+            android:contentDescription="@string/underline_description"
+            android:scaleType="fitCenter"
+            android:src="@drawable/main_theme_n"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="테마"
+            android:textSize="8sp"
+            android:textColor="@color/darkGray"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/btnTheme"
+            app:layout_constraintRight_toRightOf="@id/btnTheme"
+            app:layout_constraintTop_toBottomOf="@id/btnTheme" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewWalletGroup"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toRightOf="@id/themeGroup"
+        app:layout_constraintRight_toLeftOf="@id/achievementsGroup"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnWallet"
+            android:layout_width="49.3dp"
+            android:layout_height="49.3dp"
+            android:background="@color/transparent"
+            android:contentDescription="@string/underline_description"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bottom_toolbar_wallet_ic"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/achievementsGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/viewWalletGroup"
+        app:layout_constraintRight_toLeftOf="@id/shoppingCartGroup"
+        app:layout_constraintTop_toBottomOf="@id/shadowLayout"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/btnAchievements"
+            android:layout_width="22.3dp"
+            android:layout_height="21.3dp"
+            android:background="@color/transparent"
+            android:contentDescription="@string/underline_description"
+            android:scaleType="fitCenter"
+            android:src="@drawable/main_event_n"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtAchievements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="8sp"
+            android:text="이벤트"
+            android:textColor="@color/darkGray"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/btnAchievements"
+            app:layout_constraintRight_toRightOf="@id/btnAchievements"
+            app:layout_constraintTop_toBottomOf="@id/btnAchievements" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shoppingCartGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/achievementsGroup"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shadowLayout">
+
+        <ImageView
+            android:id="@+id/btnShoppingCart"
+            android:layout_width="24.7dp"
+            android:layout_height="21dp"
+            android:background="@color/transparent"
+            android:contentDescription="@string/underline_description"
+            android:scaleType="fitCenter"
+            android:src="@drawable/main_cart_n"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtShoppingCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/shopping_cart"
+            android:textColor="@color/darkGray"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/btnShoppingCart"
+            app:layout_constraintRight_toRightOf="@id/btnShoppingCart"
+            app:layout_constraintTop_toBottomOf="@id/btnShoppingCart" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/btnShoppingCart"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="21.3dp"-->
+    <!--android:background="@color/transparent"-->
+    <!--android:contentDescription="@string/icon_description"-->
+    <!--android:scaleType="fitCenter"-->
+    <!--android:src="@drawable/bottom_toolbar_home_ic"-->
+    <!--app:layout_constraintLeft_toRightOf="@id/btnAchievements"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--<com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveImageView-->
+    <!--android:id="@+id/shadow"-->
+    <!--android:layout_width="1080px"-->
+    <!--android:layout_height="9px"-->
+    <!--android:background="@drawable/bottom_toolbar_shadow"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--android:layout_marginTop="4px"/>-->
+
+    <!--<com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveImageView-->
+    <!--android:id="@+id/home"-->
+    <!--android:layout_width="106px"-->
+    <!--android:layout_height="106px"-->
+    <!--android:background="@drawable/bottom_toolbar_home"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/shadow"-->
+    <!--app:layout_constraintRight_toLeftOf="@+id/menu"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+    <!--<com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveImageView-->
+    <!--android:id="@+id/menu"-->
+    <!--android:layout_width="106px"-->
+    <!--android:layout_height="106px"-->
+    <!--android:background="@drawable/bottom_toolbar_menu"-->
+    <!--app:layout_constraintLeft_toRightOf="@+id/home"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/shadow"-->
+    <!--app:layout_constraintRight_toLeftOf="@+id/wallet"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+    <!--<com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveImageView-->
+    <!--android:id="@+id/wallet"-->
+    <!--android:layout_width="150px"-->
+    <!--android:layout_height="148px"-->
+    <!--android:background="@drawable/bottom_toolbar_wallet"-->
+    <!--app:layout_constraintLeft_toRightOf="@+id/menu"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--app:layout_constraintRight_toLeftOf="@+id/my"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+    <!--<com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveImageView-->
+    <!--android:id="@+id/my"-->
+    <!--android:layout_width="106px"-->
+    <!--android:layout_height="106px"-->
+    <!--android:background="@drawable/bottom_toolbar_my"-->
+    <!--app:layout_constraintLeft_toRightOf="@+id/wallet"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/shadow"-->
+    <!--app:layout_constraintRight_toLeftOf="@+id/review"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+    <!--<com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveImageView-->
+    <!--android:id="@+id/review"-->
+    <!--android:layout_width="106px"-->
+    <!--android:layout_height="106px"-->
+    <!--android:background="@drawable/bottom_toolbar_review"-->
+    <!--app:layout_constraintLeft_toRightOf="@+id/my"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/shadow"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

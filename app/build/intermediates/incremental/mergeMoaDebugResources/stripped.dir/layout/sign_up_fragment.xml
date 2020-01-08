@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/svSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:paddingBottom="@dimen/common_margin"
+        app:layout_constraintBottom_toTopOf="@+id/signUpNext"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingStart="13.3dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+                <!-- 이메일 입력 -->
+                <TextView
+                    android:id="@+id/tvEmailTitle"
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email"
+                    android:textColor="@color/black"
+                    android:textSize="14.3sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/etInputEmail"
+                    style="@style/MoaFont"
+                    android:layout_width="0dp"
+                    android:layout_height="46.7dp"
+                    android:layout_marginTop="8.3dp"
+                    android:layout_marginEnd="6.7dp"
+                    android:background="@drawable/common_edit_text_form"
+                    android:hint="@string/sign_up_input_email"
+                    android:importantForAutofill="no"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:paddingStart="9.3dp"
+                    android:paddingEnd="0dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/nobel"
+                    android:textSize="13.3sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/btnExitsEmail"
+                    app:layout_constraintTop_toBottomOf="@+id/tvEmailTitle"
+                    tools:targetApi="o" />
+
+                <Button
+                    android:id="@+id/btnExitsEmail"
+                    style="@style/CoralBoldStyle"
+                    android:layout_width="84.7dp"
+                    android:layout_height="46.7dp"
+                    android:layout_marginStart="6.7dp"
+                    android:layout_marginRight="13.3dp"
+                    android:text="중복 확인"
+                    android:textSize="13.3sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/etInputEmail" />
+
+                <TextView
+                    android:id="@+id/inputEmailError"
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.3dp"
+                    android:text="@string/sign_up_input_email_error"
+                    android:textColor="@color/coral"
+                    android:textSize="11.3sp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/etInputEmail" />
+
+                <!-- 비밀번호 입력 -->
+                <TextView
+                    android:id="@+id/pwTitle"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16.7dp"
+                    android:text="비밀번호"
+                    android:textColor="@color/black"
+                    android:textSize="14.3sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inputEmailError" />
+
+                <EditText
+                    android:id="@+id/inputPw"
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="46.7dp"
+                    android:layout_marginTop="8.3dp"
+                    android:layout_marginEnd="13.3dp"
+                    android:background="@drawable/common_edit_text_form"
+                    android:hint="@string/sign_up_input_password"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:paddingStart="9.3dp"
+                    android:paddingEnd="0dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/nobel"
+                    android:textSize="13.3sp"
+                    app:layout_constraintTop_toBottomOf="@+id/pwTitle"
+                    tools:targetApi="o" />
+
+                <TextView
+                    android:id="@+id/inputPwError"
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.3dp"
+                    android:maxLines="1"
+                    android:text="영문,숫자 (특수문자)를 8~20자로 입력해 주세요."
+                    android:textColor="@color/coral"
+                    android:textSize="11.3sp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/inputPw" />
+
+                <!-- 비밀번호 확인 -->
+                <TextView
+                    android:id="@+id/pwCheckTitle"
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16.7dp"
+                    android:text="비밀번호 확인"
+                    android:textColor="@color/black"
+                    android:textSize="14.3sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inputPwError" />
+
+                <EditText
+                    android:id="@+id/inputCheckPw"
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="46.7dp"
+                    android:layout_marginTop="8.3dp"
+                    android:layout_marginEnd="13.3dp"
+                    android:background="@drawable/common_edit_text_form"
+                    android:hint="@string/sign_up_input_password"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:paddingStart="9.3dp"
+                    android:paddingEnd="0dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/nobel"
+                    android:textSize="13.3sp"
+                    app:layout_constraintTop_toBottomOf="@+id/pwCheckTitle"
+                    tools:layout_editor_absoluteX="13dp"
+                    tools:targetApi="o" />
+
+                <TextView
+                    android:id="@+id/inputCheckPwError"
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.3dp"
+                    android:maxLines="1"
+                    android:text="@string/common_pw_not_match"
+                    android:textColor="@color/coral"
+                    android:textSize="11.3sp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/inputCheckPw" />
+
+                <!--추천인 -->
+                <CheckBox
+                    android:id="@+id/rpCheckBox"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/transparent"
+                    android:button="@null"
+                    android:drawableStart="@drawable/check_box_coral"
+                    android:text="추천인 등록"
+                    android:textSize="14.3sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/inputCheckPwError" />
+
+                <CheckBox
+                    android:id="@+id/rpCheckBox2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16.7dp"
+                    android:button="@null"
+                    android:drawableStart="@drawable/check_box_coral_s"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@id/rpCheckTitle"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/inputCheckPwError" />
+
+                <TextView
+                    android:id="@+id/rpCheckTitle"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6.3dp"
+                    android:layout_marginTop="16.7dp"
+                    android:text="추천인 등록"
+                    android:textColor="@color/black"
+                    android:textSize="14.3sp"
+                    android:visibility="invisible"
+                    app:layout_constraintLeft_toRightOf="@id/rpCheckBox"
+                    app:layout_constraintTop_toBottomOf="@+id/inputCheckPwError" />
+
+                <ImageView
+                    android:id="@+id/rpQuestion"
+                    android:layout_width="12.7dp"
+                    android:layout_height="12.7dp"
+                    android:layout_marginStart="6.7dp"
+                    android:background="@drawable/questionmark"
+                    app:layout_constraintBottom_toBottomOf="@id/rpCheckBox"
+                    app:layout_constraintLeft_toRightOf="@id/rpCheckBox"
+                    app:layout_constraintTop_toTopOf="@id/rpCheckBox" />
+
+                <RelativeLayout
+                    android:id="@+id/toolTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toRightOf="@id/rpQuestion"
+                    app:layout_constraintTop_toTopOf="@+id/inputCheckPw">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="58.3dp"
+                        android:background="@drawable/tooltip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.7dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="9.7dp"
+                        android:text="- 주문 시 추천인에게 주문 건당 n포인트가 적립됩니다.\n- 회원 가입이 완료된 후에는 추천인 입력이 되지 않습니다.\n- 추천인은 한 번 등록하시면 수정하실 수 없습니다."
+                        android:textSize="9.3sp" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/etInputRecommender"
+                    style="@style/MoaFont"
+                    android:layout_width="0dp"
+                    android:layout_height="46.7dp"
+                    android:layout_marginTop="8.3dp"
+                    android:layout_marginRight="6.7dp"
+                    android:background="@drawable/common_edit_text_form"
+                    android:enabled="false"
+                    android:hint="@string/sign_up_recommender_phone_number"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:paddingStart="9.3dp"
+                    android:paddingEnd="0dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/nobel"
+                    android:textSize="13.3sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/btnRecommenderCheck"
+                    app:layout_constraintTop_toBottomOf="@+id/rpCheckBox"
+                    tools:targetApi="o" />
+
+                <TextView
+                    android:id="@+id/tvRecommenderError"
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.3dp"
+                    android:maxLines="1"
+                    android:text="@string/sign_up_phone_number_again_check"
+                    android:textColor="@color/coral"
+                    android:textSize="11.3sp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/etInputRecommender" />
+
+                <Button
+                    android:id="@+id/btnRecommenderCheck"
+                    style="@style/NobelBoldStyle"
+                    android:layout_width="84.7dp"
+                    android:layout_height="46.7dp"
+                    android:layout_marginStart="6.7dp"
+                    android:layout_marginEnd="13.3dp"
+                    android:enabled="false"
+                    android:text="번호 확인"
+                    android:textSize="13.3sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/etInputRecommender" />
+
+                <TextView
+                    android:id="@+id/inputPRNumber"
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.3dp"
+                    android:text="휴대 전화번호를 다시 한 번 확인해 주세요."
+                    android:textColor="@color/coral"
+                    android:textSize="11.3sp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/etInputRecommender" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/linkWater"
+                app:layout_constraintTop_toBottomOf="@id/inputPRNumber" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin"
+                android:background="@color/white"
+                android:paddingLeft="13.3dp"
+                android:paddingTop="20dp"
+                android:paddingRight="13.3dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/termsTitle"
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="이용약관"
+                    android:textColor="@color/black"
+                    android:textSize="14.3sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/middleLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginTop="8.3dp"
+                    android:background="@color/linkWater"
+                    app:layout_constraintTop_toBottomOf="@id/termsTitle" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxAllAgree"
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/transparent"
+                    android:button="@null"
+                    android:drawableStart="@drawable/check_box_coral"
+                    android:text="아래의 내용에 모두 동의합니다."
+                    android:textSize="13.3sp"
+                    app:layout_constraintTop_toBottomOf="@+id/middleLine" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxTermsAgree"
+                    style="@style/MoaFont"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="16.7dp"
+                    android:background="@color/transparent"
+                    android:button="@null"
+                    android:drawableStart="@drawable/check_box_coral"
+                    android:text="이용약관 동의 (필수)"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/termsAgreeAllRead"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxAllAgree" />
+
+                <TextView
+                    android:id="@+id/termsAgreeAllRead"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="전문보기"
+                    android:textColor="@color/coral"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/checkBoxTermsAgree"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/checkBoxTermsAgree"
+                    tools:ignore="SmallSp" />
+
+                <CheckBox
+                    android:id="@+id/personalInfAgree"
+                    style="@style/MoaFont"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="16.7dp"
+                    android:background="@color/transparent"
+                    android:button="@null"
+                    android:drawableStart="@drawable/check_box_coral"
+                    android:text="개인정보 수집 및 이용동의 (필수)"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/personalInfAllRead"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxTermsAgree" />
+
+                <TextView
+                    android:id="@+id/personalInfAllRead"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="전문보기"
+                    android:textColor="@color/coral"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/personalInfAgree"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/personalInfAgree"
+                    tools:ignore="SmallSp" />
+
+                <CheckBox
+                    android:id="@+id/ageAgree"
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="16.7dp"
+                    android:background="@color/transparent"
+                    android:button="@null"
+                    android:drawableStart="@drawable/check_box_coral"
+                    android:text="만 14세 이상입니다. (필수)"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/personalInfAgree" />
+
+
+                <CheckBox
+                    android:id="@+id/pushAgree"
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="16.7dp"
+                    android:background="@color/transparent"
+                    android:button="@null"
+                    android:drawableStart="@drawable/check_box_coral"
+                    android:text="쿠폰 / 할인 이벤트 혜택 알림 (선택)"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/ageAgree" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/signUpNext"
+        style="@style/NobelBoldStyle"
+        android:layout_width="match_parent"
+        android:layout_height="53.33dp"
+        android:clickable="false"
+        android:text="@string/sign_up_next"
+        android:textSize="16.7dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

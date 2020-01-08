@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/customre_relative"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/customer_detail_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13.3dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/customercenter_noti_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="코인 결제는 어떻게 하나요?"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/side_customercenter_main_next"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="3dp"
+            android:textColor="@color/black"
+            android:textSize="14.3sp"
+            android:textStyle="bold"
+            style="@style/MoaFont"/>
+
+        <ImageView
+            android:id="@+id/side_customercenter_main_next"
+            android:layout_width="14.3dp"
+            android:layout_height="7.7dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="13.3dp"
+            android:background="@drawable/arrow_down" />
+
+        <ImageView
+            android:id="@+id/side_customercenter_main_next_top"
+            android:layout_width="14.3dp"
+            android:layout_height="7.7dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="13.3dp"
+            android:background="@drawable/arrow_top_o"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/customer_detail_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/customer_detail_top"
+        android:layout_marginLeft="13.3dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="13.3dp"
+        android:background="@color/whiteSmoke"
+        android:paddingLeft="13.3dp"
+        android:paddingTop="13.3dp"
+        android:paddingRight="13.3dp"
+        android:paddingBottom="13.3dp"
+        android:text="스타일리시"
+        android:textColor="@color/black"
+        android:textSize="13.3sp"
+        android:lineSpacingExtra="4dp"
+        style="@style/MoaFont"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_below="@+id/customer_detail_data"
+        android:layout_marginLeft="13.3dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="13.3dp"
+        android:background="@drawable/bg_whitesmoke_bottom_lightgray" />
+</RelativeLayout>

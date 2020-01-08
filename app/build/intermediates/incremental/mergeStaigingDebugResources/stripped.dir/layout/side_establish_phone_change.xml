@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteSmoke"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/top_toolbar"
+        android:id="@+id/top"
+        />
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/common_data_form_cover"
+        >
+
+        <EditText
+            android:layout_alignParentLeft="true"
+            android:id="@+id/textbox"
+            android:layout_below="@id/password"
+            android:layout_width="match_parent"
+            android:layout_toLeftOf="@id/btn"
+            android:layout_height="37dp"
+            android:hint="휴대전화 번호 입력 (-제외)"
+            android:textSize="10.67dp"
+            android:inputType="textPassword"
+            android:textColorHint="@color/nobel"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="25.67dp"
+            android:layout_marginLeft="18.67dp"
+            android:layout_marginRight="7.33dp"
+            android:background="@drawable/common_edit_text_form"
+            style="@style/MoaFont"
+            />
+
+        <Button
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/line"
+
+            android:id="@+id/btn"
+            android:layout_width="78.33dp"
+            android:layout_height="31.33dp"
+            android:background="@drawable/common_radius_coral_button_form"
+            android:text="인증받기"
+            android:textColor="#FFFFFF"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:layout_marginTop="28.67dp"
+            android:layout_marginRight="18.33dp"
+            style="?android:attr/borderlessButtonStyle"
+
+
+            />
+
+        <EditText
+            android:layout_alignParentLeft="true"
+            android:id="@+id/textbox2"
+            android:layout_below="@id/textbox"
+            android:layout_width="match_parent"
+            android:layout_toLeftOf="@id/btn2"
+            android:layout_height="37dp"
+            android:hint="인증번호 입력"
+            android:textSize="10.67dp"
+            android:inputType="textPassword"
+            android:textColorHint="@color/nobel"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="8.33dp"
+            android:layout_marginLeft="18.67dp"
+            android:layout_marginRight="7.33dp"
+            android:background="@drawable/common_edit_text_form"
+            style="@style/MoaFont"
+            />
+
+        <Button
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/btn"
+
+            android:id="@+id/btn2"
+            android:layout_width="78.33dp"
+            android:layout_height="31.33dp"
+            android:background="@drawable/common_radius_coral_button_form"
+            android:text="인증"
+            android:textColor="#FFFFFF"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="18.33dp"
+            style="?android:attr/borderlessButtonStyle"
+
+
+            />
+
+        <TextView
+            android:id="@+id/number"
+             android:layout_below="@id/textbox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="인증번호가 전송되었습니다. (02:59)"
+            android:textColor="@color/coral"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="7dp"
+            style="@style/MoaFont"
+
+            />
+
+        <Button
+            android:layout_below="@id/textbox2"
+            android:id="@+id/btnchange"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:background="@drawable/common_gray_button"
+            android:text="변경완료"
+            android:textColor="#FFFFFF"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:layout_marginTop="26dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="19dp"
+            android:layout_marginRight="19dp"
+            android:layout_marginBottom="23.33dp"
+            style="?android:attr/borderlessButtonStyle"
+
+
+            />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

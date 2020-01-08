@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout-->
+        <!--android:id="@+id/top_tolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/top_toolbar_height"-->
+        <!--android:background="@drawable/top_toolbar_style">-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/btnBack"-->
+            <!--android:layout_width="24dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@color/white"-->
+            <!--android:contentDescription="@string/underline_description"-->
+            <!--android:paddingStart="@dimen/top_toolbar_back_ic_width"-->
+            <!--android:paddingTop="12dp"-->
+            <!--android:paddingEnd="0dp"-->
+            <!--android:paddingBottom="12dp"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:src="@drawable/top_toolbar_black_back_ic"-->
+            <!--app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/toolbarTitle"-->
+            <!--style="@style/MoaFont"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="GOEAT PAY 설정"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="@dimen/common_text_xl_size"-->
+            <!--android:textStyle="bold"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--app:layout_constraintRight_toRightOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <com.moaPlatform.moa.util.custom_view.CommonTitleView
+        android:id="@+id/top_tolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/lightGray" />
+
+    <TextView
+        android:id="@+id/set_cardadd"
+        android:layout_width="match_parent"
+        android:layout_height="95.7dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16.7dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/border_rect_0_0_0_0_ffffff_1dp_ff794c"
+        android:gravity="center"
+        android:text="카드 등록 +"
+        android:textColor="@color/coral"
+        android:textSize="15sp"
+        style="@style/MoaFont"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/linkWater" />
+
+    <RelativeLayout
+        android:id="@+id/pay_pw_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="9.3dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="결제 비밀번호 초기화"
+            android:textColor="@color/black"
+            android:textSize="14.3sp"
+            android:textStyle="bold"
+            style="@style/MoaFont"/>
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:background="@drawable/arrow_2_right"
+            android:layout_width="7.7dp"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/linkWater" />
+
+    <RelativeLayout
+        android:id="@+id/pay_pw_change"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:layout_marginTop="9.3dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="결제 비밀번호 변경"
+            android:textColor="@color/black"
+            android:textSize="14.3sp"
+            android:textStyle="bold"
+            style="@style/MoaFont"/>
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:background="@drawable/arrow_2_right"
+            android:layout_width="7.7dp"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/linkWater" />
+
+    <RelativeLayout
+        android:id="@+id/pay_expire"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:layout_marginTop="9.3dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GOEAT PAY 서비스 해지"
+            android:textColor="@color/black"
+            android:textSize="14.3sp"
+            android:textStyle="bold"
+            style="@style/MoaFont"/>
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:background="@drawable/arrow_2_right"
+            android:layout_width="7.7dp"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</LinearLayout>

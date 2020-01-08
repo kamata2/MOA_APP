@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/whiteSmoke"
+    android:orientation="vertical">
+
+   <com.moaPlatform.moa.util.custom_view.CommonTitleView
+       android:id="@+id/commonTitleMyReview"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            >
+
+            <LinearLayout
+                android:id="@+id/coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="43dp"
+                android:layout_marginBottom="43dp"
+                >
+
+                <TextView
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="등록할 쿠폰 번호를"
+                    android:textSize="15sp" />
+
+                <TextView
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="3dp"
+                    android:text="입력하세요"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/incoupon"
+                style="@style/MoaFont"
+                android:layout_width="match_parent"
+                android:layout_height="46.7dp"
+                android:layout_below="@id/coupon"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="13.3dp"
+                android:layout_marginRight="13.3dp"
+                android:background="@drawable/common_edit_text_form"
+                android:hint="쿠폰 번호 입력"
+                android:inputType="text"
+                android:paddingLeft="9.33dp"
+                android:textColorHint="@color/matterhorn"
+                android:textSize="13.3sp" />
+
+            <Button
+                android:id="@+id/registerCoupon"
+                style="@style/MoaFont"
+                android:layout_width="match_parent"
+                android:layout_height="53.3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/common_radius_coral_button_form"
+                android:text="쿠폰 등록"
+                android:textColor="@color/white"
+                android:textSize="16.7sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

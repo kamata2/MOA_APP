@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="13dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBookmarkStoreRegisteredStoreListGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="13dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bookmarkstoreholder_registered_store_list_height"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="@dimen/bookmarkstoreholder_registered_store_list_ic_width"
+                android:layout_height="@dimen/bookmarkstoreholder_registered_store_list_ic_height"
+                android:background="@drawable/bookmarkactivity_registered_store_list_ic"
+                android:contentDescription="@string/bookmarkstoreholder_registered_store_list_ic" />
+
+            <TextView
+                style="@style/BlackColorBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/bookmarkstoreholder_registered_store_list_text_start_space"
+                android:text="@string/bookmarkstoreholder_registered_store_list"
+                android:textSize="@dimen/bookmarkstoreholder_registered_store_list_text_text_size" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bookmarkstoreholder_registered_store_list_underline_height"
+            android:background="@color/linkWater"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clItemBookmarkStoreContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp">
+
+        <ImageView
+            android:id="@+id/ivBookmarkStoreThumbnail"
+            android:layout_width="@dimen/bookmarkstoreholder_store_thumbnail_size"
+            android:layout_height="@dimen/bookmarkstoreholder_store_thumbnail_size"
+            android:contentDescription="@string/bookmarkstoreholder_store_thumbnail_description"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/viewThumbNailMask"
+            android:layout_width="@dimen/bookmarkstoreholder_store_thumbnail_size"
+            android:layout_height="@dimen/bookmarkstoreholder_store_thumbnail_size"
+            android:background="@drawable/store_list_thumbnail_mask_w"
+            app:layout_constraintTop_toTopOf="@id/ivBookmarkStoreThumbnail"
+            app:layout_constraintLeft_toLeftOf="@id/ivBookmarkStoreThumbnail"
+            app:layout_constraintBottom_toBottomOf="@id/ivBookmarkStoreThumbnail"
+            app:layout_constraintRight_toRightOf="@id/ivBookmarkStoreThumbnail"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rlBookmarkStoreDeleteGroup"
+            android:layout_width="@dimen/bookmarkstoreholder_store_remove_group_size"
+            android:layout_height="@dimen/bookmarkstoreholder_store_remove_group_size"
+            android:gravity="end|center_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingEnd="13dp">
+
+            <ImageView
+                android:layout_width="@dimen/bookmarkstoreholder_store_remove_ic_size"
+                android:layout_height="@dimen/bookmarkstoreholder_store_remove_ic_size"
+                android:background="@drawable/btn_x_k"
+                android:contentDescription="@string/bookmarkstoreholder_store_remove_ic_description" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvBookmarkStoreName"
+            style="@style/BlackColorBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/bookmarkstoreholder_store_name_start_space"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="@dimen/bookmarkstoreholder_store_name_text_size"
+            app:layout_constraintBottom_toTopOf="@id/llBookmarkStoreScoreGroup"
+            app:layout_constraintLeft_toRightOf="@id/ivBookmarkStoreThumbnail"
+            app:layout_constraintRight_toLeftOf="@id/rlBookmarkStoreDeleteGroup"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="괴물 떡볶이 남양주 다산점" />
+
+        <LinearLayout
+            android:id="@+id/llBookmarkStoreScoreGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/tvBookmarkStoreName"
+            app:layout_constraintRight_toRightOf="@id/tvBookmarkStoreName"
+            app:layout_constraintTop_toBottomOf="@id/tvBookmarkStoreName">
+
+            <ImageView
+                android:layout_width="@dimen/bookmarkstoreholder_store_gpa_ic_size"
+                android:layout_height="@dimen/bookmarkstoreholder_store_gpa_ic_size"
+                android:background="@drawable/yellow_star"
+                android:contentDescription="@string/bookmarkstoreholder_store_gpa_ic_description" />
+
+            <TextView
+                android:id="@+id/tvBookmarkStoreGPA"
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/bookmarkstoreholder_store_gpa_start_space"
+                android:textColor="@color/black"
+                android:textSize="@dimen/bookmarkstoreholder_store_gpa_text_size"
+                android:textStyle="bold"
+                tools:text="3.2" />
+
+            <TextView
+                android:id="@+id/tvBookmarkStoreReview"
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/bookmarkstoreholder_store_review_start_space"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/bookmarkstoreholder_store_review_text_size"
+                tools:text="리뷰 34" />
+
+            <TextView
+                android:id="@+id/tvBookmarkStoreBookmark"
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/bookmarkstoreholder_store_bookmark_start_space"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/bookmarkstoreholder_store_bookmark_text_size"
+                tools:text="즐겨찾기 98" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

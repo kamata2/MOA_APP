@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp">
+
+    <ImageView
+        android:id="@+id/ivSubMenuEatOutStoreThumb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/rlSubMenuEatOutStoreThumbContainer"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:background="#4D000000"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/ivSubMenuEatOutStoreThumb"
+        app:layout_constraintLeft_toLeftOf="@id/ivSubMenuEatOutStoreThumb"
+        app:layout_constraintRight_toRightOf="@id/ivSubMenuEatOutStoreThumb">
+
+        <ImageView
+            android:id="@+id/ivSubMenuEatOutStoreStar"
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/star_p" />
+
+        <TextView
+            android:id="@+id/tvSubMenuEatOutStoreScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2.7dp"
+            android:layout_toRightOf="@id/ivSubMenuEatOutStoreStar"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/white"
+            android:textSize="13.5sp"
+            tools:text="4.5" />
+
+        <TextView
+            android:id="@+id/tvSubMenuEatOutStoreDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            tools:text="1km" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvSubMenuEatOutStoreName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="#0f0f0f"
+        android:textSize="12.7sp"
+        app:layout_constraintLeft_toLeftOf="@id/rlSubMenuEatOutStoreThumbContainer"
+        app:layout_constraintRight_toRightOf="@id/rlSubMenuEatOutStoreThumbContainer"
+        app:layout_constraintTop_toBottomOf="@id/rlSubMenuEatOutStoreThumbContainer"
+        tools:text="신들린 보쌈"
+        style="@style/MoaFont"
+        />
+
+    <TextView
+        android:id="@+id/tvSubMenuEatOutStoreTagAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6.3dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="#777777"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="@id/rlSubMenuEatOutStoreThumbContainer"
+        app:layout_constraintRight_toRightOf="@id/rlSubMenuEatOutStoreThumbContainer"
+        app:layout_constraintTop_toBottomOf="@id/tvSubMenuEatOutStoreName"
+        style="@style/MoaFont"
+        tools:text="#한식 / 가산동 368-20" />
+
+    <View
+        android:id="@+id/viewSubMenuEatOutStoreInfoTopDivider"
+        android:layout_width="0dp"
+        android:layout_height="0.3dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="#b7b7b7"
+        app:layout_constraintTop_toBottomOf="@id/tvSubMenuEatOutStoreTagAddress" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.5dp"
+        app:layout_constraintLeft_toLeftOf="@id/viewSubMenuEatOutStoreInfoTopDivider"
+        app:layout_constraintTop_toBottomOf="@id/viewSubMenuEatOutStoreInfoTopDivider">
+
+        <ImageView
+            android:id="@+id/ivSubMenuEatOutStoreLike"
+            android:layout_width="@dimen/space_9"
+            android:layout_height="8.3dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/nfavorite" />
+
+        <TextView
+            android:id="@+id/tvSubMenuEatOutStoreLikeCntText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.3dp"
+            android:layout_toRightOf="@id/ivSubMenuEatOutStoreLike"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="#777777"
+            android:textSize="8.8sp"
+            tools:text="12" />
+
+        <ImageView
+            android:id="@+id/ivSubMenuEatOutStoreVisitCnt"
+            android:layout_width="12dp"
+            android:layout_height="8dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="31.3dp"
+            android:layout_toRightOf="@id/tvSubMenuEatOutStoreLikeCntText"
+            android:background="@drawable/view" />
+
+        <TextView
+            android:id="@+id/tvSubMenuEatOutStoreVisitCntText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.3dp"
+            android:layout_toRightOf="@id/ivSubMenuEatOutStoreVisitCnt"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="#777777"
+            android:textSize="8.8sp"
+            tools:text="342" />
+
+        <ImageView
+            android:id="@+id/ivSubMenuEatOutStoreReViewCnt"
+            android:layout_width="9.3dp"
+            android:layout_height="9.3dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="31.3dp"
+            android:layout_toRightOf="@id/tvSubMenuEatOutStoreVisitCntText"
+            android:background="@drawable/review" />
+
+        <TextView
+            android:id="@+id/tvSubMenuEatOutStoreReviewCnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.3dp"
+            android:layout_toRightOf="@id/ivSubMenuEatOutStoreReViewCnt"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="#777777"
+            android:textSize="8.8sp"
+            tools:text="1,210" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

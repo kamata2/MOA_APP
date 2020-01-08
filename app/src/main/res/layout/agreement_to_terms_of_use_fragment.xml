@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteSmoke"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/done"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/headForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/agreement_to_terms_of_use_agree_all_check_layout_padding_bottom"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/agreement_to_terms_of_use_title_margin_top"
+                    android:gravity="center_horizontal"
+                    android:text="@string/agreement_to_terms_of_use_title"
+                    android:textColor="@color/black"
+                    android:textSize="18.3sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_underline_height"
+                    android:layout_marginTop="@dimen/agreement_to_terms_of_use_title_under_line_margin_top"
+                    android:background="@color/pinkSwan"
+                    android:contentDescription="@string/underline_description" />
+
+                <TextView
+                    android:id="@+id/txtAgreeStart"
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/agreement_to_terms_of_use_agree_service_start_margin_top"
+                    android:gravity="center_horizontal"
+                    android:text="@string/agreement_to_terms_of_use_agree_start"
+                    android:textColor="@color/dimGray"
+                    android:textSize="13.3sp" />
+
+                <CheckBox
+                    android:id="@+id/allCheckBox"
+                    android:layout_width="@dimen/agreement_to_terms_of_use_agree_all_check_size"
+                    android:layout_height="@dimen/agreement_to_terms_of_use_agree_all_check_size"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/agreement_to_terms_of_use_agree_all_check_margin_top"
+                    android:background="@drawable/check_box_all_check"
+                    android:button="@null"
+                    android:checked="false" />
+
+                <TextView
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/agreement_to_terms_of_use_agree_all_check_text_margin_top"
+                    android:text="@string/agreement_to_terms_of_use_all_agree_text"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/common_text_xl_size"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/linkWater"
+                app:layout_constraintTop_toBottomOf="@id/headForm" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="13.3dp"
+                android:paddingRight="13.3dp"
+                android:paddingBottom="36.7dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/headForm">
+
+                <TextView
+                    android:id="@+id/termsAndCondition"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/agreement_to_terms_of_use_condition"
+                    android:textColor="@color/black"
+                    android:textSize="14.3sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_underline_height"
+                    android:layout_marginTop="8.3dp"
+                    android:background="@color/pinkSwan"
+                    android:contentDescription="@string/underline_description" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkBoxGpsAgree"
+                        style="@style/CoralCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/agreement_to_terms_of_use_gps"
+                        android:textSize="13.3sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvLocationAgreementAllRead"
+                        style="@style/MoaFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="end"
+                        android:text="@string/agreement_to_terms_of_use_agree_all_reed"
+                        android:textColor="@color/coral"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="29.4dp"
+                    android:layout_marginTop="13dp"
+                    android:text="@string/agreement_to_terms_of_use_gps_content"
+                    android:textColor="@color/dimGray"
+                    android:textSize="12sp"
+                    tools:ignore="SmallSp" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxEventAgree"
+                    style="@style/CoralCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/agreement_to_terms_of_use_event_checkbox_margin_top"
+                    android:checked="false"
+                    android:text="@string/agreement_to_terms_of_use_event"
+                    android:textSize="13.3sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="29.4dp"
+                    android:layout_marginTop="13dp"
+                    android:text="@string/agreement_to_terms_of_use_event_content"
+                    android:textColor="@color/dimGray"
+                    android:textSize="12sp"
+                    tools:ignore="SmallSp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/done"
+        style="@style/MoaFont"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_bottom_button_height"
+        android:layout_marginTop="@dimen/common_margin"
+        android:background="@color/darkGray"
+        android:clickable="false"
+        android:text="@string/agreement_to_terms_of_use_done_button_text"
+        android:textColor="@color/white"
+        android:textSize="16.7sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ScrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/top_fix_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <com.moaPlatform.moa.util.custom_view.CommonTitleView
+                    android:id="@+id/commonTitleMyReview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/side_oneonone_email_fix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/top_tolbar"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="13.3dp">
+
+                    <TextView
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/email"
+                        android:textColor="@color/black"
+                        android:textSize="14.3sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="6.3dp"
+                        android:gravity="center_vertical"
+                        android:text="*"
+                        android:textColor="@color/coral"
+                        android:textSize="14.3sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/side_oneonone_email"
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="46.7dp"
+                    android:layout_below="@+id/side_oneonone_email_fix"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="8.3dp"
+                    android:layout_marginRight="13.3dp"
+                    android:background="@drawable/common_edit_text_form"
+                    android:hint="usermail@mail.net"
+                    android:paddingLeft="@dimen/space_9"
+                    android:textColor="#565656"
+                    android:textColorHint="#949494"
+                    android:textSize="13.3sp" />
+
+                <TextView
+                    android:id="@+id/side_oneonone_name_fix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="13.3dp"
+                    android:text="이름"
+                    android:textColor="@color/black"
+                    android:textSize="14.3sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/side_oneonone_name"
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="46.7dp"
+                    android:layout_below="@+id/side_oneonone_email_fix"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="8.3dp"
+                    android:layout_marginRight="13.3dp"
+                    android:background="@drawable/common_edit_text_form"
+                    android:hint="이름을 입력해 주세요."
+                    android:paddingLeft="@dimen/space_9"
+                    android:textColor="#565656"
+                    android:textColorHint="#949494"
+                    android:textSize="13.3sp" />
+
+                <LinearLayout
+                    android:id="@+id/side_oneonone_phone_fix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13.3dp"
+                        android:text="휴대폰"
+                        android:textColor="@color/black"
+                        android:textSize="14.3sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="6.3dp"
+                        android:layout_marginTop="1dp"
+                        android:gravity="center_vertical"
+                        android:text="*"
+                        android:textColor="@color/coral"
+                        android:textSize="14.3sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/side_oneonone_phone"
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="46.7dp"
+                    android:layout_below="@+id/side_oneonone_email_fix"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="8.3dp"
+                    android:layout_marginRight="13.3dp"
+                    android:background="@drawable/common_edit_text_form"
+                    android:hint="휴대폰 번호를 입력해 주세요."
+                    android:inputType="phone"
+                    android:paddingLeft="@dimen/space_9"
+                    android:textColor="#565656"
+                    android:textColorHint="#949494"
+                    android:textSize="13.3sp" />
+
+                <LinearLayout
+                    android:id="@+id/side_oneonone_questiontype_fix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/side_oneonone_phone"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13.3dp"
+                        android:text="문의유형"
+                        android:textColor="@color/black"
+                        android:textSize="14.3sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="6.3dp"
+                        android:layout_marginTop="1dp"
+                        android:gravity="center_vertical"
+                        android:text="*"
+                        android:textColor="@color/coral"
+                        android:textSize="14.3sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/side_oneonone_spinner"
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="46.7dp"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="8.3dp"
+                    android:layout_marginRight="13.3dp"
+                    android:background="@drawable/common_edit_text_form" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="13.3dp"
+                    android:background="@color/linkWater" />
+
+                <LinearLayout
+                    android:id="@+id/side_oneonone_title_fix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="13.3dp">
+
+                    <TextView
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="제목"
+                        android:textColor="@color/black"
+                        android:textSize="14.3sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="6.3dp"
+                        android:layout_marginTop="1dp"
+                        android:gravity="center_vertical"
+                        android:text="*"
+                        android:textColor="@color/coral"
+                        android:textSize="14.3sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/side_oneonone_title"
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="46.7dp"
+                    android:layout_below="@+id/side_oneonone_title_fix"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="8.3dp"
+                    android:layout_marginRight="13.3dp"
+                    android:background="@drawable/common_edit_text_form"
+                    android:paddingLeft="@dimen/space_9"
+                    android:textColor="#565656"
+                    android:textColorHint="#949494"
+                    android:textSize="13.3sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/side_oneonone_content_fix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="13.3dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="내용"
+                        android:textColor="@color/black"
+                        android:textSize="14.3sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="6.3dp"
+                        android:layout_marginTop="1dp"
+                        android:gravity="center_vertical"
+                        android:text="*"
+                        android:textColor="@color/coral"
+                        android:textSize="14.3sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/side_oneonone_content"
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_below="@+id/side_oneonone_content_fix"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="8.3dp"
+                    android:layout_marginRight="13.3dp"
+                    android:background="@drawable/common_edit_text_form"
+                    android:gravity="top"
+                    android:paddingLeft="13.3dp"
+                    android:paddingTop="13.3dp"
+                    android:textColor="#565656"
+                    android:textColorHint="#949494"
+                    android:textSize="13.3sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/side_oneonone_picture_fix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        style="@style/MoaFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13.3dp"
+                        android:layout_marginRight="13.3dp"
+                        android:text="파일첨부"
+                        android:textColor="@color/black"
+                        android:textSize="14.3sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/side_oneonone_pic_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="108.7dp"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="8.3dp"
+                    android:layout_marginRight="13.3dp">
+
+                    <RelativeLayout
+                        android:id="@+id/side_relative_img1"
+                        android:layout_width="106.7dp"
+                        android:layout_height="106.7dp"
+                        android:layout_weight="1"
+                        android:background="@color/whisper"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/side_oneonone_pic"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/side_img1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="40dp"
+                            android:background="@drawable/addphoto_l" />
+
+                        <TextView
+                            android:id="@+id/side_img_del"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/side_img1"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="3dp"
+                            android:text="삭제"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/side_relative_img2"
+                        android:layout_width="106.7dp"
+                        android:layout_height="106.7dp"
+                        android:layout_marginLeft="6.7dp"
+                        android:layout_weight="1"
+                        android:background="@color/whisper"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/side_oneonone_pic2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/side_img2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="40dp"
+                            android:background="@drawable/addphoto_l"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/side_img_del2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/side_img2"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="3dp"
+                            android:text="삭제"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/side_relative_img3"
+                        android:layout_width="106.7dp"
+                        android:layout_height="106.7dp"
+                        android:layout_marginLeft="6.7dp"
+                        android:layout_weight="1"
+                        android:background="@color/whisper"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/side_oneonone_pic3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/side_img3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="40dp"
+                            android:background="@drawable/addphoto_l"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/side_img_del3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/side_img3"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="3dp"
+                            android:text="삭제"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="6.7dp"
+                    android:layout_marginRight="13.3dp"
+                    android:text="이미지 첨부 파일은 최대 3개까지 가능"
+                    android:textSize="12.7sp" />
+
+                <TextView
+                    style="@style/MoaFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="13.3dp"
+                    android:text="첨부 가능 파일 : JPG, PNG 이미지 파일"
+                    android:textSize="12.7sp" />
+
+
+                <View
+                    android:id="@+id/side_fix_underline"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="13.3dp"
+                    android:background="@drawable/bg_whitesmoke_bottom_lightgray" />
+
+                <LinearLayout
+                    android:id="@+id/guest_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="13.3dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/side_oneonone_password_fix"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            style="@style/MoaFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="비밀번호"
+                            android:textColor="@color/black"
+                            android:textSize="14.3sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="6.3dp"
+                            android:layout_marginTop="1dp"
+                            android:gravity="center_vertical"
+                            android:text="*"
+                            android:textColor="@color/coral"
+                            android:textSize="14.3sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/MoaFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9.7dp"
+                        android:text="비회원은 비밀번호를 입력해야 문의 내역을 확인할 수 있습니다."
+                        android:textColor="#949494"
+                        android:textSize="12.7sp" />
+
+                    <EditText
+                        android:id="@+id/side_oneonone_password"
+                        style="@style/MoaFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="46.7dp"
+                        android:layout_below="@+id/side_oneonone_email_fix"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/common_edit_text_form"
+                        android:hint="비밀번호를 입력하세요."
+                        android:paddingLeft="9.3dp"
+                        android:textColor="#565656"
+                        android:textColorHint="#949494"
+                        android:textSize="13.3sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/ask_question_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="53.3dp"
+                android:layout_below="@+id/top_fix_linear"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/common_radius_coral_button_form"
+                android:text="문의하기"
+                android:textColor="#ffffff"
+                android:textSize="16.7sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.moaPlatform.moa.util.custom_view.CommonLoadingView
+        android:id="@+id/viewQuestionOneAndOneLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

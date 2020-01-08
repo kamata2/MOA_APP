@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/viewTakeOutMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/BlackColorBold"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="19.7dp"
+                tools:text="가산디지털 1로 168 우림라이온스밸리 1차"
+                android:paddingStart="13.3dp"
+                android:paddingEnd="13.3dp"
+                android:textSize="14.3sp"/>
+
+            <ImageView
+                android:id="@+id/ivStoreMap"
+                android:layout_width="match_parent"
+                android:layout_height="133.3dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddress"
+                android:layout_marginTop="20dp"
+                android:contentDescription="map"
+                android:scaleType="fitXY"/>
+
+            <RelativeLayout
+                android:id="@+id/rlEatOutStoreDetailSearchWalk"
+                android:layout_width="67dp"
+                android:layout_height="67dp"
+                android:background="@drawable/border_oval_f2f2f2_0dp_trans"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/rlEatOutStoreDetailSearchNavi"
+                app:layout_constraintTop_toBottomOf="@id/ivStoreMap"
+                android:layout_marginTop="13.3dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="13dp"
+                    android:background="@drawable/subdirectory_arrow" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="13dp"
+                    android:gravity="center"
+                    android:text="@string/eatout_store_detail_search_walk"
+                    android:textColor="#595959"
+                    android:textSize="10.7sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlEatOutStoreDetailSearchNavi"
+                android:layout_width="67dp"
+                android:layout_height="67dp"
+                android:background="@drawable/border_oval_f2f2f2_0dp_trans"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivStoreMap"
+                android:layout_marginTop="13.3dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="13dp"
+                    android:background="@drawable/navigation" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="13dp"
+                    android:gravity="center"
+                    android:text="@string/eatout_store_detail_search_navi"
+                    android:textColor="#595959"
+                    android:textSize="10.7sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlEatOutStoreDetailSearchCopyAddress"
+                android:layout_width="67dp"
+                android:layout_height="67dp"
+                android:background="@drawable/border_oval_f2f2f2_0dp_trans"
+                app:layout_constraintLeft_toRightOf="@id/rlEatOutStoreDetailSearchNavi"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivStoreMap"
+                android:layout_marginTop="13.3dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="13dp"
+                    android:background="@drawable/copy_color" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="13dp"
+                    android:gravity="center"
+                    android:text="@string/eatout_store_detail_tab_copy_addr"
+                    android:textColor="#595959"
+                    android:textSize="10.7sp" />
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_toolbar_style"
+            android:orientation="horizontal"
+            android:paddingTop="30dp"
+            android:paddingBottom="20dp"
+            android:paddingStart="13.3dp"
+            android:paddingEnd="13.3dp">
+
+            <TextView
+                android:id="@+id/tvStoreInfoTitle"
+                style="@style/BlackColorBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매장 안내"
+                android:textSize="@dimen/common_text_xl_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvStoreAddInformationStoreGuide"
+                style="@style/BlackColorNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:textSize="@dimen/common_text_m_size"
+                android:textColor="@color/nobel"
+                app:layout_constraintTop_toBottomOf="@id/tvStoreInfoTitle"
+                tools:text="이벤트로 치킨 1마리 주문 시 치킨 무 2개씩 드리고 있습니다.  리뷰 남겨 주시면 다음 주문시 닭다리 1개 더 드립니다." />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_toolbar_style"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingStart="13.3dp"
+            android:paddingEnd="13.3dp">
+
+            <TextView
+                android:id="@+id/tvStoreEventTitle"
+                style="@style/BlackColorBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이벤트 및 혜택 안내"
+                android:textSize="@dimen/common_text_xl_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvStoreEvent"
+                style="@style/BlackColorNormal"
+                android:textColor="@color/nobel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="@dimen/common_text_m_size"
+                app:layout_constraintTop_toBottomOf="@id/tvStoreEventTitle"
+                tools:text="2,000원 쿠폰 다운로드 이벤트 진행 중입니다.쿠폰을 다운로드 받고 할인 혜택 꼭 받으세요." />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_toolbar_style"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingStart="13.3dp"
+            android:paddingEnd="13.3dp">
+
+            <TextView
+                android:id="@+id/tvStoreSalesInfoTitle"
+                style="@style/BlackColorBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="영업 정보"
+                android:textSize="@dimen/common_text_xl_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvBusinessHoursTimeTitle"
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="영업시간"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_text_m_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvStoreSalesInfoTitle" />
+
+            <TextView
+                android:id="@+id/tvBusinessHoursTime"
+                style="@style/BlackColorNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/common_text_m_size"
+                android:layout_marginLeft="96.3dp"
+                android:textColor="@color/nobel"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvBusinessHoursTimeTitle"
+                app:layout_constraintBottom_toBottomOf="@id/tvBusinessHoursTimeTitle"
+                tools:text="매일 오전 09:00 ~ 새벽 05:00"/>
+
+            <TextView
+                android:id="@+id/tvClosedDaysTitle"
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9.7dp"
+                android:text="휴무일"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_text_m_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvBusinessHoursTime" />
+
+            <TextView
+                android:id="@+id/tvClosedDays"
+                style="@style/BlackColorNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/common_text_m_size"
+                android:textColor="@color/nobel"
+                android:layout_marginLeft="96.3dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/tvClosedDaysTitle"
+                app:layout_constraintTop_toTopOf="@id/tvClosedDaysTitle"
+                tools:text="연중 무휴"/>
+
+            <TextView
+                android:id="@+id/tvAdditionalInformationTitle"
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9.7dp"
+                android:text="부가 정보"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_text_m_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvClosedDays" />
+
+            <TextView
+                android:id="@+id/tvAdditionalInformation"
+                style="@style/BlackColorNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/common_text_m_size"
+                android:textColor="@color/nobel"
+                android:layout_marginLeft="96.3dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvAdditionalInformationTitle"
+                app:layout_constraintBottom_toBottomOf="@id/tvAdditionalInformationTitle"
+                tools:text="주차 가능"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_toolbar_style"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingStart="13.3dp"
+            android:paddingEnd="13.3dp">
+
+            <TextView
+                android:id="@+id/tvLocationInfoTitle"
+                style="@style/BlackColorBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="위치 정보"
+                android:textSize="@dimen/common_text_xl_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDeliveryAreaTitle"
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.3dp"
+                android:text="배달 가능 지역"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_text_m_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLocationInfoTitle"/>
+
+            <TextView
+                android:id="@+id/tvDeliveryArea"
+                style="@style/BlackColorNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/common_text_m_size"
+                android:textColor="@color/nobel"
+                android:layout_marginStart="96.3dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvDeliveryAreaTitle"
+                app:layout_constraintBottom_toBottomOf="@id/tvDeliveryAreaTitle"
+                tools:text="가산동, 독산동, 철산동 일대" />
+
+            <TextView
+                android:id="@+id/tvDeliveryPriceTitle"
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9.7dp"
+                android:text="배달비"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_text_m_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDeliveryAreaTitle" />
+
+            <TextView
+                android:id="@+id/tvDeliveryPrice"
+                style="@style/BlackColorNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/common_text_m_size"
+                android:textColor="@color/nobel"
+                android:layout_marginStart="96.3dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/tvDeliveryPriceTitle"
+                app:layout_constraintTop_toTopOf="@id/tvDeliveryPriceTitle"
+                tools:text="지역에 따라 배달비가 추가됩니다."/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_toolbar_style"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingStart="13.3dp"
+            android:paddingEnd="13.3dp">
+
+            <TextView
+                android:id="@+id/tvBusinessInformationTitle"
+                style="@style/BlackColorBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="사업자 정보"
+                android:textSize="@dimen/common_text_xl_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvStoreNameTitle"
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.3dp"
+                android:text="상호명"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_text_m_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvBusinessInformationTitle"/>
+
+            <TextView
+                android:id="@+id/tvStoreName"
+                style="@style/BlackColorNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/common_text_m_size"
+                android:layout_marginLeft="96.3dp"
+                android:textColor="@color/nobel"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvStoreNameTitle"
+                app:layout_constraintBottom_toBottomOf="@id/tvStoreNameTitle"
+                tools:text="굽네치킨 가산점"/>
+
+            <TextView
+                android:id="@+id/tvBusinessLicenseNumberTitle"
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9.7dp"
+                android:text="사업자등록번호"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_text_m_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvStoreNameTitle" />
+
+            <TextView
+                android:id="@+id/tvBusinessLicenseNumber"
+                style="@style/BlackColorNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/common_text_m_size"
+                android:textColor="@color/nobel"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/tvBusinessLicenseNumberTitle"
+                app:layout_constraintTop_toTopOf="@id/tvBusinessLicenseNumberTitle"
+                android:layout_marginLeft="96.3dp"
+                tools:text="123-12-12345"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_toolbar_style"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingStart="13.3dp"
+            android:paddingEnd="13.3dp">
+
+            <TextView
+                android:id="@+id/tvCountryOfOriginInformationTitle"
+                style="@style/BlackColorBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="원산지 정보"
+                android:textSize="@dimen/common_text_xl_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCountryOfOriginInformation"
+                style="@style/BlackColorNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.3dp"
+                android:textSize="@dimen/common_text_m_size"
+                android:textColor="@color/nobel"
+                app:layout_constraintTop_toBottomOf="@id/tvCountryOfOriginInformationTitle"
+                tools:text="닭고기(뼈:국내산, 순살:브라질 ,칠레), 윙(태국산), 고추가루(중국산)"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

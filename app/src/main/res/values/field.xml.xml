@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinnerArray">
+        <item>문의사항 유형을 선택하세요.</item>
+        <item>주문/예약</item>
+        <item>회원정보</item>
+        <item>결제관련</item>
+        <item>취소/환불</item>
+        <item>오류 문의</item>
+        <item>리뷰 문의</item>
+        <item>제휴 문의</item>
+        <item>기타</item>
+    </string-array>
+</resources>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:paddingLeft="13.3dp"
+    android:paddingTop="@dimen/store_product_price_info_layout_padding_top"
+    android:paddingRight="13.3dp"
+    android:paddingBottom="@dimen/store_product_price_info_layout_padding_bottom">
+
+    <TextView
+        android:id="@+id/orderPriceTitle"
+        style="@style/MoaFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/store_product_order_price_title"
+        android:textColor="@color/black"
+        android:textSize="13.3sp" />
+
+    <TextView
+        android:id="@+id/orderPriceContent"
+        style="@style/MoaFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        tools:text="3000원"
+        android:textColor="@color/black"
+        android:textSize="13.3sp" />
+
+    <View
+        android:id="@+id/order_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_below="@id/orderPriceTitle"
+        android:layout_marginTop="20dp"
+        android:background="@color/linkWater" />
+
+    <TextView
+        android:id="@+id/deliveryPriceTitle"
+        style="@style/MoaFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/order_line"
+        android:layout_marginTop="20dp"
+        android:text="@string/store_product_delivery_price_title"
+        android:textColor="@color/black"
+        android:textSize="13.3sp" />
+
+    <TextView
+        android:id="@+id/deliveryPriceContent"
+        style="@style/MoaFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/order_line"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        tools:text="3000원"
+        android:textColor="@color/black"
+        android:textSize="13.3sp" />
+
+    <View
+        android:id="@+id/deliver_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_below="@id/deliveryPriceTitle"
+        android:layout_marginTop="20dp"
+        android:background="@color/linkWater" />
+
+    <TextView
+        android:id="@+id/salePriceTitle"
+        style="@style/MoaFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/deliver_line"
+        android:layout_marginTop="20dp"
+        android:text="@string/store_product_sale_price_title"
+        android:textColor="@color/black"
+        android:textSize="13.3sp" />
+
+    <TextView
+        android:id="@+id/salePriceContent"
+        style="@style/MoaFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/deliver_line"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        tools:text="3000원"
+        android:textColor="@color/black"
+        android:textSize="13.3sp" />
+
+    <View
+        android:id="@+id/discount_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_below="@id/salePriceTitle"
+        android:layout_marginTop="20dp"
+        android:background="@color/linkWater" />
+
+    <TextView
+        android:id="@+id/tvMinOrderPrice"
+        style="@style/MoaFont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/discount_line"
+        android:layout_marginTop="43.3dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/coral"
+        android:textSize="13.3sp"
+        android:textStyle="bold"
+        tools:text="최소 주문 금액 3,000원 이상" />
+
+    <LinearLayout
+        android:id="@+id/total_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMinOrderPrice"
+        android:layout_marginTop="17dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/totalOrderPriceTitle"
+            style="@style/MoaFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/store_product_total_price_title"
+            android:textColor="@color/black"
+            android:textSize="20.2sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/totalOrderPriceContent"
+            style="@style/MoaFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13.3dp"
+            tools:text="3000원"
+            android:textColor="@color/black"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/savePoint"
+        style="@style/MoaFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/total_price"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="13.3dp"
+        android:gravity="center"
+        tools:text="문 혜택 500P 적립 예정"
+        android:textColor="@color/black"
+        android:textSize="13.3sp" />
+
+</RelativeLayout>

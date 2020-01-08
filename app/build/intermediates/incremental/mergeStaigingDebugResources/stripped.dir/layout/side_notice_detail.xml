@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/whiteSmoke"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/top_toolbar"
+        android:id="@+id/top"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top2"
+        app:layout_constraintTop_toBottomOf="@id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_data_form_cover"
+        android:layout_margin="5dp"
+        android:paddingLeft="18.67dp"
+        android:paddingTop="24.67dp"
+        android:paddingBottom="20dp"
+        android:paddingRight="18.67dp"
+
+        >
+
+        <TextView
+            android:id="@+id/memout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="앱어워드 2018 통합 대상 수상"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="18.67dp"
+            android:layout_marginTop="24.67dp"
+            style="@style/MoaFont"
+            />
+
+        <TextView
+            android:id="@+id/logout"
+            app:layout_constraintTop_toBottomOf="@id/memout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2019.02.02"
+            android:textColor="@color/black"
+            android:textSize="10.67dp"
+            android:layout_marginTop="7.67dp"
+            style="@style/MoaFont"
+
+            />
+
+        <RelativeLayout
+            android:id="@+id/article"
+            app:layout_constraintTop_toBottomOf="@id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.33dp"
+            android:background="@color/whiteSmoke"
+
+            >
+
+
+
+            <TextView
+
+                android:id="@+id/inside"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="경축!!!!"
+                android:textSize="10.67dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="15.67dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentLeft="true"
+                style="@style/MoaFont"
+                />
+
+
+            <TextView
+                android:id="@+id/moaapp"
+                android:layout_alignParentLeft="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="15.67dp"
+                android:layout_below="@id/inside"
+                android:text="모아 앱이 스마트앱어워드 2018 생활서비스부문 통합 대상을\n수상했습니다."
+                android:textSize="10.67dp"
+                android:textColor="@color/black"
+                style="@style/MoaFont"
+                />
+
+
+
+            <TextView
+                android:id="@+id/app"
+                android:layout_alignParentLeft="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="전문가들로 이루어진 심사의원들의 평가를 바탕으로 통합대상\n이라는 큰 상을 받게 되어 너무 감격스럽습니다.\n"
+                android:textSize="10.67dp"
+                android:textColor="@color/black"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="15.67dp"
+                android:layout_below="@id/moaapp"
+                style="@style/MoaFont"
+
+                />
+
+
+
+            <TextView
+                android:layout_alignParentLeft="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="앞으로 대한민국 1등 어플에 걸맞는 서비스와 여러분을 향한 무\n한사랑으로 보답하겠습니다."
+                android:textSize="10.67dp"
+                android:textColor="@color/black"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="15.67dp"
+                android:layout_below="@id/app"
+                android:layout_marginBottom="20dp"
+                style="@style/MoaFont"
+                />
+
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

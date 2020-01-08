@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@id/roadAddress"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/nowLocation"
+        android:layout_width="@dimen/location_setting_now_location_ic_width"
+        android:layout_height="@dimen/location_setting_now_location_ic_height"
+        android:contentDescription="@string/underline_description"
+        android:scaleType="fitXY"
+        android:src="@drawable/location_mark"
+        app:layout_constraintBottom_toBottomOf="@id/mapView"
+        app:layout_constraintLeft_toLeftOf="@id/mapView"
+        app:layout_constraintRight_toRightOf="@id/mapView"
+        app:layout_constraintTop_toTopOf="@id/mapView" />
+
+    <TextView
+        android:id="@+id/roadAddress"
+        style="@style/MoaFont"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black"
+        android:textSize="14.3sp"
+        android:textStyle="bold"
+        android:text="@string/detail_address_fragment_map_loading"
+        app:layout_constraintBottom_toTopOf="@id/jibunAddress"
+        app:layout_constraintLeft_toLeftOf="@id/inputDetailAddress"
+        app:layout_constraintRight_toRightOf="@id/inputDetailAddress" />
+
+    <TextView
+        android:id="@+id/jibunAddress"
+        style="@style/MoaFont"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/charcoal"
+        android:textSize="12.7sp"
+        app:layout_constraintBottom_toTopOf="@id/inputDetailAddress"
+        app:layout_constraintLeft_toLeftOf="@id/inputDetailAddress"
+        app:layout_constraintRight_toRightOf="@id/inputDetailAddress"
+        tools:text="지번" />
+
+    <EditText
+        android:id="@+id/inputDetailAddress"
+        style="@style/MoaFont"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_edit_text_height"
+        android:layout_marginLeft="13.3dp"
+        android:layout_marginRight="13.3dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/common_edit_text_form"
+        android:hint="@string/input_detail_location_hint"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:paddingStart="@dimen/space_9"
+        android:paddingEnd="0dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/nobel"
+        android:textSize="13.3sp"
+        app:layout_constraintBottom_toTopOf="@id/btnAddressDone"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/btnAddressDone"
+        style="@style/CoralBoldStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_bottom_button_height"
+        android:text="@string/detail_address_done"
+        android:textSize="16.7sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

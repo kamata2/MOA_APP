@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\B2C_MOA_APP\\app\\build\\intermediates\\incremental\\mergeMoaDebugResources\\stripped.dir\\layout\\agreement_to_terms_moapay.xml",
+        "source": "D:\\B2C_MOA_APP\\app\\src\\main\\res\\layout\\agreement_to_terms_moapay.xml"
+    },
+    {
+        "merged": "D:\\B2C_MOA_APP\\app\\build\\intermediates\\incremental\\mergeMoaDebugResources\\stripped.dir\\layout\\agreement_to_terms_of_use_activity.xml",
+        "source": "D:\\B2C_MOA_APP\\app\\src\\main\\res\\layout\\agreement_to_terms_of_use_activity.xml"
+    }
+]

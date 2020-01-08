@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 공통 -->
+    <dimen name="common_bottom_button_height">53.3dp</dimen>
+    <dimen name="common_text_xxxl_size">15.3sp</dimen>
+    <dimen name="common_text_xxl_size">15sp</dimen>
+    <dimen name="common_text_xl_size">15sp</dimen>
+    <dimen name="common_text_l_size">12sp</dimen>
+    <dimen name="common_text_m_size">13sp</dimen>
+    <dimen name="common_text_xs_size">10.7sp</dimen>
+    <dimen name="common_text_xxs_size">10sp</dimen>
+    <dimen name="common_text_xxxs_size">9.3sp</dimen>
+    <dimen name="common_margin">5dp</dimen>
+    <dimen name="common_margin_10">13.3dp</dimen>
+    <dimen name="common_underline_height">0.3dp</dimen>
+    <dimen name="common_edit_text_height">46.7dp</dimen>
+    <dimen name="edit_text_start_space">9dp</dimen>
+    <dimen name="space_6_7">6.7dp</dimen>
+    <dimen name="space_14">14dp</dimen>
+    <dimen name="space_9">9dp</dimen>
+    <dimen name="edit_text_size">13.3sp</dimen>
+    <dimen name="common_loading_view_size">65.3dp</dimen>
+
+    <!-- listView -->
+    <dimen name="item_common_margin_horizontal">13.3dp</dimen>
+    <dimen name="item_common_grid_margin">13.3dp</dimen>
+    <dimen name="item_common_margin_top">13.3dp</dimen>
+    <dimen name="item_store_review_horizontal">9.7dp</dimen>
+    <dimen name="item_store_review_across_margin">1.3dp</dimen>
+    <dimen name="item_card_slider_margin_horizontal">36dp</dimen>
+
+    <!-- toolbar -->
+    <dimen name="top_toolbar_height">44dp</dimen>
+    <dimen name="top_toolbar_sub_menu_ic_width">28.7dp</dimen>
+    <dimen name="top_toolbar_sub_menu_ic_height">12.7dp</dimen>
+    <dimen name="top_toolbar_back_ic_width">13.3dp</dimen>
+    <dimen name="top_toolbar_back_ic_height">11.7dp</dimen>
+    <dimen name="top_toolbar_back_ic_margin_left">10dp</dimen>
+    <dimen name="top_toolbar_now_location_ic_width">10.7dp</dimen>
+    <dimen name="top_toolbar_now_location_ic_height">15.3dp</dimen>
+    <dimen name="top_toolbar_now_location_ic_margin_right">6.3dp</dimen>
+    <dimen name="top_toolbar_now_location_title_margin_right">10dp</dimen>
+    <dimen name="top_toolbar_search_ic_width">27.7dp</dimen>
+    <dimen name="top_toolbar_search_ic_common_padding">11dp</dimen>
+    <dimen name="top_toolbar_location_ic_width">32.3dp</dimen>
+    <dimen name="top_toolbar_location_ic_right_padding">18.3dp</dimen>
+    <dimen name="bottom_toolbar_height">49.3dp</dimen>
+    <dimen name="bottom_toolbar_padding">45dp</dimen>
+
+    <!-- 선택적 접근 권한 안내 -->
+    <!-- 부모 레이아웃 -->
+    <dimen name="moa_optional_access_dialog_side_padding">13.3dp</dimen>
+    <dimen name="moa_optional_access_dialog_bottom_padding">20dp</dimen>
+    <dimen name="moa_optional_access_dialog_width">313.3dp</dimen>
+    <!-- 타이틀-->
+    <dimen name="moa_optional_access_dialog_title_margin_top">20dp</dimen>
+    <dimen name="moa_optional_access_dialog_title_content_margin_top">12.7dp</dimen>
+    <dimen name="moa_optional_access_dialog_title_content_margin_bottom">23.33dp</dimen>
+    <!-- 권한 정보 -->
+    <dimen name="moa_optional_access_dialog_access_info_form_margin_top_first">21.9dp</dimen>
+    <dimen name="moa_optional_access_dialog_access_info_form_margin_top">18dp</dimen>
+    <dimen name="moa_optional_access_dialog_access_info_form_margin_left">8dp</dimen>
+    <dimen name="moa_optional_access_dialog_location_ic_width">10.7dp</dimen>
+    <dimen name="moa_optional_access_dialog_location_ic_height">15.3dp</dimen>
+    <dimen name="moa_optional_access_dialog_location_ic_margin_right">12dp</dimen>
+    <dimen name="moa_optional_access_dialog_sms_ic_width">12dp</dimen>
+    <dimen name="moa_optional_access_dialog_sms_ic_height">10.7dp</dimen>
+    <dimen name="moa_optional_access_dialog_sms_ic_margin_right">11.3dp</dimen>
+    <dimen name="moa_optional_access_dialog_phone_ic_width">14.3dp</dimen>
+    <dimen name="moa_optional_access_dialog_phone_ic_height">12.7dp</dimen>
+    <dimen name="moa_optional_access_dialog_phone_ic_margin_right">10dp</dimen>
+    <dimen name="moa_optional_access_dialog_camera_ic_width">14dp</dimen>
+    <dimen name="moa_optional_access_dialog_camera_ic_height">11.7dp</dimen>
+    <dimen name="moa_optional_access_dialog_camera_ic_margin_right">10dp</dimen>
+    <dimen name="moa_optional_access_dialog_storage_ic_width">13.3dp</dimen>
+    <dimen name="moa_optional_access_dialog_storage_ic_height">9.7dp</dimen>
+    <dimen name="moa_optional_access_dialog_storage_ic_margin_right">10.7dp</dimen>
+    <dimen name="moa_optional_access_dialog_main_sub_content_margin_left">10.67dp</dimen>
+    <dimen name="moa_optional_access_dialog_main_sub_content_info_margin_top">25dp</dimen>
+    <!-- 접근권한 변경 방법 -->
+    <dimen name="moa_optional_access_dialog_change_way_margin_top">13dp</dimen>
+    <!-- 완료 버튼-->
+    <dimen name="moa_optional_access_dialog_done_height">36.7dp</dimen>
+    <dimen name="moa_optional_access_dialog_done_margin_top">23dp</dimen>
+
+    <!-- 이용약관 동의 -->
+    <dimen name="agreement_to_terms_of_use_title">18sp</dimen>
+    <dimen name="agreement_to_terms_of_use_title_margin_top">48.3dp</dimen>
+    <dimen name="agreement_to_terms_of_use_title_under_line_margin_top">18.3dp</dimen>
+    <dimen name="agreement_to_terms_of_use_agree_service_start_margin_top">28.3dp</dimen>
+    <dimen name="agreement_to_terms_of_use_agree_all_check_size">67dp</dimen>
+    <dimen name="agreement_to_terms_of_use_agree_all_check_margin_top">40dp</dimen>
+    <dimen name="agreement_to_terms_of_use_agree_all_check_text_margin_top">24.7dp</dimen>
+    <dimen name="agreement_to_terms_of_use_agree_all_check_layout_padding_bottom">37dp</dimen>
+    <dimen name="agreement_to_terms_of_use_conditions_title_margin_top">16dp</dimen>
+    <dimen name="agreement_to_terms_of_use_conditions_layout_left_right_padding">10dp</dimen>
+    <dimen name="agreement_to_terms_of_use_conditions_underline_margin_top">9.7dp</dimen>
+    <dimen name="agreement_to_terms_of_use_gps_checkbox_layout_margin_top">26.67dp</dimen>
+    <dimen name="agreement_to_terms_of_use_checkbox_content_margin_left">26.67dp</dimen>
+    <dimen name="agreement_to_terms_of_use_checkbox_content_margin_top">16.3dp</dimen>
+    <dimen name="agreement_to_terms_of_use_event_checkbox_margin_top">31.3dp</dimen>
+    <dimen name="agreement_to_terms_of_use_checkbox_margin_left">3.3dp</dimen>
+
+    <!-- 위치 설정 -->
+    <dimen name="location_setting_activity_content_space">13.3dp</dimen>
+    <dimen name="location_setting_input_address_top_space">20dp</dimen>
+    <dimen name="location_setting_search_ic_size">17dp</dimen>
+    <dimen name="location_setting_input_address_height">36.7dp</dimen>
+    <dimen name="location_setting_input_address_padding_right">32dp</dimen>
+    <dimen name="location_setting_search_address_introduce_margin_top">85dp</dimen>
+    <dimen name="location_setting_address_list_margin_top">20dp</dimen>
+    <dimen name="location_setting_address_under_line">8dp</dimen>
+    <dimen name="location_setting_address_item_padding">13.3dp</dimen>
+    <dimen name="location_setting_address_item_location_ic_width">10.7dp</dimen>
+    <dimen name="location_setting_address_item_location_ic_height">15dp</dimen>
+    <dimen name="location_setting_address_item_detail_address_margin_top">8.3dp</dimen>
+    <dimen name="location_setting_address_item_remove_size">9.7dp</dimen>
+    <dimen name="location_setting_now_location_ic_width">30.7dp</dimen>
+    <dimen name="location_setting_now_location_ic_height">44.3dp</dimen>
+
+    <!-- 검색 -->
+    <dimen name="item_store_search_empty_ic_width">74.3dp</dimen>
+    <dimen name="item_store_search_empty_ic_height">75.3dp</dimen>
+    <dimen name="item_store_search_empty_text_top_space">19.7dp</dimen>
+    <dimen name="item_store_search_empty_text_size">13.3sp</dimen>
+
+    <!-- 메인 화면 -->
+    <dimen name="main_category_bg_height">426.3dp</dimen>
+    <dimen name="main_category_group_width">46dp</dimen>
+    <dimen name="main_category_ani_cover_size">131.3dp</dimen>
+    <dimen name="main_category_circle_layout_size">270dp</dimen>
+    <dimen name="main_category_circle_left_right_width">133.3dp</dimen>
+    <dimen name="main_category_circle_left_right_height">200dp</dimen>
+    <dimen name="main_category_circle_bottom_width">229.7dp</dimen>
+    <dimen name="main_category_circle_bottom_height">97dp</dimen>
+    <dimen name="main_category_eat_out_ic_width">23dp</dimen>
+    <dimen name="main_category_eat_out_ic_height">29.7dp</dimen>
+    <dimen name="main_category_community_ic_size">29dp</dimen>
+    <dimen name="main_category_delivery_ic_width">32.7dp</dimen>
+    <dimen name="main_category_delivery_ic_height">27.7dp</dimen>
+    <dimen name="main_select_category_line_width">76dp</dimen>
+    <dimen name="main_select_category_line_height">1dp</dimen>
+    <dimen name="main_select_category_line_margin_bottom">6.3dp</dimen>
+    <dimen name="main_category_address_margin_bottom">12.3dp</dimen>
+    <dimen name="main_select_category_margin_bottom">8dp</dimen>
+    <dimen name="main_delivery_animation_height">49.7dp</dimen>
+    <dimen name="main_delivery_animation_margin">4.7dp</dimen>
+    <dimen name="main_ad_title_margin_left">14dp</dimen>
+    <dimen name="main_ad_title_margin_top">43.3dp</dimen>
+    <dimen name="main_ad_title_margin_bottom">13dp</dimen>
+    <dimen name="main_ad_famous_store_height">133.3dp</dimen>
+    <dimen name="main_ad_famous_store_content_text_size">21sp</dimen>
+    <dimen name="main_ad_white_arrow_width">15.7dp</dimen>
+    <dimen name="main_ad_white_arrow_height">5.7dp</dimen>
+    <dimen name="main_ad_white_arrow_margin_top">18.3dp</dimen>
+    <dimen name="main_ad_click_margin_top">5dp</dimen>
+    <dimen name="main_copyright_margin_top">12.3dp</dimen>
+    <dimen name="main_moa_not_responsibility_margin_top">16dp</dimen>
+    <dimen name="main_moa_responsibility_padding_bottom">26.3dp</dimen>
+    <dimen name="main_entrepreneur_padding_top_bottom">13dp</dimen>
+    <dimen name="main_entrepreneur_info_arrow_width">4dp</dimen>
+    <dimen name="main_entrepreneur_info_arrow_height">7.7dp</dimen>
+    <dimen name="main_entrepreneur_info_arrow_margin_left">6.7dp</dimen>
+    <dimen name="main_termsLayout_content_margin">14dp</dimen>
+    <dimen name="main_termsLayout_padding">21.3dp</dimen>
+    <dimen name="main_use_info_padding">23dp</dimen>
+
+    <!-- 하단 메뉴 -->
+    <!-- 배지 (업적) 관련 -->
+    <dimen name="badge_activity_tree_ani_bg_group_width">1080px</dimen>
+    <dimen name="badge_activity_tree_ani_bg_group_height">846px</dimen>
+    <dimen name="badge_activity_coin_tree_click_lottie_size">100dp</dimen>
+    <!-- 업적 리스트 아이템 -->
+    <dimen name="achievement_list_item_question_size">14dp</dimen>
+    <dimen name="achievement_list_item_question_margin_right">6.67dp</dimen>
+    <!-- 업적 보상 다이얼로그 -->
+    <dimen name="achievement_reward_dialog_padding_left_right">12.33dp</dimen>
+    <dimen name="achievement_reward_dialog_padding_top">9.33dp</dimen>
+    <dimen name="achievement_reward_dialog_padding_bottom">21dp</dimen>
+    <dimen name="achievement_reward_dialog_title_width">166.33dp</dimen>
+    <dimen name="achievement_reward_dialog_title_height">34.33dp</dimen>
+    <dimen name="achievement_reward_dialog_title_padding_top">7dp</dimen>
+    <dimen name="achievement_reward_dialog_title_size">12sp</dimen>
+    <dimen name="achievement_reward_dialog_coin_ic_width">64dp</dimen>
+    <dimen name="achievement_reward_dialog_coin_ic_height">68.33dp</dimen>
+    <dimen name="achievement_reward_dialog_coin_ic_margin_top">15.33dp</dimen>
+    <dimen name="achievement_reward_dialog_coin_text_size">16.67sp</dimen>
+    <dimen name="achievement_reward_dialog_coin_margin_top">20dp</dimen>
+    <dimen name="achievement_reward_dialog_reward_step_text_size">12sp</dimen>
+    <dimen name="achievement_reward_dialog_reward_step_margin_top">20.33dp</dimen>
+    <dimen name="achievement_reward_dialog_reward_pay_text_size">10sp</dimen>
+    <dimen name="achievement_reward_dialog_reward_pay_margin_top">9.67dp</dimen>
+    <!-- 업적 보상 확인 다이얼로그 -->
+    <dimen name="achievement_reward_check_dialog_padding_left_right">13.33dp</dimen>
+    <dimen name="achievement_reward_check_dialog_padding_top">11.33dp</dimen>
+    <dimen name="achievement_reward_check_dialog_padding_bottom">30.33dp</dimen>
+    <dimen name="achievement_reward_check_dialog_badge_title_text_size">12sp</dimen>
+    <dimen name="achievement_reward_check_dialog_title_under_line_width">163.33dp</dimen>
+    <dimen name="achievement_reward_check_dialog_title_under_line_height">1px</dimen>
+    <dimen name="achievement_reward_check_dialog_title_under_line_margin_top">9.67dp</dimen>
+    <dimen name="achievement_reward_check_dialog_badge_ic_size">46.33dp</dimen>
+    <dimen name="achievement_reward_check_dialog_badge_ic_margin_top">49.67dp</dimen>
+    <dimen name="achievement_reward_check_dialog_reward_title_margin_top">21.33dp</dimen>
+    <dimen name="achievement_reward_check_dialog_reward_title_text_size">12sp</dimen>
+    <dimen name="achievement_reward_check_dialog_reward_content_margin_top">13.67dp</dimen>
+    <dimen name="achievement_reward_check_dialog_reward_content_text_size">10sp</dimen>
+
+    <!-- 배달 메뉴 -->
+    <!-- 메뉴 선택 화면-->
+    <dimen name="store_product_default_info_padding_bottom">16.67dp</dimen>
+    <dimen name="store_product_thumbnail_width">160dp</dimen>
+    <dimen name="store_product_thumbnail_height">160dp</dimen>
+    <dimen name="store_product_thumbnail_margin_top">21dp</dimen>
+    <dimen name="store_product_name_text_size">15sp</dimen>
+    <dimen name="store_product_name_margin_top">18.33dp</dimen>
+    <dimen name="store_product_description_width">170.33dp</dimen>
+    <dimen name="store_product_description_text_size">10.67sp</dimen>
+    <dimen name="store_product_description_margin_top">4.67dp</dimen>
+    <dimen name="store_product_additional_dc_margin_right">2.33dp</dimen>
+    <dimen name="store_product_dc_text_size">12sp</dimen>
+    <dimen name="store_product_dc_padding_left_right">7.33dp</dimen>
+    <dimen name="store_product_dc_margin_top">17dp</dimen>
+    <dimen name="store_product_dc_padding_top_bottom">3dp</dimen>
+    <dimen name="store_product_quantity_control_width">26.67dp</dimen>
+    <dimen name="store_product_quantity_control_height">27.33dp</dimen>
+    <dimen name="store_product_quantity_padding">7.33dp</dimen>
+    <dimen name="store_product_quantity_text_width">44dp</dimen>
+    <dimen name="store_product_quantity_text_size">10.83sp</dimen>
+    <dimen name="store_product_detail_info_padding_top">26.33dp</dimen>
+    <dimen name="store_product_detail_info_padding_bottom">28.33dp</dimen>
+    <dimen name="store_product_detail_info_padding_left_right">18.33dp</dimen>
+    <dimen name="store_product_detail_info_title_text_size">11.83sp</dimen>
+    <dimen name="store_product_detail_info_title_underline_margin_top">8dp</dimen>
+    <dimen name="store_product_price_name_margin_top">34dp</dimen>
+    <dimen name="store_product_price_list_margin_top">3dp</dimen>
+    <dimen name="store_product_sub_item_text_size">10.67sp</dimen>
+    <dimen name="store_product_price_item_margin_top">13.33dp</dimen>
+    <dimen name="store_product_add_product_recycler_view_margin_top">33.33dp</dimen>
+    <dimen name="store_product_option_margin_left_right">12dp</dimen>
+    <dimen name="store_product_add_option_margin_top">13dp</dimen>
+    <dimen name="store_product_add_option_header_margin_bottom">3.33dp</dimen>
+    <dimen name="store_product_add_option_header_title_margin_top">3.33dp</dimen>
+    <dimen name="store_product_price_info_text_size">9.33sp</dimen>
+    <dimen name="store_product_total_price_title">11.33sp</dimen>
+    <dimen name="store_product_total_price_content">13.33sp</dimen>
+    <dimen name="store_product_save_point_text_size">9sp</dimen>
+    <dimen name="store_product_price_info_layout_margin_top">34.67dp</dimen>
+    <dimen name="store_product_price_info_layout_padding_top">10.67dp</dimen>
+    <dimen name="store_product_price_info_layout_padding_bottom">30dp</dimen>
+    <dimen name="store_product_price_info_margin_top">7.33dp</dimen>
+    <dimen name="store_product_price_info_underline_margin_top_bottom">11dp</dimen>
+    <dimen name="store_product_price_info_save_point_margin_top">4.67dp</dimen>
+
+    <!-- 장바구니 상세 화면 -->
+    <dimen name="shopping_cart_detail_activity_store_name_font_size">15sp</dimen>
+    <dimen name="shopping_cart_detail_activity_item_all_remove_height">30dp</dimen>
+    <dimen name="shopping_cart_detail_activity_item_all_remove_width">65dp</dimen>
+    <dimen name="shopping_cart_detail_activity_item_all_remove_font_size">12sp</dimen>
+    <dimen name="shopping_cart_detail_activity_button_add_product_height">43.3dp</dimen>
+    <dimen name="shopping_cart_detail_activity_button_add_product_font_size">13sp</dimen>
+    <dimen name="shopping_cart_detail_activity_content_space">13.3dp</dimen>
+    <dimen name="shopping_cart_detail_activity_product_name_text_size">15sp</dimen>
+    <dimen name="shopping_cart_detail_activity_product_remove_size">9.7dp</dimen>
+    <dimen name="shopping_cart_detail_activity_product_remove_parent_size">30dp</dimen>
+    <dimen name="shopping_cart_detail_activity_product_sub_title_text_size">12.7sp</dimen>
+    <dimen name="shopping_cart_detail_activity_product_quantity_text_size">12sp</dimen>
+
+    <!-- 주문 결제 -->
+    <dimen name="activity_order_payment_common_space">13.3dp</dimen>
+    <dimen name="activity_order_payment_common_edit_text_start_space">8.3dp</dimen>
+    <dimen name="activity_order_payment_common_edit_text_text_size">13.3sp</dimen>
+    <dimen name="activity_order_payment_delivery_info_title_top_space">30dp</dimen>
+    <dimen name="activity_order_payment_delivery_info_title_text_size">16.7sp</dimen>
+    <dimen name="activity_order_payment_delivery_info_road_address_top_space">26.3dp</dimen>
+    <dimen name="activity_order_payment_delivery_info_road_address_text_size">14.3sp</dimen>
+    <dimen name="activity_order_payment_delivery_info_jibun_address_top_space">10dp</dimen>
+    <dimen name="activity_order_payment_delivery_info_jibun_address_text_size">12.7sp</dimen>
+    <dimen name="activity_order_payment_delivery_info_input_detail_road_address_top_space">10dp</dimen>
+    <dimen name="activity_order_payment_delivery_info_phone_number_title_top_space">16.3dp</dimen>
+    <dimen name="activity_order_payment_delivery_info_phone_number_title_text_size">14.3sp</dimen>
+    <dimen name="activity_order_payment_delivery_info_input_phone_number_top_space">8dp</dimen>
+    <dimen name="activity_order_payment_delivery_info_req_term_title_top_space">16.3dp</dimen>
+    <dimen name="activity_order_payment_delivery_info_req_term_title_text_size">14.3sp</dimen>
+    <dimen name="activity_order_payment_delivery_info_input_req_term_height">88.7dp</dimen>
+    <dimen name="activity_order_payment_delivery_info_input_req_term_top_space">8dp</dimen>
+    <dimen name="activity_order_payment_delivery_info_input_req_term_">8dp</dimen>
+
+
+    <dimen name="order_payment_left_right_padding">18.33dp</dimen>
+    <dimen name="order_payment_common_margin_top">8.3dp</dimen>
+    <dimen name="order_payment_sub_content_left_right_margin">6.67dp</dimen>
+    <dimen name="order_payment_main_title_text_size">16.7sp</dimen>
+    <dimen name="order_payment_sub_title_text_size">10.67sp</dimen>
+    <dimen name="order_payment_edit_text_size">10.67sp</dimen>
+    <dimen name="order_payment_edit_text_padding_left">10.33sp</dimen>
+    <dimen name="order_payment_delivery_title_margin_top">19.7dp</dimen>
+    <dimen name="order_payment_address_title_margin_top">20dp</dimen>
+    <dimen name="order_payment_edit_text_height">37dp</dimen>
+    <dimen name="order_payment_req_term_title_padding_top">10.33dp</dimen>
+    <dimen name="order_payment_max_req_term_text_size">10sp</dimen>
+    <dimen name="order_payment_delivery_way_title_margin_top">33.33dp</dimen>
+
+    <!-- 사이드 메뉴-->
+
+    <!-- 주문 내역 공통 -->
+    <dimen name="common_order_history_order_type_start_end_space">5dp</dimen>
+    <dimen name="common_order_history_order_type_top_end_bottom">3.7dp</dimen>
+    <dimen name="common_order_history_order_type_text_size">10.7sp</dimen>
+    <dimen name="common_order_history_order_type_stroke_line_size">0.7dp</dimen>
+    <!-- 주문 내역-->
+    <dimen name="order_history_common_text_size">13.3sp</dimen>
+    <dimen name="activity_order_history_date_space">13.3dp</dimen>
+    <dimen name="activity_order_history_menu_month_top_bottom_space">14dp</dimen>
+    <dimen name="activity_order_history_menu_month_middle_space">3.5dp</dimen>
+    <dimen name="activity_order_history_swung_dash_text_size">10.7sp</dimen>
+    <dimen name="fragment_order_history_order_count_text_size">12sp</dimen>
+    <dimen name="fragment_order_history_order_count_top_space">9.7dp</dimen>
+    <dimen name="fragment_order_history_order_count_bottom_space">10dp</dimen>
+    <dimen name="fragment_order_history_content_top_space">5dp</dimen>
+    <dimen name="fragment_order_history_content_start_space">13.3dp</dimen>
+    <dimen name="fragment_order_history_empty_text_first_top_space">18dp</dimen>
+    <dimen name="fragment_order_history_empty_text_second_top_space">2dp</dimen>
+    <dimen name="fragment_order_history_empty_text_third_top_space">19.7dp</dimen>
+    <dimen name="fragment_order_history_empty_text_third_text_size">15sp</dimen>
+    <dimen name="fragment_order_history_loading_bottom_space">213dp</dimen>
+    <dimen name="fragment_order_history_empty_text_size">10.7sp</dimen>
+    <dimen name="fragment_order_history_empty_icon_width">78.7dp</dimen>
+    <dimen name="fragment_order_history_empty_icon_height">69dp</dimen>
+    <dimen name="item_order_history_store_thumbnail_size">64dp</dimen>
+    <dimen name="item_order_history_store_container_space">13.3dp</dimen>
+    <dimen name="item_order_history_store_order_date_text_size">10.7sp</dimen>
+    <dimen name="item_order_history_store_name_text_size">15sp</dimen>
+    <dimen name="item_order_history_store_name_top_space">9.3dp</dimen>
+    <dimen name="item_order_history_store_info_group_start_space">10dp</dimen>
+    <dimen name="item_order_history_order_menu_list_group_top_space">9dp</dimen>
+    <dimen name="item_order_history_order_menu_title_text_size">10sp</dimen>
+    <dimen name="item_order_history_order_menu_title_padding">3dp</dimen>
+    <dimen name="item_order_history_order_menu_list_start_space">7dp</dimen>
+    <dimen name="item_order_history_order_menu_list_text_size">12sp</dimen>
+
+    <!-- 주문 내역 상세 -->
+    <dimen name="activity_order_detail_history_common_space">13.3dp</dimen>
+    <dimen name="activity_order_detail_history_store_info_group_bottom_space">20dp</dimen>
+    <dimen name="activity_order_detail_history_store_name_text_size">14.3sp</dimen>
+    <dimen name="activity_order_detail_history_order_cancel_title_top_space">26.3dp</dimen>
+    <dimen name="activity_order_detail_history_store_name_top_space">20dp</dimen>
+    <dimen name="activity_order_detail_history_order_cancel_text_size">13.3sp</dimen>
+    <dimen name="activity_order_detail_history_order_cancel_top_space">20dp</dimen>
+    <dimen name="activity_order_detail_history_order_cancel_height">46.7dp</dimen>
+    <dimen name="activity_order_detail_history_order_info_group_top_space">5dp</dimen>
+    <dimen name="activity_order_detail_history_order_info_top_space">29.7dp</dimen>
+    <dimen name="activity_order_detail_history_order_title_text_size">16.7sp</dimen>
+    <dimen name="activity_order_detail_history_order_info_item_box_space">19.7dp</dimen>
+    <dimen name="activity_order_detail_history_order_cancel_under_line_top_space">30dp</dimen>
+    <dimen name="activity_order_detail_history_order_info_item_text_size">13.3sp</dimen>
+    <dimen name="activity_order_detail_history_order_number_group_box_top_space">6.6dp</dimen>
+    <dimen name="activity_order_detail_history_order_detail_address_top_space">10dp</dimen>
+    <dimen name="activity_order_detail_history_sale_amount_coupon_group_top_space">10dp</dimen>
+    <dimen name="activity_order_detail_history_sale_amount_moa_point_start_space">20dp</dimen>
+    <dimen name="activity_order_detail_history_sale_amount_coupon_start_space">20dp</dimen>
+    <dimen name="activity_order_detail_history_order_price_text_size">16.7sp</dimen>
+    <dimen name="activity_order_detail_history_payment_reserve_bottom_space">33.7dp</dimen>
+    <dimen name="item_order_detail_history_top_space">9.7dp</dimen>
+
+    <!-- 사이드 메뉴 프로필 -->
+    <dimen name="moa_side_profil_image">48.33dp</dimen>
+    <dimen name="moa_side_profil_image_marginleft">17.33dp</dimen>
+    <dimen name="moa_side_profil_image_margitop">7.33dp</dimen>
+    <dimen name="moa_side_profil_image_marginbottom">10.33dp</dimen>
+
+    <!-- 사이드메뉴 프로필 리뷰-->
+    <dimen name="moa_side_profil_review_textsize">10dp</dimen>
+    <dimen name="moa_side_profil_review_marginleft">17.33dp</dimen>
+    <dimen name="moa_side_profil_review_margintop">14dp</dimen>
+
+    <!--사이드메뉴 프로필 번호-->
+    <dimen name="moa_side_number_size">12dp</dimen>
+    <dimen name="moa_side_number_marginleft">37.67dp</dimen>
+    <dimen name="moa_side_number_margintop">12dp</dimen>
+
+    <!--사이드메뉴 블럭-->
+    <dimen name="moa_side_block_height">13dp</dimen>
+    <dimen name="moa_side_block_width">0.33dp</dimen>
+    <dimen name="moa_side_block_marginleft">69.67dp</dimen>
+    <dimen name="moa_side_block_margintop">13dp</dimen>
+
+    <!--사이드메뉴 아이콘 위치-->
+    <dimen name="moa_side_icon_marginleft">16.33dp</dimen>
+    <dimen name="moa_side_icon_margintop">14dp</dimen>
+    <dimen name="moa_side_icon_marginbottom">12.33dp</dimen>
+
+    <!--사이드메뉴 배지 글자-->
+    <dimen name="moa_side_badge_marginleft">12dp</dimen>
+    <dimen name="moa_side_badge_margintop">16dp</dimen>
+    <dimen name="moa_side_badge_textsize">10dp</dimen>
+
+    <!--사이드메뉴 번호-->
+    <dimen name="moa_side_number_textsize">9.33dp</dimen>
+
+    <!--사이드메뉴 번호 원-->
+    <dimen name="moa_side_circle_height">13.33dp</dimen>
+    <dimen name="moa_side_circle_weight">13.33dp</dimen>
+
+    <!--사이드메뉴 화살표-->
+    <dimen name="moa_side_arrow_width">6dp</dimen>
+    <dimen name="moa_side_arrow_height">10dp</dimen>
+    <dimen name="moa_side_arrow_margileft">277.33dp</dimen>
+    <dimen name="moa_side_arrow_margintop">16.3dp</dimen>
+
+    <!--사이드메뉴 쿠폰 아이콘-->
+    <dimen name="moa_side_coupon_width">19.67dp</dimen>
+    <dimen name="moa_side_coupon_height">14dp</dimen>
+    <dimen name="moa_side_coupon_marginleft">15dp</dimen>
+    <dimen name="moa_side_coupon_margintop">15.33dp</dimen>
+    <dimen name="moa_coupon_marginbottom">14dp</dimen>
+
+    <!--사이드메뉴 배달 아이콘-->
+    <dimen name="moa_side_deliver_width">16dp</dimen>
+    <dimen name="moa_side_deliver_height">14dp</dimen>
+    <dimen name="moa_side_deliver_marginleft">17dp</dimen>
+    <dimen name="moa_side_deliver_margintop">14.33dp</dimen>
+
+    <!--사이드메뉴 즐겨찾기-->
+    <dimen name="bookmarkstoreholder_registered_store_list_height">99dp</dimen>
+    <dimen name="bookmarkstoreholder_registered_store_list_ic_width">21dp</dimen>
+    <dimen name="bookmarkstoreholder_registered_store_list_ic_height">18dp</dimen>
+    <dimen name="bookmarkstoreholder_registered_store_list_text_start_space">11dp</dimen>
+    <dimen name="bookmarkstoreholder_registered_store_list_text_text_size">14sp</dimen>
+    <dimen name="bookmarkstoreholder_registered_store_list_underline_height">0.3dp</dimen>
+    <dimen name="bookmarkstoreholder_store_thumbnail_size">64dp</dimen>
+    <dimen name="bookmarkstoreholder_store_name_text_size">15sp</dimen>
+    <dimen name="bookmarkstoreholder_store_name_start_space">11dp</dimen>
+    <dimen name="bookmarkstoreholder_store_gpa_ic_size">9dp</dimen>
+    <dimen name="bookmarkstoreholder_store_gpa_text_size">11sp</dimen>
+    <dimen name="bookmarkstoreholder_store_gpa_start_space">4dp</dimen>
+    <dimen name="bookmarkstoreholder_store_review_start_space">11dp</dimen>
+    <dimen name="bookmarkstoreholder_store_review_text_size">11sp</dimen>
+    <dimen name="bookmarkstoreholder_store_bookmark_start_space">7dp</dimen>
+    <dimen name="bookmarkstoreholder_store_bookmark_text_size">11sp</dimen>
+    <dimen name="bookmarkstoreholder_store_remove_ic_size">10dp</dimen>
+    <dimen name="bookmarkstoreholder_store_remove_group_size">40dp</dimen>
+    <dimen name="moa_side_enjoy_marginleft">45.67dp</dimen>
+    <dimen name="moa_side_enjoy_margintop">12dp</dimen>
+    <dimen name="moa_side_enjoy_textsize">8.67dp</dimen>
+
+    <!--사이드메뉴 즐겨찾기 번호-->
+    <dimen name="moa_side_enjoy_number_textsize">16.67dp</dimen>
+    <dimen name="moa_side_enjoy_number_marginleft">51.33dp</dimen>
+    <dimen name="moa_side_enjoy_number_margintop">4dp</dimen>
+
+    <!--사이드메뉴 배달쪽 블럭-->
+    <dimen name="moa_side_blockleft_width">0.33dp</dimen>
+    <dimen name="moa_side_blockleft_marginleft">119.67dp</dimen>
+    <dimen name="moa_side_blockleft_margintop">43.67dp</dimen>
+    <dimen name="moa_side_blockright_marginleft">240.33dp</dimen>
+    <dimen name="moa_side_blockright_margintop">43.67dp</dimen>
+    <dimen name="moa_side_blockbottom_width">340dp</dimen>
+    <dimen name="moa_side_blockbottom_height">0.33dp</dimen>
+    <dimen name="moa_side_blockbottom_marginleft">10dp</dimen>
+    <dimen name="moa_side_blockbottom_margintop">16.67dp</dimen>
+
+    <!--사이드메뉴 배달리뷰-->
+    <dimen name="moa_side_dereview_marginleft">164.33dp</dimen>
+    <dimen name="moa_side_dereview_margintop">12dp</dimen>
+
+    <!--사이드메뉴 배달리뷰 번호-->
+    <dimen name="moa_side_dereview_number_marginleft">176dp</dimen>
+    <dimen name="moa_side_dereview_number_margintop">4dp</dimen>
+
+    <!--사이드메뉴 공감-->
+    <dimen name="moa_side_sympath_textsize">8.67dp</dimen>
+    <dimen name="moa_side_sympath_marginleft">293dp</dimen>
+    <dimen name="moa_side_sympath_margintop">12dp</dimen>
+
+    <!--사이드메뉴 공감 번호-->
+    <dimen name="moa_side_sympath_number_textsize">16.67dp</dimen>
+    <dimen name="moa_side_sympath_number_marginleft">292.67dp</dimen>
+
+    <dimen name="test_1">65.33dp</dimen>
+    <dimen name="test_2">104dp</dimen>
+    <dimen name="test_3">220dp</dimen>
+
+</resources>

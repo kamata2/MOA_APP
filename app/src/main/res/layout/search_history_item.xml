@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintSearchHistoryItemContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvSearchKeyword"
+            style="@style/BlackColorBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="테스트"
+            android:textSize="13.3sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btRemove"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            tools:text="치킨" />
+
+        <LinearLayout
+            android:id="@+id/btRemove"
+            android:layout_width="45dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:gravity="center_horizontal|end">
+
+            <ImageButton
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/underline_description"
+                android:src="@drawable/black_close" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

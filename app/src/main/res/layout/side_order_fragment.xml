@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="116.33dp"
+    android:background="@drawable/common_data_form_cover"
+
+    >
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="18dp"
+
+        />
+
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018.12.01"
+            android:textColor="@color/black"
+            android:textSize="9.33dp"
+            android:textStyle="bold"
+            android:layout_marginTop="19.33dp"
+            android:layout_marginLeft="11.33dp"
+            style="@style/MoaFont"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="동대문 엽기 떡볶이"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:layout_marginLeft="11.33dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="18dp"
+                android:layout_height="11.67dp"
+                android:background="@drawable/tangerinbutton"
+                android:text="메뉴"
+                android:textColor="@color/white"
+                android:textSize="7dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginLeft="11.33dp"
+
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="치즈 떡볶이, 순대, 닭강정 1인분"
+                android:textSize="9.33dp"
+                android:layout_marginLeft="7dp"
+                android:textColor="@color/shunshade"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="45.33dp"
+        android:layout_height="14.33dp"
+        android:background="@drawable/common_radius_coral_button_form"
+        android:text="주문 접수"
+        android:textSize="9.33dp"
+        android:paddingTop="1dp"
+        android:paddingLeft="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginLeft="222.33dp"
+        android:layout_marginTop="17.67dp"
+
+        />
+    
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+
+        />
+    
+
+
+</LinearLayout>

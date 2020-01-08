@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveConstraintLayout
+        android:id="@+id/lottieBg"
+        android:layout_width="@dimen/badge_activity_tree_ani_bg_group_width"
+        android:layout_height="@dimen/badge_activity_tree_ani_bg_group_height"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/coinTreeBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/badge_activity_coin_tree_bg"/>
+
+        <!--<VideoView-->
+            <!--android:id="@+id/videoTest"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--/>-->
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/coinTreeFlowers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_rawRes="@raw/coin_tree_flowers"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/coinTree"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_imageAssetsFolder="coin_tree"
+            app:lottie_rawRes="@raw/coin_tree"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/coinTreeDance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_imageAssetsFolder="coin_tree_dance"
+            app:lottie_rawRes="@raw/coin_tree_dance"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:visibility="gone" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/coinTreeClick"
+            android:layout_width="@dimen/badge_activity_coin_tree_click_lottie_size"
+            android:layout_height="@dimen/badge_activity_coin_tree_click_lottie_size"
+            app:lottie_imageAssetsFolder="coin_tree_click"
+            app:lottie_rawRes="@raw/coin_tree_click"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:visibility="gone"/>
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveImageView
+            android:layout_width="1080px"
+            android:layout_height="208px"
+            android:background="@drawable/bg_card_bottom_mask"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveConstraintLayout>
+
+    <include
+        android:id="@+id/topToolbar"
+        layout="@layout/top_toolbar"/>
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/coinTreeCryngCpctySkbr"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:progressDrawable="@drawable/badge_activity_coin_tree_seek_bar"
+        app:layout_constraintBottom_toBottomOf="@+id/lottieBg"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:thumb="@color/transparent"
+        />
+
+    <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveConstraintLayout
+        android:id="@+id/walletForm"
+        android:layout_width="1080px"
+        android:layout_height="199px"
+        android:paddingBottom="19px"
+        app:layout_constraintTop_toBottomOf="@+id/lottieBg"
+        android:layout_marginTop="19px"
+        android:background="@drawable/top_toolbar_style"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+            android:id="@+id/coinTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MOA COIN"
+            android:textColor="@color/coral"
+            app:responsiveTextSize="30"
+            android:textStyle="bold"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="70px"
+            app:layout_constraintBottom_toTopOf="@+id/coin" />
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+            android:id="@+id/coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3,000C"
+            app:responsiveTextSize="60"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="@id/coinTitle"
+            app:layout_constraintTop_toBottomOf="@+id/coinTitle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="12px"/>
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+            android:id="@+id/coinExChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(36,000)"
+            app:responsiveTextSize="40"
+            android:textColor="@color/matterhorn"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/coin"
+            app:layout_constraintTop_toTopOf="@+id/coin"
+            app:layout_constraintBottom_toBottomOf="@id/coin"
+            android:layout_marginLeft="34px"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/centerLine"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/pinkSwan"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+            android:id="@+id/pointTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MOA POINT"
+            android:textColor="@color/coral"
+            app:responsiveTextSize="30"
+            android:textStyle="bold"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintLeft_toRightOf="@id/centerLine"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="71px"
+            app:layout_constraintBottom_toTopOf="@+id/point" />
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+            android:id="@+id/point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2,500P"
+            app:responsiveTextSize="60"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="@id/pointTitle"
+            app:layout_constraintTop_toBottomOf="@+id/pointTitle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="12px"/>
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+            android:id="@+id/pointExChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(36,000)"
+            app:responsiveTextSize="40"
+            android:textColor="@color/matterhorn"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/point"
+            app:layout_constraintTop_toTopOf="@+id/point"
+            app:layout_constraintBottom_toBottomOf="@id/point"
+            android:layout_marginLeft="34px"/>
+
+    </com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/badgeGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/walletForm"
+        android:background="@drawable/bg_whitesmoke_bottom_lightgray">
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+            android:id="@+id/badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="배지"
+            android:textStyle="bold"
+            app:responsiveTextSize="36"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="70px"
+            android:layout_marginTop="25px"
+            android:layout_marginBottom="25px"/>
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="배지 컬렉션 >"
+            app:responsiveTextSize="36"
+            android:textColor="@color/black"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/badge"
+            app:layout_constraintBottom_toBottomOf="@id/badge"
+            android:layout_marginRight="36px"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/badgeList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/badgeGroup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/whiteSmoke">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

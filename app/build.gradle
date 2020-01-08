@@ -1,0 +1,170 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'moaplanetb2c'
+            storePassword 'ahdkvmffoslt@!3'
+            keyPassword 'ahdkvmffoslt@!3'
+            storeFile file('D:\\project\\b2c\\key\\B2C_MOA_APP_JKS\\moa_b2c_goeat.jks')
+        }
+    }
+    compileSdkVersion 28
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    flavorDimensions "moa"
+
+    productFlavors {
+        local {
+            applicationId "com.moaPlatform.moaLocal"
+            resValue("string", "app_name", "Go Eat Local")
+            buildConfigField("String", "REST_API_BASE_URL", '"http://172.30.1.121/"')
+            buildConfigField("String", "FILE_SERVER_BASE_URL", '"https://stgimage.goeat.co.kr"')
+            dimension "moa"
+        }
+        staiging {
+            applicationId "com.moaPlatform.moaStaging"
+            resValue("string", "app_name", "Go Eat Staging")
+            buildConfigField("String", "REST_API_BASE_URL", '"http://stgbackend.goeat.co.kr/"')
+            buildConfigField("String", "FILE_SERVER_BASE_URL", '"https://stgimage.goeat.co.kr"')
+            dimension "moa"
+        }
+        moa {
+            applicationId "com.moaPlatform.moa"
+            resValue("string", "app_name", "Go Eat")
+            buildConfigField("String", "REST_API_BASE_URL", '"https://backend.goeat.co.kr/"')
+            buildConfigField("String", "FILE_SERVER_BASE_URL", '"https://image.goeat.co.kr"')
+            dimension "moa"
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.moaPlatform.moa"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1022
+        versionName "1.0.2.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'retrofit2.pro', 'gson-proguard.pro', 'glide.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude "lib/arm64-v8a/librealm-jni.so"
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    /* default */
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:design:28.0.0'
+
+    /* AndroidX */
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    /* glide */
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+
+    /* retrofit */
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.1'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+
+    /* permission */
+    implementation 'gun0912.ted:tedpermission:2.2.2'
+
+    /* animation */
+    implementation 'com.airbnb.android:lottie:2.8.0'
+
+    /* rating bar */
+    implementation 'me.zhanghai.android.materialratingbar:library:1.3.2'
+
+    /* qrcode */
+    implementation 'me.dm7.barcodescanner:zxing:1.9.8'
+    implementation 'com.journeyapps:zxing-android-embedded:3.5.0'
+
+    /* kakao */
+    // 카카오링크 sdk를 사용하기 위해 필요.
+    implementation group: 'com.kakao.sdk', name: 'kakaolink', version: project.KAKAO_SDK_VERSION
+
+    /* butterknife */
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+
+    /* test */
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    /* paging */
+    def paging_version = "2.1.0"
+    implementation "androidx.paging:paging-runtime:$paging_version"
+
+    /* lifecycle */
+    def lifecycle_version = "2.0.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+
+    /* multi dex */
+    implementation 'com.android.support:multidex:1.0.3'
+
+    /* fingerprint */
+    implementation 'androidx.biometric:biometric:1.0.0-alpha04'
+
+    /* daum map */
+    implementation files('libs/libDaumMapAndroid.jar')
+
+    /* pin view */
+    implementation 'com.chaos.view:pinview:1.4.3'
+
+    /* firebase */
+    implementation 'com.google.firebase:firebase-core:17.0.1'
+    implementation 'com.google.firebase:firebase-messaging:19.0.1'
+
+    /* bitmap */
+    implementation 'androidx.exifinterface:exifinterface:1.1.0-beta01'
+
+    /* moa crypto */
+    implementation files('libs/bcprov-ext-jdk15on-160.jar')
+    implementation files('libs/moaCryptoCoreAPI-v1.0.2.jar')
+    implementation files('libs/moaAndroidCryptoCoreAPI-v1.0.2.jar')
+
+    /* moa auth */
+    implementation files('libs/moaAndroidRegLogInLib-v1.0.4.jar')
+    implementation files('libs/moaAndroidIDMng-v1.0.2.jar')
+
+    /* moa wallet */
+    implementation files('libs/moaAndroidBCWallet-v1.0.2.jar')
+
+    /* moa blockchain */
+    implementation files('libs/MoaSDK.0.1.2.jar')
+    implementation 'com.coverity.security:coverity-escapers:1.1.1'
+    implementation 'com.google.guava:guava:24.1-jre'
+    implementation 'org.slf4j:slf4j-api:1.7.26'
+    implementation 'org.whispersystems:curve25519-java:0.5.0'
+
+    /* RxJava */
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.8'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+}

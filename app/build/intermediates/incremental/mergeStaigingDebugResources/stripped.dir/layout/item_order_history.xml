@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/item_order_history_store_container_space">
+
+    <ImageView
+        android:id="@+id/ivOrderHistoryStoreThumbnail"
+        android:layout_width="@dimen/item_order_history_store_thumbnail_size"
+        android:layout_height="@dimen/item_order_history_store_thumbnail_size"
+        android:contentDescription="@string/item_order_history_store_thumbnail"
+        android:scaleType="fitXY"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/badge_review" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/item_order_history_store_info_group_start_space"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/ivOrderHistoryStoreThumbnail"
+        app:layout_constraintLeft_toRightOf="@id/ivOrderHistoryStoreThumbnail"
+        app:layout_constraintRight_toLeftOf="@id/viewOrderHistoryOrderType"
+        app:layout_constraintTop_toTopOf="@id/ivOrderHistoryStoreThumbnail">
+
+        <TextView
+            android:id="@+id/tvOrderHistoryOrderDate"
+            style="@style/BlackColorNormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:textColor="@color/black"
+            android:textSize="@dimen/item_order_history_store_order_date_text_size"
+            tools:text="2018.12.01" />
+
+        <TextView
+            android:id="@+id/tvOrderHistoryStoreName"
+            style="@style/BlackColorBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_order_history_store_name_top_space"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:scaleType="fitXY"
+            android:textSize="@dimen/item_order_history_store_name_text_size"
+            tools:text="괴물 떡볶이 남양주 다산점" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/item_order_history_order_menu_list_group_top_space"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tangerinbutton"
+                android:padding="@dimen/item_order_history_order_menu_title_padding"
+                android:text="@string/item_order_history_store_menu_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/item_order_history_order_menu_title_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvOrderHistoryOrderMenuList"
+                style="@style/BlackColorNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/item_order_history_order_menu_list_start_space"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="@dimen/item_order_history_order_menu_list_text_size"
+                tools:text="떡볶이(1) , 순대(3) , 닭강정(3)" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.moaPlatform.moa.side_menu.order.OrderCommonOrderTypeView
+        android:id="@+id/viewOrderHistoryOrderType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivOrderHistoryStoreThumbnail" />
+
+    <LinearLayout
+        android:id="@+id/orderReview"
+        android:layout_width="match_parent"
+        android:layout_height="46.7dp"
+        android:layout_marginTop="8.3dp"
+        android:background="@drawable/common_edit_text_form"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/ivOrderHistoryStoreThumbnail">
+
+        <ImageView
+            android:layout_width="16.7dp"
+            android:layout_height="19.3dp"
+            android:layout_marginEnd="6.7dp"
+            android:contentDescription="@string/item_order_history_review_write_ic"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_review_write" />
+
+        <TextView
+            android:id="@+id/tvOrderHistoryReviewWrite"
+            style="@style/BlackColorBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/order_history_common_text_size"
+            tools:text="리뷰 작성하기 (5일 남음)" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

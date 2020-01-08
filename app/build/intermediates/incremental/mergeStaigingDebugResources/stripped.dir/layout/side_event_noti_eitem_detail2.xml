@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_tolbar"
+        layout="@layout/top_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_tolbar">
+
+        <ImageView
+            android:id="@+id/event_detail2_img"
+            android:layout_width="match_parent"
+            android:layout_height="508.7dp"
+            android:background="@color/pacificBlue" />
+
+        <TextView
+            android:id="@+id/event_detail2_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/event_detail2_img"
+            android:layout_marginTop="20dp"
+            android:text="결제 시 무조건 할인받는 쿠폰"
+            android:textColor="@color/black"
+            android:textSize="12.7sp" />
+
+        <TextView
+            android:id="@+id/event_detail2_text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/event_detail2_text"
+            android:layout_marginTop="8.3dp"
+            android:text="2018.12.01(토)~2019.01.01(화)"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

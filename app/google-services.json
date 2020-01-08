@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "71147769402",
+    "firebase_url": "https://moaplanetandroid.firebaseio.com",
+    "project_id": "moaplanetandroid",
+    "storage_bucket": "moaplanetandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:71147769402:android:4fcde9b2bc67f920",
+        "android_client_info": {
+          "package_name": "com.moaPlatform.moa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "71147769402-6aqba0camagk6jlc7mkcnj8upmves004.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYUETZAqRKg_YHy2FR_TL-OM9_0HPWs-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "71147769402-6aqba0camagk6jlc7mkcnj8upmves004.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:71147769402:android:d276aab67e7dc3bb",
+        "android_client_info": {
+          "package_name": "com.moaPlatform.moaLocal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "71147769402-6aqba0camagk6jlc7mkcnj8upmves004.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYUETZAqRKg_YHy2FR_TL-OM9_0HPWs-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "71147769402-6aqba0camagk6jlc7mkcnj8upmves004.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:71147769402:android:c92f4b04bd012b8d",
+        "android_client_info": {
+          "package_name": "com.moaPlatform.moaStaging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "71147769402-6aqba0camagk6jlc7mkcnj8upmves004.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYUETZAqRKg_YHy2FR_TL-OM9_0HPWs-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "71147769402-6aqba0camagk6jlc7mkcnj8upmves004.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

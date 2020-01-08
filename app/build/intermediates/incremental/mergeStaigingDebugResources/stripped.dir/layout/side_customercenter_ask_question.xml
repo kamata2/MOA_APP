@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteSmoke"
+    android:orientation="vertical">
+
+    <com.moaPlatform.moa.util.custom_view.CommonTitleView
+        android:id="@+id/commonTitleMyReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/askbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/commonTitleMyReview"
+        android:background="@color/white"
+        android:paddingLeft="13.3dp"
+        android:paddingTop="6.7dp"
+        android:paddingRight="13.3dp"
+        android:paddingBottom="13.3dp">
+
+        <LinearLayout
+            android:id="@+id/linear_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--android:background="@drawable/side_customercenter_border_selector"-->
+            <Button
+                android:id="@+id/askquestion1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp"
+                android:textColor="@drawable/side_customercenter_main_btn"
+                android:textSize="13.3sp" />
+
+            <Button
+                android:id="@+id/askquestion2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6.7dp"
+                android:layout_weight="1"
+                android:background="@drawable/side_customercenter_border_selector"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp"
+                android:textColor="@drawable/side_customercenter_main_btn"
+                android:textSize="13.3sp" />
+
+            <Button
+                android:id="@+id/askquestion3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6.7dp"
+                android:layout_weight="1"
+                android:background="@drawable/side_customercenter_border_selector"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp"
+                android:textColor="@drawable/side_customercenter_main_btn"
+                android:textSize="13.3sp" />
+
+            <Button
+                android:id="@+id/askquestion4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6.7dp"
+                android:layout_weight="1"
+                android:background="@drawable/side_customercenter_border_selector"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp"
+                android:textColor="@drawable/side_customercenter_main_btn"
+                android:textSize="13.3sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_top"
+            android:layout_marginTop="6.7dp">
+
+            <Button
+                android:id="@+id/askquestion5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/side_customercenter_border_selector"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp"
+                android:textColor="@drawable/side_customercenter_main_btn"
+                android:textSize="13.3sp" />
+
+            <Button
+                android:id="@+id/askquestion6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6.7dp"
+                android:layout_weight="1"
+                android:background="@drawable/side_customercenter_border_selector"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp"
+                android:textColor="@drawable/side_customercenter_main_btn"
+                android:textSize="13.3sp" />
+
+            <Button
+                android:id="@+id/askquestion7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6.7dp"
+                android:layout_weight="1"
+                android:background="@drawable/side_customercenter_border_selector"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp"
+                android:textColor="@drawable/side_customercenter_main_btn"
+                android:textSize="13.3sp" />
+
+            <Button
+                android:id="@+id/askquestion8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6.7dp"
+                android:layout_weight="1"
+                android:background="@drawable/side_customercenter_border_selector"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp"
+                android:textColor="@drawable/side_customercenter_main_btn"
+                android:textSize="13.3sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_below="@id/askbutton"
+        android:background="@color/linkWater" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/askQuestionRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/askbutton"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        tools:listitem="@layout/side_customercenter_ask_row">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</RelativeLayout>

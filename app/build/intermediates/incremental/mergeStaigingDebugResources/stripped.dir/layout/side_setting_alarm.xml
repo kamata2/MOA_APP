@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteSmoke"
+    android:orientation="vertical">
+
+    <com.moaPlatform.moa.util.custom_view.CommonTitleView
+        android:id="@+id/commontitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/top1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/coupon"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="20dp"
+                    android:text="쿠폰/할인 이벤트 혜택 알림"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/sale"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/coupon"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="10dp"
+                    android:text="할인 혜택 및 마케팅 정보를 받을 수 있습니다."
+                    android:textColor="@color/matterhorn51"
+                    android:textSize="12.7sp" />
+
+                <CheckBox
+                    android:id="@+id/adInfoNoti"
+                    android:layout_width="39dp"
+                    android:layout_height="19.33dp"
+                    android:layout_below="@id/line"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="122dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginRight="13.3dp"
+                    android:background="@drawable/radio_button"
+                    android:button="@null" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sale"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="39dp"
+                    android:layout_marginBottom="23.3dp"
+                    android:text="1:1 문의 답변 알림"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/inqAnswerNoti"
+                    android:layout_width="39dp"
+                    android:layout_height="19.33dp"
+                    android:layout_below="@id/line"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="122dp"
+                    android:layout_marginTop="93dp"
+                    android:layout_marginRight="13.3dp"
+                    android:background="@drawable/radio_button"
+                    android:button="@null" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/linkWater" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text2"
+                android:layout_marginTop="4.7dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/top2"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="20dp"
+                    android:text="에티켓 설정"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.33dp"
+                    android:layout_below="@id/top2"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="13.3dp"
+                    android:background="@color/linkWater" />
+
+                <TextView
+                    android:id="@+id/aticket"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line2"
+                    android:layout_marginLeft="13.3sp"
+                    android:layout_marginTop="20dp"
+                    android:text="에티켓 모드"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/night"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/aticket"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:lineSpacingExtra="3dp"
+                    android:text="야간 시간 (오후 9시~익일 오전 8시)알림을 \n받지 않습니다."
+                    android:textColor="@color/matterhorn51"
+                    android:textSize="12.7sp" />
+
+                <CheckBox
+                    android:id="@+id/nightAdInfoNoti"
+                    android:layout_width="39dp"
+                    android:layout_height="19.33dp"
+                    android:layout_below="@id/line2"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="199dp"
+                    android:layout_marginTop="24.7dp"
+                    android:layout_marginRight="13.3dp"
+                    android:background="@drawable/radio_button"
+                    android:button="@null" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/linkWater" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4.7dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/version"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.3dp"
+                    android:layout_marginTop="20dp"
+                    android:text="버전 정보"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/version"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="13.3dp"
+                    android:paddingRight="13.3dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/currentversion"
+                        style="@style/MoaFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/version"
+                        android:layout_marginRight="7dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/version_button"
+                        android:gravity="center"
+                        android:paddingTop="17dp"
+                        android:paddingBottom="17dp"
+                        android:textSize="13.3sp"
+                        tools:text="@string/sideversion" />
+
+                    <TextView
+                        android:id="@+id/moappversion"
+                        style="@style/MoaFont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/version"
+                        android:layout_alignParentRight="true"
+                        android:layout_weight="1"
+                        android:background="@drawable/version_button"
+                        android:gravity="center"
+                        android:paddingTop="17dp"
+                        android:paddingBottom="17dp"
+                        android:textSize="13.3sp"
+                        tools:text="@string/sideversionnew" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

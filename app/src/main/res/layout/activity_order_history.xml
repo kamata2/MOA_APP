@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.moaPlatform.moa.util.custom_view.CommonTitleView
+        android:id="@+id/commonTitleMyReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabSideOrderMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/grey"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextAppearance="@style/tabLayoutText"
+        app:tabTextColor="@color/grey" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_underline_height"
+        android:background="@color/linkWater" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_order_history_date_space">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tvSideOrderMenu1Month"
+                style="@style/BlackColorBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/activity_order_history_menu_month_middle_space"
+                android:background="@drawable/coupon_register_button"
+                android:gravity="center"
+                android:paddingTop="@dimen/activity_order_history_menu_month_top_bottom_space"
+                android:paddingBottom="@dimen/activity_order_history_menu_month_top_bottom_space"
+                android:text="@string/activity_order_history_one_month"
+                android:textSize="@dimen/order_history_common_text_size"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/tvSideOrderMenu3Month"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSideOrderMenu3Month"
+                style="@style/BlackColorBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_order_history_menu_month_middle_space"
+                android:layout_marginEnd="@dimen/activity_order_history_menu_month_middle_space"
+                android:background="@drawable/coupon_register_button"
+                android:gravity="center"
+                android:paddingTop="@dimen/activity_order_history_menu_month_top_bottom_space"
+                android:paddingBottom="@dimen/activity_order_history_menu_month_top_bottom_space"
+                android:text="@string/activity_order_history_three_month"
+                android:textSize="@dimen/order_history_common_text_size"
+                app:layout_constraintLeft_toRightOf="@id/tvSideOrderMenu1Month"
+                app:layout_constraintRight_toLeftOf="@id/tvSideOrderMenu6Month"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSideOrderMenu6Month"
+                style="@style/BlackColorBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_order_history_menu_month_middle_space"
+                android:background="@drawable/coupon_register_button"
+                android:gravity="center"
+                android:paddingTop="@dimen/activity_order_history_menu_month_top_bottom_space"
+                android:paddingBottom="@dimen/activity_order_history_menu_month_top_bottom_space"
+                android:text="@string/activity_order_history_six_month"
+                android:textSize="@dimen/order_history_common_text_size"
+                app:layout_constraintLeft_toRightOf="@id/tvSideOrderMenu3Month"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/llInputOrderDateGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.7dp"
+                android:background="@drawable/coupon_register_button"
+                android:orientation="horizontal"
+                android:paddingStart="1dp"
+                android:paddingTop="14.3dp"
+                android:paddingEnd="5dp"
+                android:paddingBottom="14.7dp"
+                app:layout_constraintLeft_toLeftOf="@id/tvSideOrderMenu1Month"
+                app:layout_constraintRight_toRightOf="@id/tvSideOrderMenu3Month"
+                app:layout_constraintTop_toBottomOf="@id/tvSideOrderMenu1Month"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/tvSideOrderMenuStartDate"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:drawableStart="@drawable/side_order_list_calender"
+                    android:gravity="fill"
+                    android:textColor="@color/matterhorn"
+                    android:textSize="12sp"
+                    tools:text="2018.12.01"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activity_order_history_swung_dash"
+                    android:textColor="@color/matterhorn"
+                    android:textSize="@dimen/activity_order_history_swung_dash_text_size"
+                    android:layout_weight="1"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:id="@+id/tvSideOrderMenuEndDate"
+                    style="@style/MoaFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:drawableStart="@drawable/side_order_list_calender"
+                    android:gravity="fill"
+                    android:textColor="@color/matterhorn"
+                    android:textSize="12sp"
+                    tools:text="2018.12.31"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnSideOrderMenuSearch"
+                style="@style/BlackColorBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/coupon_register_button"
+                android:gravity="center"
+                android:paddingTop="@dimen/activity_order_history_menu_month_top_bottom_space"
+                android:paddingBottom="@dimen/activity_order_history_menu_month_top_bottom_space"
+                android:text="@string/activity_order_history_period_check"
+                android:textSize="@dimen/order_history_common_text_size"
+                app:layout_constraintLeft_toLeftOf="@id/tvSideOrderMenu6Month"
+                app:layout_constraintRight_toRightOf="@id/tvSideOrderMenu6Month"
+                app:layout_constraintTop_toTopOf="@id/llInputOrderDateGroup" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pagerSideOrderMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

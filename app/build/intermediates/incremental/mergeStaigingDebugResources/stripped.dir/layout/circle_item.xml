@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.moaPlatform.moa.util.resolution.custom.CustomImageView
+        android:id="@+id/circleItem"
+        android:layout_width="254px"
+        android:layout_height="557px"
+        android:background="@drawable/category_delivery_bg"/>
+
+    <com.moaPlatform.moa.util.resolution.custom.CustomImageView
+        android:id="@+id/lvIcon"
+        android:layout_width="99px"
+        android:layout_height="89px"
+        android:background="@drawable/category_delivery_ic"
+        app:layout_constraintBottom_toTopOf="@+id/txtTitle"
+        app:layout_constraintLeft_toLeftOf="@+id/circleItem"
+        app:layout_constraintRight_toRightOf="@+id/circleItem"
+        app:layout_constraintTop_toTopOf="@+id/circleItem"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/custom_font"
+        android:text="테이크\n아웃"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="10px"
+        app:layout_constraintBottom_toBottomOf="@+id/circleItem"
+        app:layout_constraintLeft_toLeftOf="@+id/circleItem"
+        app:layout_constraintRight_toRightOf="@+id/circleItem"
+        app:layout_constraintTop_toBottomOf="@+id/lvIcon" />
+
+</android.support.constraint.ConstraintLayout>

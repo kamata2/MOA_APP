@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <fragment
+        android:id="@+id/submenuListFragment"
+        android:name="com.moaPlatform.moa.bottom_menu.main.fragments.MainSubMenuFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/main_sub_menu_item" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/deliveryAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_delivery_animation_height"
+        android:layout_marginTop="@dimen/main_delivery_animation_margin"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/submenuListFragment"
+        app:lottie_imageAssetsFolder="main_ad_ani"
+        app:lottie_rawRes="@raw/main_ad_ani"
+        android:visibility="gone"/>
+
+    <!-- 광고 영역 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/adLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_delivery_animation_margin"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/deliveryAnimation"
+        android:visibility="gone">
+
+        <!-- 맛집 랭킹 -->
+        <TextView
+            android:id="@+id/storeRanking"
+            style="@style/BlackColorBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/main_ad_title_margin_left"
+            android:layout_marginTop="@dimen/main_ad_title_margin_top"
+            android:text="@string/main_activity_famous_ranking_title"
+            android:textSize="@dimen/common_text_xxxl_size"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/lvFamousStoreBg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_ad_famous_store_height"
+            android:layout_marginTop="@dimen/main_ad_title_margin_bottom"
+            android:contentDescription="@string/underline_description"
+            android:scaleType="fitXY"
+            android:src="@drawable/ad_famous_ranking_bg"
+            app:layout_constraintTop_toBottomOf="@id/storeRanking" />
+
+        <TextView
+            android:id="@+id/tvFamousStoreText"
+            style="@style/MoaFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/main_activity_famous_ranking_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/main_ad_famous_store_content_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/lvFamousStoreBg"
+            app:layout_constraintTop_toTopOf="@id/lvFamousStoreBg" />
+
+        <ImageView
+            android:id="@+id/famousArrow"
+            android:layout_width="@dimen/main_ad_white_arrow_width"
+            android:layout_height="@dimen/main_ad_white_arrow_height"
+            android:layout_marginTop="@dimen/main_ad_white_arrow_margin_top"
+            android:contentDescription="@string/underline_description"
+            android:scaleType="fitXY"
+            android:src="@drawable/white_down_arrow"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFamousStoreText" />
+
+        <TextView
+            android:id="@+id/famousClickText"
+            style="@style/MoaFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_ad_click_margin_top"
+            android:text="@string/main_activity_ad_click_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_text_xxxs_size"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/famousArrow" />
+
+        <!-- 이런 음식은 어떄요? -->
+        <TextView
+            android:id="@+id/howFoodTitle"
+            style="@style/BlackColorBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/main_ad_title_margin_left"
+            android:layout_marginTop="@dimen/main_ad_title_margin_top"
+            android:text="@string/main_activity_ad_how_food"
+            android:textSize="@dimen/common_text_xxxl_size"
+            app:layout_constraintTop_toBottomOf="@id/lvFamousStoreBg" />
+
+        <LinearLayout
+            android:id="@+id/howFoodMore"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/common_margin_10"
+            app:layout_constraintBottom_toBottomOf="@id/howFoodTitle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/howFoodTitle">
+
+            <TextView
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="9.3dp"
+                android:text="@string/main_activity_ad_more"
+                android:textColor="@color/zambezi"
+                android:textSize="@dimen/common_text_m_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="10dp"
+                android:contentDescription="@string/main_activity_ad_more"
+                android:scaleType="fitXY"
+                android:src="@drawable/ad_more_arrow" />
+
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/adListFragment"
+            android:name="com.moaPlatform.moa.util.StoreGridListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_marginTop="@dimen/main_ad_title_margin_bottom"
+            android:layout_marginRight="@dimen/common_margin"
+            app:layout_constraintTop_toBottomOf="@id/howFoodTitle"
+            tools:layout="@layout/store_grid_item" />
+
+        <ImageView
+            android:id="@+id/howFoodUnderLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_underline_height"
+            android:layout_marginLeft="@dimen/common_margin_10"
+            android:layout_marginRight="@dimen/common_margin_10"
+            android:background="@color/pinkSwan"
+            android:contentDescription="@string/underline_description"
+            app:layout_constraintTop_toBottomOf="@id/adListFragment" />
+
+        <!-- 우리동네 새로운 맛집 -->
+        <TextView
+            android:id="@+id/newFamousStoreTitle"
+            style="@style/BlackColorBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/main_ad_title_margin_left"
+            android:layout_marginTop="@dimen/main_ad_title_margin_top"
+            android:text="@string/main_activity_new_famous_store_title"
+            android:textSize="@dimen/common_text_xxxl_size"
+            app:layout_constraintTop_toBottomOf="@id/howFoodUnderLine" />
+
+        <ImageView
+            android:id="@+id/lvNewFamousStoreBg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_ad_famous_store_height"
+            android:layout_marginTop="@dimen/main_ad_title_margin_bottom"
+            android:contentDescription="@string/underline_description"
+            android:scaleType="fitXY"
+            android:src="@drawable/ad_new_famous_bg"
+            app:layout_constraintTop_toBottomOf="@id/newFamousStoreTitle" />
+
+        <TextView
+            android:id="@+id/tvNewFamousStoreText"
+            style="@style/MoaFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/main_activity_new_famous_store_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/main_ad_famous_store_content_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/lvNewFamousStoreBg"
+            app:layout_constraintTop_toTopOf="@id/lvNewFamousStoreBg" />
+
+        <ImageView
+            android:id="@+id/newFamousArrow"
+            android:layout_width="@dimen/main_ad_white_arrow_width"
+            android:layout_height="@dimen/main_ad_white_arrow_height"
+            android:layout_marginTop="@dimen/main_ad_white_arrow_margin_top"
+            android:contentDescription="@string/underline_description"
+            android:scaleType="fitXY"
+            android:src="@drawable/white_down_arrow"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNewFamousStoreText" />
+
+        <TextView
+            android:id="@+id/newFamousClickText"
+            style="@style/MoaFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_ad_click_margin_top"
+            android:text="@string/main_activity_ad_click_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_text_xxxs_size"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newFamousArrow" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

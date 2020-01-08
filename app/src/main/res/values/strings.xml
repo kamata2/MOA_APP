@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 공통 -->
+    <string name="underline_description" translatable="false">underline</string>
+    <string name="common_new_pw">새 비밀번호</string>
+    <string name="common_new_pw_check">새 비밀번호 확인</string>
+    <string name="common_input_pw_six_digits">비밀번호를 숫자 6자리로 입력해 주세요.</string>
+    <string name="common_pw_not_match">비밀번호가 일치하지 않습니다.</string>
+    <string name="common_pw_change">비밀번호 변경</string>
+    <string name="banner_count">%d/%d</string>
+    <string name="login">로그인</string>
+    <string name="sign_up">회원가입</string>
+    <string name="phone_call">전화하기</string>
+    <string name="bookmark">즐겨찾기</string>
+    <string name="share">공유하기</string>
+    <string name="email">이메일</string>
+    <string name="email_id">이메일 아이디</string>
+    <string name="find_id">아이디 찾기</string>
+    <string name="find_pw">비밀번호 찾기</string>
+    <string name="password">비밀번호</string>
+    <string name="account_setting">계정 설정</string>
+    <string name="sale_coupon">할인 쿠폰</string>
+    <string name="shopping_cart">장바구니</string>
+    <string name="coupon_register_success">쿠폰 등록이 완료되었습니다.</string>
+    <string name="already_coupon_registered">이미 등록한 쿠폰입니다.\n확인 후 다시 시도해 주세요.</string>
+    <string name="already_used_coupon">이미 사용한 쿠폰입니다.\n쿠폰 번호를 다시 확인해 주세요</string>
+    <string name="not_exist_coupon">유효하지 않은 쿠폰입니다.\n쿠폰 번호를 다시 확인해 주세요.</string>
+    <string name="event_or_notice">이벤트/공지사항</string>
+    <string name="event">이벤트</string>
+    <string name="notice">공지사항</string>
+    <string name="font_name_nanum_gothic">nanum_gothic.ttf</string>
+    
+    <!-- common title -->
+    <string name="common_title_review">전체 리뷰</string>
+    <string name="common_title_review_modify">리뷰 수정</string>
+    <string name="common_title_review_modify_complete_button">수정하기</string>
+
+
+    <!-- common dialog -->
+    <string name="dialog_list_filter_title">정렬기준</string>
+    <string name="dialog_list_filter_complete">완료</string>
+
+    <!-- toast msg -->
+    <string name="common_toast_msg_finish">뒤로 버튼을 한번 더 누르시면 종료됩니다.</string>
+    <string name="common_toast_msg_connection_fail">서버와 통신이 원활하지 않습니다.</string>
+    <string name="common_toast_msg_check_date">조회 날짜를 다시 확인해주세요.</string>
+    <string name="common_toast_msg_review_write_success">리뷰 등록이 완료되었습니다.</string>
+    <string name="common_toast_msg_review_write_fail">리뷰 등록을 실패하였습니다.</string>
+    <string name="common_toast_msg_review_modify_success">리뷰 수정이 완료되었습니다.</string>
+    <string name="common_toast_msg_review_modify_fail">리뷰 수정을 실패하였습니다.</string>
+    <string name="common_toast_msg_review_delete_success">리뷰 삭제가 완료되었습니다.</string>
+    <string name="common_toast_msg_review_delete_fail">리뷰 삭제를 실패하였습니다.</string>
+    <string name="common_toast_msg_canceled">취소되었습니다.</string>
+    <string name="common_toast_msg_success_pw_change">비밀번호가 변경되었습니다.</string>
+    <string name="common_toast_msg_network_err">예기치 못한 오류가 발생했습니다. \n일시적인 현상이거나 네트워크 문제일 수 \n있으니 잠시 후 다시 시도해 주시길 바랍니다. \n동일한 증상이 계속 발생하는 경우 고객센터로 \n문의 주시면 확인 후 도움 드리도록 하겠습니다.</string>
+    <string name="common_toast_msg_data_load_fail_at_server">서버에서 설정값을 불러 오지 못하였습니다.</string>
+    <string name="common_toast_msg_success_profile_change">프로필 수정 완료 되었습니다.</string>
+    <string name="common_toast_msg_please_enter_email">이메일을 입력해주세요.</string>
+    <string name="common_toast_msg_email_format_not_available">사용할수 없는 이메일 형식입니다.</string>
+    <string name="common_toast_msg_please_enter_phone_number">전화번호를 입력해주세요.</string>
+    <string name="common_toast_msg_phone_number_format_not_available">사용할수 없는 전화번호 형식입니다</string>
+    <string name="common_toast_msg_please_enter_title">제목을 입력해주세요.</string>
+    <string name="common_toast_msg_please_enter_content">내용을 입력해주세요.</string>
+    <string name="common_toast_msg_cannot_contain_special_characters">주소 검색시에는 특수문자를 포함할 수 없습니다.</string>
+    <string name="common_toast_msg_card_register_success">카드 등록이 완료 되었습니다.</string>
+    <string name="common_toast_msg_card_register_fail">카드 등록을 실패하였습니다.\n</string>
+    <string name="common_toast_msg_agreement_register_fail">약관동의 요청이 실패되었습니다.</string>
+    <string name="common_toast_msg_no_register_photo">등록된 사진이 없습니다.</string>
+    <string name="common_toast_msg_use_available_after_login">로그인 후 사용 가능합니다.</string>
+
+    <!-- Progress dialog msg -->
+    <string name="common_dialog_msg_loading">조회중&#8230;</string>
+    <string name="common_dialog_msg_review">리뷰 등록중&#8230;</string>
+
+    <!-- 리스트 필터 다이얼로그 -->
+    <string name="dialog_list_filter_oder_grade">평점 순</string>
+    <string name="dialog_list_filter_oder_saving">적립률 순</string>
+    <string name="dialog_list_filter_oder_distance">거리 순</string>
+    <string name="dialog_list_filter_oder_review">리뷰 순</string>
+    <string name="dialog_list_filter_oder_favor">즐겨찾기 순</string>
+    <string name="dialog_list_filter_oder_takeout">테이크아웃매장</string>
+    <string name="dialog_list_filter_oder_owner_reply">사장님 댓글 순</string>
+    <string name="dialog_list_filter_oder_event">이벤트 여부</string>
+
+    <!-- 타임 이벤트 문구 -->
+    <string name="common_time_event_default_save_rate">적립률 %d%%</string>
+    <string name="common_time_event_add_save_rate">추가적립 %d%%</string>
+    <string name="common_time_event_fixed_amount">%s원 할인</string>
+    <string name="common_time_event_fixed_rate">%d%% 할인</string>
+
+
+    <!-- 선택적 접근 권한 안내창 -->
+    <string name="moa_optional_access_dialog_title">선택적 접근 권한 안내</string>
+    <string name="moa_optional_access_dialog_title_content">MOA B2C APP은 정보통신망법령에 따라 서비스에 필요한 항목들에 대해 아래와 같이 접근합니다.</string>
+    <string name="moa_optional_access_dialog_location_info">위치정보</string>
+    <string name="moa_optional_access_dialog_location_content">현재 사용자의 위치 확인</string>
+    <string name="moa_optional_access_dialog_sms_title" translatable="false">SMS</string>
+    <string name="moa_optional_access_dialog_sms_content">SMS 인증번호 자동 입력</string>
+    <string name="moa_optional_access_dialog_telephone_title">전화</string>
+    <string name="moa_optional_access_dialog_telephone_content">회원가입 및 인증</string>
+    <string name="moa_optional_access_dialog_camera_photo_title">사진/카메라</string>
+    <string name="moa_optional_access_dialog_camera_photo_content">프로필 및 사진 리뷰 첨부</string>
+    <string name="moa_optional_access_dialog_storage_space_title">저장공간</string>
+    <string name="moa_optional_access_dialog_content_info">선택적 접근권한은 해당 기능을 사용할 때 허용이 필요하며,\n비 허용 시에도 해당 기능 외 서비스 이용이 가능합니다.</string>
+    <string name="moa_optional_access_dialog_change_access_title">접근권한 변경 방법</string>
+    <string name="moa_optional_access_dialog_change_access_content">휴대전화 설정 > 모아 B2C APP</string>
+    <string name="moa_optional_access_dialog_done">확인</string>
+
+    <!-- yes or no 다이얼로그-->
+    <string name="yes_or_no_dialog_title">알림</string>
+    <string name="yes_or_no_dialog_yes">예</string>
+    <string name="yes_or_no_dialog_no">아니오</string>
+    <string name="yes_or_no_dialog_content_gps_on">위치 설정을 허용해야만 합니다.\n위치설정을 허용하시겠습니까?</string>
+    <string name="yes_or_no_dialog_content_force_update">최신버전으로 업데이트를 \n진행하여 주세요.</string>
+    <string name="yes_or_no_dialog_content_select_update">최신버전이 있습니다. \n업데이트를 진행하시겠습니까?</string>
+    <string name="yes_or_no_dialog_content_delete_card">카드를 삭제하시겠습니까?</string>
+    <string name="yes_or_no_dialog_content_logout">로그아웃 시 비회원으로 로그인하게 됩니다. 로그아웃 하시겠습니까?</string>
+    <string name="yes_or_no_dialog_content_expire">회원 탈퇴 시 삭제된 정보는 다시 복구할 수 없습니다. 회원 탈퇴 시 정상적인 앱 구동을 위해 앱이 종료됩니다.\n회원을 탈퇴하시겠습니까?</string>
+    <string name="yes_or_no_dialog_content_delete_review">리뷰를 삭제하시겠습니까?</string>
+
+    <!-- OnebtnDialog 다이얼로그-->
+    <string name="one_button_dialog_title">알림</string>
+    <string name="one_button_dialog_btn_ok">확인</string>
+    <string name="one_button_dialog_title_point_tooltip">활성 예정 포인트란?</string>
+    <string name="one_button_dialog_content_point_tooltip">주문 결제 시 매장에서 적립금으로\n지급되었지만 적립 정책에 따라 \n일정 시간 이후 활성화되어 \n사용 가능한 포인트입니다.</string>
+
+    <!-- 이용약관 동의 -->
+    <string name="agreement_to_terms_of_use_title">이용약관 동의</string>
+    <string name="agreement_to_terms_of_use_all_agree_text">전체 동의</string>
+    <string name="agreement_to_terms_of_use_agree_all_reed"><u>전문보기</u></string>
+    <string name="agreement_to_terms_of_use_agree_start">아래 약관에 동의하시면\n서비스를 시작할 수 있습니다.</string>
+    <string name="agreement_to_terms_of_use_condition">이용약관</string>
+    <string name="agreement_to_terms_of_use_gps">위치기반 서비스 이용약관 동의(필수)</string>
+    <string name="agreement_to_terms_of_use_event">쿠폰/할인 이벤트 혜택 알림(선택)</string>
+    <string name="agreement_to_terms_of_use_event_content">다양한 쿠폰 정보와 이벤트 혜택 정보 수신을 위한\n동의가 필요합니다.</string>
+    <string name="agreement_to_terms_of_use_gps_content">주변 매장 검색을 위해 위치기반 서비스 이용약관 및\n위치 정보 사용에 대한 동의가 필요합니다.</string>
+    <string name="agreement_to_terms_of_use_event_push_agree">모아(%s)\n마케팅 정보 수신 동의 처리가 완료되었습니다.</string>
+    <string name="agreement_to_terms_of_use_answer_push_agree">모아(%s)\n1:1 문의 답변 수신 동의 처리가 완료되었습니다.</string>
+    <string name="agreement_to_terms_of_use_etiquette_push_agree">모아(%s)\에티켓 모드 동의 처리가 완료되었습니다.</string>
+    <string name="agreement_to_terms_of_use_event_push_disagree">모아(%s)\n마케팅 정보 수신 거부 처리가 완료되었습니다.</string>
+    <string name="agreement_to_terms_of_use_done_button_text">시작하기</string>
+    <string name="agreement_to_terms_of_use_when_coupon_or_event_subscribe_rejected">알림 수신 거부 시 할인 쿠폰 및 이벤트 소식을 받으실 수 없습니다.\n정말 알림을 수신 거부하시겠습니까?</string>
+    <string name="agreement_to_terms_of_use_when_answer_subscribe_reject">알림 수신 거부 시 답변 알림을 받을수 없습니다.\n정말 알림을 수신 거부하시겠습니까?</string>
+    <string name="agreement_to_terms_of_use_when_night_subscribe_reject">알림 수신 거부 시 야간시간 알림을 받을수 없습니다.\n정말 알림을 수신 거부하시겠습니까?</string>
+
+
+    <!-- 위치 설정 -->
+    <string name="location_setting_address_item_jibun">[지번] %s</string>
+
+    <!-- 기본 위치 설정 -->
+    <string name="location_setting_input_address_hint">도로명, 지번, 건물명으로 검색</string>
+    <string name="location_setting_search_address_introduce">‘<![CDATA[<b><font color=#ff794c>현 위치</font></b>]]>’ 버튼을 누르면 간편하게<![CDATA[<br/>]]>현재 위치를 검색할 수 있습니다.</string>
+    <string name="location_setting_default_address">기본 주소</string>
+    <string name="location_setting_recently_address">최근 주소</string>
+    <string name="location_setting_search_address">주소 검색 결과</string>
+    <string name="location_permission_denied">"현재 위치 검색을 위해 권한이 필요합니다.\n\n[설정] > [권한]에서 허용으로 변경해 주세요.</string>
+
+    <string name="location_default_setting_top_toolbar_title">위치 설정</string>
+    <string name="location_default_setting_top_toolbar_my_location">현 위치</string>
+    <string name="location_default_setting_address_select_result_title">주소 검색 결과</string>
+    <string name="location_default_setting_default_address_title">기본 주소</string>
+
+    <!-- 검색 -->
+    <string name="storesearch_input_keyword_hint">검색어를 입력하세요.</string>
+    <string name="storesearch_item_empty_search_data">해당하는 매장이 없습니다.</string>
+    <string name="storesearch_item_empty_recent_search_keyword">최근 검색어가 없습니다.</string>
+    <string name="storesearch_item_empty_ic_description">검색 아이콘</string>
+    <string name="store_search_list_empty">검색 결과가 없습니다.</string>
+
+    <!-- 상세 위치 설정 -->
+    <string name="detail_address_title">상세 주소 설정</string>
+    <string name="location_detail_setting_address_set">상세 주소 설정하기</string>
+    <string name="input_detail_location_hint">상세주소 입력 (예: 모아빌딩 706호)</string>
+    <string name="detail_address_done">이 주소로 설정하기</string>
+    <string name="detail_address_fragment_map_loading">지도를 로딩중입니다.</string>
+    <string name="detail_address_fragment_detail_address_empty">기본주소가 설정되지 않았습니다.</string>
+
+    <!-- 메인 화면 -->
+    <string name="main_activity_title">MOA</string>
+    <string name="main_activity_famous_ranking_title">맛집 랭킹</string>
+    <string name="main_activity_famous_ranking_content">“우리동네 소문난 맛집 10선!”</string>
+    <string name="main_activity_ad_click_text">클릭</string>
+    <string name="main_activity_ad_more">더보기</string>
+    <string name="main_activity_ad_how_food">이런 음식은 어떄요?</string>
+    <string name="main_activity_new_famous_store_title">우리 동네 새로운 맛집</string>
+    <string name="main_activity_new_famous_store_content">“우리동네 새로운 맛집 10선!”</string>
+    <string name="ceo_info_check">사업자정보확인</string>
+    <string name="use_of_terms">이용약관</string>
+    <string name="privacy_policy">개인정보처리방침</string>
+    <string name="moa_not_responsibility">(주)모아플래닛은 통신판매중개자로서 거래 당사자가 아니며 상품 거래 정보 및\n거래에 대하여 책임을 지지 않습니다.</string>
+    <string name="moa_entrepreneur_info">(주)모아플래닛 사업자 정보</string>
+    <string name="customer_service">고객센터</string>
+    <string name="copyright_moa" translatable="false">Copyright MOA. All Rights Reserved.</string>
+    <string name="category_position" translatable="false">category_position</string>
+    <string name="category_code" translatable="false">category_code</string>
+
+    <!-- 회원가입 -->
+    <string name="sign_up_list">보안이 강화된 다른 로그인 방법으로\n더욱 안전하게 계정을 보호할 수 있습니다.</string>
+    <string name="sign_up_input_email">이메일을 입력하세요.</string>
+    <string name="sign_up_input_email_error">이메일을 입력해 주세요.</string>
+    <string name="sign_up_input_invalid_email_error">올바른 이메일 주소가 아닙니다.</string>
+    <string name="sign_up_input_password">영문,숫자(특수문자)를 8~20자리로 입력해 주세요.</string>
+    <string name="sign_up_input_password_again">비밀번호를 한 번 더 입력해 주세요.</string>
+    <string name="sign_up_password_info">비밀번호는 로그인 및 결제 비밀번호로 사용됩니다.</string>
+    <string name="sign_up_input_password_error">비밀번호를 숫자 6자로 입력해주세요.</string>
+    <string name="sign_up_password_check_title">비밀번호 확인</string>
+    <string name="sign_up_input_password_check">비밀번호를 한번 더 입력해 주세요.</string>
+    <string name="sign_up_terms_and_onditions">이용약관</string>
+    <string name="sign_up_terms_and_onditions_all_agreement">아래의 내용에 모두 동의합니다.</string>
+    <string name="sign_up_terms_and_onditions_terms_and_conditions">이용약관 동의 (필수)</string>
+    <string name="sign_up_terms_and_onditions_terms_and_conditions_read">전문보기</string>
+    <string name="sign_up_terms_and_onditions_personal_information">개인정보 수집 및 이용동의 (필수)</string>
+    <string name="sign_up_terms_and_onditions_personal_information_read">전문보기</string>
+    <string name="sign_up_terms_and_onditions_event">쿠폰 / 할인 이벤트 혜택 알림 (선택)</string>
+    <string name="sign_up_terms_and_onditions_age">만 14세 이상입니다.</string>
+    <string name="sign_up_next">다음</string>
+    <string name="sign_up_wallet_pw">전자지갑 비밀번호</string>
+    <string name="sign_up_wallet_pw_check">전자지갑 비밀번호 확인</string>
+    <string name="sign_up_msg_wallet_create_success">지갑이 생성되었습니다.</string>
+    <string name="sign_up_msg_wallet_create_fail">지갑 생성에 실패하였습니다.</string>
+    <string name="sign_up_msg_wallet_already_exist">생성된 지갑이 존재합니다.</string>
+    <string name="sign_up_msg_wallet_not_exist">생성된 지갑이 존재하지 않습니다.</string>
+    <string name="sign_up_msg_wallet_restore_success">전자지갑 복원에 성공하였습니다.</string>
+    <string name="sign_up_msg_wallet_restore_fail">지갑 복원에 실패하였습니다.</string>
+    <string name="sign_up_request_restore_wallet">서버에 등록된 지갑이 존재합니다.\n지갑 복원 요청을 통하여 지갑 복원을 해주세요.</string>
+    <string name="sign_up_email_check_please">이메일 중복 확인을 진행해 주세요</string>
+    <string name="sign_up_exits_email">이미 사용 중인 이메일입니다.</string>
+    <string name="sign_up_email_available_to_use">사용 가능한 이메일 입니다.</string>
+    <string name="sign_up_phone_number_again_check">휴대 전화번호를 다시 한 번 확인해 주세요.</string>
+    <string name="sign_up_recommender_phone_number">추천인 전화번호( ‘-’ 제외)를 입력하세요.</string>
+
+    <!-- 본인인증 -->
+    <string name="identification_announcement_content">관련 법률 준수와 안전한 서비스 이용을 위해 \n약관 동의 후 본인인증이 필요합니다.</string>
+
+    <!-- 가맹점 리스트 -->
+    <string name="store_list_review">리뷰 %d</string>
+    <string name="store_list_bookMark">즐겨찾기 %d</string>
+
+    <!-- 가맹점 상세 화면 -->
+    <string name="store_detail_review">리뷰</string>
+    <string name="store_detail_save_percent">적립률 %s%%</string>
+    <string name="store_detail_activity_event_guide"><![CDATA[[안내]<font color = #8f8f8f> %s</font>]]></string>
+    <string name="activity_store_detail_delivery_money">%s원(%s원 이상 주문 시 무료)</string>
+    <string name="activity_store_detail_min_order_money">최소 %s원 이상</string>
+    <string name="activity_store_detail_call_order">전화 주문</string>
+    <string name="activity_store_detail_call_enquiry">전화 문의</string>
+    <string name="fragment_store_additional_information_store_info_empty">%s 입니다. \n방문해 주셔서 감사합니다.</string>
+    <string name="fragment_store_additional_information_store_event_empty">진행 중인 이벤트가 없습니다.</string>
+    <string name="fragment_store_additional_information_store_country_of_origin_empty">원산지 정보가 없습니다.</string>
+
+    <!-- 메뉴 선택 화면-->
+    <string name="store_product_order_button">주문하기</string>
+    <string name="store_product_shopping_cart_button">장바구니 담기</string>
+    <string name="store_product_name_demo" translatable="false">Chicken</string>
+    <string name="store_product_description" translatable="false">very very very delicious</string>
+    <string name="store_product_total_money">%s원</string>
+    <string name="store_product_cnt" translatable="false">%d</string>
+    <string name="store_product_additional_dc">추가할인 %s</string>
+    <string name="store_product_delivery_dc">배달할인 %s원</string>
+    <string name="store_product_quantity_name">수량</string>
+    <string name="store_product_price_name">가격</string>
+    <string name="store_product_price_item_name_demo" translatable="false">select demo</string>
+    <string name="store_product_price_item_option_price">%s원</string>
+    <string name="store_product_quantity_control_description" translatable="false">Quantity Control</string>
+    <string name="store_product_add_option_head_title">%s (%s개까지 추가 가능)</string>
+    <string name="store_product_add_option_price">+%s 원</string>
+    <string name="store_product_order_price_title">주문금액</string>
+    <string name="store_product_delivery_price_title">배달료</string>
+    <string name="store_product_delivery_price_title_free_price">배달료 (%s원 이상 무료)</string>
+    <string name="store_product_sale_price_title">할인금액</string>
+    <string name="store_product_total_price_title">총 주문 금액</string>
+    <string name="store_product_save_point_title">주문 혜택  %sP 적립 예정</string>
+    <string name="store_product_shopping_cart">장바구니 (%s)</string>
+    <string name="activity_store_product_min_order_price">최소 주문 금액 %s원 이상</string>
+
+    <!-- 매장 부가 정보 -->
+    <string name="store_business_hours">%s:%s ~ %s:%s</string>
+
+    <!-- 주문 결제 -->
+    <string name="activity_order_payment_jibun_address">[지번] %s</string>
+    <string name="activity_order_payment_input_detail_road_address">상세주소를 입력해주세요.</string>
+    <string name="activity_order_payment_input_contact">휴대전화 번호 입력해주세요. (필수)</string>
+    <string name="activity_order_payment_contact">연락처</string>
+    <string name="order_history_count">주문건수 : %s건</string>
+    <string name="order_cancel_count">주문취소 : %s건</string>
+
+    <!-- 배달 정보 -->
+    <string name="order_payment_delivery_info_title">배달 정보</string>
+    <string name="order_payment_delivery_info_address">주소</string>
+    <string name="order_payment_delivery_info_input_default_address">주소를 입력해 주세요</string>
+    <string name="order_payment_delivery_info_req">요청사항</string>
+    <string name="order_payment_delivery_info_input_req">요청 사항을 입력하세요.</string>
+    <string name="order_payment_delivery_info_max_req">50자이내</string>
+    <string name="order_payment_delivery_info_req_count">%d/50자</string>
+
+    <!-- 배달 방식 선택 -->
+    <string name="order_payment_delivery_way_title">배달 방식 선택</string>
+    <string name="order_payment_delivery_way_btn_delivery">배달</string>
+    <string name="order_payment_delivery_way_btn_take_out">테이크아웃</string>
+    <string name="order_payment_delivery_way_btn_now_order">바로주문</string>
+    <string name="order_payment_delivery_way_btn_reservation_order">예약 주문</string>
+    <string name="order_now">바로주문</string>
+    <string name="order_reservation">예약 주문</string>
+
+    <!-- 결제 수단 선택-->
+    <string name="order_payment_payment_way_title">결제 수단 선택</string>
+    <string name="order_payment_my_keep_point">보유 : %sP <![CDATA[<b><font color=#797979>(%s원)</font></b>]]></string>
+    <string name="order_payment_use_point">%s p (-%s원)</string>
+
+    <!-- 업적 (배지) -->
+    <string name="badge_activity_coin_tree_bg" translatable="false">coinTreeBg</string>
+
+    <!-- 업적 리스트 -->
+    <string name="achievement_list_item_question_ic_description" translatable="false">question_ic</string>
+
+    <!-- 업적 보상 다이얼로그 -->
+    <string name="achievement_reward_dialog_reward_pay">Rewards have been paid</string>
+    <string name="achievement_reward_dialog_reward_title_temp">초보 리뷰어</string>
+    <string name="achievement_reward_dialog_coin_ic_description" translatable="false">rewardCoin</string>
+    <string name="achievement_reward_dialog_coin" translatable="false">%d Coin</string>
+    <string name="achievement_reward_dialog_reward_step_temp">1단계 달성 보상</string>
+    <!-- 업적 보상 확인 다이얼로그 -->
+    <string name="achievement_reward_check_dialog_badge_title_temp">모아 가족</string>
+    <string name="achievement_reward_check_dialog_badge_reward_title">달성 보상</string>
+    <string name="achievement_reward_check_dialog_badge_reward_content_temp">배지, 50% 할인 쿠폰</string>
+    <string name="achievement_reward_check_dialog_badge_ic_description" translatable="false">badge_icon</string>
+
+    <!-- 장바구니 -->
+    <string name="shopping_cart_activity_empty">장바구니에 담긴 메뉴가 없습니다.</string>
+
+    <!-- 장바구니 상세 -->
+    <string name="shopping_cart_detail_activity_item_all_remove">전체 삭제</string>
+    <string name="shopping_cart_detail_activity_product_quantity">수량</string>
+    <string name="shopping_cart_detail_activity_product_price">가격</string>
+    <string name="shopping_cart_detail_activity_product_option">옵션</string>
+    <string name="shopping_cart_detail_activity_total_price">소계</string>
+    <string name="shopping_cart_detail_activity_price">%s원</string>
+    <string name="shopping_cart_detail_activity_option_price">+%s원</string>
+    <string name="shopping_cart_detail_activity_add_product">+ 메뉴 추가</string>
+
+    <!-- 사이드 메뉴-->
+    <string name="side_menu_review">리뷰</string>
+    <string name="side_menu_sympathy">받은공감</string>
+
+    <!-- 사이드 메뉴 아이콘 정보-->
+    <string name="side_icon_badge">배지</string>
+    <string name="side_icon_coupon">쿠폰</string>
+    <string name="side_icon_deliver">배달</string>
+    <string name="side_icon_dereview">배달리뷰</string>
+    <string name="side_icon_sympath">공감</string>
+    <string name="side_icon_eatout">외식</string>
+    <string name="side_icon_checkin">체크인</string>
+    <string name="side_icon_reservationlist">예약내역</string>
+    <string name="side_icon_servicecenter">고객센터</string>
+    <string name="side_icon_set">설정</string>
+
+    <!-- 사이드 메뉴 내 문의 내역 -->
+    <string name="side_myquestion_login"><u>로그인 하기</u></string>
+    <string name="side_myquestion">내 문의 내역</string>
+
+    <!-- 사이드메뉴 로그인-->
+    <string name="side_login">로그인하면 엄청난 혜택이 팡팡!!</string>
+
+    <!--사이드 리뷰 관리-->
+    <string name="side_menu_review_title">리뷰 관리</string>
+    <string name="side_menu_review_tab_store">배달 리뷰</string>
+    <string name="side_menu_review_tab_eat_out">플레이스 리뷰</string>
+
+    <!-- 리뷰 수정 화면 -->
+    <string name="review_modify_activity_add_picture_dialog_title">파일첨부</string>
+    <string name="review_modify_activity_add_picture_dialog_content">촬영 혹은 앨범에서 선택하세요</string>
+    <string name="review_modify_activity_add_picture_dialog_btn_camera">사진촬영</string>
+    <string name="review_modify_activity_add_picture_dialog_btn_gallery">사진앨범</string>
+    <string name="review_modify_activity_remove_picture_dialog_content">첨부 파일을 삭제하시겠습니까?</string>
+    <string name="review_modify_activity_please_enter_star">별점을 입력해 주세요.</string>
+    <string name="review_modify_activity_write_content_hint">매장에 대한 리뷰를 작성해 주세요.\n\n허위 리뷰, 광고, 욕설, 비방, 도배 등의 글은 예고없이 차단/삭제될 \n수 있습니다.</string>
+
+
+
+    <!--사이드 쿠폰내역-->
+    <string name="side_coupon_list">쿠폰함</string>
+    <string name="side_coupon_register">쿠폰 등록하기</string>
+
+    <!--사이드 자주묻는 질문-->
+    <string name="side_question_list">자주묻는 질문</string>
+    <string name="side_one_one_question">1:1문의하기</string>
+
+    <!--사이드 고객센터-->
+    <string name="side_customercenter_list">고객 센터</string>
+
+    <!--사이드 주문내역-->
+    <string name="activity_order_history_one_month">1개월</string>
+    <string name="activity_order_history_three_month">3개월</string>
+    <string name="activity_order_history_six_month">6개월</string>
+    <string name="activity_order_history_period_check">기간 조회</string>
+    <string name="activity_order_history_swung_dash">~</string>
+    <string name="fragment_order_history_empty_icon">OrderHistory Empty</string>
+    <string name="item_order_history_store_thumbnail">Store Thumbnail</string>
+    <string name="item_order_history_store_menu_title">메뉴</string>
+    <string name="item_order_history_order_type_order_wait">접수 대기</string>
+    <string name="item_order_history_order_type_order_reception">주문 접수</string>
+    <string name="item_order_history_order_type_delivery_reception">배달 완료</string>
+    <string name="item_order_history_order_type_take_out_reception">포장 완료</string>
+    <string name="item_order_history_order_type_reservation_reception">예약 완료</string>
+    <string name="item_order_history_order_type_client_cancel">취소(고객)</string>
+    <string name="item_order_history_order_type_store_cancel">취소(매장)</string>
+    <string name="item_order_history_review_write_ic">리뷰 작성 아이콘</string>
+    <string name="item_order_history_review_write_date">리뷰 작성하기 (%d일 남음)</string>
+    <string name="side_menu_order_title">주문 내역</string>
+    <string name="side_menu_order_cancel">취소 내역</string>
+    <string name="side_menu_order_list_empty_title_1">비회원 주문 내역은 30일 동안만 확인할 수 있습니다.</string>
+    <string name="side_menu_order_list_empty_title_2">앱을 삭제하면 비회원 주문 내역을 확인할 수 없습니다.</string>
+    <string name="side_menu_order_list_empty_content">주문 내역이 없습니다.</string>
+
+    <!-- 주문 내역 상세 -->
+    <string name="activity_order_detail_history_title">주문 내역 상세</string>
+    <string name="activity_order_detail_history_order_cancel">주문 취소하기</string>
+    <string name="activity_order_detail_history_again_order">다시 주문하기</string>
+    <string name="activity_order_detail_history_order_info_title">주문 정보</string>
+    <string name="activity_order_detail_history_order_cancel_title">주문 취소 사유</string>
+    <string name="activity_order_detail_history_order_number">주문 번호</string>
+    <string name="activity_order_detail_history_order_cancel_reason">취소 사유</string>
+    <string name="activity_order_detail_history_order_time">주문 시간</string>
+    <string name="activity_order_detail_history_order_method">주문 방법</string>
+    <string name="activity_order_detail_history_order_amount">주문 금액</string>
+    <string name="activity_order_detail_history_order_history">주문 내역</string>
+    <string name="activity_order_detail_history_order_total">주문 합계</string>
+    <string name="activity_order_detail_history_sale_amount">할인 금액</string>
+    <string name="activity_order_detail_history_delivery_price_title">배달료</string>
+    <string name="activity_order_detail_history_payment_method">결제 수단</string>
+    <string name="activity_order_detail_history_payment_amount">결제 금액</string>
+    <string name="activity_order_detail_history_payment_reserve">적립금</string>
+    <string name="activity_order_detail_history_address">주소</string>
+    <string name="activity_order_detail_history_contact_information">연락처</string>
+    <string name="activity_order_detail_history_requested_term">요청사항</string>
+    <string name="activity_order_detail_history_moa_point_title">모아 포인트</string>
+    <string name="activity_order_detail_history_coupon">쿠폰</string>
+    <string name="activity_order_detail_history_store_sale">매장 할인</string>
+    <string name="activity_order_detail_default_price">%s원</string>
+    <string name="activity_order_detail_reserve_unit">%s P</string>
+    <string name="activity_order_detail_sale_amount_point_coupon_price">- %s 원</string>
+    <string name="item_order_detail_history_product_name_default_option">%s %s (%d)</string>
+    <string name="item_order_detail_history_product_name_single">%s (%d)</string>
+    <string name="item_order_detail_history_add_product_product_name_single"> - 옵션 %s</string>
+    <string name="item_order_detail_history_product_price_unit">%s원</string>
+
+    <!--사이드 주문내역 상세 할인 금액부분-->
+    <string name="moa">(쿠폰) <font color="#ff7928">-7000원</font></string>
+
+    <!-- Permission Check -->
+    <string name="msg_permission_denied">권한이 설정되지 않았습니다.</string>
+    <string name="msg_detail_permission_denied">해당 기능 사용을 위해 권한이 필요합니다.\n\n[설정] > [권한]에서 허용으로 변경해 주세요.</string>
+    <string name="msg_guide_permission_approve">[설정] > [권한] 에서 권한을 허용할 수 있습니다.</string>
+
+    <!--사이드메뉴 글자수 체크-->
+    <string name="iptStrSize">%d/100 자</string>
+    <string name="sideversion">현재 버전 <font color="#000000">1.0.1.5</font></string>
+    <string name="sideversionnew">최신 버전 <font color="#000000">1.0.1.6</font></string>
+    <string name="latest_version">최신 버전 %s</string>
+    <string name="current_version">현재 버전 %s</string>
+
+    <!--사이드 메뉴 회원탈퇴-->
+    <string name="side_memberout">     모아 APP에서 탈퇴 시 사용하고 계신 이메일 아이디(<font color="#ff7928">sanoleuser@email.com</font>)의 회원정보 및 서비스 이용 기록이 모두 삭제되며 복구되지 않습니다.(단, 결제 정보가 있는 경우, 전자상거래 등에서의 소비자 보호에 관한 법률에 따라 계약 또는 청약철회에 관한기록, 대금결제 및 재화 등의 공급에 관한 기록은 5년간 보존됩니다.)</string>
+
+    <!-- 사이드 매뉴 리뷰 작성 -->
+    <string name="reviewwrite">매장에 대한 리뷰를 작성해 주세요.<br />허위 리뷰, 광고, 욕설, 비방, 도배 등의 글은 예고없이 차단/삭제될 <br />수 있습니다.</string>
+    <!-- 사용자 인증 -->
+    <string name="msg_non_member_login_success">비회원 로그인 성공</string>
+    <string name="msg_non_member_login_fail">비회원 로그인 실패</string>
+    <string name="msg_registered_id_exists">등록된 ID가 존재합니다.</string>
+    <string name="msg_pin_register_success">PIN 등록 성공</string>
+    <string name="msg_pin_register_fail">PIN 등록 실패</string>
+    <string name="msg_pin_login_success">로그인이 완료되었습니다.</string>
+    <string name="msg_pin_login_fail">PIN 로그인 실패</string>
+    <string name="msg_fingerprint_already_registered">지문이 이미 등록되었습니다.</string>
+    <string name="msg_fingerprint_register_success">지문 등록 성공</string>
+    <string name="msg_fingerprint_register_fail">지문 등록 실패</string>
+    <string name="msg_fingerprint_login_fail">지문 로그인 실패</string>
+    <string name="msg_fingerprint_login_success">지문 로그인 성공</string>
+    <string name="msg_auth_token_not_validate">인증 토큰이 유효하지 않습니다.</string>
+    <string name="msg_logout_complete">로그아웃 성공</string>
+    <string name="msg_logout_fail">로그아웃 실패</string>
+    <string name="msg_reset_pin_success">PIN 재설정 성공</string>
+    <string name="msg_reset_pin_fail">PIN 재설정 실패</string>
+    <string name="msg_change_pin_success">PIN 변경 성공</string>
+    <string name="msg_change_pin_fail">PIN 변경 실패</string>
+    <string name="msg_unregister_member_success">회원탈퇴 성공하였습니다.</string>
+    <string name="msg_unregister_member_fail">회원탈퇴 실패하였습니다.</string>
+    <string name="msg_card_delete_success">카드가 삭제 되었습니다.</string>
+    <string name="msg_nonce_verify_fail">Nonce 검증 실패</string>
+    <string name="msg_password_change_success">비밀번호 변경 성공</string>
+    <string name="msg_password_change_fail">비밀번호 변경 실패</string>
+    <string name="msg_wallet_init_password_success">전자지갑 비밀번호 초기화 성공</string>
+    <string name="msg_wallet_init_password_fail">전자지갑 비밀번호 초기화 실패</string>
+    <string name="msg_wallet_init_date_of_birth_not_validate">생년월일이 일치하지 않습니다.</string>
+
+    <!-- 매장 페이지 리뷰 -->
+    <string name="user_coment">역시 굽네 기름빠져서 먹을때마다 담백하고 부드러운 맛에 놀랍니다!/n많이 파세요!!</string>
+    <string name="master_coment">안녕하세요. 고객님/n맛있게 드셨다니 저도 매우 기쁘네요. 다음에는 서비스도 더 팍팍/n드리도록 할게요~! 감사합니다.^^</string>
+
+    <!-- [외식] 상세화면 start -->
+    <string name="eatout_store_detail_review">리뷰</string>
+    <string name="eatout_store_detail_visit">방문</string>
+
+    <string name="eatout_store_detail_tab_review_write">리뷰작성</string>
+
+    <string name="eatout_store_detail_search_walk">길 찾기</string>
+    <string name="eatout_store_detail_search_navi">네비게이션</string>
+    <string name="eatout_store_detail_tab_copy_addr">주소복사</string>
+
+    <string name="eatout_store_detail_business_info">영업정보</string>
+    <string name="eatout_store_detail_business_time_header">매일 오전</string>
+    <string name="eatout_store_detail_business_time">영업 시간</string>
+    <string name="eatout_store_detail_last_order">라스트 오더</string>
+    <string name="eatout_store_detail_closing_day">휴무일</string>
+    <string name="eatout_store_detail_phone_number">전화번호</string>
+
+    <string name="eatout_store_detail_common_more">더보기 ></string>
+    <string name="eatout_store_detail_store_notice">매장 알림</string>
+    <string name="eatout_store_detail_store_notice_content">%s 입니다.\n방문해 주셔서 감사합니다.</string>
+    <string name="eatout_store_detail_menu_title">대표 메뉴</string>
+    <string name="eatout_store_detail_menu_list_empty">대표 메뉴가 없습니다.</string>
+    <string name="eatout_store_detail_recently_review">최근 리뷰</string>
+    <string name="eatout_store_detail_common_empty_info">해당 정보가 없습니다.</string>
+    <string name="call_permission_denied">"전화 접근 권한이 필요합니다.\n\n[설정] > [권한]에서 허용으로 변경해 주세요.</string>
+    <string name="copy_clip_baord">주소가 복사되었습니다.</string>
+    <string name="common_eat_out_store_review_owner">사장님</string>
+    <string name="review_write">리뷰 작성하기</string>
+    <string name="review_taste_score">맛</string>
+    <string name="review_amount_score">양</string>
+    <string name="review_delivery_score">배달</string>
+    <string name="review_service_score">서비스</string>
+    <string name="review_modify">수정</string>
+    <string name="review_delete">삭제</string>
+    <string name="review_write_count_header">작성한 리뷰</string>
+    <!-- [외식] 상세화면 end-->
+
+    <!-- 모아 PAY 비밀번호 설정-->
+    <string name="payment_password_title">GOEAT PAY 비밀번호 설정</string>
+    <string name="payment_password_content_1">결제 비밀번호 설정</string>
+    <string name="payment_password_content_2">결제 비밀번호로 사용할 숫자 6자리를 등록해 주세요.</string>
+    <string name="payment_password_check_pw">비밀번호 확인</string>
+    <string name="payment_password_card_nick_name_setting_title1">카드 닉네임 설정</string>
+    <string name="payment_password_card_nick_name_setting_title2">등록한 카드를 구분하기 위한 카드 닉네임을 등록해 주세요.</string>
+    <string name="payment_password_card_nick_name_title">닉네임</string>
+    <string name="payment_password_card_nick_name_input_hint">닉네임을 입력해 주세요.</string>
+    <string name="payment_password_register">등록하기</string>
+
+    <string name="payment_reset_password_title">GOEAT PAY 설정</string>
+    <string name="payment_reset_password_sub_title">결제 비밀번호 재설정</string>
+    <string name="payment_reset_password_current_pw">현재 비밀번호</string>
+    <string name="payment_reset_password_update">변경하기</string>
+
+    <!-- 메인 탭 월렛 -->
+    <string name="wallet_main_login_content_1">현재까지 누적된 적립금은 회원 가입 시 발급되는\n전자지갑을 통해 사용하실 수 있습니다.</string>
+    <string name="wallet_main_login_content_2">또한, GOEAT 회원은 특별 할인 쿠폰 및 다양한\n혜택을 누리실 수 있습니다.</string>
+    <string name="wallet_card_desc">쉽고 빠른 GOEAT PAY에 신규 카드를 등록하시면\n간편한 인증으로 초 스피드 결제가 가능합니다.</string>
+    <string name="wallet_stand_by_point">활성 예정:</string>
+    <string name="wallet_main_wallet_address_copy">지갑 주소가 복사되었습니다.</string>
+
+
+    <!-- 메인 탭 월렛 > 포인트 내역 -->
+    <string name="wallet_point_histoy_title">포인트 내역</string>
+    <string name="wallet_point_histoy_goeat_point_title">GOEAT POINT</string>
+    <string name="wallet_point_histoy_goeat_use_able_point">사용 가능 포인트</string>
+    <string name="wallet_point_histoy_goeat_stand_by_point">활성 예정 포인트</string>
+    <string name="wallet_point_histoy_goeat_filter_title">적립 / 사용내역</string>
+    <string name="wallet_point_histoy_goeat_filter_save">적립</string>
+    <string name="wallet_point_histoy_goeat_filter_use">사용</string>
+    <string name="wallet_point_p">%s P</string>
+    <string name="wallet_point_w">( &#8361;%s )</string>
+    <string name="wallet_coin_moa">%s MOA</string>
+    <string name="wallet_point_history_list_empty_content">내역이 없습니다.</string>
+    <string name="point_use_check">위 내용을 확인하였으며 결제에 동의합니다.</string>
+
+    <!-- 메인 탭 월렛  > 적립/사용내역 (MoaCoin)-->
+    <string name="wallet_point_exchange_title">포인트 전환</string>
+    <string name="wallet_point_exchange_moa_coin">보유한 MOA</string>
+    <string name="wallet_point_exchange_point">보유한 GOEAT POINT</string>
+    <string name="wallet_point_exchange_sub_title_ratio">전환 비율</string>
+    <string name="wallet_point_exchange_one_day_limit">1일 전환한도</string>
+    <string name="wallet_point_exchange_moa">전환할 MOA</string>
+    <string name="wallet_point_exchange_edit_text_hint">최소 1.0 MOA</string>
+    <string name="wallet_point_exchange_max">최대</string>
+    <string name="wallet_point_exchange_fee">전환 수수료</string>
+    <string name="wallet_point_exchange_to_be_point">전활될 포인트</string>
+    <string name="wallet_point_exchange_terms_text">포인트 전환 안내를 읽고 동의합니다.</string>
+    <string name="wallet_point_exchange_toast_msg_nothing_moa_coin">보유하신 코인이 없습니다.</string>
+    <string name="wallet_point_exchange_toast_msg_input_moa_coin">최소 1.0 Moa 이상을 입력해주세요.</string>
+    <string name="wallet_point_exchange_toast_msg_nothing_moa_coin_less">수수료 결제 코인이 부족합니다.</string>
+    <string name="wallet_point_exchange_toast_msg_success">포인트 전환이 완료되었습니다.</string>
+
+    <string name="wallet_point_exchange_eat_out_point">보유한 GOEAT POINT</string>
+    <string name="wallet_point_exchange_terms">전문보기</string>
+    <string name="wallet_point_exchange_terms_webview_title">포인트 전환 안내</string>
+    <string name="wallet_point_exchange_check_terms_agree">포인트 전환 안내 동의가 필요합니다.</string>
+    <string name="wallet_point_exchange_over_the_limit">1일 전환한도를 초과하였습니다.</string>
+    <string name="wallet_point_exchange_ratio_text_header">1MOA → </string>
+
+    <!-- 비밀번호 인증 화면-->
+    <string name="wallet_password_input_title_name">비밀번호 인증</string>
+    <string name="wallet_password_input_title_content">포인트 전환 인증을 위해\n전자지갑 비밀번호를 입력해 주세요.</string>
+    <string name="wallet_password_not_verify">전자지갑 비밀번호가 일치하지 않습니다.</string>
+
+    <!-- 검색화면 -->
+    <string name="store_search_title">검색</string>
+    <string name="logout">로그아웃</string>
+
+    <!-- fcm -->
+    <string name="default_notification_channel_id">channel_id</string>
+    <string name="push_name">푸시알림</string>
+
+    <string name="sign_sp_id_title">가입하신 계정 이메일 ID 입니다.</string>
+
+    <!-- 로그인 화면 -->
+    <string name="loginactivity_finger_login">지문인식 로그인</string>
+    <string name="loginactivity_login_to_another_method">다른 로그인 방법</string>
+    <string name="loginactivity_set_up_login_method">로그인 방법을 설정하세요.</string>
+    <string name="loginactivity_id_authentication">아이디 인증</string>
+    <string name="loginactivity_finger_authentication">지문 인증</string>
+    <string name="loginactivity_first_visit">처음 방문이신가요?</string>
+    <string name="loginactivity_register">회원가입</string>
+    <string name="loginactivity_login_fail_msg">이메일아이디 또는 비밀번호가 일치하지 않습니다.</string>
+    <string name="loginactivity_empty_email">이메일을 입력해주세요.</string>
+    <string name="loginactivity_empty_password">비밀번호를 입력해주세요.</string>
+    <string name="login_activity_input_email">이메일 입력</string>
+    <string name="login_activity_input_password">비밀번호 입력</string>
+    <string name="login_activity_auto_login">자동 로그인</string>
+    <string name="login_activity_id_pw_slash">" / "</string>
+
+    <!-- 비밀번호 찾기 -->
+    <string name="find_password_activity_input_new_password">영문,숫자(특수문자)를 8~20자리로 입력해 주세요.</string>
+    <string name="find_password_activity_new_password_error">영문,숫자(특수문자)를 8~20자리로 입력해 주세요.</string>
+    <string name="find_password_activity_input_new_password_check">영문,숫자(특수문자)를 8~20자리로 입력해 주세요.</string>
+    <string name="find_password_activity_error_input_email">이메일을 입력해 주세요.</string>
+
+    <!-- 계정 설정 화면 -->
+    <string name="account_setting_activity_agree_to_email_receive">이메일 수신 동의</string>
+    <string name="account_setting_activity_agree_to_email_receive_info">이메일 수신에 동의하시면 MOA 서비스의 업데이트 및 이벤트 소식을 받을 수 있습니다.</string>
+    <string name="account_setting_activity_change">변경하기</string>
+    <string name="account_setting_activity_phone_number_authentic_title">휴대전화 인증</string>
+    <string name="account_setting_activity_agree_to_sms_receive">SMS 수신 동의</string>
+    <string name="account_setting_activity_agree_to_sms_receive_info">SMS 수신에 동의하시면 GOEAT 서비스의 업데이트 및 이벤트 소식을 받을 수 있습니다.</string>
+    <string name="account_setting_activity_user_password">******</string>
+    <string name="account_setting_activity_receive_success">모아(%s)\n%s 수신 %s 처리가 완료되었습니다.</string>
+
+    <!--비회원 내문의 내역-->
+    <string name="side_nomember_ask">비회원은 이메일과 비밀번호를 입력해야\n문의 내역 조회가 가능합니다.</string>
+
+    <!--지문인증 문구-->
+    <string name="finger_print_cellphone">- 휴대 전화에 등록된 지문으로 로그인 및 결제가 가능합니다.</string>
+    <string name="finger_print_app_user">- 모아 APP은 사용자의 지문 정보를 저장하지 않습니다.</string>
+    <string name="finger_print_warring">- 계정 도용, 결제 피해 방지를 위해 반드시 본인 지문만 등록하시길 바랍니다.</string>
+    <string name="finger_print_setting">- 지문 인증은 왼쪽 상단 메뉴바 > 설정 > 지문인증 관리에서 설정 및 변경이 가능합니다.</string>
+
+    <!-- 일대일 문의 -->
+    <string name="permission_picture">사진 권한</string>
+    <string name="msg_question_success">문의 완료 되었습니다.</string>
+    <string name="msg_question_fail">문의 하기 실패 하였습니다.</string>
+    <string name="title_dialog_file_attach">파일 첨부</string>
+    <string name="msg_dialog_select_camera_or_gallery">촬영 혹은 앨범에서 선택하세요.</string>
+    <string name="title_capture">사진 촬영</string>
+    <string name="msg_permission_need_for_save_file">사진 및 파일을 저장하기 위하여 접근 권한이 필요합니다.</string>
+    <string name="title_gallery">사진 앨범</string>
+    <string name="msg_remove_attached_file">첨부 파일을 삭제하시겠습니까?</string>
+    <string name="msg_retire_because_of_img_err">이미지 처리 오류! 다시 시도해주세요.</string>
+    <string name="msg_sending_picture">사진 전송중 입니다.</string>
+
+    <!-- 즐겨찾기 -->
+    <string name="bookmarkactivity_top_toolbar_title">즐겨찾기</string>
+    <string name="bookmarkstoreholder_registered_store_list">등록된 매장 리스트입니다.</string>
+    <string name="bookmarkstoreholder_registered_store_list_ic">등록된 매장 리스트 아이콘</string>
+    <string name="bookmarkstoreholder_store_thumbnail_description">즐겨찾기 가맹점 썸네일</string>
+    <string name="bookmarkstoreholder_store_gpa_ic_description">즐겨찾기 가맹점의 평점 아이콘</string>
+    <string name="bookmarkstoreholder_store_review">리뷰 %s</string>
+    <string name="bookmarkstoreholder_store_bookmark">즐겨찾기 %s</string>
+    <string name="bookmarkstoreholder_store_remove_ic_description">즐겨찾기 가맹점 삭제 아이콘</string>
+    <string name="msg_dialog_delete_favorite_store">즐겨찾기 매장을 삭제하시겠습니까?</string>
+
+    <!-- 아이디 찾기 -->
+    <string name="activity_find_id_exist_id">해당 전화번호로 등록된 아이디가 없습니다.</string>
+
+    <!-- 서버 Key -->
+    <string name="sign_up_server_key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0rIj6+54EIiOJPnfvCoIbZP1XoW1rCGhDJDKGjPeKiT4Cq4xNyOI+biRGiLsqYoxbynDge5FbGYXcyieUjM3TG3J3WJRVrE1TruqgmyB8NdgVyOhDsnYRvNA5K+TiYemyIdhqbLinCX/pOclIiuewP1bo/TX9y0Przgn7rddK5mw3a+k1q5pjTuv5bEkshuA35iku+MuOPMSpsWE7vRNJ29jgex81jMfPm7fjMIFEwj31UCzGjsSPwpaJEPg1KYkrcWH8GTXt2LX1UncHqVwtQ5uhBdirTW3pIgxbVTUgdRQYZPaHw7UYjCCc8vAJllYBqNzZbfIz9yqqFSB81wYdQIDAQAB</string>
+
+    <!--결제 비밀번호-->
+    <string name="pay_password_title">GOEAT PAY 비밀번호 설정</string>
+
+    <!--모아페이 가입 이용동의-->
+    <string name="pay_join_agreement">GOEAT PAY 이용동의</string>
+
+    <!--하단 버튼 테마-->
+    <string name="bottom_menu_them">테마</string>
+
+    <!--사이드메뉴 설정-->
+    <string name="side_notice_alarm">설정</string>
+
+    <!--전자지갑 복원-->
+    <string name="wallet_restore_way">전자지갑 복원 절차 안내</string>
+    <string name="wallet_restore">전자지갑 복원</string>
+
+    <!--회원탈퇴 유의사항-->
+    <string name="memberout_notice">GOEAT에서 탈퇴 시 사용하고 계신 이메일 아이디에 대한 <font color="#ff5252">회원정보 및 서비스 이용기록이 모두 삭제되며 복구되지 않습니다.</font>(단, 법령에따라 개인 정보를 일정 기간 보존하여야 하는 경우, 보존 기간이 경과된 후 지체 없이 해당 개인정보를 파기합니다.)</string>
+    <string name="memberout_notice_two">회원 탈퇴 시 재가입, 임의 해지 등을 반복적으로 행하여 GOEAT이 제공하는 할인 쿠폰, 이벤트 혜택 등으로 이익을 취하거나 명의를 무단으로 사용하는 등 편법 및 불법 행위를 하는 회원을 차단하고자 GOEAT은 회원 탈퇴 후 90일간 회원의 정보를 보관합니다.</string>
+    <string name="memberout_notice_three">작성한 리뷰 및 게시물은 탈퇴 시 자동 삭제되지 않으며, 삭제를 원하는 리뷰 및 게시물이 있다면 반드시 탈퇴 전 삭제하시기 바랍니다.</string>
+    <string name="memberout_notice_four">이미 결제가 완료된 건은 탈퇴로 취소되지 않습니다.</string>
+    <string name="memberout_checkbox">"안내 사항을 모두 확인하였으며 회원 탈퇴에 동의 합니다.</string>
+    <string name="memberout_title">회원 탈퇴</string>
+    <string name="member_check_button">회원 탈퇴 안내 동의가 필요합니다.</string>
+
+    <!--내문의 내역 비회원-->
+    <string name="myquestion_nomember">비회원은 이메일과 비밀번호를 입력해야\n문의내역 조회가 가능합니다.</string>
+    <string name="myquestion_login">내 문의 내역</string>
+
+    <!--회원가입 추천인 등록 툴팁-->
+    <string name="recommend_id_explain">추천인 등록이란?</string>
+    <string name="recommend_id_contents">주문 시 추천인에게 일정 금액의 포인트가 적립됩니다. 회원가입이 완료된 후에는 추천인을 등록할 수 없습니다.</string>
+
+    <!--비회원 QR이용버튼클릭-->
+    <string name="join_member_qr">QR코드 결제를 이용하기 위해서는 로그인이 필요합니다.</string>
+    <string name="join_member_qr_title">알림</string>
+
+    <!--지문인증 로그인-->
+    <string name="finger_print_login">지문인증을 설정하기 위해서는\n로그인 후 가능 합니다.</string>
+    <string name="finger_checkbox">자동 로그인</string>
+    <string name="finger_find_id">아이디 찾기 / 비밀번호 찾기</string>
+    <string name="finger_print_set">지문인증 설정</string>
+
+</resources>

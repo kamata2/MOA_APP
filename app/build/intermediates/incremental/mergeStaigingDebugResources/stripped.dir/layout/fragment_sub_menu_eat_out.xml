@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrainSubMenuEatOutSearchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="13.3dp"
+        android:paddingBottom="13.3dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="13.3dp"
+            android:layout_marginRight="13.3dp"
+            android:background="@drawable/common_data_form_cover"
+            android:focusableInTouchMode="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <ImageView
+                android:id="@+id/ivSubMenuEatOutSearchIcon"
+                android:layout_width="17.7dp"
+                android:layout_height="17.7dp"
+                android:layout_marginStart="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/search_o"
+                />
+
+            <TextView
+                android:id="@+id/tvSubMenuEatOutSearchInput"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="6.3dp"
+                android:layout_marginEnd="6.3dp"
+                android:singleLine="true"
+                android:background="@null"
+                android:textColor="#888888"
+                android:textSize="15.3sp"
+                android:gravity="center_vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/ivSubMenuEatOutSearchIcon"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="깜짝! 놀랄 맛집 검색"
+                style="@style/MoaFont"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Type 1 : 배너 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrainSubMenuEatOutMenuType1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/constrainSubMenuEatOutSearchContainer">
+
+        <ImageView
+            android:id="@+id/ivSubMenuEatOutMenuType1Banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ad_famous_ranking_bg"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSubMenuEatOutMenuType1BannerDesc"
+            style="@style/MoaFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="1dp"
+            android:text="@string/main_activity_famous_ranking_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/main_ad_famous_store_content_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ivSubMenuEatOutMenuType1Banner"
+            app:layout_constraintTop_toTopOf="@id/ivSubMenuEatOutMenuType1Banner" />
+
+        <TextView
+            android:id="@+id/tvSubMenuEatOutMenuType1BannerDescSub"
+            style="@style/MoaFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="7.3dp"
+            tools:text="들어는 봤나? 먹어는 봤나? 한 번 맛보면 돌이킬수 없는 순례길이 시작된다! "
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintTop_toBottomOf="@id/tvSubMenuEatOutMenuType1BannerDesc" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Type 2 : 매장 리스트 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrainSubMenuEatOutMenuType2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/constrainSubMenuEatOutMenuType1">
+
+        <!-- 타이틀 영역 -->
+        <TextView
+            android:id="@+id/tvSubMenuEatOutMenuType2Title"
+            style="@style/BlackColorBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13.3dp"
+            android:textSize="16.7sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="2열 가맹점 리스트의 예시"
+            />
+
+        <LinearLayout
+            android:id="@+id/llSubMenuEatOutMenuType2TitleMore"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="0dp"
+            android:paddingEnd="13.3dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvSubMenuEatOutMenuType2Title"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvSubMenuEatOutMenuType2Title">
+
+            <TextView
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_9"
+                android:text="@string/main_activity_ad_more"
+                android:textColor="@color/zambezi"
+                android:textSize="12sp"/>
+
+            <ImageView
+                android:layout_width="6dp"
+                android:layout_height="10dp"
+                android:contentDescription="@string/main_activity_ad_more"
+                android:scaleType="fitXY"
+                android:src="@drawable/ad_more_arrow"
+                style="@style/MoaFont"/>
+        </LinearLayout>
+
+        <!-- 리스트 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerSubMenuEatOutMenuType2List"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item_common_margin_horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="@dimen/item_common_margin_horizontal"
+            android:descendantFocusability="blocksDescendants"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSubMenuEatOutMenuType2Title"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_sub_menu_eat_out_store"
+            tools:orientation="vertical"
+            tools:spanCount="2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Type 3 : 테마 리스트 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrainSubMenuEatOutMenuType3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/constrainSubMenuEatOutMenuType2">
+
+        <LinearLayout
+            android:id="@+id/llSubMenuEatOutDividerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="42.3dp"
+            >
+
+        </LinearLayout>
+
+        <!-- 타이틀 영역 -->
+        <TextView
+            android:id="@+id/tvSubMenuEatOutMenuType3Title"
+            style="@style/BlackColorBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13.3dp"
+            android:layout_marginTop="42.3dp"
+            android:textSize="16.7sp"
+            app:layout_constraintTop_toBottomOf="@id/llSubMenuEatOutDividerContainer"
+            tools:text="2열 테마의 예시" />
+
+        <!-- 리스트 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerSubMenuEatOutMenuType3List"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item_common_margin_horizontal"
+            android:layout_marginRight="@dimen/item_common_margin_horizontal"
+            android:layout_marginTop="12.7dp"
+            android:descendantFocusability="blocksDescendants"
+            android:nestedScrollingEnabled="false"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSubMenuEatOutMenuType3Title"
+            tools:listitem="@layout/item_sub_menu_eat_out_theme" />
+
+        <View
+            android:id="@+id/viewSubMenuEatOutDividerEnd"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_marginTop="19.7dp"
+            android:layout_marginBottom="43.3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#e4e4e4"
+            app:layout_constraintTop_toBottomOf="@id/recyclerSubMenuEatOutMenuType3List" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintSubMenuEatOutMenuTypeBannerTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43.7dp"
+        app:layout_constraintTop_toBottomOf="@id/constrainSubMenuEatOutMenuType3">
+
+        <ImageView
+            android:id="@+id/ivSubMenuEatOutMenuTypeBannerTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ad_famous_ranking_bg"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSubMenuEatOutMenuTypeBannerTwoDesc"
+            style="@style/MoaFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="1dp"
+            android:text="@string/main_activity_famous_ranking_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/main_ad_famous_store_content_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ivSubMenuEatOutMenuTypeBannerTwo"
+            app:layout_constraintTop_toTopOf="@id/ivSubMenuEatOutMenuTypeBannerTwo" />
+
+        <TextView
+            android:id="@+id/tvSubMenuEatOutMenuTypeBannerTwoDescSub"
+            style="@style/MoaFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="7.3dp"
+            tools:text="있을건 다 있는 화개장터처럼 맛있는 건 다 있느 우리동네 10선"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintTop_toBottomOf="@id/tvSubMenuEatOutMenuTypeBannerTwoDesc" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

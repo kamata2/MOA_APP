@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="13.3dp"
+    android:layout_marginRight="13.3dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/noti_top"
+        android:layout_width="300dp"
+        android:layout_height="13.3dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/event_noti_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="앱어워드 2018 통합 대상 수상"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginLeft="6.7dp"
+            android:background="@drawable/new_icon" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/event_noti_detail_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/noti_top"
+        android:layout_marginTop="8.3dp"
+        android:text="앱어워드 2018 통합 대상 수상"
+        android:textColor="#515151"
+        android:textSize="10.7sp" />
+
+    <ImageView
+        android:id="@+id/event_notiitem_next"
+        android:layout_width="7.7dp"
+        android:layout_height="14.3dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/arrow_2_right" />
+
+    <WebView
+        android:id="@+id/side_noti_detail_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/event_noti_detail_text2"
+        android:layout_marginTop="20dp"></WebView>
+
+    <TextView
+        android:id="@+id/side_noti_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/event_noti_detail_text2"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:paddingRight="8.3dp"
+        android:paddingBottom="20dp"
+        android:text="경축!!!!  모아 앱이 스마트앱어워드 2018 생활서비스부문 통합대상을 수상했습니다. 삭제 되어야할 텍스트뷰입니다."></TextView>
+
+</RelativeLayout>

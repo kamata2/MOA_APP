@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteSmoke"
+    android:orientation="vertical"
+    tools:context=".side_menu.settings.account.AccountSettingActivity">
+
+    <com.moaPlatform.moa.util.custom_view.CommonTitleView
+        android:id="@+id/topToolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:id="@+id/viewPhoneNumberChange"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <WebView
+        android:id="@+id/wv_init_psw"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingStart="13.3dp"
+            android:paddingEnd="13.3dp">
+
+            <TextView
+                android:id="@+id/tvEmailTitle"
+                style="@style/BlackColorBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/email_id"
+                android:textColor="@color/black"
+                android:textSize="14.3sp" />
+
+            <TextView
+                android:id="@+id/tvUserEmail"
+                style="@style/BlackColorBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvEmailTitle"
+                android:layout_marginTop="13dp"
+                android:textColorHint="@color/nobel"
+                android:textSize="20sp"
+                tools:text="asdasd@asdasd.com" />
+
+            <CheckBox
+                android:id="@+id/cbEmailReceive"
+                style="@style/CoralCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvUserEmail"
+                android:layout_marginTop="30dp"
+                android:background="@color/transparent"
+                android:text="@string/account_setting_activity_agree_to_email_receive"
+                android:textSize="13.3sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvEmailReceiveInfo"
+                style="@style/BlackColorNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cbEmailReceive"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="6.3dp"
+                android:layout_marginEnd="23.7dp"
+                android:text="@string/account_setting_activity_agree_to_email_receive_info"
+                android:textSize="12.7sp" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_below="@id/tvEmailReceiveInfo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="19.7dp"
+                android:background="@color/lightGray" />
+
+            <TextView
+                android:id="@+id/tvPasswordTitle"
+                style="@style/MoaFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:layout_marginTop="20dp"
+                android:text="@string/password"
+                android:textColor="@color/black"
+                android:textSize="14.3sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/viewPasswordGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPasswordTitle"
+                android:layout_marginTop="8.3dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etUserPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/common_edit_text_height"
+                    android:layout_marginEnd="6.7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/common_edit_text_form"
+                    android:enabled="false"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword"
+                    android:paddingStart="9dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/account_setting_activity_user_password"
+                    android:textColor="@color/matterhorn"
+                    android:textSize="13.3sp"
+                    tools:ignore="LabelFor"
+                    tools:targetApi="o" />
+
+                <Button
+                    android:id="@+id/btnPasswordChange"
+                    style="@style/CoralBoldStyle"
+                    android:layout_width="84.7dp"
+                    android:layout_height="@dimen/common_edit_text_height"
+                    android:background="@drawable/common_radius_coral_button_form"
+                    android:text="@string/account_setting_activity_change"
+                    android:textSize="13.3sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewPasswordGroupLine"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_below="@id/viewPasswordGroup"
+                android:layout_marginTop="20dp"
+                android:background="@color/lightGray" />
+
+            <TextView
+                android:id="@+id/tvPhoneTitle"
+                style="@style/BlackColorBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewPasswordGroupLine"
+                android:layout_marginTop="20dp"
+                android:text="@string/account_setting_activity_phone_number_authentic_title"
+                android:textSize="14.3sp" />
+
+            <LinearLayout
+                android:id="@+id/phone_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPhoneTitle"
+                android:layout_marginTop="8.3dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etUserPhoneNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/common_edit_text_height"
+                    android:layout_marginEnd="6.7dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/common_edit_text_form"
+                    android:enabled="false"
+                    android:importantForAutofill="no"
+                    android:inputType="phone"
+                    android:paddingStart="9dp"
+                    android:paddingEnd="0dp"
+                    android:textColor="@color/matterhorn"
+                    android:textSize="13.3sp"
+                    tools:ignore="LabelFor"
+                    tools:targetApi="o"
+                    tools:text="01077894454" />
+
+                <Button
+                    android:id="@+id/btnUserPhoneNumberChange"
+                    style="@style/CoralBoldStyle"
+                    android:layout_width="84.7dp"
+                    android:layout_height="@dimen/common_edit_text_height"
+                    android:background="@drawable/common_radius_coral_button_form"
+                    android:text="@string/account_setting_activity_change"
+                    android:textSize="13.3sp" />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cbSmsReceive"
+                style="@style/CoralCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phone_layout"
+                android:layout_marginTop="12dp"
+                android:background="@color/transparent"
+                android:text="@string/account_setting_activity_agree_to_sms_receive"
+                android:textColor="@color/black"
+                android:textSize="13.3sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSmsReceiveInfo"
+                style="@style/BlackColorNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cbSmsReceive"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="9.7dp"
+                android:text="@string/account_setting_activity_agree_to_sms_receive_info"
+                android:textSize="12.7sp" />
+
+            <Button
+                android:id="@+id/init_wallet_psw"
+                style="@style/CoralBoldStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/common_edit_text_height"
+                android:layout_below="@id/tvSmsReceiveInfo"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="12dp"
+                android:background="@drawable/common_radius_coral_button_form"
+                android:onClick="initWalletPsw"
+                android:text="지갑 비밀번호 초기화"
+                android:textSize="13.3sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

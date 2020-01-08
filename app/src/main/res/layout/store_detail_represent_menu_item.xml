@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveImageView
+        android:id="@+id/lvRepresentMenuThumbNail"
+        android:layout_width="match_parent"
+        android:layout_height="363px"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:scaleType="fitXY"
+        android:layout_marginTop="34px"
+        android:layout_marginLeft="15px"
+        android:layout_marginRight="15px"/>
+
+    <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+        android:id="@+id/txtMenuTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="굽네 허니멜로"
+        app:responsiveTextSize="34"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/lvRepresentMenuThumbNail"
+        app:layout_constraintLeft_toLeftOf="@+id/lvRepresentMenuThumbNail"
+        android:layout_marginLeft="12px"
+        android:layout_marginTop="21px"/>
+
+    <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+        android:id="@+id/txtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:responsiveTextSize="34"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="18,000원"
+        app:layout_constraintLeft_toLeftOf="@+id/txtMenuTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtMenuTitle"
+        android:layout_marginTop="13px" />
+
+</com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveConstraintLayout>

@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.moaPlatform.moaStaging"
+    android:targetSandboxVersion="2"
+    android:versionCode="1022"
+    android:versionName="1.0.2.2" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="28" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- NETWORK_PROVIDER 접근 권한 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- GPS_PROVIDER 접근 권한 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.screen.landscape"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+
+    <application
+        android:name="androidx.multidex.MultiDexApplication"
+        android:allowBackup="false"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+
+        <activity
+            android:name="com.moaPlatform.moa.intro.IntroActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/kakaolink_host"
+                    android:scheme="@string/kakao_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.moaPlatform.moa.payment.StartEasyPayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.account.FindIdActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.moaPlatform.moaStaging.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name="com.moaPlatform.moa.bottom_menu.main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.side_menu.SideMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.delivery_menu.store_list.StoreListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.top_menu.location.LocationSettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.moaPlatform.moa.delivery_menu.store_detail.StoreDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.bottom_menu.wallet.wallet_main.view.WalletMainActivity"
+            android:screenOrientation="portrait" /> <!-- 메인 탭 > 월렛 -->
+        <activity
+            android:name="com.moaPlatform.moa.bottom_menu.wallet.wallet_main.view.WalletSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.bottom_menu.wallet.wallet_main.view.WalletAgreeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.bottom_menu.wallet.wallet_main.view.WalletSettingPWActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.bottom_menu.wallet.wallet_main.view.IdentityActivity"
+            android:screenOrientation="portrait" /> <!-- 전화번호 인증 화면 -->
+        <activity
+            android:name="com.moaPlatform.moa.bottom_menu.badge.badge_main.view.BadgeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.online_payment.order_payment.OrderPaymentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.moaPlatform.moa.online_payment.order_payment.WalletPayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.delivery_menu.store_product.StoreProductActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.bottom_menu.wallet.barcode.QrCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.bottom_menu.wallet.barcode.QrMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.bottom_menu.wallet.barcode.CustomQrScanningActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.bottom_menu.wallet.barcode.QrCodeInputDataActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.side_menu.usernotice.UserNoticeActivity"
+            android:screenOrientation="portrait" /> <!-- 카드등록 웹뷰 -->
+        <activity
+            android:name="com.moaPlatform.moa.bottom_menu.shopping_cart.main.ShoppingCartActivity"
+            android:screenOrientation="portrait" /> <!-- 장바구니 상세 -->
+        <activity
+            android:name="com.moaPlatform.moa.bottom_menu.shopping_cart.detail.ShoppingCartDetailActivity"
+            android:screenOrientation="portrait" /> <!-- 사이드 메뉴 -->
+        <!-- 사이드 메뉴 메인 -->
+        <activity
+            android:name="com.moaPlatform.moa.side_menu.order.detail.view.OrderDetailHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.activity.ReviewModifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.auth.sign_up.controller.SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.payment.CardRegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.side_menu.favorite.BookmarkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.side_menu.coupon.CouponListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.side_menu.order.OrderHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.side_menu.review_view.MyReviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.side_menu.eventnotice.view.event.EventMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.side_menu.coupon.CouponRegisterMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.side_menu.settings.noticeagree.NoticeAgreeSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.side_menu.settings.account.FingerPrintSettingMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.delivery_menu.eatout_store_detail.EatOutStoreDetailActivity"
+            android:screenOrientation="portrait" /> <!-- 외식 상세화면 -->
+        <activity
+            android:name="com.moaPlatform.moa.delivery_menu.eatout_store_list.EatOutStoreListActivity"
+            android:screenOrientation="portrait" /> <!-- 외식 상점 리스트 화면 -->
+        <activity
+            android:name="com.moaPlatform.moa.delivery_menu.eatout_store_detail.EatOutStoreDaumMapActivity"
+            android:screenOrientation="portrait" /> <!-- 외식 상세 > 지도 화면 -->
+        <activity
+            android:name="com.moaPlatform.moa.delivery_menu.eatout_store_detail.EatOutStoreProductListActivity"
+            android:screenOrientation="portrait" /> <!-- 외식 상세 > 상품 리스트 화면 -->
+        <activity
+            android:name="com.moaPlatform.moa.delivery_menu.eatout_store_detail.EatOutStoreReviewActivity"
+            android:screenOrientation="portrait" /> <!-- 외식 상세 > 리뷰 리스트 화면 -->
+        <activity
+            android:name="com.moaPlatform.moa.side_menu.eventnotice.view.event.EventSubWebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.side_menu.customercenter.faq.view.FaqMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.side_menu.customercenter.CustomerCenterMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.side_menu.customercenter.myquestion.view.OneOnOneQuestionMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.side_menu.customercenter.myquestion.view.MyQuestionMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.activity.ReviewWriteMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.side_menu.profile.ProfileChangeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.auth.sign_up.controller.LogInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.auth.sign_up.controller.LogInFingerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.auth.sign_up.controller.LogInFingerBeforeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.side_menu.settings.account.AccountSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.side_menu.settings.account.PasswordChangeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.activity.EventWebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.online_payment.order_payment.PaymentCouponActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.top_menu.search.StoreSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.bottom_menu.theme.ThemeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.wallet.WalletRestoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.payment.MoaPayPswInitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.bottom_menu.wallet.wallet_main.view.PaymentResetPasswordActivity"
+            android:screenOrientation="portrait" /> <!-- GOEAT PAY 비밀번호 재설정화면 -->
+        <activity
+            android:name="com.moaPlatform.moa.bottom_menu.wallet.wallet_main.view.PaymentSearchPasswordActivity"
+            android:screenOrientation="portrait" /> <!-- GOEAT PAY 비밀번호 재설정화면 -->
+        <activity
+            android:name="com.moaPlatform.moa.bottom_menu.wallet.wallet_main.view.WalletPointHistoryActivity"
+            android:screenOrientation="portrait" /> <!-- 포인트 내역 -->
+        <activity
+            android:name="com.moaPlatform.moa.auth.PinResetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.auth.sign_up.FindPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.moaPlatform.moa.bottom_menu.wallet.wallet_main.view.WalletPointExchangeActivity"
+            android:screenOrientation="portrait" /> <!-- 월렛 > 포인트 전환 -->
+
+        <activity
+            android:name="com.moaPlatform.moa.bottom_menu.wallet.wallet_main.view.WalletPasswordInputActivity"
+            android:screenOrientation="portrait" /> <!-- 월렛 > 포인트 전환 > 비밀번호 인증 -->
+
+
+        <!-- <activity -->
+        <!-- android:name=".side_menu.profile.MemberOutNotice" -->
+        <!-- android:screenOrientation="portrait" />&lt;!&ndash;회원탈퇴 유의사항&ndash;&gt; -->
+
+
+        <!-- <activity -->
+        <!-- android:name=".side_menu.customercenter.myquestion.MyQuestionNomember" -->
+        <!-- android:screenOrientation="portrait" />&lt;!&ndash;비회원 문의내역&ndash;&gt; -->
+
+        <service
+            android:name="com.moaPlatform.moa.notification.MyFirebaseMessagingService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+            <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimary" />
+
+        <activity
+            android:name="com.gun0912.tedpermission.TedPermissionActivity"
+            android:configChanges="mcc|mnc|locale|keyboard|keyboardHidden|screenLayout|fontScale|uiMode|orientation|screenSize|layoutDirection"
+            android:screenOrientation="unspecified"
+            android:theme="@style/Theme.Transparent.Permission" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:clearTaskOnLaunch="true"
+            android:screenOrientation="sensorLandscape"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <!--
+             FirebaseMessagingService performs security checks at runtime,
+             but set to not exported to explicitly avoid allowing another app to call it.
+        -->
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="false" >
+            <intent-filter android:priority="-500" >
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.moaPlatform.moaStaging.firebaseinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" >
+        </receiver>
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.INSTALL_PACKAGES" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="com.moaPlatform.moaStaging.lifecycle-process"
+            android:exported="false"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>

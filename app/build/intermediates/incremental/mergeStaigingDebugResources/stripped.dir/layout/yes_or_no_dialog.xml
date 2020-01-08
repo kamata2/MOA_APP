@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/common_dialog_form_cover">
+
+    <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveConstraintLayout
+        android:id="@+id/titleForm"
+        android:layout_width="940px"
+        android:layout_height="110px">
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveImageView
+            android:id="@+id/btnClose"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:background="@drawable/btn_x_k"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="40px"/>
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:responsiveTextSize="40"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="@string/yes_or_no_dialog_title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveConstraintLayout
+            android:id="@+id/hiddenLine"
+            android:layout_width="860px"
+            android:layout_height="1px"
+            android:background="@color/transparent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+        </com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            app:layout_constraintLeft_toLeftOf="@+id/hiddenLine"
+            app:layout_constraintRight_toRightOf="@+id/hiddenLine"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/pinkSwan">
+        </android.support.constraint.ConstraintLayout>
+
+    </com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveConstraintLayout>
+
+    <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="73px"
+        app:responsiveTextSize="40"
+        android:text="@string/yes_or_no_dialog_content_gps_on"
+        android:textColor="@color/matterhorn"
+        app:layout_constraintLeft_toLeftOf="@+id/titleForm"
+        app:layout_constraintRight_toRightOf="@+id/titleForm"
+        app:layout_constraintTop_toBottomOf="@+id/titleForm"/>
+
+    <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+        android:id="@+id/dialogYes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yes_or_no_dialog_yes"
+        android:textStyle="bold"
+        app:responsiveTextSize="40"
+        android:textColor="@color/summerSky"
+        app:layout_constraintTop_toBottomOf="@+id/content"
+        app:layout_constraintRight_toRightOf="@+id/titleForm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="54px"
+        android:layout_marginRight="80px"
+        android:layout_marginBottom="74px"/>
+
+    <com.moaPlatform.moa.util.custom_view.temp.Responsive.ResponsiveTextView
+        android:id="@+id/dialogNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yes_or_no_dialog_no"
+        android:textStyle="bold"
+        app:responsiveTextSize="40"
+        android:textColor="@color/summerSky"
+        app:layout_constraintTop_toTopOf="@+id/dialogYes"
+        app:layout_constraintRight_toLeftOf="@+id/dialogYes"
+        android:layout_marginRight="80px"/>
+
+</android.support.constraint.ConstraintLayout>

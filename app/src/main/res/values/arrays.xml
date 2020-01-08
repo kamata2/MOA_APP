@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="payment">
+        <item >MOA COIN</item>
+        <item >MOA POINT</item>
+    </string-array>
+    <string-array name="oneOnOneQuestionTypes">
+        <item>회원 정보</item>
+        <item>주문 정보</item>
+        <item>결제/취소</item>
+        <item>포인트</item>
+        <item>쿠폰 문의</item>
+        <item>리뷰 문의</item>
+        <item>이용 문의</item>
+        <item>기타</item>
+        <item>제휴 문의</item>
+    </string-array>
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.moaPlatform.moa.util.custom_view.CommonTitleView
+        android:id="@+id/commonTitleMyReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    
+    <RelativeLayout
+        android:id="@+id/no_question"
+        android:layout_below="@id/commonTitleMyReview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:visibility="gone"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            >
+        
+        <ImageView
+            android:layout_width="92.7dp"
+            android:layout_height="79.3dp"
+            android:background="@drawable/plate"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="문의 내역이 없습니다"
+            android:textSize="15sp"
+            android:textColor="@color/gray98"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            style="@style/MoaFont"
+            />
+        </LinearLayout>
+        
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/questionRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_tolbar"
+        android:layout_marginTop="-2dp"
+        tools:listitem="@layout/side_customercenter_my_row"></androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".delivery_menu.eatout_store_detail.EatOutStoreDetailActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarEatOutStoreDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/whiteSmoke">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_collapseMode="parallax"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintEatOuitStoreDeatilTopInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <!-- 가게 메인 배경-->
+                    <ImageView
+                        android:id="@+id/ivEatOutStoreDetailTopInfoBg"
+                        android:layout_width="match_parent"
+                        android:layout_height="89dp"
+                        android:background="@color/white"
+                        android:contentDescription="@string/underline_description"
+                        android:scaleType="fitXY"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- 가게 정보 그룹-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constrainEatOutStoreDetailTopInfo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:paddingBottom="23.3dp"
+                        android:layout_marginTop="90dp"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/ivEatOutStoreDetailTopInfoBg">
+
+                        <!-- 가게 이름-->
+                        <TextView
+                            android:id="@+id/tvEatOutStoreDetailStoreName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="49.7dp"
+                            android:text="더미 화면입니다."
+                            android:textColor="@color/black"
+                            android:textSize="26.7sp"
+                            style="@style/MoaFont"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!-- 가게 등급 2019-05-23 미사용 처리(기획) -->
+                        <ImageView
+                            android:id="@+id/ivEatOutStoreDetailGrade"
+                            android:layout_width="17.7dp"
+                            android:layout_height="17.7dp"
+                            android:layout_marginEnd="5dp"
+                            android:contentDescription="@string/underline_description"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/best_store_ic"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="@id/tvEatOutStoreDetailStoreName"
+                            app:layout_constraintRight_toLeftOf="@id/tvEatOutStoreDetailStoreName"
+                            app:layout_constraintTop_toTopOf="@id/tvEatOutStoreDetailStoreName" />
+
+                        <LinearLayout
+                            android:id="@+id/llEatOutStoreDetailCnt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            style="@style/MoaFont"
+                            app:layout_constraintTop_toBottomOf="@id/tvEatOutStoreDetailStoreName">
+
+                            <!-- 리뷰-->
+                            <TextView
+                                style="@style/MoaFont"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/eatout_store_detail_review"
+                                android:textColor="#414141"
+                                android:textSize="13.7sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toLeftOf="@id/tvEatOutStoreDetailReviewCnt"
+                                app:layout_constraintTop_toBottomOf="@id/tvEatOutStoreDetailStoreName" />
+
+                            <TextView
+                                android:id="@+id/tvEatOutStoreDetailReviewCnt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3.7dp"
+                                android:textColor="#414141"
+                                android:textSize="13.7sp"
+                                tools:text="232" />
+                            <View
+                                android:layout_width="0.3dp"
+                                android:layout_height="8dp"
+                                android:background="@color/linkWater"
+                                android:layout_marginLeft="11dp"
+                                />
+
+                            <!-- 즐겨 찾기-->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="11dp"
+                                android:text="@string/bookmark"
+                                android:textColor="#414141"
+                                android:textSize="13.7sp"
+                                style="@style/MoaFont"/>
+
+                            <TextView
+                                android:id="@+id/tvEatOutStoreDetailReviewBookMarkCnt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3.7dp"
+                                android:textColor="#414141"
+                                android:textSize="13.7sp"
+                                tools:text="232"
+                                style="@style/MoaFont"/>
+
+                            <View
+                                android:layout_width="0.3dp"
+                                android:layout_height="8dp"
+                                android:background="@color/linkWater"
+                                android:layout_marginLeft="11dp"
+                                />
+
+                            <!-- 방문 -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="11dp"
+                                android:text="@string/eatout_store_detail_visit"
+                                android:textColor="#414141"
+                                android:textSize="13.7sp"
+                                style="@style/MoaFont"/>
+
+                            <TextView
+                                android:id="@+id/tvEatOutStoreDetailVisitCnt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3.7dp"
+                                android:textColor="#414141"
+                                android:textSize="13.7sp"
+                                tools:text="50"
+                                style="@style/MoaFont"/>
+                        </LinearLayout>
+
+                        <!-- 식당 평점-->
+                        <TextView
+                            android:id="@+id/tvEatOutStoreDetailRatingPoint"
+                            style="@style/BlackColorBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="21dp"
+                            android:textSize="23.5sp"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/ratingBarEatOutStoreDetailStar"
+                            app:layout_constraintTop_toBottomOf="@id/llEatOutStoreDetailCnt"
+                            tools:text="4.0" />
+
+                        <RatingBar
+                            android:id="@+id/ratingBarEatOutStoreDetailStar"
+                            android:layout_width="95dp"
+                            android:layout_height="18dp"
+                            android:layout_marginStart="5dp"
+                            android:isIndicator="true"
+                            android:numStars="5"
+                            android:stepSize="1"
+                            android:rating="2"
+                            app:layout_constraintBottom_toBottomOf="@id/tvEatOutStoreDetailRatingPoint"
+                            app:layout_constraintLeft_toRightOf="@+id/tvEatOutStoreDetailRatingPoint"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/llEatOutStoreDetailCnt"
+                            app:layout_constraintTop_toTopOf="@id/tvEatOutStoreDetailRatingPoint"
+                            style="@style/customRating"
+                            tools:targetApi="lollipop" />
+
+                        <TextView
+                            android:id="@+id/tvEatOutStoreDetailDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="10.7sp"
+                            style="@style/MoaFont"
+                            app:layout_constraintTop_toBottomOf="@id/ratingBarEatOutStoreDetailStar"
+                            tools:text="강남역맛집 매콤 소갈비가 들어간 강남역파스타" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <!-- 가게 이미지-->
+                    <ImageView
+                        android:id="@+id/ivEatOutStoreDeatilThumb"
+                        android:layout_width="68.3dp"
+                        android:layout_height="68.3dp"
+                        android:contentDescription="@string/underline_description"
+                        android:scaleType="fitXY"
+                        android:layout_marginTop="48dp"
+                        android:src="@drawable/menu_icon_circle"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/ivEatOutStoreDetailTopInfoBg" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerEatOutStoreDetailImageList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        app:layout_constraintTop_toBottomOf="@id/constrainEatOutStoreDetailTopInfo"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <RelativeLayout
+                    android:id="@+id/rlEatOutStoreDetailCall"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="11.7dp"
+                        android:background="@drawable/call" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10.7dp"
+                        android:gravity="center"
+                        android:textColor="#a7a7a7"
+                        android:textSize="10.7sp"
+                        android:text="@string/phone_call"
+
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.7dp"
+                    android:layout_height="25dp"
+                    android:background="#eaeaea" />
+
+                <RelativeLayout
+                    android:id="@+id/rlEatOutStoreDetailBookMark"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <CheckBox
+                        android:id="@+id/cbEatOutStoreDetailBookMark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="14.7dp"
+                        android:focusableInTouchMode="false"
+                        android:checked="false"
+                        android:button="@drawable/select_eat_out_store_detail_bookmark_checkbox"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10.7dp"
+                        android:gravity="center"
+                        android:textColor="#a7a7a7"
+                        android:textSize="10.7sp"
+                        android:text="@string/bookmark"
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.7dp"
+                    android:layout_height="25dp"
+                    android:background="#eaeaea" />
+
+                <RelativeLayout
+                    android:id="@+id/rlEatOutStoreDetailReviewWrite"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="11.7dp"
+                        android:background="@drawable/ic_review_write" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10.7dp"
+                        android:gravity="center"
+                        android:textColor="#a7a7a7"
+                        android:textSize="10.7sp"
+                        android:text="@string/eatout_store_detail_tab_review_write"
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0.7dp"
+                    android:layout_height="25dp"
+                    android:background="#eaeaea" />
+
+                <RelativeLayout
+                    android:id="@+id/rlEatOutStoreDetailShare"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="13.3dp"
+                        android:background="@drawable/share" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10.7dp"
+                        android:gravity="center"
+                        android:textColor="#a7a7a7"
+                        android:textSize="10.7sp"
+                        android:text="@string/share"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <include
+                android:id="@+id/include"
+                layout="@layout/include_activity_eat_out_store_detail_bottom_info" />
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlEatOutStoreTitleBack"
+        android:layout_width="60dp"
+        android:layout_height="45dp"
+        android:layout_above="@id/viewCommonTitleDivider"
+        android:gravity="center_vertical"
+        >
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/top_toolbar_white_back_ic"
+            android:contentDescription="@string/underline_description"
+            />
+    </RelativeLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieEatOutStoreDetailLoading"
+        android:layout_width="65.3dp"
+        android:layout_height="65.3dp"
+        android:layout_centerInParent="true"
+        app:lottie_loop="true"
+        />
+</RelativeLayout>
